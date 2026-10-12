@@ -4,6 +4,8 @@
 
 从 [HEngine 1.1.0 Release](https://github.com/hebohang/HEngineDev/releases/tag/v1.1.0) 下载并解压 Windows x64 二进制 SDK，再下载或克隆 [本工程](https://github.com/hebohang/StarbloomSurvivor)。
 
+当前引擎 1.1.0 先在私有 `HEngineDev` 发布，需要该仓库访问权限或作者提供的 SDK。此游戏工程已公开；公开引擎 release 发布后会更新下载地址。
+
 运行 SDK 内的 `ProjectManager.exe`，选择本目录的 `Project.heproject`，打开 `Assets/Scenes/MainGameCSharp.he` 后按 `F6` 游玩，按 `F8` 停止。`Project.heproject` 是引擎规定的描述文件名；工程目录名可以任意更换。
 
 发行示例提供 `Scripts/CSharp/Prebuilt`，首次打开和游玩不需要编译引擎。修改 C# 脚本后需要 .NET SDK，按 SDK 的依赖检查结果安装工具。
