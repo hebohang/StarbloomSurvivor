@@ -1,0 +1,201 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 258,
+            "max": [
+                0.4070319397786862,
+                0.75,
+                0.4070319397786862
+            ],
+            "min": [
+                -0.4070319397786862,
+                0.0,
+                -0.4070319397786862
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 258,
+            "max": [
+                0.9238795325112868,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.9238795325112868,
+                -1.0,
+                -1.0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 258,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 72,
+            "max": [
+                71
+            ],
+            "min": [
+                0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 4,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 96,
+            "max": [
+                167
+            ],
+            "min": [
+                72
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 5,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 90,
+            "max": [
+                257
+            ],
+            "min": [
+                168
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 9288,
+            "data": [],
+            "name": "",
+            "uri": "Assets/Models/VerdantRift/Mushroom.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 3096,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 3096,
+            "byteOffset": 3096,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 2064,
+            "byteOffset": 6192,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 288,
+            "byteOffset": 8256,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 384,
+            "byteOffset": 8544,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 360,
+            "byteOffset": 8928,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        }
+    ],
+    "name": "Mushroom",
+    "primitives": [
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 3,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/RuinStone.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 4,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/ShrineCoral.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 5,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/ShrineGold.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "",
+    "version": 1,
+    "weights": []
+}

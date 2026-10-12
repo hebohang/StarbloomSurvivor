@@ -1,0 +1,201 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 750,
+            "max": [
+                2.35,
+                7.6886047988928885,
+                2.234982813293611
+            ],
+            "min": [
+                -2.35,
+                0.0,
+                -2.234982813293611
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 750,
+            "max": [
+                0.9510565162951535,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.9975079611525639,
+                -1.0,
+                -1.0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 750,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 174,
+            "max": [
+                365
+            ],
+            "min": [
+                0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 4,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 492,
+            "max": [
+                749
+            ],
+            "min": [
+                120
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 5,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 84,
+            "max": [
+                473
+            ],
+            "min": [
+                366
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 27000,
+            "data": [],
+            "name": "",
+            "uri": "Assets/Models/VerdantRift/RegionLandmark_Thunder.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 9000,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 9000,
+            "byteOffset": 9000,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 6000,
+            "byteOffset": 18000,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 696,
+            "byteOffset": 24000,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1968,
+            "byteOffset": 24696,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 336,
+            "byteOffset": 26664,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        }
+    ],
+    "name": "RegionLandmark_Thunder",
+    "primitives": [
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 3,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/CliffDark.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 4,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/ShrineGold.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 5,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/RuinStone.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "",
+    "version": 1,
+    "weights": []
+}

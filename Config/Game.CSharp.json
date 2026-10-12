@@ -1,0 +1,343 @@
+{
+  "Game": {
+    "Name": "小树保卫者",
+    "DefaultScene": "Assets/Scenes/MainGameCSharp.he",
+    "Icon": "Assets/UI/Icons/Survivor/Brand/StarbloomSurvivor.png",
+    "ResourceWarmup": {
+      "Version": 1,
+      "Groups": [
+        {
+          "Name": "MenuRoster",
+          "Trigger": "MenuRoster",
+          "Priority": 100,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorMenuPreview.hprefab"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/UltimateMonsters/Cat/Cat.hmesh"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Pig/Pig.hmesh"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Cactus/Cactus.hmesh"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Panda/Panda.hmesh"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Penguin/Penguin.hmesh"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Bee.hmesh"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom.hmesh"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Ghost/Ghost.hmesh"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Crab/Crab.hmesh"
+            },
+            {
+              "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien.hmesh"
+            }
+          ]
+        },
+        {
+          "Name": "AdventureCore",
+          "Trigger": "AdventureCore",
+          "Priority": 90,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/ExperienceGem.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorBossChest.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "RegionFoundations",
+          "Trigger": "RegionFoundations",
+          "Priority": 89,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Models/VerdantRift/EventRing_North.hmesh"
+            },
+            {
+              "Path": "Assets/Models/VerdantRift/EventRing_West.hmesh"
+            },
+            {
+              "Path": "Assets/Models/VerdantRift/EventRing_South.hmesh"
+            },
+            {
+              "Path": "Assets/Models/VerdantRift/EventRing_East.hmesh"
+            }
+          ]
+        },
+        {
+          "Name": "Wave00",
+          "Trigger": "Wave00",
+          "Priority": 80,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/green_blob.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave01",
+          "Trigger": "Wave01",
+          "Priority": 79,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/pink_blob.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave02",
+          "Trigger": "Wave02",
+          "Priority": 78,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/spiky_blob.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave03",
+          "Trigger": "Wave03",
+          "Priority": 77,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/yeti_colossus.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave04",
+          "Trigger": "Wave04",
+          "Priority": 76,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/bee_ranger.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave05",
+          "Trigger": "Wave05",
+          "Priority": 75,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/orc_bruiser.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/alien_charger.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave06",
+          "Trigger": "Wave06",
+          "Priority": 74,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/orc_warlord.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave07",
+          "Trigger": "Wave07",
+          "Priority": 73,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/mushroom_lobber.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/ghost_ambusher.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave08",
+          "Trigger": "Wave08",
+          "Priority": 72,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/crab_guard.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/bomb_spore.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/alien_commander.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "RegionRewards",
+          "Trigger": "RegionRewards",
+          "Priority": 71,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorBossChest.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave10",
+          "Trigger": "Wave10",
+          "Priority": 70,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/azure_demon.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "FinalBoss",
+          "Trigger": "FinalBoss",
+          "Priority": 69,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/star_dragon.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "Wave13",
+          "Trigger": "Wave13",
+          "Priority": 67,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorEnemies/mushroom_monarch.hprefab"
+            }
+          ]
+        },
+        {
+          "Name": "WeaponPool",
+          "Trigger": "WeaponPool",
+          "Priority": 60,
+          "Expand": "Runtime",
+          "Residency": "Session",
+          "Roots": [
+            {
+              "Path": "Assets/Prefabs/SurvivorHoneyNeedleCore.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorSporecapCore.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorPhantomBellCore.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorCoralAnchorCore.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorPrismCore.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorAcornCore.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorFrostOrbCore.hprefab"
+            },
+            {
+              "Path": "Assets/Prefabs/SurvivorGravityYoyoCore.hprefab"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Cook": {
+    "ContentVersion": "1.1.0",
+    "CompressionLevel": 9,
+    "DynamicAssetSets": [
+      {
+        "Name": "SurvivorRuntime",
+        "Manifest": "Config/SurvivorRuntimeAssets.json"
+      }
+    ],
+    "RootFiles": [
+      "Config/DefaultEngine.json",
+      "Config/BaseEngine.json",
+      "Config/SurvivorGame.json",
+      "Assets/UI/SurvivorHUD.uimotion.json",
+      "Assets/Prefabs/SurvivorMenuPreview.hprefab",
+      "Assets/Prefabs/SurvivorBossChest.hprefab",
+      "Assets/Prefabs/SurvivorHoneyNeedleCore.hprefab",
+      "Assets/Prefabs/SurvivorSporecapCore.hprefab",
+      "Assets/Prefabs/SurvivorPhantomBellCore.hprefab",
+      "Assets/Prefabs/SurvivorCoralAnchorCore.hprefab",
+      "Assets/Prefabs/SurvivorPrismCore.hprefab",
+      "Assets/Prefabs/SurvivorAcornCore.hprefab",
+      "Assets/Prefabs/SurvivorFrostOrbCore.hprefab",
+      "Assets/Prefabs/SurvivorGravityYoyoCore.hprefab",
+      "Assets/UI/Icons/Survivor/manifest.json",
+      "Assets/Fonts/Starbloom/NotoSansSC-Regular.otf",
+      "Assets/Fonts/Starbloom/NotoSansSC-Bold.otf",
+      "Assets/Fonts/Starbloom/OFL-NotoSansSC.txt",
+      "Assets/Scenes/MainGameCSharp.he"
+    ],
+    "IncludeDirectories": [],
+    "CookedJsonExtensions": [
+      ".he",
+      ".hprefab",
+      ".hmat",
+      ".hmesh",
+      ".hskel",
+      ".hanim",
+      ".hanimctrl",
+      ".hui",
+      ".hbt"
+    ],
+    "ExcludeDirectories": [
+      "__pycache__"
+    ],
+    "ExcludeExtensions": [
+      ".pyc"
+    ],
+    "VirtualFiles": [
+      "Config/SurvivorProgression.json"
+    ]
+  }
+}

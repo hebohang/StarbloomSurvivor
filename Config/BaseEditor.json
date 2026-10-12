@@ -1,0 +1,18 @@
+{
+    "DefaultLayout": {
+        "ShowAboutMe": false,
+        "ShowBaseSettings": false,
+        "ShowContentBrowser": true,
+        "ShowDemoImGui": false,
+        "ShowOutputLog": true,
+        "ShowProperties": true,
+        "ShowSRT": true,
+        "ShowSceneHierarchy": true,
+        "ShowStats": false,
+        "ShowTutorial": false,
+        "ShowViewport": true
+    },
+    "DefaultScene": "Assets/Scenes/MainGameCSharp.he",
+    "Fullscreen": false,
+    "Language": "Chinese"
+}

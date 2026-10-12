@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "HEngine.ScriptRuntime/1.0.0": {
+        "dependencies": {
+          "GameScripts": "1.0.0",
+          "HEngine.ScriptCore": "1.0.0"
+        },
+        "runtime": {
+          "HEngine.ScriptRuntime.dll": {}
+        }
+      },
+      "GameScripts/1.0.0": {
+        "dependencies": {
+          "HEngine.ScriptCore": "1.0.0"
+        },
+        "runtime": {
+          "GameScripts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "HEngine.ScriptCore/1.0.0": {
+        "runtime": {
+          "HEngine.ScriptCore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HEngine.ScriptRuntime/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameScripts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HEngine.ScriptCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

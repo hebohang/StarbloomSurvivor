@@ -1,0 +1,235 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 144,
+            "max": [
+                0.52,
+                0.52,
+                0.66
+            ],
+            "min": [
+                -0.52,
+                -0.52,
+                -0.59
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 144,
+            "max": [
+                0.9948341425312659,
+                0.9948341425312659,
+                0.5905646231949586
+            ],
+            "min": [
+                -0.9948341425312659,
+                -0.9948341425312659,
+                -0.8574929257125442
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 144,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 24,
+            "max": [
+                23
+            ],
+            "min": [
+                0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 4,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 48,
+            "max": [
+                71
+            ],
+            "min": [
+                24
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 5,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 24,
+            "max": [
+                95
+            ],
+            "min": [
+                72
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 6,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 48,
+            "max": [
+                143
+            ],
+            "min": [
+                96
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 5184,
+            "data": [],
+            "name": "",
+            "uri": "Assets/Models/SurvivorWeapons/Generated/CometCore.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 1728,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1728,
+            "byteOffset": 1728,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1152,
+            "byteOffset": 3456,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 96,
+            "byteOffset": 4608,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 192,
+            "byteOffset": 4704,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 96,
+            "byteOffset": 4896,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 192,
+            "byteOffset": 4992,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        }
+    ],
+    "name": "CometCore",
+    "primitives": [
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 3,
+            "materialResPath": "Assets/Models/SurvivorWeapons/Generated/Materials/CometCore_CometCream.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 4,
+            "materialResPath": "Assets/Models/SurvivorWeapons/Generated/Materials/CometCore_CometSky.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 5,
+            "materialResPath": "Assets/Models/SurvivorWeapons/Generated/Materials/CometCore_CometBlue.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 6,
+            "materialResPath": "Assets/Models/SurvivorWeapons/Generated/Materials/CometCore_CometCandy.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "",
+    "version": 1,
+    "weights": []
+}

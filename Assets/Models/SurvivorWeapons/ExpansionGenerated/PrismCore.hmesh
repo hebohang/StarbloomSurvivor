@@ -1,0 +1,201 @@
+{
+  "accessorVec": [
+    {
+      "bufferViewIndex": 0,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 48,
+      "max": [
+        0.58,
+        0.82,
+        0.58
+      ],
+      "min": [
+        -0.58,
+        -0.82,
+        -0.58
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "VEC3"
+    },
+    {
+      "bufferViewIndex": 1,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 48,
+      "max": [
+        0.6355615789624307,
+        0.4473199862699893,
+        0.6355615789624307
+      ],
+      "min": [
+        -0.6355615789624307,
+        -0.4473199862699893,
+        -0.6355615789624307
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "VEC3"
+    },
+    {
+      "bufferViewIndex": 2,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 48,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "VEC2"
+    },
+    {
+      "bufferViewIndex": 3,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 12,
+      "max": [
+        17
+      ],
+      "min": [
+        0
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "SCALAR"
+    },
+    {
+      "bufferViewIndex": 4,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 12,
+      "max": [
+        23
+      ],
+      "min": [
+        6
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "SCALAR"
+    },
+    {
+      "bufferViewIndex": 5,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 24,
+      "max": [
+        47
+      ],
+      "min": [
+        24
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferVec": [
+    {
+      "byteLength": 1728,
+      "data": [],
+      "name": "",
+      "uri": "Assets/Models/SurvivorWeapons/ExpansionGenerated/PrismCore.bin"
+    }
+  ],
+  "bufferViewVec": [
+    {
+      "bufferIndex": 0,
+      "byteLength": 576,
+      "byteOffset": 0,
+      "byteStride": 0,
+      "name": "",
+      "target": 34962
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 576,
+      "byteOffset": 576,
+      "byteStride": 0,
+      "name": "",
+      "target": 34962
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 384,
+      "byteOffset": 1152,
+      "byteStride": 0,
+      "name": "",
+      "target": 34962
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 48,
+      "byteOffset": 1536,
+      "byteStride": 0,
+      "name": "",
+      "target": 34963
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 48,
+      "byteOffset": 1584,
+      "byteStride": 0,
+      "name": "",
+      "target": 34963
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 96,
+      "byteOffset": 1632,
+      "byteStride": 0,
+      "name": "",
+      "target": 34963
+    }
+  ],
+  "name": "PrismCore",
+  "primitives": [
+    {
+      "attributes": {
+        "NORMAL": 1,
+        "POSITION": 0,
+        "TEXCOORD_0": 2
+      },
+      "indices": 3,
+      "materialResPath": "Assets/Models/SurvivorWeapons/ExpansionGenerated/Materials/PrismCore_Cyan.hmat",
+      "mode": 4,
+      "targets": []
+    },
+    {
+      "attributes": {
+        "NORMAL": 1,
+        "POSITION": 0,
+        "TEXCOORD_0": 2
+      },
+      "indices": 4,
+      "materialResPath": "Assets/Models/SurvivorWeapons/ExpansionGenerated/Materials/PrismCore_Violet.hmat",
+      "mode": 4,
+      "targets": []
+    },
+    {
+      "attributes": {
+        "NORMAL": 1,
+        "POSITION": 0,
+        "TEXCOORD_0": 2
+      },
+      "indices": 5,
+      "materialResPath": "Assets/Models/SurvivorWeapons/ExpansionGenerated/Materials/PrismCore_Star.hmat",
+      "mode": 4,
+      "targets": []
+    }
+  ],
+  "skeletonPath": "",
+  "version": 1,
+  "weights": []
+}

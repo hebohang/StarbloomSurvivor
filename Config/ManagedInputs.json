@@ -1,0 +1,3 @@
+{
+  "inputs": ["Scripts/*.py", "Tools/ExportWeb.py", "Tools/GenerateVerdantRift.py"]
+}

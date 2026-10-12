@@ -1,0 +1,187 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1159,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1159,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1159,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1159,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1159,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1159,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1159,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 7,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 5160,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 122632,
+            "data": [],
+            "name": "Alien",
+            "uri": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 13908,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 13908,
+            "byteOffset": 13908,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 9272,
+            "byteOffset": 27816,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 13908,
+            "byteOffset": 37088,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 13908,
+            "byteOffset": 50996,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 18544,
+            "byteOffset": 64904,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 18544,
+            "byteOffset": 83448,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 20640,
+            "byteOffset": 101992,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        }
+    ],
+    "name": "Alien",
+    "primitives": [
+        {
+            "attributes": {
+                "BITANGENT": 4,
+                "JOINTS_0": 5,
+                "NORMAL": 1,
+                "POSITION": 0,
+                "TANGENT": 3,
+                "TEXCOORD_0": 2,
+                "WEIGHTS_0": 6
+            },
+            "indices": 7,
+            "materialResPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Texture.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien_Skeleton.hskel",
+    "version": 1,
+    "weights": []
+}

@@ -1,0 +1,1588 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HEngine.ScriptCore</name>
+    </assembly>
+    <members>
+        <member name="T:HEngine.ActionTimelineTick">
+            <summary>One-step action markers, emitted exactly once even when a step crosses both boundaries.</summary>
+            <param name="Committed">The gameplay marker was crossed this step.</param>
+            <param name="Completed">The end of the action was crossed this step.</param>
+        </member>
+        <member name="M:HEngine.ActionTimelineTick.#ctor(System.Boolean,System.Boolean)">
+            <summary>One-step action markers, emitted exactly once even when a step crosses both boundaries.</summary>
+            <param name="Committed">The gameplay marker was crossed this step.</param>
+            <param name="Completed">The end of the action was crossed this step.</param>
+        </member>
+        <member name="P:HEngine.ActionTimelineTick.Committed">
+            <summary>The gameplay marker was crossed this step.</summary>
+        </member>
+        <member name="P:HEngine.ActionTimelineTick.Completed">
+            <summary>The end of the action was crossed this step.</summary>
+        </member>
+        <member name="T:HEngine.ActionTimeline">
+            <summary>Shared time source for normalized animation playback and cancellable gameplay actions.</summary>
+        </member>
+        <member name="P:HEngine.ActionTimeline.IsActive">
+            <summary>Whether the action is running.</summary>
+        </member>
+        <member name="P:HEngine.ActionTimeline.HasCommitted">
+            <summary>Whether its gameplay marker has already fired; retained after cancellation.</summary>
+        </member>
+        <member name="P:HEngine.ActionTimeline.Elapsed">
+            <summary>Current elapsed seconds, bounded by Duration.</summary>
+        </member>
+        <member name="P:HEngine.ActionTimeline.Duration">
+            <summary>Configured action duration.</summary>
+        </member>
+        <member name="P:HEngine.ActionTimeline.Progress">
+            <summary>Normalized time for a sampled animation layer.</summary>
+        </member>
+        <member name="M:HEngine.ActionTimeline.Start(System.Single,System.Single)">
+            <summary>Starts a new action. Cancel an existing action explicitly before replacing it.</summary>
+        </member>
+        <member name="M:HEngine.ActionTimeline.Cancel">
+            <summary>Stops future markers. Previously committed gameplay is not undone.</summary>
+        </member>
+        <member name="M:HEngine.ActionTimeline.Advance(System.Single)">
+            <summary>Advances animation and gameplay on the same simulation clock.</summary>
+        </member>
+        <member name="T:HEngine.CombatAgentState">
+            <summary>Reusable combat phases; locomotion, collision and rendering remain with the caller.</summary>
+        </member>
+        <member name="F:HEngine.CombatAgentState.Patrol">
+            <summary>No remembered target.</summary>
+        </member>
+        <member name="F:HEngine.CombatAgentState.Acquire">
+            <summary>Confirming sustained visual contact.</summary>
+        </member>
+        <member name="F:HEngine.CombatAgentState.Pursue">
+            <summary>Visible target outside attack distance.</summary>
+        </member>
+        <member name="F:HEngine.CombatAgentState.Windup">
+            <summary>Telegraphing an attack at a locked aim point.</summary>
+        </member>
+        <member name="F:HEngine.CombatAgentState.Recover">
+            <summary>Attack cooldown.</summary>
+        </member>
+        <member name="F:HEngine.CombatAgentState.Search">
+            <summary>Investigating the last observed position.</summary>
+        </member>
+        <member name="F:HEngine.CombatAgentState.Dead">
+            <summary>Disabled until explicitly reset.</summary>
+        </member>
+        <member name="T:HEngine.CombatAgentSettings">
+            <summary>Immutable, engine-independent tuning in world units and seconds.</summary>
+        </member>
+        <member name="P:HEngine.CombatAgentSettings.SightRange">
+            <summary>Distance at which a previously unseen target can be acquired.</summary>
+        </member>
+        <member name="P:HEngine.CombatAgentSettings.LoseSightRange">
+            <summary>Distance at which a tracked target is lost; must be at least SightRange.</summary>
+        </member>
+        <member name="P:HEngine.CombatAgentSettings.FieldOfViewDegrees">
+            <summary>Full horizontal/vertical sight cone angle, in degrees.</summary>
+        </member>
+        <member name="P:HEngine.CombatAgentSettings.AttackRange">
+            <summary>Attack distance; cannot exceed SightRange.</summary>
+        </member>
+        <member name="P:HEngine.CombatAgentSettings.DetectionSeconds">
+            <summary>Continuous visible contact required before engaging.</summary>
+        </member>
+        <member name="P:HEngine.CombatAgentSettings.WindupSeconds">
+            <summary>Visible warning before each attack.</summary>
+        </member>
+        <member name="P:HEngine.CombatAgentSettings.RecoverySeconds">
+            <summary>Minimum time from an attack release to the next warning.</summary>
+        </member>
+        <member name="P:HEngine.CombatAgentSettings.MemorySeconds">
+            <summary>Time to remember an occluded target.</summary>
+        </member>
+        <member name="T:HEngine.CombatObservation">
+            <summary>One caller-owned perception sample. Line of sight must include world occlusion.</summary>
+            <param name="Position">Observer position.</param>
+            <param name="Forward">Observer facing; zero means no directional visibility.</param>
+            <param name="TargetPosition">Current candidate target position.</param>
+            <param name="TargetAlive">Whether the target remains valid and alive.</param>
+            <param name="ClearLineOfSight">Whether collision queries find an unobstructed view.</param>
+        </member>
+        <member name="M:HEngine.CombatObservation.#ctor(System.Numerics.Vector3,System.Numerics.Vector3,System.Numerics.Vector3,System.Boolean,System.Boolean)">
+            <summary>One caller-owned perception sample. Line of sight must include world occlusion.</summary>
+            <param name="Position">Observer position.</param>
+            <param name="Forward">Observer facing; zero means no directional visibility.</param>
+            <param name="TargetPosition">Current candidate target position.</param>
+            <param name="TargetAlive">Whether the target remains valid and alive.</param>
+            <param name="ClearLineOfSight">Whether collision queries find an unobstructed view.</param>
+        </member>
+        <member name="P:HEngine.CombatObservation.Position">
+            <summary>Observer position.</summary>
+        </member>
+        <member name="P:HEngine.CombatObservation.Forward">
+            <summary>Observer facing; zero means no directional visibility.</summary>
+        </member>
+        <member name="P:HEngine.CombatObservation.TargetPosition">
+            <summary>Current candidate target position.</summary>
+        </member>
+        <member name="P:HEngine.CombatObservation.TargetAlive">
+            <summary>Whether the target remains valid and alive.</summary>
+        </member>
+        <member name="P:HEngine.CombatObservation.ClearLineOfSight">
+            <summary>Whether collision queries find an unobstructed view.</summary>
+        </member>
+        <member name="T:HEngine.CombatDecision">
+            <summary>Value-only decision for animation, movement and attacks.</summary>
+            <param name="State">Current phase.</param>
+            <param name="TargetVisible">Visibility including range, cone and occlusion.</param>
+            <param name="HasDestination">Whether there is a remembered movement/look destination.</param>
+            <param name="Destination">Last observed position; never follows an unseen target.</param>
+            <param name="AimPoint">Position locked when the attack warning began.</param>
+            <param name="AttackReleased">One-step pulse; the caller decides whether a weapon can emit.</param>
+            <param name="WindupProgress">Warning progress from zero to one.</param>
+        </member>
+        <member name="M:HEngine.CombatDecision.#ctor(HEngine.CombatAgentState,System.Boolean,System.Boolean,System.Numerics.Vector3,System.Numerics.Vector3,System.Boolean,System.Single)">
+            <summary>Value-only decision for animation, movement and attacks.</summary>
+            <param name="State">Current phase.</param>
+            <param name="TargetVisible">Visibility including range, cone and occlusion.</param>
+            <param name="HasDestination">Whether there is a remembered movement/look destination.</param>
+            <param name="Destination">Last observed position; never follows an unseen target.</param>
+            <param name="AimPoint">Position locked when the attack warning began.</param>
+            <param name="AttackReleased">One-step pulse; the caller decides whether a weapon can emit.</param>
+            <param name="WindupProgress">Warning progress from zero to one.</param>
+        </member>
+        <member name="P:HEngine.CombatDecision.State">
+            <summary>Current phase.</summary>
+        </member>
+        <member name="P:HEngine.CombatDecision.TargetVisible">
+            <summary>Visibility including range, cone and occlusion.</summary>
+        </member>
+        <member name="P:HEngine.CombatDecision.HasDestination">
+            <summary>Whether there is a remembered movement/look destination.</summary>
+        </member>
+        <member name="P:HEngine.CombatDecision.Destination">
+            <summary>Last observed position; never follows an unseen target.</summary>
+        </member>
+        <member name="P:HEngine.CombatDecision.AimPoint">
+            <summary>Position locked when the attack warning began.</summary>
+        </member>
+        <member name="P:HEngine.CombatDecision.AttackReleased">
+            <summary>One-step pulse; the caller decides whether a weapon can emit.</summary>
+        </member>
+        <member name="P:HEngine.CombatDecision.WindupProgress">
+            <summary>Warning progress from zero to one.</summary>
+        </member>
+        <member name="T:HEngine.CombatAgent">
+            <summary>Deterministic visual perception, target memory and interruptible attack phases.
+            No scene handles or global state; one instance per agent. Each Step emits at most one attack.
+            Large steps do not skip a newly entered warning phase. Zero time never advances phases.</summary>
+        </member>
+        <member name="P:HEngine.CombatAgent.State">
+            <summary>Current phase.</summary>
+        </member>
+        <member name="M:HEngine.CombatAgent.#ctor(HEngine.CombatAgentSettings)">
+            <summary>Validates tuning once; subsequent decisions allocate no resources.</summary>
+        </member>
+        <member name="M:HEngine.CombatAgent.Reset(System.Single)">
+            <summary>Clears all target/attack state, e.g. on spawn, pooling or a new wave.</summary>
+        </member>
+        <member name="M:HEngine.CombatAgent.Kill">
+            <summary>Stops all attacks and forgets the target until Reset.</summary>
+        </member>
+        <member name="M:HEngine.CombatAgent.Investigate(System.Numerics.Vector3)">
+            <summary>Records a heard/damage location without granting visual contact or permitting a blind shot.</summary>
+        </member>
+        <member name="M:HEngine.CombatAgent.Step(System.Single,HEngine.CombatObservation@)">
+            <summary>Consumes a finite nonnegative simulation interval and one sensor sample.</summary>
+        </member>
+        <member name="T:HEngine.InvalidEngineObjectException">
+            <summary>A native object or component view whose lifetime has ended. No fake-null conversion is performed.</summary>
+        </member>
+        <member name="M:HEngine.InvalidEngineObjectException.#ctor(System.String,System.UInt64,System.String,System.Exception)">
+            <summary>A native object or component view whose lifetime has ended. No fake-null conversion is performed.</summary>
+        </member>
+        <member name="P:HEngine.InvalidEngineObjectException.ObjectType">
+            <summary>Object/view type whose lifetime ended.</summary>
+        </member>
+        <member name="P:HEngine.InvalidEngineObjectException.EntityHandle">
+            <summary>Stale runtime entity handle, retained for diagnostics only.</summary>
+        </member>
+        <member name="P:HEngine.InvalidEngineObjectException.Origin">
+            <summary>API operation that detected the invalid lifetime.</summary>
+        </member>
+        <member name="T:HEngine.IComponentView`1">
+            <summary>Explicit component binding; implementors supply a fixed binding ID, never a reflected type name.</summary>
+        </member>
+        <member name="P:HEngine.IComponentView`1.Kind">
+            <summary>Fixed native binding ID; unsupported IDs are rejected.</summary>
+        </member>
+        <member name="M:HEngine.IComponentView`1.Bind(HEngine.Entity,System.UInt64)">
+            <summary>Constructs a view of a native component generation; host binding only.</summary>
+        </member>
+        <member name="T:HEngine.Entity">
+            <summary>Generation-checked scene object identity. Destroyed entities are explicitly invalid, never fake null.</summary>
+            <example><code>var transform = Entity.GetComponent&lt;Transform&gt;(); var value = transform.Snapshot; value.Position.X += 1; transform.Snapshot = value;</code></example>
+        </member>
+        <member name="M:HEngine.Entity.HasComponent``1">
+            <summary>Returns whether the native entity has a supported component. A stale entity throws.</summary>
+        </member>
+        <member name="M:HEngine.Entity.GetComponent``1">
+            <summary>Gets a generation-checked component view; missing or destroyed components throw.</summary>
+        </member>
+        <member name="M:HEngine.Entity.TryGetComponent``1(``0@)">
+            <summary>Returns false for a missing component; stale entities and API failures throw.</summary>
+        </member>
+        <member name="M:HEngine.Entity.AddComponent``1">
+            <summary>Adds a supported component or returns its existing view.</summary>
+        </member>
+        <member name="M:HEngine.Entity.RemoveComponent``1">
+            <summary>Removes a supported optional component. Required Transform removal throws.</summary>
+        </member>
+        <member name="P:HEngine.Entity.Parent">
+            <summary>Gets or sets the same-scene parent; the default Entity detaches. Cycles throw.</summary>
+        </member>
+        <member name="M:HEngine.Entity.GetChildrenSnapshot">
+            <summary>Returns a bounded children snapshot. Avoid allocating it on every frame.</summary>
+        </member>
+        <member name="M:HEngine.Entity.Create(System.String)">
+            <summary>Creates an entity in the currently executing script's scene.</summary>
+        </member>
+        <member name="M:HEngine.Entity.Instantiate(HEngine.Entity)">
+            <summary>Duplicates an existing same-scene entity hierarchy with new stable identities.</summary>
+        </member>
+        <member name="M:HEngine.Entity.#ctor(System.UInt64)">
+            <summary>Generation-checked scene object identity. Destroyed entities are explicitly invalid, never fake null.</summary>
+            <example><code>var transform = Entity.GetComponent&lt;Transform&gt;(); var value = transform.Snapshot; value.Position.X += 1; transform.Snapshot = value;</code></example>
+        </member>
+        <member name="P:HEngine.Entity.IsValid">
+            <summary>False for missing, retired or pending-destruction handles; a detached host throws.</summary>
+        </member>
+        <member name="P:HEngine.Entity.State">
+            <summary>Batched Transform/Sprite value snapshot. Stale handles throw InvalidEngineObjectException.</summary>
+        </member>
+        <member name="M:HEngine.Entity.Apply(HEngine.EntityState@)">
+            <summary>Applies one snapshot; unsupported components and invalid values throw.</summary>
+        </member>
+        <member name="M:HEngine.Entity.Destroy">
+            <summary>Invalidates the entity now; native removal occurs at the deferred command barrier.</summary>
+        </member>
+        <member name="M:HEngine.Entity.SetScriptEnabled(System.Boolean)">
+            <summary>Changes this entity's ScriptComponent enable state.</summary>
+        </member>
+        <member name="P:HEngine.Entity.Texture">
+            <summary>Stable Sprite texture identity; missing Sprite or stale entity throws.</summary>
+        </member>
+        <member name="T:HEngine.Transform">
+            <summary>A generation-checked Transform view. Snapshot accesses batch position, rotation and scale.</summary>
+        </member>
+        <member name="M:HEngine.Transform.#ctor(HEngine.Entity,System.UInt64)">
+            <summary>A generation-checked Transform view. Snapshot accesses batch position, rotation and scale.</summary>
+        </member>
+        <member name="P:HEngine.Transform.Kind">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.Transform.Bind(HEngine.Entity,System.UInt64)">
+            <inheritdoc/>
+        </member>
+        <member name="P:HEngine.Transform.Snapshot">
+            <summary>Batched transform state; invalid views throw InvalidEngineObjectException.</summary>
+        </member>
+        <member name="T:HEngine.Sprite">
+            <summary>A generation-checked Sprite view. Removing/replacing the component permanently invalidates old views.</summary>
+        </member>
+        <member name="M:HEngine.Sprite.#ctor(HEngine.Entity,System.UInt64)">
+            <summary>A generation-checked Sprite view. Removing/replacing the component permanently invalidates old views.</summary>
+        </member>
+        <member name="P:HEngine.Sprite.Kind">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.Sprite.Bind(HEngine.Entity,System.UInt64)">
+            <inheritdoc/>
+        </member>
+        <member name="P:HEngine.Sprite.Color">
+            <summary>RGBA tint; stale component generations throw InvalidEngineObjectException.</summary>
+        </member>
+        <member name="P:HEngine.Sprite.Texture">
+            <summary>Stable texture identity; invalid assets or retired views throw.</summary>
+        </member>
+        <member name="T:HEngine.EngineApi">
+            <summary>Shared typed ABI semantics; platform transports copy requests across their own boundary.</summary>
+        </member>
+        <member name="M:HEngine.EngineApi.New(HEngine.Scripting.Interop.EngineOperation,System.UInt64)">
+            <summary>Creates a versioned request; entity zero is reserved for context-free services.</summary>
+        </member>
+        <member name="M:HEngine.EngineApi.Call(HEngine.Scripting.Interop.Request@,System.String,System.String,System.Int32)">
+            <summary>Synchronous borrowed-buffer transport. Failures throw; no pointers may escape the call.</summary>
+        </member>
+        <member name="M:HEngine.EngineApi.IsValid(System.UInt64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.ReadEntity(System.UInt64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.WriteEntity(System.UInt64,HEngine.EntityState@,System.Boolean,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.ReadInput">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.ReadAction(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.SetInputContext(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.RebindInput(System.String,System.Int32,HEngine.ActionBinding)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.ReadInputMap">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.WriteInputMap(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.DestroyEntity(System.UInt64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.FindEntity(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.SetEnabled(System.UInt64,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.ReadTexture(System.UInt64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.WriteTexture(System.UInt64,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.Log(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.ReadSave(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.WriteSave(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.EmitEvent(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.PlatformService(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.ReadEvent(System.String,System.UInt64,System.UInt64@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.ComponentAccess(System.UInt64,System.UInt32,System.UInt32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.CreateEntity(System.String,HEngine.Entity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.Parent(System.UInt64,HEngine.Entity,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.Children(System.UInt64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HEngine.EngineApi.PrefabRequest(System.UInt64,System.UInt64,System.UInt32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:HEngine.ActionState">
+            <summary>Snapshot for one presentation frame; edge flags do not consume input.</summary>
+        </member>
+        <member name="M:HEngine.ActionState.#ctor(System.Numerics.Vector2,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>Snapshot for one presentation frame; edge flags do not consume input.</summary>
+        </member>
+        <member name="T:HEngine.ActionDevice">
+            <summary>Supported binding sources. Key and mouse codes use the engine input code tables.</summary>
+        </member>
+        <member name="F:HEngine.ActionDevice.Key">
+            <summary>Keyboard key.</summary>
+        </member>
+        <member name="F:HEngine.ActionDevice.MouseButton">
+            <summary>Mouse button.</summary>
+        </member>
+        <member name="F:HEngine.ActionDevice.GamepadButton">
+            <summary>Normalized gamepad button.</summary>
+        </member>
+        <member name="F:HEngine.ActionDevice.GamepadAxis">
+            <summary>Normalized gamepad axis.</summary>
+        </member>
+        <member name="F:HEngine.ActionDevice.PointerX">
+            <summary>Pointer horizontal delta.</summary>
+        </member>
+        <member name="F:HEngine.ActionDevice.PointerY">
+            <summary>Pointer vertical delta.</summary>
+        </member>
+        <member name="T:HEngine.ActionBinding">
+            <summary>Maps a device code to action axis 0/1 with a finite nonzero scale.</summary>
+        </member>
+        <member name="M:HEngine.ActionBinding.#ctor(HEngine.ActionDevice,System.Int32,System.Int32,System.Single)">
+            <summary>Maps a device code to action axis 0/1 with a finite nonzero scale.</summary>
+        </member>
+        <member name="T:HEngine.InputActions">
+            <summary>Named desktop actions with project defaults and explicit player preference persistence.</summary>
+        </member>
+        <member name="M:HEngine.InputActions.Read(System.String)">
+            <summary>Reads an action; a misspelled or unknown action throws.</summary>
+        </member>
+        <member name="M:HEngine.InputActions.SetContext(System.String)">
+            <summary>Selects an existing context, such as Gameplay or UI.</summary>
+        </member>
+        <member name="M:HEngine.InputActions.Rebind(System.String,System.Int32,HEngine.ActionBinding)">
+            <summary>Changes a binding without mutating the project asset on disk.</summary>
+        </member>
+        <member name="M:HEngine.InputActions.Save(System.String)">
+            <summary>Saves player bindings through the host's atomic save service.</summary>
+        </member>
+        <member name="M:HEngine.InputActions.Load(System.String)">
+            <summary>Loads saved bindings; false means the slot is absent. Invalid data throws without applying it.</summary>
+        </member>
+        <member name="T:HEngine.NativeEngineApi">
+            <summary>PC host transport. Captures its engine thread and rejects calls after generation detach.</summary>
+            <param name="entry">Borrowed native ABI entry valid for the attached host lifetime.</param>
+        </member>
+        <member name="M:HEngine.NativeEngineApi.#ctor(System.IntPtr)">
+            <summary>PC host transport. Captures its engine thread and rejects calls after generation detach.</summary>
+            <param name="entry">Borrowed native ABI entry valid for the attached host lifetime.</param>
+        </member>
+        <member name="M:HEngine.NativeEngineApi.Call(HEngine.Scripting.Interop.Request@,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:HEngine.NavigationFollowStep">
+            <summary>One segment of travel, bounded by the next corner so a hitch cannot cut through a wall.</summary>
+            <param name="Displacement">Requested movement; the caller must resolve body collision.</param>
+            <param name="HasPath">A complete route exists.</param>
+            <param name="Arrived">The last corner has been reached.</param>
+            <param name="Replanned">A query was issued this step.</param>
+        </member>
+        <member name="M:HEngine.NavigationFollowStep.#ctor(System.Numerics.Vector3,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>One segment of travel, bounded by the next corner so a hitch cannot cut through a wall.</summary>
+            <param name="Displacement">Requested movement; the caller must resolve body collision.</param>
+            <param name="HasPath">A complete route exists.</param>
+            <param name="Arrived">The last corner has been reached.</param>
+            <param name="Replanned">A query was issued this step.</param>
+        </member>
+        <member name="P:HEngine.NavigationFollowStep.Displacement">
+            <summary>Requested movement; the caller must resolve body collision.</summary>
+        </member>
+        <member name="P:HEngine.NavigationFollowStep.HasPath">
+            <summary>A complete route exists.</summary>
+        </member>
+        <member name="P:HEngine.NavigationFollowStep.Arrived">
+            <summary>The last corner has been reached.</summary>
+        </member>
+        <member name="P:HEngine.NavigationFollowStep.Replanned">
+            <summary>A query was issued this step.</summary>
+        </member>
+        <member name="T:HEngine.NavigationPathFollower">
+            <summary>Per-agent path following with throttled target updates and failed-path retries.
+            Positions are ground anchors in world space. Movement and collision remain caller-owned.</summary>
+        </member>
+        <member name="P:HEngine.NavigationPathFollower.Diagnostic">
+            <summary>Diagnostic from the most recent path query.</summary>
+        </member>
+        <member name="M:HEngine.NavigationPathFollower.#ctor(System.Func{System.Numerics.Vector3,System.Numerics.Vector3,HEngine.NavigationPath},System.Single,System.Single,System.Single)">
+            <summary>Constructs a follower; an optional query supports other navigation providers.</summary>
+        </member>
+        <member name="M:HEngine.NavigationPathFollower.Reset">
+            <summary>Clears old scene, teleport or respawn state. The next positive step queries immediately.</summary>
+        </member>
+        <member name="M:HEngine.NavigationPathFollower.Invalidate">
+            <summary>Stops a route obstructed by dynamic collision; retries retain the query cooldown.</summary>
+        </member>
+        <member name="M:HEngine.NavigationPathFollower.Step(System.Single,System.Numerics.Vector3,System.Numerics.Vector3,System.Single)">
+            <summary>Requests at most speed * seconds of movement toward one corner. Zero time is inert.</summary>
+        </member>
+        <member name="T:HEngine.PrefabLoad">
+            <summary>Scene-owned asynchronous prefab lease. Native workers load data; polling and instantiation use the engine thread.</summary>
+        </member>
+        <member name="M:HEngine.PrefabLoad.Begin(HEngine.ScriptBehaviour,HEngine.ResourceReference)">
+            <summary>Begins loading a project-relative stable prefab resource reference. Invalid paths and unsupported platforms throw.</summary>
+        </member>
+        <member name="P:HEngine.PrefabLoad.IsReady">
+            <summary>True after native loading completes. A failed load throws with its resource path.</summary>
+        </member>
+        <member name="P:HEngine.PrefabLoad.Wait">
+            <summary>A coroutine wait that completes when this lease is ready; failures enter the script exception boundary.</summary>
+        </member>
+        <member name="M:HEngine.PrefabLoad.Instantiate">
+            <summary>Creates an instance in the owner's scene. Throws if loading is incomplete or the lease is released.</summary>
+        </member>
+        <member name="M:HEngine.PrefabLoad.Dispose">
+            <summary>Releases this lease. Shared native work may finish safely; it never calls a released script.</summary>
+        </member>
+        <member name="T:HEngine.RenderPreferences">
+            <summary>Transactional runtime renderer preferences persisted by the native settings service.</summary>
+        </member>
+        <member name="F:HEngine.RenderPreferences.TextureStreamingBudgetId">
+            <summary>Target material texture payload budget, integer MiB from 1 to 8192; not total GPU memory.</summary>
+        </member>
+        <member name="F:HEngine.RenderPreferences.UpscalingModeId">
+            <summary>Mode setting: Off or FSR3.1.</summary>
+        </member>
+        <member name="F:HEngine.RenderPreferences.UpscalingQualityId">
+            <summary>Quality setting: NativeAA, Quality, Balanced, Performance or UltraPerformance.</summary>
+        </member>
+        <member name="F:HEngine.RenderPreferences.UpscalingSharpnessId">
+            <summary>FSR reconstruction sharpness setting, from zero to one.</summary>
+        </member>
+        <member name="M:HEngine.RenderPreferences.ReadDisplay">
+            <summary>Last recorded output/internal sizes and actual upscaling/fallback state. May lag a frame after applying settings.</summary>
+        </member>
+        <member name="M:HEngine.RenderPreferences.Read">
+            <summary>Resolved requested/effective values, availability, diagnostics and revision.</summary>
+        </member>
+        <member name="M:HEngine.RenderPreferences.Apply(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <summary>Applies stable property IDs atomically to the user layer and saves them.</summary>
+        </member>
+        <member name="T:HEngine.PreparedAppearance">
+            <summary>A preloaded, scene-owned mesh/material appearance. Applying validates compatible skin palettes.</summary>
+        </member>
+        <member name="M:HEngine.PreparedAppearance.#ctor(HEngine.ScriptBehaviour,HEngine.ResourceReference,System.String[],HEngine.Entity)">
+            <summary>Preloads geometry and materials; an optional target also prepares its private deformation and GPU resources during startup.</summary>
+        </member>
+        <member name="M:HEngine.PreparedAppearance.Apply(HEngine.Entity)">
+            <summary>Replaces the actor mesh, invalidates animation state and preserves its compatible animation skeleton.</summary>
+        </member>
+        <member name="M:HEngine.PreparedAppearance.Dispose">
+            <summary>Releases preload references. Already applied appearances remain independently owned by their actors.</summary>
+        </member>
+        <member name="T:HEngine.CameraPreview">
+            <summary>Restores the exact follow rig, lens and pose after an in-game character/camera preview.</summary>
+        </member>
+        <member name="M:HEngine.CameraPreview.#ctor(HEngine.ScriptBehaviour)">
+            <summary>Captures the primary follow camera. Scene/script teardown also restores it.</summary>
+        </member>
+        <member name="M:HEngine.CameraPreview.Dispose">
+            <summary>Restores the captured camera; repeated disposal is safe.</summary>
+        </member>
+        <member name="T:HEngine.Physics">
+            <summary>Scene-checked desktop physics operations. Velocities use world units per second.</summary>
+        </member>
+        <member name="M:HEngine.Physics.CharacterState(HEngine.Entity)">
+            <summary>Reads the current collision-driven character stance and world velocity.</summary>
+        </member>
+        <member name="M:HEngine.Physics.MoveCharacter(HEngine.Entity,System.Numerics.Vector3)">
+            <summary>Supplies a desired world-space character velocity for the next simulation step; collisions remain engine-owned.</summary>
+        </member>
+        <member name="M:HEngine.Physics.SetVelocity(HEngine.Entity,System.Numerics.Vector3,System.Boolean)">
+            <summary>Sets a live rigid body's velocity. Returns false for a missing body; invalid entities and nonfinite input throw.</summary>
+        </member>
+        <member name="M:HEngine.Physics.SetBodyEnabled(HEngine.Entity,System.Boolean)">
+            <summary>Enables or disables a live rigid body's collisions and queries, retaining its shape for reactivation. Returns false for a missing body.</summary>
+        </member>
+        <member name="M:HEngine.Physics.RaycastDistance(System.Numerics.Vector3,System.Numerics.Vector3,System.Single,HEngine.Entity)">
+            <summary>Closest scene collision distance; ignores an optional source rigid body.</summary>
+        </member>
+        <member name="M:HEngine.Physics.RaycastDistance(System.Numerics.Vector3,System.Numerics.Vector3,System.Single,HEngine.Entity[])">
+            <summary>Closest scene collision distance, excluding up to 32 live entities in this scene.</summary>
+        </member>
+        <member name="M:HEngine.Physics.FaceCharacter(HEngine.Entity,System.Single,System.Boolean)">
+            <summary>Overrides a character's facing while retaining collision-driven movement.</summary>
+        </member>
+        <member name="M:HEngine.Physics.FloorHeight(System.Numerics.Vector3,System.Single,System.Single,HEngine.Entity)">
+            <summary>Casts vertically to find a floor; returns null when the ray misses.</summary>
+        </member>
+        <member name="T:HEngine.CharacterMotionState">
+            <summary>Snapshot of a physics character after its most recent simulation step.</summary>
+        </member>
+        <member name="M:HEngine.CharacterMotionState.#ctor(System.Boolean,System.Boolean,System.Numerics.Vector3)">
+            <summary>Snapshot of a physics character after its most recent simulation step.</summary>
+        </member>
+        <member name="T:HEngine.Animator">
+            <summary>Typed animation controller operations on a generation-checked scene entity.</summary>
+        </member>
+        <member name="M:HEngine.Animator.#ctor(HEngine.Entity)">
+            <summary>Typed animation controller operations on a generation-checked scene entity.</summary>
+        </member>
+        <member name="M:HEngine.Animator.ConsumeEvents">
+            <summary>Consumes this frame's base/transition-target clip events once. Blend samples and layers do not duplicate events.</summary>
+        </member>
+        <member name="M:HEngine.Animator.SetAttachmentVisible(HEngine.Entity,System.Boolean)">
+            <summary>Shows or hides an entity with a BoneAttachmentComponent.</summary>
+        </member>
+        <member name="M:HEngine.Animator.SetFootContactWeight(System.Single)">
+            <summary>Sets every authored foot contact's absolute weight in [0, 1]. Zero clears contact history; scene reload restores authored weights.</summary>
+        </member>
+        <member name="M:HEngine.Animator.SetBool(System.String,System.Boolean)">
+            <summary>Sets a declared boolean parameter.</summary>
+        </member>
+        <member name="M:HEngine.Animator.SetFloat(System.String,System.Single)">
+            <summary>Sets a declared finite numeric parameter.</summary>
+        </member>
+        <member name="M:HEngine.Animator.Trigger(System.String)">
+            <summary>Raises a declared controller trigger.</summary>
+        </member>
+        <member name="M:HEngine.Animator.SetController(HEngine.ResourceReference)">
+            <summary>Loads a project-relative animation controller.</summary>
+        </member>
+        <member name="M:HEngine.Animator.Play(HEngine.ResourceReference,System.Boolean)">
+            <summary>Plays a project-relative clip, replacing the current controller.</summary>
+        </member>
+        <member name="T:HEngine.AnimationEvent">
+            <summary>One authored animation event, identified by clip-local ID and loop cycle.</summary>
+        </member>
+        <member name="M:HEngine.AnimationEvent.#ctor(System.String,System.String,System.String,System.Single,System.Int64)">
+            <summary>One authored animation event, identified by clip-local ID and loop cycle.</summary>
+        </member>
+        <member name="T:HEngine.SceneSequence">
+            <summary>Controls a persisted scene sequence; the engine restores gameplay camera and input on completion.</summary>
+        </member>
+        <member name="M:HEngine.SceneSequence.Play(HEngine.Entity)">
+            <summary>Starts the sequence on a scene entity; returns false if it is absent or another sequence is playing.</summary>
+        </member>
+        <member name="M:HEngine.SceneSequence.Stop(HEngine.Entity)">
+            <summary>Requests that the sequence stop and gameplay state be restored on the next scene update.</summary>
+        </member>
+        <member name="M:HEngine.SceneSequence.State(HEngine.Entity)">
+            <summary>Reads current playback time and any runtime validation error.</summary>
+        </member>
+        <member name="T:HEngine.SequencePlaybackState">
+            <summary>Current scene-sequence playback status.</summary>
+        </member>
+        <member name="P:HEngine.SequencePlaybackState.Playing">
+            <summary>Whether this sequence is requested to play or currently playing.</summary>
+        </member>
+        <member name="P:HEngine.SequencePlaybackState.Time">
+            <summary>Current playback time in seconds.</summary>
+        </member>
+        <member name="P:HEngine.SequencePlaybackState.Duration">
+            <summary>Authored duration in seconds.</summary>
+        </member>
+        <member name="P:HEngine.SequencePlaybackState.Error">
+            <summary>Runtime validation error, or empty when playback is valid.</summary>
+        </member>
+        <member name="T:HEngine.SceneFlow">
+            <summary>Scene transitions are queued and processed at the host's safe frame boundary.</summary>
+        </member>
+        <member name="M:HEngine.SceneFlow.Load(HEngine.ResourceReference,System.Boolean)">
+            <summary>Queues a project-relative scene; returns false when another transition is pending.</summary>
+        </member>
+        <member name="T:HEngine.Camera">
+            <summary>Primary-camera follow configuration. Angles are radians; pitch bounds are degrees.</summary>
+        </member>
+        <member name="P:HEngine.Camera.Primary">
+            <summary>The current primary camera entity.</summary>
+        </member>
+        <member name="M:HEngine.Camera.SetSpringArm(System.Single,System.Numerics.Vector3,System.Numerics.Vector3,System.Single,System.Single)">
+            <summary>Adjusts an existing follow rig without resetting its orbit or collision state; pitch delta is in radians.</summary>
+        </member>
+        <member name="M:HEngine.Camera.Follow(HEngine.Entity,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean)">
+            <summary>Follows an entity through the scene camera's spring arm.</summary>
+        </member>
+        <member name="M:HEngine.Camera.StopFollowing">
+            <summary>Clears the primary camera's follow target.</summary>
+        </member>
+        <member name="T:HEngine.NavigationPath">
+            <summary>Complete path result; an unreachable target has no partial points.</summary>
+        </member>
+        <member name="M:HEngine.NavigationPath.#ctor(System.Boolean,System.Numerics.Vector3[],System.String)">
+            <summary>Complete path result; an unreachable target has no partial points.</summary>
+        </member>
+        <member name="T:HEngine.Navigation">
+            <summary>Per-scene Recast navigation using the project's persisted agent and area settings.</summary>
+        </member>
+        <member name="M:HEngine.Navigation.Build">
+            <summary>Rebuilds from current scene geometry, retaining the old mesh on failure.</summary>
+        </member>
+        <member name="M:HEngine.Navigation.Build(System.Numerics.Vector3,System.Numerics.Vector3)">
+            <summary>Rebuilds only the world-space box. Geometry crossing its boundary is clipped.</summary>
+        </member>
+        <member name="M:HEngine.Navigation.FindPath(System.Numerics.Vector3,System.Numerics.Vector3)">
+            <summary>Finds a complete path after Build; failed queries contain an actionable diagnostic.</summary>
+        </member>
+        <member name="T:HEngine.AudioPlayback">
+            <summary>Audio playback owned by a script and released when that script or scene ends.</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.Play(HEngine.ScriptBehaviour,HEngine.ResourceReference,System.Boolean,System.Single)">
+            <summary>Starts a sound; resource/load failures throw at the script boundary.</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.Dispose">
+            <summary>Stops playback. Repeated disposal is safe.</summary>
+        </member>
+        <member name="T:HEngine.VfxPlayback">
+            <summary>Effekseer playback owned by a script and released on script/scene teardown.</summary>
+        </member>
+        <member name="M:HEngine.VfxPlayback.Play(HEngine.ScriptBehaviour,HEngine.ResourceReference,System.Numerics.Vector3,System.Numerics.Vector3,System.Single,System.Nullable{System.Numerics.Vector4})">
+            <summary>Starts a project effect at a world-space transform.</summary>
+        </member>
+        <member name="M:HEngine.VfxPlayback.Update(System.Numerics.Vector3,System.Numerics.Vector3,System.Boolean,System.Nullable{System.Numerics.Vector4})">
+            <summary>Updates a live effect's transform, pause state, and optional global color; returns false after natural completion.</summary>
+        </member>
+        <member name="M:HEngine.VfxPlayback.Dispose">
+            <summary>Stops playback. Repeated disposal is safe.</summary>
+        </member>
+        <member name="T:HEngine.UiDocument">
+            <summary>Scene UI document released automatically with its script owner.</summary>
+        </member>
+        <member name="P:HEngine.UiDocument.DocumentId">
+            <summary>Scene-local identity for advanced element, cursor and focus services.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.Load(HEngine.ScriptBehaviour,HEngine.ResourceReference)">
+            <summary>Loads and shows a .hui or authored .rml resource in the current scene.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.SetVisible(System.Boolean)">
+            <summary>Shows or hides this document.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.SetText(System.String,System.String)">
+            <summary>Writes plain text into an element.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.SetStyle(System.String,System.String,System.String)">
+            <summary>Changes one element style property.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.SetClass(System.String,System.String,System.Boolean)">
+            <summary>Adds or removes a CSS class.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.Dispose">
+            <summary>Unloads the document; repeated disposal is safe.</summary>
+        </member>
+        <member name="T:HEngine.SceneServices">
+            <summary>Presentation services supplied by a scene host, independent of game rules.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.Call``1(System.String,System.Object)">
+            <summary>Calls an explicit optional host service. Unsupported services, incompatible results and invalid arguments throw. Gameplay should prefer typed wrappers.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.FindTag(System.String)">
+            <summary>Expensive scene-wide first-tag search; cache the returned Entity instead of calling every frame. Missing tags return an invalid handle.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.Instantiate(System.String)">
+            <summary>Synchronous compatibility prefab service using a stable project-relative path. Prefer PrefabLoad for asynchronous Windows loading.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.WorldPosition(HEngine.Entity)">
+            <summary>World-space position, including transform parents and evaluated bone attachments.</summary>
+        </member>
+        <member name="P:HEngine.SceneServices.Camera">
+            <summary>Current scene primary camera; an absent camera returns an invalid handle.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.PlayAudio(System.String,System.Boolean,System.Single)">
+            <summary>Starts a stable audio resource and returns a transient playback ID. Unsupported platforms and invalid parameters throw.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.StopAudio(System.UInt64)">
+            <summary>Stops a transient audio playback ID; returns false when it is already absent.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.SetAnimationBool(HEngine.Entity,System.String,System.Boolean)">
+            <summary>Sets a declared animation-controller boolean; unsupported parameters or missing controllers return false or a host diagnostic.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.SetAnimationFloat(HEngine.Entity,System.String,System.Single)">
+            <summary>Sets a declared finite animation-controller number; unsupported parameters or missing controllers return false or a host diagnostic.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.LoadUi(System.String)">
+            <summary>Loads a stable UI resource and returns its scene document identity; unavailable UI backends throw.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.SetUiVisible(System.String,System.Boolean)">
+            <summary>Changes visibility of an existing scene UI document; returns false if absent.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.ClearUi">
+            <summary>Releases all scene UI documents through the host service.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.SetText(System.String,System.String,System.String)">
+            <summary>Sets plain text on a known document element; returns false if the document/element is absent.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.ScrollIntoView(System.String,System.String)">
+            <summary>Scrolls a visible element into its container without changing keyboard focus.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.SetMarkup(System.String,System.String,System.String)">
+            <summary>Sets markup on a known document element; callers own markup validity.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.SetStyle(System.String,System.String,System.String,System.String)">
+            <summary>Sets one declared style property on an existing document element.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.SetClass(System.String,System.String,System.String,System.Boolean)">
+            <summary>Adds or removes one class on an existing document element.</summary>
+        </member>
+        <member name="M:HEngine.SceneServices.SetAttribute(System.String,System.String,System.String,System.String)">
+            <summary>Sets an attribute on an existing document element.</summary>
+        </member>
+        <member name="T:HEngine.ScriptAggregateCodec">
+            <summary>Schema-2 codecs used by explicit generated bindings. No runtime field reflection or object graph serializer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptAggregateCodec.ReadStruct(System.Text.Json.JsonElement,System.String)">
+            <summary>Checks stable structure identity; returned members are borrowed from the input document.</summary>
+        </member>
+        <member name="M:HEngine.ScriptAggregateCodec.TryMember(System.Text.Json.JsonElement,System.String,System.String[],System.Text.Json.JsonElement@)">
+            <summary>Resolves the current ID followed by explicit FormerIds; missing members retain generated defaults.</summary>
+        </member>
+        <member name="M:HEngine.ScriptAggregateCodec.ReadSequence``1(System.Text.Json.JsonElement,System.String,System.String,System.Func{System.Text.Json.JsonElement,``0})">
+            <summary>Reads at most 256 elements using the supplied generated typed reader.</summary>
+        </member>
+        <member name="M:HEngine.ScriptAggregateCodec.WriteStruct(System.String,System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>Writes explicit generated members. Arbitrary objects and delegates cannot be persisted.</summary>
+        </member>
+        <member name="M:HEngine.ScriptAggregateCodec.WriteSequence``1(System.String,System.String,System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String},System.String)">
+            <summary>Writes a bounded sequence and a generated element prototype for editor insertion. Null sequences become empty.</summary>
+        </member>
+        <member name="T:HEngine.IScriptData`1">
+            <summary>Explicit typed payload contract. Implementations must encode bounded value data without runtime reflection.</summary>
+        </member>
+        <member name="P:HEngine.IScriptData`1.Schema">
+            <summary>Stable, versioned schema identity. Change it when the wire representation becomes incompatible.</summary>
+        </member>
+        <member name="M:HEngine.IScriptData`1.Encode(`0)">
+            <summary>Encodes one JSON value; never encode handles, delegates or managed object graphs.</summary>
+        </member>
+        <member name="M:HEngine.IScriptData`1.Decode(System.Text.Json.JsonElement)">
+            <summary>Decodes one JSON value or throws InvalidDataException for an incompatible representation.</summary>
+        </member>
+        <member name="T:HEngine.ScriptDataCodec`1">
+            <summary>Validates a bounded schema envelope shared by saves and scene mailboxes.</summary>
+        </member>
+        <member name="M:HEngine.ScriptDataCodec`1.Encode(`0)">
+            <summary>Encodes at most 64 KiB with JSON depth at most 16; invalid schemas and payloads throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptDataCodec`1.Decode(System.String)">
+            <summary>Rejects a different schema before calling the explicit typed decoder.</summary>
+        </member>
+        <member name="T:HEngine.SaveSlot`1">
+            <summary>A typed persistent save slot. Values survive scene Stop; writes use the host's existing atomic save service.</summary>
+        </member>
+        <member name="M:HEngine.SaveSlot`1.#ctor(System.String)">
+            <summary>A typed persistent save slot. Values survive scene Stop; writes use the host's existing atomic save service.</summary>
+        </member>
+        <member name="M:HEngine.SaveSlot`1.TryRead(`0@)">
+            <summary>Returns false for an absent save. Corrupt or incompatible data throws and is not overwritten.</summary>
+        </member>
+        <member name="M:HEngine.SaveSlot`1.Write(`0)">
+            <summary>Writes explicit value data; host validation or I/O failures propagate to the script exception boundary.</summary>
+        </member>
+        <member name="T:HEngine.ScriptEvent`1">
+            <summary>A typed scene mailbox, not an unbounded event queue. Consumers observe the latest sequence once per poll.</summary>
+        </member>
+        <member name="M:HEngine.ScriptEvent`1.#ctor(System.String)">
+            <summary>A typed scene mailbox, not an unbounded event queue. Consumers observe the latest sequence once per poll.</summary>
+        </member>
+        <member name="M:HEngine.ScriptEvent`1.Publish(`0)">
+            <summary>Publishes a bounded value to the current scene. Later writes may replace unread mailbox values.</summary>
+        </member>
+        <member name="M:HEngine.ScriptEvent`1.TryRead(System.UInt64@,`0@)">
+            <summary>Reads only a newer sequence. Keep the cursor per consumer and per Play session.</summary>
+        </member>
+        <member name="T:HEngine.ScriptBehaviour">
+            <summary>Explicit lifecycle base. Field restoration precedes Initialize; failures are isolated per instance.</summary>
+            <remarks>Lifecycle ordering, cleanup barriers and edit restrictions are specified in Docs/ScriptingWorkflowUpgrade.md.</remarks>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Subscribe``1(HEngine.ScriptEvent{``0},System.Action{``0})">
+            <summary>Polls a typed mailbox on ordinary updates. The subscription is disposed with this behaviour's coroutines.</summary>
+        </member>
+        <member name="P:HEngine.ScriptBehaviour.Entity">
+            <summary>Owning runtime entity, valid only in this scene session.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Bind(HEngine.Entity)">
+            <summary>Host construction only; binds the owner before restoring fields.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Initialize">
+            <summary>Runs once after persisted fields have been restored.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Enable">
+            <summary>Runs when an initialized instance gains enabled status.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Update(System.Double)">
+            <summary>Ordinary enabled frame update; seconds is game delta time.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Disable">
+            <summary>Runs when an enabled instance loses enabled status, including Stop.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Destroy">
+            <summary>Final callback before mandatory host release, even after earlier callback failures.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Start">
+            <summary>Runs once before the first ordinary update of an enabled instance.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.FixedUpdate(System.Double)">
+            <summary>Runs zero or more times per frame at the fixed simulation interval.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.LateUpdate(System.Double)">
+            <summary>Runs after all ordinary Update callbacks and before the destruction barrier.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Reset">
+            <summary>Sets serialized defaults on initial type selection or explicit Reset; runtime APIs are forbidden.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.OnValidate">
+            <summary>Validates committed edit values once per transaction; recursive validation and runtime APIs are forbidden.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Pause">
+            <summary>Receives transition into a paused scene.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.Resume">
+            <summary>Receives transition out of a paused scene.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.ApplicationQuit">
+            <summary>Receives normal application shutdown before scene cleanup.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.SceneLoaded">
+            <summary>Receives the initialized scene context before its first frame.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.SceneUnloading">
+            <summary>Receives scene shutdown before Disable/Destroy/Release.</summary>
+        </member>
+        <member name="P:HEngine.ScriptBehaviour.Lifetime">
+            <summary>Cancelled before final engine release. Pass it to every background operation.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.PendingTasksForShutdown">
+            <summary>Runtime shutdown snapshot, engine thread only. Used for one bounded cancellation grace period across all retired scripts.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.StartCoroutine(System.Collections.Generic.IEnumerator{HEngine.ScriptWait})">
+            <summary>Starts a typed coroutine. The engine owns and disposes its iterator on release.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.TrackTask(System.Threading.Tasks.Task,System.String)">
+            <summary>Registers a task that uses Lifetime. Engine APIs remain restricted to the engine thread.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.AdvanceScheduled(System.Boolean,System.Double)">
+            <summary>Runtime dispatch only; advances a snapshot so newly queued routines wait until the next phase.</summary>
+        </member>
+        <member name="M:HEngine.ScriptBehaviour.ReleaseScheduled">
+            <summary>Cancels work and disposes every iterator even when cleanup throws. Returns diagnostic strings only.</summary>
+        </member>
+        <member name="T:HEngine.ScriptTypeAttribute">
+            <summary>Registers a behaviour under a persistent project-wide type ID.</summary>
+        </member>
+        <member name="M:HEngine.ScriptTypeAttribute.#ctor(System.String)">
+            <summary>Registers a behaviour under a persistent project-wide type ID.</summary>
+        </member>
+        <member name="P:HEngine.ScriptTypeAttribute.Id">
+            <summary>Stable scene identity; changing it requires explicit migration.</summary>
+        </member>
+        <member name="T:HEngine.ScriptStructAttribute">
+            <summary>Declares a bounded value structure with stable identity and explicit ScriptField members.</summary>
+        </member>
+        <member name="M:HEngine.ScriptStructAttribute.#ctor(System.String)">
+            <summary>Declares a bounded value structure with stable identity and explicit ScriptField members.</summary>
+        </member>
+        <member name="P:HEngine.ScriptStructAttribute.Id">
+            <summary>Stable identity of the bounded value structure.</summary>
+        </member>
+        <member name="T:HEngine.ScriptExecutionOrderAttribute">
+            <summary>Sets a type's lifecycle phase order. Equal values use stable type IDs.</summary>
+        </member>
+        <member name="M:HEngine.ScriptExecutionOrderAttribute.#ctor(System.Int32)">
+            <summary>Sets a type's lifecycle phase order. Equal values use stable type IDs.</summary>
+        </member>
+        <member name="P:HEngine.ScriptExecutionOrderAttribute.Order">
+            <summary>Default priority when dependency constraints do not order two types.</summary>
+        </member>
+        <member name="P:HEngine.ScriptExecutionOrderAttribute.Before">
+            <summary>Stable script type IDs that must execute after this type; missing IDs fail the build.</summary>
+        </member>
+        <member name="P:HEngine.ScriptExecutionOrderAttribute.After">
+            <summary>Stable script type IDs that must execute before this type; cycles fail the build.</summary>
+        </member>
+        <member name="T:HEngine.ScriptDependencyAttribute">
+            <summary>Declares a dynamically selected stable resource so the cooker includes it.</summary>
+        </member>
+        <member name="M:HEngine.ScriptDependencyAttribute.#ctor(System.String)">
+            <summary>Declares a dynamically selected stable resource so the cooker includes it.</summary>
+        </member>
+        <member name="P:HEngine.ScriptDependencyAttribute.Path">
+            <summary>Project-relative resource identity; absolute paths are forbidden.</summary>
+        </member>
+        <member name="T:HEngine.ScriptFieldAttribute">
+            <summary>Persists a supported public value field through explicit generated bindings.</summary>
+        </member>
+        <member name="M:HEngine.ScriptFieldAttribute.#ctor(System.String,System.String[])">
+            <summary>Persists a supported public value field through explicit generated bindings.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.Id">
+            <summary>Stable field identity, independent of the C# member name.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.FormerIds">
+            <summary>Prior IDs read in declared order when the current ID is absent.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.DisplayName">
+            <summary>Inspector label; empty uses the member name.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.Tooltip">
+            <summary>Help displayed when hovering the label.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.Header">
+            <summary>Section caption preceding this field.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.Space">
+            <summary>Additional DPI-scaled logical spacing.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.ReadOnly">
+            <summary>Disables Inspector edits while retaining persistence.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.HideInInspector">
+            <summary>Hides the field without removing persisted values.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.Multiline">
+            <summary>Uses a multiline string editor.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.Color">
+            <summary>Draws Vector4 as an RGBA color.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.HasRange">
+            <summary>Uses a numeric slider when the range is representable.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.Min">
+            <summary>Minimum Inspector numeric value, enforced on commit.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.Max">
+            <summary>Maximum Inspector numeric value, enforced on commit.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.ResourceType">
+            <summary>Required asset category such as Texture or Prefab; empty accepts any supported resource.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldAttribute.AllowNull">
+            <summary>Whether an entity/resource reference may be empty.</summary>
+        </member>
+        <member name="T:HEngine.ResourceReference">
+            <summary>Stable project-relative asset identity, never a loaded object or native pointer.</summary>
+        </member>
+        <member name="M:HEngine.ResourceReference.#ctor(System.String)">
+            <summary>Stable project-relative asset identity, never a loaded object or native pointer.</summary>
+        </member>
+        <member name="T:HEngine.EntityReference">
+            <summary>Persisted scene UUID, distinct from a runtime Entity handle.</summary>
+        </member>
+        <member name="M:HEngine.EntityReference.#ctor(System.String)">
+            <summary>Persisted scene UUID, distinct from a runtime Entity handle.</summary>
+        </member>
+        <member name="M:HEngine.EntityReference.Resolve">
+            <summary>Resolves in the executing script's scene; returns an invalid Entity when absent.</summary>
+        </member>
+        <member name="T:HEngine.EntityState">
+            <summary>Value snapshot that batches Transform/Sprite reads and writes.</summary>
+        </member>
+        <member name="F:HEngine.EntityState.Position">
+            <summary>Local translation in engine units.</summary>
+        </member>
+        <member name="F:HEngine.EntityState.Rotation">
+            <summary>Local Euler rotation in radians.</summary>
+        </member>
+        <member name="F:HEngine.EntityState.Scale">
+            <summary>Local nonuniform scale.</summary>
+        </member>
+        <member name="F:HEngine.EntityState.Color">
+            <summary>Sprite RGBA tint when HasSprite is true.</summary>
+        </member>
+        <member name="F:HEngine.EntityState.HasSprite">
+            <summary>Whether the snapshot includes a Sprite component.</summary>
+        </member>
+        <member name="T:HEngine.InputState">
+            <summary>Frame input: movement axes, pointer position, down state and monotonic press sequence.</summary>
+        </member>
+        <member name="M:HEngine.InputState.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.UInt64)">
+            <summary>Frame input: movement axes, pointer position, down state and monotonic press sequence.</summary>
+        </member>
+        <member name="T:HEngine.IEngineApi">
+            <summary>Explicit host ABI facade. Prefer Entity/component views and typed data APIs in gameplay.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.IsValid(System.UInt64)">
+            <summary>Queries a generation-checked handle; stale handles return false.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.ReadEntity(System.UInt64)">
+            <summary>Reads Transform/Sprite in one call; stale entities throw InvalidEngineObjectException.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.WriteEntity(System.UInt64,HEngine.EntityState@,System.Boolean,System.Boolean)">
+            <summary>Writes selected snapshot components; nonfinite data, missing components and stale handles throw.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.ReadInput">
+            <summary>Reads input for the current scene and viewport.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.ReadAction(System.String)">
+            <summary>Reads a named action from the desktop input map.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.SetInputContext(System.String)">
+            <summary>Switches the active input context and suppresses held controls until release.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.RebindInput(System.String,System.Int32,HEngine.ActionBinding)">
+            <summary>Replaces a binding, or appends when index equals the current binding count.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.ReadInputMap">
+            <summary>Exports validated bindings for persistence using the save API.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.WriteInputMap(System.String)">
+            <summary>Validates and atomically replaces bindings; malformed maps leave live bindings unchanged.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.DestroyEntity(System.UInt64)">
+            <summary>Invalidates immediately and destroys at the scene command barrier.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.FindEntity(System.String)">
+            <summary>Resolves a stable UUID in the current scene; missing entities return an invalid handle.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.SetEnabled(System.UInt64,System.Boolean)">
+            <summary>Changes ScriptComponent enable state; lifecycle synchronization occurs at the next update.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.ReadTexture(System.UInt64)">
+            <summary>Reads the Sprite's stable texture resource identity.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.WriteTexture(System.UInt64,System.String)">
+            <summary>Sets a validated stable texture resource; invalid/missing resources throw.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.Log(System.String)">
+            <summary>Writes an engine log entry on the owning thread.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.ReadSave(System.String)">
+            <summary>Reads a persistent save slot, returning empty text if absent.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.WriteSave(System.String,System.String)">
+            <summary>Atomically writes a bounded persistent save; validation/I/O failures throw.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.EmitEvent(System.String,System.String)">
+            <summary>Publishes the latest scene-local mailbox payload.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.ReadEvent(System.String,System.UInt64,System.UInt64@)">
+            <summary>Reads a newer mailbox sequence or returns empty text.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.PlatformService(System.String,System.String)">
+            <summary>Explicit optional platform service; unsupported services throw and must pass export auditing.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.ComponentAccess(System.UInt64,System.UInt32,System.UInt32)">
+            <summary>Generated numeric component binding: operation 0=query, 1=add, 2=remove; unknown IDs throw.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.CreateEntity(System.String,HEngine.Entity)">
+            <summary>Creates or duplicates an entity hierarchy in the executing scene; returns a new stable runtime handle.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.Parent(System.UInt64,HEngine.Entity,System.Boolean)">
+            <summary>Reads or writes parent hierarchy; cross-scene references and cycles throw.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.Children(System.UInt64)">
+            <summary>Returns a bounded children snapshot; avoid allocating one every frame.</summary>
+        </member>
+        <member name="M:HEngine.IEngineApi.PrefabRequest(System.UInt64,System.UInt64,System.UInt32,System.String)">
+            <summary>Lease binding used by PrefabLoad; request IDs are distinct from entity handles.</summary>
+        </member>
+        <member name="T:HEngine.Engine">
+            <summary>Current engine-thread services. Runtime access is forbidden during Reset/OnValidate.</summary>
+        </member>
+        <member name="P:HEngine.Engine.CurrentEntity">
+            <summary>Host callback context; never retain it across Play sessions.</summary>
+        </member>
+        <member name="M:HEngine.Engine.ExchangeEntity(System.UInt64)">
+            <summary>Host dispatch only; restore the returned previous context after a callback.</summary>
+        </member>
+        <member name="P:HEngine.Engine.IsValidating">
+            <summary>True while a restricted Reset/OnValidate transaction is executing.</summary>
+        </member>
+        <member name="P:HEngine.Engine.Api">
+            <summary>Attached host facade; throws when detached or in restricted edit validation.</summary>
+        </member>
+        <member name="M:HEngine.Engine.EnterEditValidation">
+            <summary>Runtime editor binding only. Rejects recursive validation and all engine access until disposed.</summary>
+        </member>
+        <member name="M:HEngine.Engine.Attach(HEngine.IEngineApi)">
+            <summary>Host initialization only; installs the transport for this managed generation.</summary>
+        </member>
+        <member name="M:HEngine.Engine.IsAttached(HEngine.IEngineApi)">
+            <summary>Transport lifetime guard. A cached API from a detached generation must never call the native host.</summary>
+        </member>
+        <member name="M:HEngine.Engine.Detach">
+            <summary>Host shutdown only; immediately invalidates access through the old transport.</summary>
+        </member>
+        <member name="P:HEngine.Engine.Input">
+            <summary>Current viewport input snapshot.</summary>
+        </member>
+        <member name="M:HEngine.Engine.Log(System.String)">
+            <summary>Logs an engine-thread message; exceptions are reported by the script boundary.</summary>
+        </member>
+        <member name="T:HEngine.ScriptContactPhase">
+            <summary>Stable contact phases for engine-owned Jolt and Box2D rigid-body events.</summary>
+        </member>
+        <member name="F:HEngine.ScriptContactPhase.Enter">
+            <summary>A new contact pair.</summary>
+        </member>
+        <member name="F:HEngine.ScriptContactPhase.Stay">
+            <summary>An existing contact pair.</summary>
+        </member>
+        <member name="F:HEngine.ScriptContactPhase.Exit">
+            <summary>A contact pair that has ended; the other entity may already be invalid.</summary>
+        </member>
+        <member name="T:HEngine.ScriptContact">
+            <summary>Value-only contact data. Other is a generation-checked scene handle; no native collider pointer is exposed.</summary>
+        </member>
+        <member name="P:HEngine.ScriptContact.Other">
+            <summary>The other scene entity. Resolve validity before using it, particularly for Exit events.</summary>
+        </member>
+        <member name="P:HEngine.ScriptContact.Phase">
+            <summary>Enter, Stay or Exit.</summary>
+        </member>
+        <member name="P:HEngine.ScriptContact.Point">
+            <summary>World-space contact point; zero for triggers or unavailable exit manifold data.</summary>
+        </member>
+        <member name="P:HEngine.ScriptContact.Normal">
+            <summary>World-space normal facing this receiver; zero when no manifold exists.</summary>
+        </member>
+        <member name="M:HEngine.ScriptContact.#ctor(HEngine.Entity,HEngine.ScriptContactPhase,System.Numerics.Vector3,System.Numerics.Vector3)">
+            <summary>Constructs bounded finite contact data; invalid phase or coordinates throw.</summary>
+        </member>
+        <member name="T:HEngine.IScriptPhysicsEvents">
+            <summary>Engine-thread collision/trigger delivery for scripts attached to rigid bodies.</summary>
+        </member>
+        <member name="M:HEngine.IScriptPhysicsEvents.Collision(HEngine.ScriptContact@)">
+            <summary>Receives a physical contact on the engine thread; exceptions enter the caller's script boundary.</summary>
+        </member>
+        <member name="M:HEngine.IScriptPhysicsEvents.Trigger(HEngine.ScriptContact@)">
+            <summary>Receives a trigger overlap on the engine thread; exceptions enter the caller's script boundary.</summary>
+        </member>
+        <member name="T:HEngine.ScriptPhysics">
+            <summary>Type-safe contact dispatcher used by the native physics event channel.</summary>
+        </member>
+        <member name="M:HEngine.ScriptPhysics.Dispatch(HEngine.ScriptBehaviour,HEngine.ScriptContact@,System.Boolean)">
+            <summary>Invokes an explicitly implemented interface, without method-name scanning. Returns false for non-subscribers.</summary>
+        </member>
+        <member name="T:HEngine.ScriptFieldRegistration">
+            <summary>One generated stable field binding. Readers/writers use the bounded value schema.</summary>
+            <param name="Id">Stable field identity.</param>
+            <param name="Write">Generated typed assignment after schema validation.</param>
+            <param name="Read">Generated typed value encoder.</param>
+        </member>
+        <member name="M:HEngine.ScriptFieldRegistration.#ctor(System.String,System.Action{HEngine.ScriptBehaviour,System.Text.Json.JsonElement},System.Func{HEngine.ScriptBehaviour,System.String})">
+            <summary>One generated stable field binding. Readers/writers use the bounded value schema.</summary>
+            <param name="Id">Stable field identity.</param>
+            <param name="Write">Generated typed assignment after schema validation.</param>
+            <param name="Read">Generated typed value encoder.</param>
+        </member>
+        <member name="P:HEngine.ScriptFieldRegistration.Id">
+            <summary>Stable field identity.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldRegistration.Write">
+            <summary>Generated typed assignment after schema validation.</summary>
+        </member>
+        <member name="P:HEngine.ScriptFieldRegistration.Read">
+            <summary>Generated typed value encoder.</summary>
+        </member>
+        <member name="T:HEngine.ScriptRegistration">
+            <summary>Explicit generated behaviour factory and fields; runtime assembly scanning is unnecessary.</summary>
+            <param name="Id">Stable scene script type ID.</param>
+            <param name="Create">Typed factory called once per runtime instance.</param>
+            <param name="Fields">Generated field bindings, unique by stable field ID.</param>
+        </member>
+        <member name="M:HEngine.ScriptRegistration.#ctor(System.String,System.Func{HEngine.ScriptBehaviour},HEngine.ScriptFieldRegistration[])">
+            <summary>Explicit generated behaviour factory and fields; runtime assembly scanning is unnecessary.</summary>
+            <param name="Id">Stable scene script type ID.</param>
+            <param name="Create">Typed factory called once per runtime instance.</param>
+            <param name="Fields">Generated field bindings, unique by stable field ID.</param>
+        </member>
+        <member name="P:HEngine.ScriptRegistration.Id">
+            <summary>Stable scene script type ID.</summary>
+        </member>
+        <member name="P:HEngine.ScriptRegistration.Create">
+            <summary>Typed factory called once per runtime instance.</summary>
+        </member>
+        <member name="P:HEngine.ScriptRegistration.Fields">
+            <summary>Generated field bindings, unique by stable field ID.</summary>
+        </member>
+        <member name="T:HEngine.ScriptValueCodec">
+            <summary>Strict scalar codecs for generated bindings; mismatched tags, identities and nonfinite values throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadBool(System.Text.Json.JsonElement)">
+            <summary>Reads the declared scalar/vector type; invalid tags, dimensions, numeric ranges or JSON shapes throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadInt64(System.Text.Json.JsonElement)">
+            <summary>Reads the declared scalar/vector type; invalid tags, dimensions, numeric ranges or JSON shapes throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadDouble(System.Text.Json.JsonElement)">
+            <summary>Reads the declared scalar/vector type; invalid tags, dimensions, numeric ranges or JSON shapes throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadString(System.Text.Json.JsonElement)">
+            <summary>Reads the declared scalar/vector type; invalid tags, dimensions, numeric ranges or JSON shapes throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadEntity(System.Text.Json.JsonElement)">
+            <summary>Reads the declared scalar/vector type; invalid tags, dimensions, numeric ranges or JSON shapes throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadResource(System.Text.Json.JsonElement)">
+            <summary>Reads the declared scalar/vector type; invalid tags, dimensions, numeric ranges or JSON shapes throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadVector2(System.Text.Json.JsonElement)">
+            <summary>Reads the declared scalar/vector type; invalid tags, dimensions, numeric ranges or JSON shapes throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadVector3(System.Text.Json.JsonElement)">
+            <summary>Reads the declared scalar/vector type; invalid tags, dimensions, numeric ranges or JSON shapes throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadVector4(System.Text.Json.JsonElement)">
+            <summary>Reads the declared scalar/vector type; invalid tags, dimensions, numeric ranges or JSON shapes throw.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.ReadEnum(System.Text.Json.JsonElement,System.String)">
+            <summary>Reads an enum integer only when its stable enum identity matches.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.Write(System.Boolean)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.Write(System.Int64)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.Write(System.Double)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.Write(System.String)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.Write(HEngine.EntityReference)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.Write(HEngine.ResourceReference)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.Write(System.Numerics.Vector2)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.Write(System.Numerics.Vector3)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.Write(System.Numerics.Vector4)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="M:HEngine.ScriptValueCodec.WriteEnum(System.Int64,System.String)">
+            <summary>Encodes a typed value with its schema tag; nonfinite numbers are rejected by the JSON writer.</summary>
+        </member>
+        <member name="T:HEngine.ScriptWait">
+            <summary>A bounded, engine-scheduled wait. Conditions run on the engine thread.</summary>
+        </member>
+        <member name="P:HEngine.ScriptWait.NextFrame">
+            <summary>Continues on the next ordinary update.</summary>
+        </member>
+        <member name="P:HEngine.ScriptWait.FixedUpdate">
+            <summary>Continues at the next fixed update.</summary>
+        </member>
+        <member name="M:HEngine.ScriptWait.GameSeconds(System.Double)">
+            <summary>Waits for enabled script game time; pause does not advance it.</summary>
+        </member>
+        <member name="M:HEngine.ScriptWait.RealSeconds(System.Double)">
+            <summary>Waits for elapsed wall time; resumes at the next enabled update.</summary>
+        </member>
+        <member name="M:HEngine.ScriptWait.Until(System.Func{System.Boolean})">
+            <summary>Evaluates a condition at most once per enabled ordinary update.</summary>
+        </member>
+        <member name="T:HEngine.Time">
+            <summary>Engine-owned gameplay frame clock. Single Step advances one game frame while IsPaused remains true.</summary>
+        </member>
+        <member name="P:HEngine.Time.DeltaTime">
+            <summary>Game seconds in the current ordinary frame; zero while paused between steps.</summary>
+        </member>
+        <member name="F:HEngine.Time.FixedDeltaTime">
+            <summary>Fixed simulation interval in seconds.</summary>
+        </member>
+        <member name="P:HEngine.Time.UnscaledDeltaTime">
+            <summary>Unscaled seconds supplied by the host for this gameplay frame.</summary>
+        </member>
+        <member name="P:HEngine.Time.Frame">
+            <summary>Number of gameplay frames since this managed session began.</summary>
+        </member>
+        <member name="P:HEngine.Time.IsPaused">
+            <summary>Whether the editor's gameplay session is paused.</summary>
+        </member>
+        <member name="M:HEngine.Time.BeginFrame(System.Double,System.Boolean)">
+            <summary>Runtime binding only. Called once before the frame's lifecycle phases.</summary>
+        </member>
+        <member name="M:HEngine.Time.SetPaused(System.Boolean)">
+            <summary>Runtime binding only. Pause does not advance gameplay time.</summary>
+        </member>
+        <member name="T:HEngine.Scripting.Interop.ScriptApiIdentity">
+            <summary>Generated ABI schema identity used by verified host generations.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptApiIdentity.Schema">
+            <summary>SHA-256 of the single native/managed ABI schema.</summary>
+        </member>
+        <member name="T:HEngine.Scripting.Interop.ManagedOperation">
+            <summary>Generated stable managed dispatch identifiers. Unknown values are rejected.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.BeginFrame">
+            <summary>Explicit BeginFrame dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.Collect">
+            <summary>Explicit Collect dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.Create">
+            <summary>Explicit Create dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.Describe">
+            <summary>Explicit Describe dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.EditFields">
+            <summary>Explicit EditFields dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.Initialize">
+            <summary>Explicit Initialize dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.Invoke">
+            <summary>Explicit Invoke dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.PhysicsContact">
+            <summary>Explicit PhysicsContact dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.ReadField">
+            <summary>Explicit ReadField dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.ReadFields">
+            <summary>Explicit ReadFields dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.Release">
+            <summary>Explicit Release dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.Reload">
+            <summary>Explicit Reload dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.Shutdown">
+            <summary>Explicit Shutdown dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ManagedOperation.WriteField">
+            <summary>Explicit WriteField dispatch slot.</summary>
+        </member>
+        <member name="T:HEngine.Scripting.Interop.EngineOperation">
+            <summary>Generated stable engine dispatch identifiers. Unknown values are rejected.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.ComponentAccess">
+            <summary>Explicit ComponentAccess dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.CreateEntity">
+            <summary>Explicit CreateEntity dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.DestroyEntity">
+            <summary>Explicit DestroyEntity dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.EmitEvent">
+            <summary>Explicit EmitEvent dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.EntityValid">
+            <summary>Explicit EntityValid dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.FindEntity">
+            <summary>Explicit FindEntity dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.Hierarchy">
+            <summary>Explicit Hierarchy dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.InputAction">
+            <summary>Explicit InputAction dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.Log">
+            <summary>Explicit Log dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.PlatformService">
+            <summary>Explicit PlatformService dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.PrefabRequest">
+            <summary>Explicit PrefabRequest dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.ReadEntity">
+            <summary>Explicit ReadEntity dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.ReadEvent">
+            <summary>Explicit ReadEvent dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.ReadInput">
+            <summary>Explicit ReadInput dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.ReadSave">
+            <summary>Explicit ReadSave dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.ReadTexture">
+            <summary>Explicit ReadTexture dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.SetEnabled">
+            <summary>Explicit SetEnabled dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.WriteEntity">
+            <summary>Explicit WriteEntity dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.WriteSave">
+            <summary>Explicit WriteSave dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.EngineOperation.WriteTexture">
+            <summary>Explicit WriteTexture dispatch slot.</summary>
+        </member>
+        <member name="T:HEngine.Scripting.Interop.ScriptLifecycle">
+            <summary>Generated stable lifecycle dispatch identifiers. Unknown values are rejected.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.ApplicationQuit">
+            <summary>Explicit ApplicationQuit dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.Destroy">
+            <summary>Explicit Destroy dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.Disable">
+            <summary>Explicit Disable dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.Enable">
+            <summary>Explicit Enable dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.FixedUpdate">
+            <summary>Explicit FixedUpdate dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.Initialize">
+            <summary>Explicit Initialize dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.LateUpdate">
+            <summary>Explicit LateUpdate dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.OnValidate">
+            <summary>Explicit OnValidate dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.Pause">
+            <summary>Explicit Pause dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.Reset">
+            <summary>Explicit Reset dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.Resume">
+            <summary>Explicit Resume dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.SceneLoaded">
+            <summary>Explicit SceneLoaded dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.SceneUnloading">
+            <summary>Explicit SceneUnloading dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.Start">
+            <summary>Explicit Start dispatch slot.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.ScriptLifecycle.Update">
+            <summary>Explicit Update dispatch slot.</summary>
+        </member>
+        <member name="T:HEngine.Scripting.Interop.Request">
+            <summary>Synchronous fixed-layout host request. Pointer fields are borrowed only for the duration of a call.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Version">
+            <summary>ABI Version slot (u32); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Operation">
+            <summary>ABI Operation slot (u32); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Instance">
+            <summary>ABI Instance slot (u64); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Entity">
+            <summary>ABI Entity slot (u64); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Callback">
+            <summary>ABI Callback slot (u32); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Flags">
+            <summary>ABI Flags slot (u32); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Seconds">
+            <summary>ABI Seconds slot (f64); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Data">
+            <summary>Sixteen operation-defined numeric payload slots.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Name">
+            <summary>ABI Name slot (pointer); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.NameLength">
+            <summary>ABI NameLength slot (i32); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.InputLength">
+            <summary>ABI InputLength slot (i32); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Input">
+            <summary>ABI Input slot (pointer); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Output">
+            <summary>ABI Output slot (pointer); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.OutputCapacity">
+            <summary>ABI OutputCapacity slot (i32); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.OutputLength">
+            <summary>ABI OutputLength slot (i32); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.Result">
+            <summary>ABI Result slot (u64); interpreted by the selected operation.</summary>
+        </member>
+        <member name="F:HEngine.Scripting.Interop.Request.HostEntry">
+            <summary>ABI HostEntry slot (pointer); interpreted by the selected operation.</summary>
+        </member>
+    </members>
+</doc>

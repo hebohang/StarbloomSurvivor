@@ -1,0 +1,11 @@
+{
+  "SchemaVersion": 1,
+  "RuntimeMode": "Scene",
+  "ProjectId": "starbloom-survivor",
+  "DisplayName": "小树保卫者",
+  "EngineVersion": "1.1.0",
+  "GameConfig": "Config/Game.CSharp.json",
+  "PackageConfig": "Config/Package.json",
+  "LegacySavedDirectory": "StarbloomSurvivor",
+  "ExecutableName": "StarbloomSurvivor"
+}

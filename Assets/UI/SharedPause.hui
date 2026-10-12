@@ -1,0 +1,44 @@
+{
+  "Version": 1,
+  "Name": "SharedPause",
+  "GeneratedRmlPath": "Assets/UI/SharedPause.rml",
+  "GeneratedRcssPath": "Assets/UI/SharedPause.rcss",
+  "Nodes": [
+    {
+      "Id": 1, "ParentId": -1, "Type": "Canvas", "Name": "暂停界面", "ElementId": "shared_pause",
+      "bVisible": true, "bInteractable": true,
+      "Layout": {"AnchorMin": [0,0], "AnchorMax": [1,1], "Pivot": [0,0], "OffsetMin": [0,0], "OffsetMax": [0,0]},
+      "Style": {"BackgroundColor": "#0a1423aa", "FontPath": ""}
+    },
+    {
+      "Id": 2, "ParentId": 1, "Type": "Panel", "Name": "对话框", "ElementId": "shared_pause_card",
+      "bVisible": true, "bInteractable": true,
+      "Layout": {"AnchorMin": [0.5,0.5], "AnchorMax": [0.5,0.5], "Pivot": [0.5,0.5], "OffsetMin": [0,0], "OffsetMax": [420,350]},
+      "Style": {"BackgroundColor": "#f0f3f5", "BorderRadius": 12, "FontPath": ""}
+    },
+    {
+      "Id": 3, "ParentId": 2, "Type": "Text", "Name": "标题", "ElementId": "shared_pause_title", "Text": "冒险暂停",
+      "bVisible": true, "bInteractable": false,
+      "Layout": {"AnchorMin": [0,0], "AnchorMax": [1,0], "Pivot": [0,0], "OffsetMin": [24,24], "OffsetMax": [-24,42]},
+      "Style": {"BackgroundColor": "#00000000", "TextColor": "#29394d", "FontSize": 26, "FontPath": ""}
+    },
+    {
+      "Id": 4, "ParentId": 2, "Type": "Button", "Name": "继续冒险", "ElementId": "shared_resume", "Text": "继续冒险",
+      "bVisible": true, "bInteractable": true,
+      "Layout": {"AnchorMin": [0,0], "AnchorMax": [1,0], "Pivot": [0,0], "OffsetMin": [24,100], "OffsetMax": [-24,48]},
+      "Style": {"BackgroundColor": "#a8efd6", "TextColor": "#29394d", "FontSize": 20, "BorderRadius": 10, "FontPath": ""}
+    },
+    {
+      "Id": 5, "ParentId": 2, "Type": "Button", "Name": "结算并离开", "ElementId": "shared_abandon", "Text": "结算并离开",
+      "bVisible": true, "bInteractable": true,
+      "Layout": {"AnchorMin": [0,0], "AnchorMax": [1,0], "Pivot": [0,0], "OffsetMin": [24,174], "OffsetMax": [-24,48]},
+      "Style": {"BackgroundColor": "#d9e2ec", "TextColor": "#29394d", "FontSize": 20, "BorderRadius": 10, "FontPath": ""}
+    },
+    {
+      "Id": 6, "ParentId": 2, "Type": "Button", "Name": "重新开始", "ElementId": "shared_restart", "Text": "重新开始",
+      "bVisible": true, "bInteractable": true,
+      "Layout": {"AnchorMin": [0,0], "AnchorMax": [1,0], "Pivot": [0,0], "OffsetMin": [24,248], "OffsetMax": [-24,48]},
+      "Style": {"BackgroundColor": "#ffe4a0", "TextColor": "#29394d", "FontSize": 20, "BorderRadius": 10, "FontPath": ""}
+    }
+  ]
+}

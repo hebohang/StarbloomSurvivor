@@ -1,0 +1,167 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 36,
+            "max": [
+                18.5,
+                3.0,
+                44.1
+            ],
+            "min": [
+                9.5,
+                -1.0,
+                32.1
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 36,
+            "max": [
+                1.0,
+                0.9693774373814583,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 36,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 6,
+            "max": [
+                5
+            ],
+            "min": [
+                0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 4,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 30,
+            "max": [
+                35
+            ],
+            "min": [
+                6
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 1296,
+            "data": [],
+            "name": "",
+            "uri": "Assets/Models/VerdantRift/TerrainRamp_NorthLowerEast.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 432,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 432,
+            "byteOffset": 432,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 288,
+            "byteOffset": 864,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 24,
+            "byteOffset": 1152,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 120,
+            "byteOffset": 1176,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        }
+    ],
+    "name": "TerrainRamp_NorthLowerEast",
+    "primitives": [
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 3,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/PathDirt.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 4,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/EarthWarm.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "",
+    "version": 1,
+    "weights": []
+}

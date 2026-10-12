@@ -1,0 +1,23 @@
+{
+  "entryNodeId": 1, "name": "GreenSpikyBlobCombat",
+  "nodes": [
+    {"clipPath": "", "id": 1, "name": "Entry", "position": [-260.0, 40.0], "type": "Entry"},
+    {"clipPath": "Assets/Models/Quaternius/UltimateMonsters/GreenSpikyBlob/CharacterArmature_Walk.hanim", "id": 2, "name": "Chase", "position": [-20.0, 40.0], "type": "State"},
+    {"clipPath": "Assets/Models/Quaternius/UltimateMonsters/GreenSpikyBlob/CharacterArmature_Bite_Front.hanim", "id": 3, "name": "Attack", "position": [220.0, -40.0], "type": "State"},
+    {"clipPath": "Assets/Models/Quaternius/UltimateMonsters/GreenSpikyBlob/CharacterArmature_Death.hanim", "id": 4, "name": "Death", "position": [440.0, 40.0], "type": "State"}
+  ],
+  "parameters": [
+    {"defaultValue": false, "name": "Attacking", "type": "Bool"},
+    {"defaultValue": false, "name": "Hit", "type": "Trigger"},
+    {"defaultValue": false, "name": "Dead", "type": "Bool"}
+  ],
+  "targetSkeletonPath": "Assets/Models/Quaternius/UltimateMonsters/GreenSpikyBlob/GreenSpikyBlob_Skeleton.hskel",
+  "transitions": [
+    {"conditions": [], "duration": 0.04, "fromNodeId": 1, "toNodeId": 2},
+    {"conditions": [{"op": "==", "param": "Dead", "value": true}], "duration": 0.06, "fromNodeId": 2, "toNodeId": 4},
+    {"conditions": [{"op": "==", "param": "Attacking", "value": true}], "duration": 0.08, "fromNodeId": 2, "toNodeId": 3},
+    {"conditions": [{"op": "==", "param": "Dead", "value": true}], "duration": 0.05, "fromNodeId": 3, "toNodeId": 4},
+    {"conditions": [{"op": "==", "param": "Attacking", "value": false}], "duration": 0.09, "fromNodeId": 3, "toNodeId": 2}
+  ],
+  "version": 1
+}

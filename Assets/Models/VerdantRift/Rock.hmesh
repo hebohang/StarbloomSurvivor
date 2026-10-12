@@ -1,0 +1,133 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 84,
+            "max": [
+                0.8227241335952168,
+                1.3399999999999999,
+                0.6585636242702273
+            ],
+            "min": [
+                -0.7412488312412812,
+                -0.09999999999999998,
+                -0.6585636242702273
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 84,
+            "max": [
+                0.8625751517816846,
+                0.8995249198285804,
+                0.9828900024915695
+            ],
+            "min": [
+                -1.0,
+                -0.8995249198285802,
+                -0.9828900024915695
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 84,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 84,
+            "max": [
+                83
+            ],
+            "min": [
+                0
+            ],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 3024,
+            "data": [],
+            "name": "",
+            "uri": "Assets/Models/VerdantRift/Rock.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 1008,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1008,
+            "byteOffset": 1008,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 672,
+            "byteOffset": 2016,
+            "byteStride": 0,
+            "name": "",
+            "target": 34962
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 336,
+            "byteOffset": 2688,
+            "byteStride": 0,
+            "name": "",
+            "target": 34963
+        }
+    ],
+    "name": "Rock",
+    "primitives": [
+        {
+            "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+            },
+            "indices": 3,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/RuinStone.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "",
+    "version": 1,
+    "weights": []
+}

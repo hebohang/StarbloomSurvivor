@@ -1,0 +1,2683 @@
+{
+  "aggregate_sha256": "521994145bc014d92226478bdd82fddcb533ad51ed3cf53f24a5dc429d10f210",
+  "art_direction": "Starbloom candy colors, deep-purple outline, transparent background, code-native Pillow primitives; no external or generated-image inputs",
+  "category_counts": {
+    "Bosses": 5,
+    "Characters": 10,
+    "Enemies": 12,
+    "Evolutions": 9,
+    "PowerUps": 13,
+    "Tomes": 16,
+    "Trinkets": 12,
+    "Weapons": 18
+  },
+  "files": [
+    {
+      "alpha_bbox": [
+        16,
+        14,
+        80,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#6BB7FF",
+        "secondary": "#FFF3CF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_cat_star",
+      "id": "starpaw",
+      "mode": "RGBA",
+      "opaque_pixels": 2675,
+      "path": "Assets/UI/Icons/Survivor/Characters/starpaw.png",
+      "sha256": "3ffce682893bd8d7a9be4e6d34b96d386f2394cf14d77b35a2c0a852900d991e",
+      "size": 7647,
+      "transparent_pixels": 5723,
+      "variant": 0
+    },
+    {
+      "alpha_bbox": [
+        10,
+        21,
+        86,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#FF6F88",
+        "outline": "#43235F",
+        "primary": "#FF9FB3",
+        "secondary": "#FFD5C8"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_pig_heart",
+      "id": "peachy",
+      "mode": "RGBA",
+      "opaque_pixels": 2919,
+      "path": "Assets/UI/Icons/Survivor/Characters/peachy.png",
+      "sha256": "7f395a3accedfc2c08e3a27093dfeb428561cc219789df4958ca1c6fa08b6bca",
+      "size": 8056,
+      "transparent_pixels": 5521,
+      "variant": 1
+    },
+    {
+      "alpha_bbox": [
+        9,
+        4,
+        87,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#74D695",
+        "secondary": "#B8EA7A"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_cactus_sprout",
+      "id": "mossling",
+      "mode": "RGBA",
+      "opaque_pixels": 3038,
+      "path": "Assets/UI/Icons/Survivor/Characters/mossling.png",
+      "sha256": "0879a4cbdd58d2d791d352a0f4988bb38c2937718e49bfb5f448d395cc66e764",
+      "size": 6435,
+      "transparent_pixels": 5381,
+      "variant": 2
+    },
+    {
+      "alpha_bbox": [
+        11,
+        14,
+        85,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#75DDF0",
+        "outline": "#43235F",
+        "primary": "#F7F3E8",
+        "secondary": "#6D5B88"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_panda_snow",
+      "id": "snowbean",
+      "mode": "RGBA",
+      "opaque_pixels": 3221,
+      "path": "Assets/UI/Icons/Survivor/Characters/snowbean.png",
+      "sha256": "325b3d3e6a82d323540639720f0ad0fe5ea8a061a75558adcd0f313b90dcd657",
+      "size": 7576,
+      "transparent_pixels": 5207,
+      "variant": 3
+    },
+    {
+      "alpha_bbox": [
+        6,
+        10,
+        90,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#F39AC9",
+        "outline": "#43235F",
+        "primary": "#5F92D9",
+        "secondary": "#F8F4E7"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_penguin_petal",
+      "id": "azura",
+      "mode": "RGBA",
+      "opaque_pixels": 3402,
+      "path": "Assets/UI/Icons/Survivor/Characters/azura.png",
+      "sha256": "870036ef0039ce691aaf3485faa0e85d04643eb7489cf77630cec9041b2c74e2",
+      "size": 7947,
+      "transparent_pixels": 5108,
+      "variant": 4
+    },
+    {
+      "alpha_bbox": [
+        10,
+        7,
+        86,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#74DCE0",
+        "outline": "#43235F",
+        "primary": "#FFD45C",
+        "secondary": "#6A4C76"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_bee_honey",
+      "id": "honeybun",
+      "mode": "RGBA",
+      "opaque_pixels": 2865,
+      "path": "Assets/UI/Icons/Survivor/Characters/honeybun.png",
+      "sha256": "a37d1ad642db77c0b797ff1b80b348f10b909f350eaa57560f3a9a39304e0221",
+      "size": 6976,
+      "transparent_pixels": 5396,
+      "variant": 5
+    },
+    {
+      "alpha_bbox": [
+        11,
+        15,
+        85,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#81D79B",
+        "outline": "#43235F",
+        "primary": "#F195C9",
+        "secondary": "#FFF0D0"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_mushroom_spore",
+      "id": "mushmellow",
+      "mode": "RGBA",
+      "opaque_pixels": 2774,
+      "path": "Assets/UI/Icons/Survivor/Characters/mushmellow.png",
+      "sha256": "ca4f9c60d2ef99a8d9333696a8aa2dfde25df99e758a76e70477396d74da1c99",
+      "size": 6817,
+      "transparent_pixels": 5633,
+      "variant": 6
+    },
+    {
+      "alpha_bbox": [
+        14,
+        12,
+        81,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#69DCE2",
+        "outline": "#43235F",
+        "primary": "#B79CFF",
+        "secondary": "#E9E5FF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_ghost_echo",
+      "id": "boolet",
+      "mode": "RGBA",
+      "opaque_pixels": 3168,
+      "path": "Assets/UI/Icons/Survivor/Characters/boolet.png",
+      "sha256": "2fe7a0964d10ffae4ecdb50b4873dc8a0b74ad4c771013b937cf539711cbf429",
+      "size": 6731,
+      "transparent_pixels": 5182,
+      "variant": 7
+    },
+    {
+      "alpha_bbox": [
+        5,
+        11,
+        91,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#6CDAD2",
+        "outline": "#43235F",
+        "primary": "#FF806F",
+        "secondary": "#FFB46E"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_crab_coral",
+      "id": "crabble",
+      "mode": "RGBA",
+      "opaque_pixels": 2878,
+      "path": "Assets/UI/Icons/Survivor/Characters/crabble.png",
+      "sha256": "318235f5fe27fd3905cb6855706415c079593c13dc1ef87d1d7ed2bcce97aa5f",
+      "size": 7581,
+      "transparent_pixels": 5357,
+      "variant": 8
+    },
+    {
+      "alpha_bbox": [
+        16,
+        6,
+        80,
+        88
+      ],
+      "category": "Characters",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#78D7B0",
+        "secondary": "#AA8CF7"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "character_alien_prism",
+      "id": "cosmobob",
+      "mode": "RGBA",
+      "opaque_pixels": 2697,
+      "path": "Assets/UI/Icons/Survivor/Characters/cosmobob.png",
+      "sha256": "52c5085cd5e28a219d054e611dedb6c715863673551443607d469531f622c7c2",
+      "size": 7583,
+      "transparent_pixels": 5716,
+      "variant": 9
+    },
+    {
+      "alpha_bbox": [
+        10,
+        18,
+        86,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFFFFF",
+        "outline": "#43235F",
+        "primary": "#59DDE0",
+        "secondary": "#A7F4E7"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_ripple_disc",
+      "id": "ring",
+      "mode": "RGBA",
+      "opaque_pixels": 2664,
+      "path": "Assets/UI/Icons/Survivor/Weapons/ring.png",
+      "sha256": "e20f3f07b7825010a04a67b21c682892a991c86161875ada74f59fcb4aa5d2dc",
+      "size": 9562,
+      "transparent_pixels": 5449,
+      "variant": 1
+    },
+    {
+      "alpha_bbox": [
+        14,
+        5,
+        85,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFF17A",
+        "outline": "#43235F",
+        "primary": "#FF734F",
+        "secondary": "#FFB43F"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_chibi_flame",
+      "id": "fireball",
+      "mode": "RGBA",
+      "opaque_pixels": 2904,
+      "path": "Assets/UI/Icons/Survivor/Weapons/fireball.png",
+      "sha256": "2ab6049f08d89189055ddd76b6da91b577f0a9f621632badb562652089db40d0",
+      "size": 7920,
+      "transparent_pixels": 5511,
+      "variant": 2
+    },
+    {
+      "alpha_bbox": [
+        13,
+        10,
+        81,
+        90
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#6ACEE8",
+        "outline": "#43235F",
+        "primary": "#A98CFF",
+        "secondary": "#E7E1FF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_crescent_blade",
+      "id": "moonblade",
+      "mode": "RGBA",
+      "opaque_pixels": 2007,
+      "path": "Assets/UI/Icons/Survivor/Weapons/moonblade.png",
+      "sha256": "c0203565ebeb2ed905de079401756cd2668378e86aa532757cd9f88d3b9de978",
+      "size": 5495,
+      "transparent_pixels": 6311,
+      "variant": 3
+    },
+    {
+      "alpha_bbox": [
+        12,
+        10,
+        87,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#F6A5DB",
+        "outline": "#43235F",
+        "primary": "#55CBEA",
+        "secondary": "#A6F3F1"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_bubble_chain",
+      "id": "bubble",
+      "mode": "RGBA",
+      "opaque_pixels": 2082,
+      "path": "Assets/UI/Icons/Survivor/Weapons/bubble.png",
+      "sha256": "f97372c0f2e549c011581a45731459283ba0ee8422a11fbe26eee9394804d0a0",
+      "size": 6542,
+      "transparent_pixels": 6196,
+      "variant": 4
+    },
+    {
+      "alpha_bbox": [
+        6,
+        8,
+        90,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFF1A0",
+        "outline": "#43235F",
+        "primary": "#65D6D2",
+        "secondary": "#B59BFF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_butterfly_aura",
+      "id": "aura",
+      "mode": "RGBA",
+      "opaque_pixels": 2691,
+      "path": "Assets/UI/Icons/Survivor/Weapons/aura.png",
+      "sha256": "b83c802c74606712b6b921638df399c980fd5823d3fd24c4f17802e41be771e3",
+      "size": 8391,
+      "transparent_pixels": 5353,
+      "variant": 7
+    },
+    {
+      "alpha_bbox": [
+        6,
+        6,
+        87,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#F8F2E4",
+        "secondary": "#79BCEB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_winged_dagger",
+      "id": "dagger",
+      "mode": "RGBA",
+      "opaque_pixels": 1659,
+      "path": "Assets/UI/Icons/Survivor/Weapons/dagger.png",
+      "sha256": "ebafa0fd0f6493a71b68e35190c02a7006d5a11b52288f2b0503995aa8525ba1",
+      "size": 7519,
+      "transparent_pixels": 6511,
+      "variant": 8
+    },
+    {
+      "alpha_bbox": [
+        7,
+        5,
+        92,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFF4C7",
+        "outline": "#43235F",
+        "primary": "#FFD45C",
+        "secondary": "#74D9D4"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_returning_starwheel",
+      "id": "starwheel",
+      "mode": "RGBA",
+      "opaque_pixels": 2793,
+      "path": "Assets/UI/Icons/Survivor/Weapons/starwheel.png",
+      "sha256": "7e05898a65d9e8b7f81535d6517848ab053528aeeadf84242b24375cb770b305",
+      "size": 11446,
+      "transparent_pixels": 5099,
+      "variant": 9
+    },
+    {
+      "alpha_bbox": [
+        11,
+        11,
+        80,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#F38FBE",
+        "secondary": "#FFB69F"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_petal_nova",
+      "id": "petalstorm",
+      "mode": "RGBA",
+      "opaque_pixels": 2231,
+      "path": "Assets/UI/Icons/Survivor/Weapons/petalstorm.png",
+      "sha256": "c1133877f500c6281120ff86d1ce75a091db6895c8f767e8f0353ceb5bcb3646",
+      "size": 8126,
+      "transparent_pixels": 5986,
+      "variant": 10
+    },
+    {
+      "alpha_bbox": [
+        4,
+        13,
+        86,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFF0A0",
+        "outline": "#43235F",
+        "primary": "#62B6F0",
+        "secondary": "#73DFCF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_comet_choir",
+      "id": "comet",
+      "mode": "RGBA",
+      "opaque_pixels": 2177,
+      "path": "Assets/UI/Icons/Survivor/Weapons/comet.png",
+      "sha256": "59bb3ed33a581617add75044bca0b23a10930cee147a1cbfae5121d3b31f5c37",
+      "size": 7601,
+      "transparent_pixels": 6065,
+      "variant": 11
+    },
+    {
+      "alpha_bbox": [
+        9,
+        8,
+        81,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#6EDBD3",
+        "outline": "#43235F",
+        "primary": "#FFD34E",
+        "secondary": "#8A5A47"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_honey_needle",
+      "id": "honeyneedle",
+      "mode": "RGBA",
+      "opaque_pixels": 1612,
+      "path": "Assets/UI/Icons/Survivor/Weapons/honeyneedle.png",
+      "sha256": "63fbd34cc85589655cf70621c2e74837d27745bfac6ba72f0b38bce783dc3e6b",
+      "size": 7238,
+      "transparent_pixels": 6660,
+      "variant": 12
+    },
+    {
+      "alpha_bbox": [
+        11,
+        17,
+        85,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#79D59B",
+        "outline": "#43235F",
+        "primary": "#E98EC7",
+        "secondary": "#FFF0CF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_spore_cap",
+      "id": "sporecap",
+      "mode": "RGBA",
+      "opaque_pixels": 2592,
+      "path": "Assets/UI/Icons/Survivor/Weapons/sporecap.png",
+      "sha256": "0fce7412faa2e2ee6e34d36e911c365a212ed2e8e4e8a67cf7eed9c8fd5571ed",
+      "size": 6251,
+      "transparent_pixels": 5755,
+      "variant": 13
+    },
+    {
+      "alpha_bbox": [
+        7,
+        14,
+        89,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#6EDBDC",
+        "outline": "#43235F",
+        "primary": "#AA8CF7",
+        "secondary": "#E7E1FF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_phantom_bell",
+      "id": "phantombell",
+      "mode": "RGBA",
+      "opaque_pixels": 2356,
+      "path": "Assets/UI/Icons/Survivor/Weapons/phantombell.png",
+      "sha256": "cd122f661c495c24a593f6f4239fdb1701899c2e9f76ccd17a436516cc0ce588",
+      "size": 6246,
+      "transparent_pixels": 5693,
+      "variant": 14
+    },
+    {
+      "alpha_bbox": [
+        10,
+        7,
+        86,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#62D4D2",
+        "outline": "#43235F",
+        "primary": "#FF806F",
+        "secondary": "#FFB56E"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_coral_anchor",
+      "id": "coralanchor",
+      "mode": "RGBA",
+      "opaque_pixels": 1537,
+      "path": "Assets/UI/Icons/Survivor/Weapons/coralanchor.png",
+      "sha256": "b3e1fcc8e421257ca7318525a16905a8df4e5088737b83a82c007189057d7dce",
+      "size": 6287,
+      "transparent_pixels": 6691,
+      "variant": 15
+    },
+    {
+      "alpha_bbox": [
+        6,
+        11,
+        90,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#86D8D0",
+        "secondary": "#B18DF5"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_prism_orbit",
+      "id": "prismorbit",
+      "mode": "RGBA",
+      "opaque_pixels": 2349,
+      "path": "Assets/UI/Icons/Survivor/Weapons/prismorbit.png",
+      "sha256": "9fea2ab236404d845f572788e0860ece16b191282c2f7493a72943287a335cfb",
+      "size": 6642,
+      "transparent_pixels": 5820,
+      "variant": 16
+    },
+    {
+      "alpha_bbox": [
+        17,
+        4,
+        88,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#B9784B",
+        "secondary": "#8FD072"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_acorn_mortar",
+      "id": "acornmortar",
+      "mode": "RGBA",
+      "opaque_pixels": 2639,
+      "path": "Assets/UI/Icons/Survivor/Weapons/acornmortar.png",
+      "sha256": "026ea96f6aacd91b75578cd59ec7ca56a67d27714e63e0209fd01a9568064f9c",
+      "size": 6798,
+      "transparent_pixels": 5523,
+      "variant": 17
+    },
+    {
+      "alpha_bbox": [
+        14,
+        13,
+        82,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFFFFF",
+        "outline": "#43235F",
+        "primary": "#A8E8F5",
+        "secondary": "#6EBCEB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_frost_orb",
+      "id": "frostorb",
+      "mode": "RGBA",
+      "opaque_pixels": 3125,
+      "path": "Assets/UI/Icons/Survivor/Weapons/frostorb.png",
+      "sha256": "24e0a8a06572565bfd8e67ba33451a11e60f2fb9adc985a36697b876c40d103d",
+      "size": 9637,
+      "transparent_pixels": 5337,
+      "variant": 18
+    },
+    {
+      "alpha_bbox": [
+        4,
+        11,
+        80,
+        90
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#74D9D4",
+        "outline": "#43235F",
+        "primary": "#805FD1",
+        "secondary": "#F39AC9"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_gravity_yoyo",
+      "id": "gravityyoyo",
+      "mode": "RGBA",
+      "opaque_pixels": 1859,
+      "path": "Assets/UI/Icons/Survivor/Weapons/gravityyoyo.png",
+      "sha256": "5d9aa294a4a4c502b640caf166aebe9f120a1794ef8ebc3afa12491ce726a255",
+      "size": 7368,
+      "transparent_pixels": 6371,
+      "variant": 19
+    },
+    {
+      "alpha_bbox": [
+        8,
+        26,
+        93,
+        88
+      ],
+      "category": "Weapons",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#6EBCEA",
+        "secondary": "#FF8E96"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "weapon_rainbow_rail",
+      "id": "rainbowrail",
+      "mode": "RGBA",
+      "opaque_pixels": 2188,
+      "path": "Assets/UI/Icons/Survivor/Weapons/rainbowrail.png",
+      "sha256": "05e138f7b66987b81316f14009bd4d4694a3b38d71886779627bde1cf4d9a22d",
+      "size": 5062,
+      "transparent_pixels": 6077,
+      "variant": 20
+    },
+    {
+      "alpha_bbox": [
+        12,
+        10,
+        85,
+        90
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#FF726D",
+        "outline": "#43235F",
+        "primary": "#5BCFDB",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_magnet",
+      "id": "magnet",
+      "mode": "RGBA",
+      "opaque_pixels": 4475,
+      "path": "Assets/UI/Icons/Survivor/Tomes/magnet.png",
+      "sha256": "7b8e05b96daf309a998058459d7c9f00b3017a4dcfed1033e786677a7208af45",
+      "size": 4214,
+      "transparent_pixels": 3962,
+      "variant": 0
+    },
+    {
+      "alpha_bbox": [
+        13,
+        10,
+        85,
+        91
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#FF8F9B",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_heart",
+      "id": "vitality",
+      "mode": "RGBA",
+      "opaque_pixels": 4461,
+      "path": "Assets/UI/Icons/Survivor/Tomes/vitality.png",
+      "sha256": "f71a06ede653767ba919ace729684b9649f53734798162a0a3cf4a5d9d09639d",
+      "size": 5244,
+      "transparent_pixels": 4033,
+      "variant": 1
+    },
+    {
+      "alpha_bbox": [
+        12,
+        11,
+        85,
+        90
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#72D8AF",
+        "outline": "#43235F",
+        "primary": "#63B7CC",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_shield",
+      "id": "guard",
+      "mode": "RGBA",
+      "opaque_pixels": 4414,
+      "path": "Assets/UI/Icons/Survivor/Tomes/guard.png",
+      "sha256": "fc46440bb43a35306b3a72b302660ff7843308d0827a32a1f8227fdaa7f55a92",
+      "size": 5090,
+      "transparent_pixels": 4027,
+      "variant": 2
+    },
+    {
+      "alpha_bbox": [
+        13,
+        11,
+        85,
+        91
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#FF786E",
+        "outline": "#43235F",
+        "primary": "#F2B34C",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_might_burst",
+      "id": "might",
+      "mode": "RGBA",
+      "opaque_pixels": 4396,
+      "path": "Assets/UI/Icons/Survivor/Tomes/might.png",
+      "sha256": "b944313b81da987d418877a9e10e076518935eab6155e43cb13abf81aea817fd",
+      "size": 6855,
+      "transparent_pixels": 4102,
+      "variant": 3
+    },
+    {
+      "alpha_bbox": [
+        12,
+        10,
+        85,
+        90
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#B08EF6",
+        "outline": "#43235F",
+        "primary": "#6DABE9",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_clock",
+      "id": "haste",
+      "mode": "RGBA",
+      "opaque_pixels": 4475,
+      "path": "Assets/UI/Icons/Survivor/Tomes/haste.png",
+      "sha256": "11c2bae7c476c9ec03119c1325ce9e83751c45a17cceb93318e45530c1049ff5",
+      "size": 6033,
+      "transparent_pixels": 3962,
+      "variant": 4
+    },
+    {
+      "alpha_bbox": [
+        13,
+        10,
+        85,
+        91
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#63CDBF",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_arrows",
+      "id": "reach",
+      "mode": "RGBA",
+      "opaque_pixels": 4461,
+      "path": "Assets/UI/Icons/Survivor/Tomes/reach.png",
+      "sha256": "e16af0e27716c9bc20cba335046a4131a8a5fe239058ab74dd6f550b47574a17",
+      "size": 5685,
+      "transparent_pixels": 4033,
+      "variant": 5
+    },
+    {
+      "alpha_bbox": [
+        12,
+        11,
+        85,
+        90
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#71D39A",
+        "outline": "#43235F",
+        "primary": "#F0B83E",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_clover",
+      "id": "fortune",
+      "mode": "RGBA",
+      "opaque_pixels": 4414,
+      "path": "Assets/UI/Icons/Survivor/Tomes/fortune.png",
+      "sha256": "df037ce46e08d5e603d0228003cccb42054252b1c33de332de66e1690d00402c",
+      "size": 5106,
+      "transparent_pixels": 4027,
+      "variant": 6
+    },
+    {
+      "alpha_bbox": [
+        13,
+        11,
+        85,
+        91
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#B68FF5",
+        "outline": "#43235F",
+        "primary": "#8ACD72",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_sprout",
+      "id": "growth",
+      "mode": "RGBA",
+      "opaque_pixels": 4396,
+      "path": "Assets/UI/Icons/Survivor/Tomes/growth.png",
+      "sha256": "dfcb808532cc25eabb66bc53004bc2e0f591c458584724d2e36b0392cf17638a",
+      "size": 6389,
+      "transparent_pixels": 4102,
+      "variant": 7
+    },
+    {
+      "alpha_bbox": [
+        12,
+        10,
+        85,
+        90
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#E88FC5",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_triple_star",
+      "id": "quantity",
+      "mode": "RGBA",
+      "opaque_pixels": 4475,
+      "path": "Assets/UI/Icons/Survivor/Tomes/quantity.png",
+      "sha256": "654c58788399f387053b3975cb70619367d312e26898525daa0dcb1818f0d193",
+      "size": 6493,
+      "transparent_pixels": 3962,
+      "variant": 8
+    },
+    {
+      "alpha_bbox": [
+        13,
+        10,
+        85,
+        91
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#74DCCD",
+        "outline": "#43235F",
+        "primary": "#66B9EC",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_comet",
+      "id": "velocity",
+      "mode": "RGBA",
+      "opaque_pixels": 4461,
+      "path": "Assets/UI/Icons/Survivor/Tomes/velocity.png",
+      "sha256": "a4e64f01937120fbe23f0fca2f15e8fba7db80f6c8c9b48eae2b2eb3b34f09fd",
+      "size": 6132,
+      "transparent_pixels": 4033,
+      "variant": 9
+    },
+    {
+      "alpha_bbox": [
+        12,
+        11,
+        85,
+        90
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#6DCEE2",
+        "outline": "#43235F",
+        "primary": "#8F7BE4",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_long_moon",
+      "id": "duration",
+      "mode": "RGBA",
+      "opaque_pixels": 4414,
+      "path": "Assets/UI/Icons/Survivor/Tomes/duration.png",
+      "sha256": "25e013213f2a77214ad09a85428925ee3030cfa04b74d00784878d9a387673df",
+      "size": 5027,
+      "transparent_pixels": 4027,
+      "variant": 10
+    },
+    {
+      "alpha_bbox": [
+        13,
+        11,
+        85,
+        91
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#F08FB5",
+        "outline": "#43235F",
+        "primary": "#6ED3A0",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_recovery_cross",
+      "id": "recovery",
+      "mode": "RGBA",
+      "opaque_pixels": 4396,
+      "path": "Assets/UI/Icons/Survivor/Tomes/recovery.png",
+      "sha256": "84226c2d408f0b217d6f33b47d1cf527066c226b04d6d0d8b183548d6bd0438f",
+      "size": 5121,
+      "transparent_pixels": 4102,
+      "variant": 11
+    },
+    {
+      "alpha_bbox": [
+        12,
+        10,
+        85,
+        90
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#FF8071",
+        "outline": "#43235F",
+        "primary": "#75B96E",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_thorn_vine",
+      "id": "thorns",
+      "mode": "RGBA",
+      "opaque_pixels": 4475,
+      "path": "Assets/UI/Icons/Survivor/Tomes/thorns.png",
+      "sha256": "b50f2abe11c23b915e0d39b47a3e18db1122e602faa9fa7e0c50db8c911e3adb",
+      "size": 5123,
+      "transparent_pixels": 3962,
+      "variant": 12
+    },
+    {
+      "alpha_bbox": [
+        13,
+        10,
+        85,
+        91
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#8FD171",
+        "outline": "#43235F",
+        "primary": "#F1B93C",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_coin_sun",
+      "id": "greed",
+      "mode": "RGBA",
+      "opaque_pixels": 4461,
+      "path": "Assets/UI/Icons/Survivor/Tomes/greed.png",
+      "sha256": "c7a93863a9ec45ea125e445c63e87f9fcac0b1ee36a49c4f808ddac447f941e2",
+      "size": 8431,
+      "transparent_pixels": 4033,
+      "variant": 13
+    },
+    {
+      "alpha_bbox": [
+        12,
+        11,
+        85,
+        90
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#6EDAD3",
+        "outline": "#43235F",
+        "primary": "#9A7FE8",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_status_flask",
+      "id": "status",
+      "mode": "RGBA",
+      "opaque_pixels": 4414,
+      "path": "Assets/UI/Icons/Survivor/Tomes/status.png",
+      "sha256": "510dd53f6d0597a49efc723f9f0f200e1912b8a12e492994638fa0440a536055",
+      "size": 5602,
+      "transparent_pixels": 4027,
+      "variant": 14
+    },
+    {
+      "alpha_bbox": [
+        13,
+        11,
+        85,
+        91
+      ],
+      "category": "Tomes",
+      "colors": {
+        "accent": "#F06B91",
+        "outline": "#43235F",
+        "primary": "#7454A8",
+        "secondary": "#FFF0CB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "tome_curse_eye",
+      "id": "curse",
+      "mode": "RGBA",
+      "opaque_pixels": 4396,
+      "path": "Assets/UI/Icons/Survivor/Tomes/curse.png",
+      "sha256": "da0d490a7ecfd791baa6d4392d566be7e9a6bb7d3bbbfd544520b0543ace8fe0",
+      "size": 7048,
+      "transparent_pixels": 4102,
+      "variant": 15
+    },
+    {
+      "alpha_bbox": [
+        10,
+        8,
+        86,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#FFF0A0",
+        "outline": "#43235F",
+        "primary": "#F3B642",
+        "secondary": "#FF7D70"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_star_fist",
+      "id": "meta_might",
+      "mode": "RGBA",
+      "opaque_pixels": 2960,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_might.png",
+      "sha256": "735538286eac195bda135e0f42206d91ad62b8ac90c6c27df3823d92e2b2a090",
+      "size": 9232,
+      "transparent_pixels": 5005,
+      "variant": 0
+    },
+    {
+      "alpha_bbox": [
+        12,
+        8,
+        85,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#FF8798",
+        "secondary": "#FFD2D8"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_heart_crown",
+      "id": "meta_health",
+      "mode": "RGBA",
+      "opaque_pixels": 2153,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_health.png",
+      "sha256": "0c6606eb2e19bb99e4a9eb59d851d9ce7e5ca0b1455c96f4d80037fd3846b4f8",
+      "size": 7049,
+      "transparent_pixels": 5860,
+      "variant": 1
+    },
+    {
+      "alpha_bbox": [
+        5,
+        8,
+        87,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#F292BC",
+        "outline": "#43235F",
+        "primary": "#69D3A1",
+        "secondary": "#FFF0D2"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_healing_orbit",
+      "id": "meta_recovery",
+      "mode": "RGBA",
+      "opaque_pixels": 3127,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_recovery.png",
+      "sha256": "9a6f071c65a1a983fd5f0fa625e6227450d83ed602c47a32d38b2955d9d6a4f5",
+      "size": 10754,
+      "transparent_pixels": 4789,
+      "variant": 2
+    },
+    {
+      "alpha_bbox": [
+        6,
+        17,
+        92,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#69B9EC",
+        "secondary": "#E9F7FF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_winged_boot",
+      "id": "meta_move",
+      "mode": "RGBA",
+      "opaque_pixels": 2645,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_move.png",
+      "sha256": "fe40e284c9f4b1dbc75f64222642e9686a88b3d2d58095b4d4499d0a57cec39c",
+      "size": 6979,
+      "transparent_pixels": 5469,
+      "variant": 3
+    },
+    {
+      "alpha_bbox": [
+        12,
+        20,
+        85,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#65BCE8",
+        "secondary": "#FF7A73"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_star_magnet",
+      "id": "meta_magnet",
+      "mode": "RGBA",
+      "opaque_pixels": 2015,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_magnet.png",
+      "sha256": "4c32a66b378a88d7121efc50cfe7bf6983d4d7dfed7846166b0d66465497f5b7",
+      "size": 5673,
+      "transparent_pixels": 5931,
+      "variant": 4
+    },
+    {
+      "alpha_bbox": [
+        12,
+        10,
+        85,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#B38FF5",
+        "outline": "#43235F",
+        "primary": "#7DCE78",
+        "secondary": "#C7EC83"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_rising_sprout",
+      "id": "meta_growth",
+      "mode": "RGBA",
+      "opaque_pixels": 1923,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_growth.png",
+      "sha256": "c2f56e059472babba1c37efe4a35a26514ad3c904d920b0dffc607a7cdaf11d1",
+      "size": 5872,
+      "transparent_pixels": 6164,
+      "variant": 5
+    },
+    {
+      "alpha_bbox": [
+        11,
+        9,
+        85,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#F19AC8",
+        "outline": "#43235F",
+        "primary": "#72D39A",
+        "secondary": "#FFF0A0"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_star_clover",
+      "id": "meta_luck",
+      "mode": "RGBA",
+      "opaque_pixels": 2546,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_luck.png",
+      "sha256": "676369af936c0a940e84f1eb9ea1d32935f7916f865a28b021a520fbbbff89cf",
+      "size": 8071,
+      "transparent_pixels": 5345,
+      "variant": 6
+    },
+    {
+      "alpha_bbox": [
+        12,
+        15,
+        87,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#76D5C9",
+        "outline": "#43235F",
+        "primary": "#F1B83F",
+        "secondary": "#B97A4A"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_coin_pouch",
+      "id": "meta_greed",
+      "mode": "RGBA",
+      "opaque_pixels": 3124,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_greed.png",
+      "sha256": "aaadffad851bf4f64f010a5a2087a49ebd2783620a28351d16b560cfb2608cb5",
+      "size": 7816,
+      "transparent_pixels": 5198,
+      "variant": 7
+    },
+    {
+      "alpha_bbox": [
+        4,
+        9,
+        92,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#9C82EB",
+        "secondary": "#73D6D0"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_reroll_dice",
+      "id": "meta_reroll",
+      "mode": "RGBA",
+      "opaque_pixels": 2767,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_reroll.png",
+      "sha256": "c724dd6dd81e12f24d6e16aee4ae9e3d7013435319c0728fd79d9e6ce47db92a",
+      "size": 9593,
+      "transparent_pixels": 4986,
+      "variant": 8
+    },
+    {
+      "alpha_bbox": [
+        7,
+        14,
+        91,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#FF8A92",
+        "outline": "#43235F",
+        "primary": "#68B9EA",
+        "secondary": "#79DBCD"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_comet_skip",
+      "id": "meta_skip",
+      "mode": "RGBA",
+      "opaque_pixels": 2152,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_skip.png",
+      "sha256": "479af0fcf5eab94240c472af205e775a4074f7f1fe870ab51f91f8565159557c",
+      "size": 5949,
+      "transparent_pixels": 5671,
+      "variant": 9
+    },
+    {
+      "alpha_bbox": [
+        12,
+        11,
+        85,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#7655AA",
+        "secondary": "#F08FB8"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_sealed_portal",
+      "id": "meta_banish",
+      "mode": "RGBA",
+      "opaque_pixels": 3519,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_banish.png",
+      "sha256": "0df75cee99d927b3318d4582a89f5045024554eeee108c13db313eb4b54a222a",
+      "size": 9296,
+      "transparent_pixels": 4732,
+      "variant": 10
+    },
+    {
+      "alpha_bbox": [
+        12,
+        5,
+        85,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#70D5A2",
+        "secondary": "#FF8D82"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_rekindled_bloom",
+      "id": "meta_revive",
+      "mode": "RGBA",
+      "opaque_pixels": 2297,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_revive.png",
+      "sha256": "300f469c998dd823ef61fcf106b2249dc6a4b5814238de507837f51ef5e1dd1c",
+      "size": 8166,
+      "transparent_pixels": 5801,
+      "variant": 11
+    },
+    {
+      "alpha_bbox": [
+        9,
+        9,
+        87,
+        91
+      ],
+      "category": "PowerUps",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#8F78E8",
+        "secondary": "#69D7D0"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "powerup_weapon_slot_satchel",
+      "id": "meta_weapon_slots",
+      "mode": "RGBA",
+      "opaque_pixels": 4374,
+      "path": "Assets/UI/Icons/Survivor/PowerUps/meta_weapon_slots.png",
+      "sha256": "381a492a6958df89bc83a63359346e8ace61ab787d10703618ae46f1b8204258",
+      "size": 6981,
+      "transparent_pixels": 3865,
+      "variant": 12
+    },
+    {
+      "alpha_bbox": [
+        13,
+        15,
+        80,
+        89
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#79D7D4",
+        "secondary": "#A98CFF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_prism_lens",
+      "id": "prism_lens",
+      "mode": "RGBA",
+      "opaque_pixels": 2271,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/prism_lens.png",
+      "sha256": "d77f5f30f851eecabeb9bba87e3c201e2ac206d76f3fbe4c1c983bbcead2cfd4",
+      "size": 6744,
+      "transparent_pixels": 6034,
+      "variant": 0
+    },
+    {
+      "alpha_bbox": [
+        16,
+        14,
+        80,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#75D8D1",
+        "outline": "#43235F",
+        "primary": "#FFF0A0",
+        "secondary": "#FF8C78"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_popcorn",
+      "id": "popcorn_kernel",
+      "mode": "RGBA",
+      "opaque_pixels": 2922,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/popcorn_kernel.png",
+      "sha256": "e3e7b284f7cbac189329d0b8509501c4c4c866bc6fd34f847e673558a9ec2ebc",
+      "size": 7547,
+      "transparent_pixels": 5751,
+      "variant": 1
+    },
+    {
+      "alpha_bbox": [
+        17,
+        13,
+        80,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#74D9D4",
+        "outline": "#43235F",
+        "primary": "#FFD34E",
+        "secondary": "#B97A47"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_honey_jar",
+      "id": "sticky_honey",
+      "mode": "RGBA",
+      "opaque_pixels": 2917,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/sticky_honey.png",
+      "sha256": "c0623aed7d38dd9ca4d8a3cca3100dbab201ce79f9e088980a3c71dd7faa6b4d",
+      "size": 4142,
+      "transparent_pixels": 5583,
+      "variant": 2
+    },
+    {
+      "alpha_bbox": [
+        4,
+        15,
+        94,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#6EDAD3",
+        "outline": "#43235F",
+        "primary": "#F0A1C8",
+        "secondary": "#A98CF5"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_echo_shell",
+      "id": "echo_shell",
+      "mode": "RGBA",
+      "opaque_pixels": 3470,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/echo_shell.png",
+      "sha256": "52661ccb17fa25af0d0086e2d90a5dc3af5ed69a5cac321436023119154074cf",
+      "size": 9575,
+      "transparent_pixels": 4911,
+      "variant": 3
+    },
+    {
+      "alpha_bbox": [
+        12,
+        24,
+        85,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#7AD8B1",
+        "outline": "#43235F",
+        "primary": "#FF8396",
+        "secondary": "#FFD45C"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_lucky_ribbon",
+      "id": "lucky_ribbon",
+      "mode": "RGBA",
+      "opaque_pixels": 2044,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/lucky_ribbon.png",
+      "sha256": "8ff2406d437b0295a602420cb7cf9eedd8f44817749e6a19582a206a4188a31b",
+      "size": 7710,
+      "transparent_pixels": 6214,
+      "variant": 4
+    },
+    {
+      "alpha_bbox": [
+        15,
+        32,
+        81,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#66B8E7",
+        "secondary": "#FF7D72"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_tiny_magnet",
+      "id": "tiny_magnet",
+      "mode": "RGBA",
+      "opaque_pixels": 1554,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/tiny_magnet.png",
+      "sha256": "7425db9b8a73a670fd3f9a1bd10ed3e6852d1d4bfb8db5f49c167090d7e7e635",
+      "size": 4072,
+      "transparent_pixels": 6677,
+      "variant": 5
+    },
+    {
+      "alpha_bbox": [
+        9,
+        9,
+        87,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#B396F7",
+        "outline": "#43235F",
+        "primary": "#A8EAF3",
+        "secondary": "#FFFFFF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_glass_star",
+      "id": "glass_star",
+      "mode": "RGBA",
+      "opaque_pixels": 2197,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/glass_star.png",
+      "sha256": "cbf26b854a54383ec7a4cb705be0bcba024249ae30ca58636104d608cac4023e",
+      "size": 7072,
+      "transparent_pixels": 6069,
+      "variant": 6
+    },
+    {
+      "alpha_bbox": [
+        15,
+        10,
+        81,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#6DD4CD",
+        "outline": "#43235F",
+        "primary": "#FFF0DF",
+        "secondary": "#F5A4C7"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_marshmallow_shield",
+      "id": "marshmallow_shield",
+      "mode": "RGBA",
+      "opaque_pixels": 3104,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/marshmallow_shield.png",
+      "sha256": "5cf5e3056cc44eaf16be271d82e952476f6095e6690b76d2b64d84a06d71da47",
+      "size": 7232,
+      "transparent_pixels": 5357,
+      "variant": 7
+    },
+    {
+      "alpha_bbox": [
+        9,
+        8,
+        87,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#FF756E",
+        "outline": "#43235F",
+        "primary": "#E8A941",
+        "secondary": "#7A55A8"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_boss_bell",
+      "id": "boss_bell",
+      "mode": "RGBA",
+      "opaque_pixels": 2488,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/boss_bell.png",
+      "sha256": "91e166c6b8276b91b5a73f91e3cb6ad5150741c4fe8faab3cda5f03ea31df9c3",
+      "size": 6672,
+      "transparent_pixels": 5801,
+      "variant": 8
+    },
+    {
+      "alpha_bbox": [
+        17,
+        14,
+        80,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#F38FBE",
+        "outline": "#43235F",
+        "primary": "#6ED5A4",
+        "secondary": "#FFD45C"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_bloom_battery",
+      "id": "bloom_battery",
+      "mode": "RGBA",
+      "opaque_pixels": 2519,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/bloom_battery.png",
+      "sha256": "b8a408770effe1de11bba5705db9c566bb5fa3757ba73951abd8e5912355dd9c",
+      "size": 4363,
+      "transparent_pixels": 5954,
+      "variant": 9
+    },
+    {
+      "alpha_bbox": [
+        6,
+        13,
+        85,
+        88
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#FFF0A0",
+        "outline": "#43235F",
+        "primary": "#66B8EA",
+        "secondary": "#75DBCF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_comet_tail",
+      "id": "comet_tail",
+      "mode": "RGBA",
+      "opaque_pixels": 2520,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/comet_tail.png",
+      "sha256": "7c6c7855f4c120cc70b645b9a3d1a1a1debe3b8b26e02d6b8beb2123b073c686",
+      "size": 7732,
+      "transparent_pixels": 5859,
+      "variant": 10
+    },
+    {
+      "alpha_bbox": [
+        16,
+        15,
+        80,
+        92
+      ],
+      "category": "Trinkets",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#F194C1",
+        "secondary": "#72D8CF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "trinket_friendship_pin",
+      "id": "friendship_pin",
+      "mode": "RGBA",
+      "opaque_pixels": 2900,
+      "path": "Assets/UI/Icons/Survivor/Trinkets/friendship_pin.png",
+      "sha256": "5778cddc4355735c1fefe3b7c4b2d01de398591fcf3b27bd5675bce876afecf8",
+      "size": 8056,
+      "transparent_pixels": 5671,
+      "variant": 11
+    },
+    {
+      "alpha_bbox": [
+        7,
+        7,
+        88,
+        90
+      ],
+      "category": "Evolutions",
+      "colors": {
+        "accent": "#F18FC5",
+        "outline": "#43235F",
+        "primary": "#FFD45C",
+        "secondary": "#69BCEB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "evolution_supernova_choir",
+      "id": "supernovachoir",
+      "mode": "RGBA",
+      "opaque_pixels": 2610,
+      "path": "Assets/UI/Icons/Survivor/Evolutions/supernovachoir.png",
+      "sha256": "d342342f12da38eceec5ec208bae0047ac3308e32001bec212ae15a70f28e0ef",
+      "size": 11300,
+      "transparent_pixels": 5037,
+      "variant": 0
+    },
+    {
+      "alpha_bbox": [
+        5,
+        11,
+        92,
+        90
+      ],
+      "category": "Evolutions",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#6DDDE0",
+        "secondary": "#B39AF8"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "evolution_royal_bubble",
+      "id": "royalbubblecade",
+      "mode": "RGBA",
+      "opaque_pixels": 3519,
+      "path": "Assets/UI/Icons/Survivor/Evolutions/royalbubblecade.png",
+      "sha256": "7a621cc0651b812e067f3bfc743942bc1168eb25a9cabe47984e0fdab44f86bb",
+      "size": 9590,
+      "transparent_pixels": 4789,
+      "variant": 1
+    },
+    {
+      "alpha_bbox": [
+        11,
+        11,
+        86,
+        90
+      ],
+      "category": "Evolutions",
+      "colors": {
+        "accent": "#F18FC4",
+        "outline": "#43235F",
+        "primary": "#E9E6FF",
+        "secondary": "#7CBCEB"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "evolution_nebula_network",
+      "id": "nebulanetwork",
+      "mode": "RGBA",
+      "opaque_pixels": 1392,
+      "path": "Assets/UI/Icons/Survivor/Evolutions/nebulanetwork.png",
+      "sha256": "272f2bd4f5804dfad131bfb7ff96315bfa6ce80e17d8852d44898f872934901c",
+      "size": 6669,
+      "transparent_pixels": 6424,
+      "variant": 2
+    },
+    {
+      "alpha_bbox": [
+        8,
+        8,
+        89,
+        90
+      ],
+      "category": "Evolutions",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#F18FC2",
+        "secondary": "#7AD6AC"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "evolution_galaxy_garden",
+      "id": "galaxygarden",
+      "mode": "RGBA",
+      "opaque_pixels": 1879,
+      "path": "Assets/UI/Icons/Survivor/Evolutions/galaxygarden.png",
+      "sha256": "fc4437cb4e43c575aa1e3d3b3ba9e2b554d0a263a4b1a776212c8ee8cc59a6b9",
+      "size": 7318,
+      "transparent_pixels": 5609,
+      "variant": 4
+    },
+    {
+      "alpha_bbox": [
+        6,
+        6,
+        90,
+        90
+      ],
+      "category": "Evolutions",
+      "colors": {
+        "accent": "#72DAD2",
+        "outline": "#43235F",
+        "primary": "#FFD34E",
+        "secondary": "#A96D43"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "evolution_royal_beehive",
+      "id": "royalbeehive",
+      "mode": "RGBA",
+      "opaque_pixels": 3625,
+      "path": "Assets/UI/Icons/Survivor/Evolutions/royalbeehive.png",
+      "sha256": "43c05575be7d9838c18de7258443d9037045dad9cabb1afffd757cf5e90b0712",
+      "size": 7498,
+      "transparent_pixels": 4645,
+      "variant": 5
+    },
+    {
+      "alpha_bbox": [
+        10,
+        7,
+        87,
+        90
+      ],
+      "category": "Evolutions",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#EE91C7",
+        "secondary": "#7CD5A2"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "evolution_mycelium_carnival",
+      "id": "myceliumcarnival",
+      "mode": "RGBA",
+      "opaque_pixels": 1520,
+      "path": "Assets/UI/Icons/Survivor/Evolutions/myceliumcarnival.png",
+      "sha256": "9ceb7e467ee4f1f2ec61cd6d951cae24cfa6e65041b368933564aae62a3b5a46",
+      "size": 7423,
+      "transparent_pixels": 6097,
+      "variant": 6
+    },
+    {
+      "alpha_bbox": [
+        3,
+        11,
+        86,
+        90
+      ],
+      "category": "Evolutions",
+      "colors": {
+        "accent": "#69D7D9",
+        "outline": "#43235F",
+        "primary": "#977DE8",
+        "secondary": "#E9E4FF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "evolution_midnight_encore",
+      "id": "midnightencore",
+      "mode": "RGBA",
+      "opaque_pixels": 2479,
+      "path": "Assets/UI/Icons/Survivor/Evolutions/midnightencore.png",
+      "sha256": "863218560196d7532c21715e8a3313e670a0c3e548bb4a75b45197f2bbd0fa4e",
+      "size": 7165,
+      "transparent_pixels": 5593,
+      "variant": 7
+    },
+    {
+      "alpha_bbox": [
+        11,
+        8,
+        86,
+        90
+      ],
+      "category": "Evolutions",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#64CBD6",
+        "secondary": "#FF8D79"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "evolution_tidal_fortress",
+      "id": "tidalfortress",
+      "mode": "RGBA",
+      "opaque_pixels": 3441,
+      "path": "Assets/UI/Icons/Survivor/Evolutions/tidalfortress.png",
+      "sha256": "78d78be2a084a28ec5bebdb5f29028593c9bacb3f25b620ca9ab547a10679247",
+      "size": 7291,
+      "transparent_pixels": 4858,
+      "variant": 8
+    },
+    {
+      "alpha_bbox": [
+        6,
+        10,
+        91,
+        90
+      ],
+      "category": "Evolutions",
+      "colors": {
+        "accent": "#FF8FAF",
+        "outline": "#43235F",
+        "primary": "#76D8D0",
+        "secondary": "#B18EF5"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "evolution_friendship_spectrum",
+      "id": "friendshipspectrum",
+      "mode": "RGBA",
+      "opaque_pixels": 2751,
+      "path": "Assets/UI/Icons/Survivor/Evolutions/friendshipspectrum.png",
+      "sha256": "939c9a444fa0427332750e72f234e17aa277390e914c03d5455d322dc9d300ca",
+      "size": 8552,
+      "transparent_pixels": 5082,
+      "variant": 9
+    },
+    {
+      "alpha_bbox": [
+        12,
+        14,
+        85,
+        88
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#7BD47E",
+        "secondary": "#B9EA76"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_green_chaser",
+      "id": "green_blob",
+      "mode": "RGBA",
+      "opaque_pixels": 3401,
+      "path": "Assets/UI/Icons/Survivor/Enemies/green_blob.png",
+      "sha256": "046f25e0e133866e1221139e45deccd2938ed7f3c85076d93ecaf0334a508402",
+      "size": 6039,
+      "transparent_pixels": 5149,
+      "variant": 0
+    },
+    {
+      "alpha_bbox": [
+        1,
+        4,
+        87,
+        88
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#75D8D1",
+        "outline": "#43235F",
+        "primary": "#F28CB5",
+        "secondary": "#FFB38F"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_pink_flanker",
+      "id": "pink_blob",
+      "mode": "RGBA",
+      "opaque_pixels": 3496,
+      "path": "Assets/UI/Icons/Survivor/Enemies/pink_blob.png",
+      "sha256": "e389bbb2b91680069ec4096e225df0a24655d78ef1448dfa59b370de3c110eb9",
+      "size": 6884,
+      "transparent_pixels": 4811,
+      "variant": 1
+    },
+    {
+      "alpha_bbox": [
+        5,
+        7,
+        91,
+        91
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#FF8A73",
+        "outline": "#43235F",
+        "primary": "#72B86C",
+        "secondary": "#A6D66D"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_spiky_guard",
+      "id": "spiky_blob",
+      "mode": "RGBA",
+      "opaque_pixels": 3960,
+      "path": "Assets/UI/Icons/Survivor/Enemies/spiky_blob.png",
+      "sha256": "dca1f66311d30d148ecdc1132af942e61acc86662cdaaa42d0d1ef85a01e99f2",
+      "size": 10460,
+      "transparent_pixels": 4482,
+      "variant": 2
+    },
+    {
+      "alpha_bbox": [
+        8,
+        9,
+        90,
+        88
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#8BC46D",
+        "secondary": "#A66B46"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_orc_bruiser",
+      "id": "orc_bruiser",
+      "mode": "RGBA",
+      "opaque_pixels": 3894,
+      "path": "Assets/UI/Icons/Survivor/Enemies/orc_bruiser.png",
+      "sha256": "2db3312e23f2cb3031f3037f22fc670cd01748dd7c874df7a766cf2c6310c236",
+      "size": 7026,
+      "transparent_pixels": 4590,
+      "variant": 3
+    },
+    {
+      "alpha_bbox": [
+        5,
+        10,
+        91,
+        88
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#A98CF5",
+        "outline": "#43235F",
+        "primary": "#D9EDF0",
+        "secondary": "#6FB9E6"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_yeti_zoner",
+      "id": "yeti_zoner",
+      "mode": "RGBA",
+      "opaque_pixels": 3889,
+      "path": "Assets/UI/Icons/Survivor/Enemies/yeti_zoner.png",
+      "sha256": "2d49e1a6b54d5ef067961e1f22a17c3984cb0ce0642c03938802fc0036948d77",
+      "size": 10800,
+      "transparent_pixels": 4627,
+      "variant": 4
+    },
+    {
+      "alpha_bbox": [
+        4,
+        11,
+        83,
+        89
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#FF826F",
+        "outline": "#43235F",
+        "primary": "#76D7AC",
+        "secondary": "#A98CF5"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_alien_charger",
+      "id": "alien_charger",
+      "mode": "RGBA",
+      "opaque_pixels": 3411,
+      "path": "Assets/UI/Icons/Survivor/Enemies/alien_charger.png",
+      "sha256": "23aeb7adbf1d1bb9aeb99ca2d23327a4b2bcf8a2e50b022591eccbc987b1db9b",
+      "size": 7267,
+      "transparent_pixels": 5071,
+      "variant": 5
+    },
+    {
+      "alpha_bbox": [
+        8,
+        14,
+        91,
+        88
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#6EDAD2",
+        "outline": "#43235F",
+        "primary": "#FFD34E",
+        "secondary": "#6B4A75"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_bee_ranger",
+      "id": "bee_ranger",
+      "mode": "RGBA",
+      "opaque_pixels": 2935,
+      "path": "Assets/UI/Icons/Survivor/Enemies/bee_ranger.png",
+      "sha256": "5b906ac153eddf10b0ad50242c596895e5b87a3d5b2e3f7b87eb3f3a7d9b8e07",
+      "size": 7585,
+      "transparent_pixels": 5350,
+      "variant": 6
+    },
+    {
+      "alpha_bbox": [
+        11,
+        2,
+        94,
+        88
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#78D19B",
+        "outline": "#43235F",
+        "primary": "#EB8FC5",
+        "secondary": "#FFF0CF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_mushroom_lobber",
+      "id": "mushroom_lobber",
+      "mode": "RGBA",
+      "opaque_pixels": 2772,
+      "path": "Assets/UI/Icons/Survivor/Enemies/mushroom_lobber.png",
+      "sha256": "8c1646803e3b3e61c9d1e61e2771ad6b9645e7791646e7d6dbd10ba09014ff45",
+      "size": 7883,
+      "transparent_pixels": 5466,
+      "variant": 7
+    },
+    {
+      "alpha_bbox": [
+        2,
+        11,
+        82,
+        88
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#68D7D9",
+        "outline": "#43235F",
+        "primary": "#AB91F4",
+        "secondary": "#E7E2FF"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_ghost_ambusher",
+      "id": "ghost_ambusher",
+      "mode": "RGBA",
+      "opaque_pixels": 3423,
+      "path": "Assets/UI/Icons/Survivor/Enemies/ghost_ambusher.png",
+      "sha256": "86276a92383f5f9c2c74d4a828c4d10033e22ccf7598485bf67cd330d0bd8cf9",
+      "size": 8296,
+      "transparent_pixels": 4807,
+      "variant": 8
+    },
+    {
+      "alpha_bbox": [
+        4,
+        18,
+        92,
+        88
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#66D2D0",
+        "outline": "#43235F",
+        "primary": "#FF806F",
+        "secondary": "#FFB36C"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_crab_guard",
+      "id": "crab_guard",
+      "mode": "RGBA",
+      "opaque_pixels": 2844,
+      "path": "Assets/UI/Icons/Survivor/Enemies/crab_guard.png",
+      "sha256": "64b477c8d9f2fd59e20923045b4627b785c31764f77fd9e5ef44364955ae2315",
+      "size": 6185,
+      "transparent_pixels": 5414,
+      "variant": 9
+    },
+    {
+      "alpha_bbox": [
+        14,
+        6,
+        92,
+        88
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#A46BC1",
+        "secondary": "#F18EBE"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_bomb_spore",
+      "id": "bomb_spore",
+      "mode": "RGBA",
+      "opaque_pixels": 2386,
+      "path": "Assets/UI/Icons/Survivor/Enemies/bomb_spore.png",
+      "sha256": "9a4d8fa737bcf0ad66626480334b00e766467db05dd2e4a524c44b491e0befc8",
+      "size": 6529,
+      "transparent_pixels": 5919,
+      "variant": 10
+    },
+    {
+      "alpha_bbox": [
+        5,
+        4,
+        91,
+        90
+      ],
+      "category": "Enemies",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#67CF9F",
+        "secondary": "#9276DC"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "enemy_alien_commander",
+      "id": "alien_commander",
+      "mode": "RGBA",
+      "opaque_pixels": 3802,
+      "path": "Assets/UI/Icons/Survivor/Enemies/alien_commander.png",
+      "sha256": "bb5cb1ff6cf51c29bd6c21fa4dc14db0adc6fcec0f36b714f2e3f00f4ceda286",
+      "size": 8629,
+      "transparent_pixels": 4606,
+      "variant": 11
+    },
+    {
+      "alpha_bbox": [
+        2,
+        4,
+        94,
+        92
+      ],
+      "category": "Bosses",
+      "colors": {
+        "accent": "#B18FF5",
+        "outline": "#43235F",
+        "primary": "#DDEFF2",
+        "secondary": "#70B8E5"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "boss_yeti_colossus",
+      "id": "yeti_colossus",
+      "mode": "RGBA",
+      "opaque_pixels": 4853,
+      "path": "Assets/UI/Icons/Survivor/Enemies/yeti_colossus.png",
+      "sha256": "968413bb8d4404aa2cdfd40d7e4cdfa80b5e68460ee9e2020a7d4669fbc062d7",
+      "size": 12547,
+      "transparent_pixels": 3553,
+      "variant": 0
+    },
+    {
+      "alpha_bbox": [
+        6,
+        3,
+        91,
+        92
+      ],
+      "category": "Bosses",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#88BC69",
+        "secondary": "#9A6042"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "boss_orc_warlord",
+      "id": "orc_warlord",
+      "mode": "RGBA",
+      "opaque_pixels": 4500,
+      "path": "Assets/UI/Icons/Survivor/Enemies/orc_warlord.png",
+      "sha256": "029bf3e04636f137c8f58c501377521062af4d917f6867813b5bf4b17bb4b7c2",
+      "size": 10304,
+      "transparent_pixels": 3759,
+      "variant": 1
+    },
+    {
+      "alpha_bbox": [
+        6,
+        7,
+        90,
+        92
+      ],
+      "category": "Bosses",
+      "colors": {
+        "accent": "#66D8D2",
+        "outline": "#43235F",
+        "primary": "#527FCF",
+        "secondary": "#8D69D4"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "boss_azure_demon",
+      "id": "azure_demon",
+      "mode": "RGBA",
+      "opaque_pixels": 4153,
+      "path": "Assets/UI/Icons/Survivor/Enemies/azure_demon.png",
+      "sha256": "f77a7ce56d67b531e05435e307734acf3d2e79670520c9c6bba24bb4bd806d00",
+      "size": 11616,
+      "transparent_pixels": 4074,
+      "variant": 2
+    },
+    {
+      "alpha_bbox": [
+        5,
+        4,
+        89,
+        92
+      ],
+      "category": "Bosses",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#E787C2",
+        "secondary": "#FFF0C9"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "boss_mushroom_monarch",
+      "id": "mushroom_monarch",
+      "mode": "RGBA",
+      "opaque_pixels": 3664,
+      "path": "Assets/UI/Icons/Survivor/Enemies/mushroom_monarch.png",
+      "sha256": "c86b24ba922ffec1b9bbc6c425b653595b36657abd8432bf2b38995e8d824305",
+      "size": 9116,
+      "transparent_pixels": 4328,
+      "variant": 3
+    },
+    {
+      "alpha_bbox": [
+        4,
+        7,
+        92,
+        93
+      ],
+      "category": "Bosses",
+      "colors": {
+        "accent": "#FFD45C",
+        "outline": "#43235F",
+        "primary": "#72D0A8",
+        "secondary": "#8D72DC"
+      },
+      "dimensions": [
+        96,
+        96
+      ],
+      "glyph": "boss_star_dragon",
+      "id": "star_dragon",
+      "mode": "RGBA",
+      "opaque_pixels": 3734,
+      "path": "Assets/UI/Icons/Survivor/Enemies/star_dragon.png",
+      "sha256": "4c7579b94c5b84b6025231e6e11aadea0c42af739883b7dee9d70ab2d402eb54",
+      "size": 11225,
+      "transparent_pixels": 4322,
+      "variant": 4
+    }
+  ],
+  "generated_file_count": 95,
+  "generator_version": 3,
+  "icon_size": [
+    96,
+    96
+  ],
+  "schema_version": 1
+}

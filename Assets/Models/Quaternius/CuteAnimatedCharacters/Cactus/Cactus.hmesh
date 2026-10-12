@@ -1,0 +1,187 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1512,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1512,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1512,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1512,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1512,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1512,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1512,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 7,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 4500,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 151056,
+            "data": [],
+            "name": "Cactus",
+            "uri": "Assets/Models/Quaternius/CuteAnimatedCharacters/Cactus/Cactus.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 18144,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 18144,
+            "byteOffset": 18144,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 12096,
+            "byteOffset": 36288,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 18144,
+            "byteOffset": 48384,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 18144,
+            "byteOffset": 66528,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 24192,
+            "byteOffset": 84672,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 24192,
+            "byteOffset": 108864,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 18000,
+            "byteOffset": 133056,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        }
+    ],
+    "name": "Cactus",
+    "primitives": [
+        {
+            "attributes": {
+                "BITANGENT": 4,
+                "JOINTS_0": 5,
+                "NORMAL": 1,
+                "POSITION": 0,
+                "TANGENT": 3,
+                "TEXCOORD_0": 2,
+                "WEIGHTS_0": 6
+            },
+            "indices": 7,
+            "materialResPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Cactus/Texture.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Cactus/Cactus_Skeleton.hskel",
+    "version": 1,
+    "weights": []
+}

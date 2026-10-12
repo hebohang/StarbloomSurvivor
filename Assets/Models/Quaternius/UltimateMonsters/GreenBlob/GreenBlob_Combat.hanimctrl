@@ -1,0 +1,116 @@
+{
+    "entryNodeId": 1,
+    "name": "GreenBlobCombat",
+    "nodes": [
+        {
+            "clipPath": "",
+            "id": 1,
+            "name": "Entry",
+            "position": [-300.0, 60.0],
+            "type": "Entry"
+        },
+        {
+            "clipPath": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/CharacterArmature_Walk.hanim",
+            "id": 2,
+            "name": "Chase",
+            "position": [-40.0, 60.0],
+            "type": "State"
+        },
+        {
+            "clipPath": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/CharacterArmature_Bite_Front.hanim",
+            "id": 3,
+            "name": "Attack",
+            "position": [230.0, -70.0],
+            "type": "State"
+        },
+        {
+            "clipPath": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/CharacterArmature_HitRecieve.hanim",
+            "id": 4,
+            "name": "Hit",
+            "position": [230.0, 90.0],
+            "type": "State"
+        },
+        {
+            "clipPath": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/CharacterArmature_Death.hanim",
+            "id": 5,
+            "name": "Death",
+            "position": [500.0, 60.0],
+            "type": "State"
+        }
+    ],
+    "parameters": [
+        {
+            "defaultValue": false,
+            "name": "Attacking",
+            "type": "Bool"
+        },
+        {
+            "defaultValue": false,
+            "name": "Hit",
+            "type": "Trigger"
+        },
+        {
+            "defaultValue": false,
+            "name": "Dead",
+            "type": "Bool"
+        }
+    ],
+    "targetSkeletonPath": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/GreenBlob_Skeleton.hskel",
+    "transitions": [
+        {
+            "conditions": [],
+            "duration": 0.05,
+            "fromNodeId": 1,
+            "toNodeId": 2
+        },
+        {
+            "conditions": [{"op": "==", "param": "Dead", "value": true}],
+            "duration": 0.08,
+            "fromNodeId": 2,
+            "toNodeId": 5
+        },
+        {
+            "conditions": [{"op": "==", "param": "Hit", "value": true}],
+            "duration": 0.06,
+            "fromNodeId": 2,
+            "toNodeId": 4
+        },
+        {
+            "conditions": [{"op": "==", "param": "Attacking", "value": true}],
+            "duration": 0.10,
+            "fromNodeId": 2,
+            "toNodeId": 3
+        },
+        {
+            "conditions": [{"op": "==", "param": "Dead", "value": true}],
+            "duration": 0.06,
+            "fromNodeId": 3,
+            "toNodeId": 5
+        },
+        {
+            "conditions": [{"op": "==", "param": "Hit", "value": true}],
+            "duration": 0.05,
+            "fromNodeId": 3,
+            "toNodeId": 4
+        },
+        {
+            "conditions": [{"op": "==", "param": "Attacking", "value": false}],
+            "duration": 0.11,
+            "fromNodeId": 3,
+            "toNodeId": 2
+        },
+        {
+            "conditions": [{"op": "==", "param": "Dead", "value": true}],
+            "duration": 0.05,
+            "fromNodeId": 4,
+            "toNodeId": 5
+        },
+        {
+            "conditions": [],
+            "duration": 0.08,
+            "fromNodeId": 4,
+            "toNodeId": 2
+        }
+    ],
+    "version": 1
+}

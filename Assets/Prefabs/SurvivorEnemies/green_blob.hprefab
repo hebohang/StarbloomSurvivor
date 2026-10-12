@@ -1,0 +1,37 @@
+{
+  "AnimatorComponent": {
+    "animResPath": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/CharacterArmature_Walk.hanim",
+    "bEnableRootMotion": false,
+    "bLockRootMotionXZ": true,
+    "bLoop": true,
+    "bPlay": true,
+    "controllerPath": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/GreenBlob_Combat.hanimctrl",
+    "currentClipIndex": 0,
+    "playSpeed": 1.0
+  },
+  "MeshComponent": {
+    "Path": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/GreenBlob.hmesh",
+    "meshResPath": ""
+  },
+  "TagComponent": {
+    "Tag": "SurvivorMonster"
+  },
+  "TransformComponent": {
+    "ParentUuid": "",
+    "Rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Scale": [
+      0.0053,
+      0.0053,
+      0.0053
+    ],
+    "Translation": [
+      0.0,
+      0.08,
+      0.0
+    ]
+  }
+}

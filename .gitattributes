@@ -1,0 +1,7 @@
+# Preserve source/resource hashes and precompiled script identity across clones.
+* -text whitespace=cr-at-eol
+*.dll binary
+*.png binary
+*.wav binary
+*.hdr binary
+*.bin binary

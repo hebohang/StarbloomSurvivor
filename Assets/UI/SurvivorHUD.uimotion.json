@@ -1,0 +1,142 @@
+{
+  "format": "UiMotion",
+  "version": 1,
+  "budgets": {
+    "maxActiveTimelines": 1,
+    "maxTracksPerTimeline": 256
+  },
+  "timelines": {
+    "start_enter": {
+      "duration": 0.30,
+      "interrupt": "replace",
+      "unlockMarker": "ready",
+      "renderTransitions": [
+        { "start": 0.0, "end": 0.3, "from": 0.0, "to": 1.0, "effect": "halftone_dot_reveal" }
+      ],
+      "tracks": [
+        { "at": 0.0, "action": "display", "target": "start", "value": "flex" },
+        { "at": 0.0, "action": "class", "target": "start", "name": "screen_entering", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.28, "action": "class", "target": "start", "name": "screen_entering", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.28, "action": "marker", "name": "ready" }
+      ]
+    },
+    "start_to_loading": {
+      "duration": 0.34,
+      "interrupt": "safe_complete",
+      "unlockMarker": "ready",
+      "renderTransitions": [
+        { "start": 0.04, "end": 0.15, "from": 1.0, "to": 0.0, "effect": "diagonal_sticker_wipe" },
+        { "start": 0.15, "end": 0.31, "from": 0.0, "to": 1.0, "effect": "star_petal_reveal" }
+      ],
+      "tracks": [
+        { "at": 0.0, "action": "class", "target": "start", "name": "screen_confirm", "enabled": true, "reduceFlash": "skip" },
+        { "at": 0.04, "action": "class", "target": "start", "name": "screen_exiting", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.15, "action": "marker", "name": "switch" },
+        { "at": 0.15, "action": "display", "target": "start", "value": "none" },
+        { "at": 0.15, "action": "display", "target": "loading", "value": "flex" },
+        { "at": 0.15, "action": "class", "target": "loading", "name": "screen_entering", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.31, "action": "class", "target": "loading", "name": "screen_entering", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.31, "action": "marker", "name": "ready" }
+      ]
+    },
+    "modal_enter": {
+      "duration": 0.34,
+      "interrupt": "replace",
+      "unlockMarker": "ready",
+      "tracks": [
+        { "at": 0.0, "action": "class", "target": "$target", "name": "modal_entering", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.0, "action": "display", "target": "$target", "value": "flex" },
+        { "at": 0.032, "action": "marker", "name": "switch" },
+        { "at": 0.32, "action": "class", "target": "$target", "name": "modal_entering", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.32, "action": "marker", "name": "ready" }
+      ]
+    },
+    "modal_exit": {
+      "duration": 0.112,
+      "interrupt": "reverse",
+      "unlockMarker": "ready",
+      "tracks": [
+        { "at": 0.0, "action": "class", "target": "$source", "name": "modal_exiting", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.08, "action": "marker", "name": "switch" },
+        { "at": 0.08, "action": "display", "target": "$source", "value": "none" },
+        { "at": 0.08, "action": "class", "target": "$source", "name": "modal_exiting", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.088, "action": "marker", "name": "ready" }
+      ]
+    },
+    "modal_confirm_exit": {
+      "duration": 0.24,
+      "interrupt": "safe_complete",
+      "unlockMarker": "ready",
+      "tracks": [
+        { "at": 0.0, "action": "class", "target": "$source", "name": "screen_confirm", "enabled": true, "reduceFlash": "skip" },
+        { "at": 0.04, "action": "class", "target": "$source", "name": "screen_exiting", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.12, "action": "marker", "name": "switch" },
+        { "at": 0.12, "action": "display", "target": "$source", "value": "none" },
+        { "at": 0.12, "action": "class", "target": "$source", "name": "screen_exiting", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.12, "action": "class", "target": "$source", "name": "screen_confirm", "enabled": false, "reduceFlash": "skip" },
+        { "at": 0.21, "action": "marker", "name": "ready" }
+      ]
+    },
+    "hub_page_change": {
+      "duration": 0.24,
+      "interrupt": "safe_complete",
+      "unlockMarker": "ready",
+      "tracks": [
+        { "at": 0.0, "action": "class", "target": "$source", "name": "page_exiting", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.10, "action": "marker", "name": "switch" },
+        { "at": 0.10, "action": "display", "target": "$source", "value": "none" },
+        { "at": 0.10, "action": "class", "target": "$source", "name": "page_exiting", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.10, "action": "display", "target": "$target", "value": "flex" },
+        { "at": 0.10, "action": "class", "target": "$target", "name": "page_entering", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.22, "action": "class", "target": "$target", "name": "page_entering", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.22, "action": "marker", "name": "ready" }
+      ]
+    },
+    "preview_swap": {
+      "duration": 0.22,
+      "interrupt": "replace",
+      "unlockMarker": "ready",
+      "tracks": [
+        { "at": 0.0, "action": "class", "target": "$target", "name": "purchase_confirming", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.08, "action": "marker", "name": "switch" },
+        { "at": 0.20, "action": "class", "target": "$target", "name": "purchase_confirming", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.20, "action": "marker", "name": "ready" }
+      ]
+    },
+    "purchase_confirm": {
+      "duration": 0.20,
+      "interrupt": "safe_complete",
+      "unlockMarker": "ready",
+      "tracks": [
+        { "at": 0.0, "action": "class", "target": "$target", "name": "purchase_confirming", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.08, "action": "marker", "name": "commit" },
+        { "at": 0.18, "action": "class", "target": "$target", "name": "purchase_confirming", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.18, "action": "marker", "name": "ready" }
+      ]
+    },
+    "unlock_reveal": {
+      "duration": 0.25,
+      "interrupt": "replace",
+      "unlockMarker": "ready",
+      "tracks": [
+        { "at": 0.0, "action": "display", "target": "$target", "value": "flex" },
+        { "at": 0.0, "action": "class", "target": "$target", "name": "unlock_revealing", "enabled": true, "reduceMotion": "skip", "reduceFlash": "skip" },
+        { "at": 0.10, "action": "marker", "name": "switch" },
+        { "at": 0.23, "action": "class", "target": "$target", "name": "unlock_revealing", "enabled": false, "reduceMotion": "skip", "reduceFlash": "skip" },
+        { "at": 0.23, "action": "marker", "name": "ready" }
+      ]
+    },
+    "result_enter": {
+      "duration": 0.32,
+      "interrupt": "safe_complete",
+      "unlockMarker": "ready",
+      "tracks": [
+        { "at": 0.0, "action": "display", "target": "$target", "value": "flex" },
+        { "at": 0.0, "action": "class", "target": "$target", "name": "screen_entering", "enabled": true, "reduceMotion": "skip" },
+        { "at": 0.12, "action": "marker", "name": "switch" },
+        { "at": 0.30, "action": "class", "target": "$target", "name": "screen_entering", "enabled": false, "reduceMotion": "skip" },
+        { "at": 0.30, "action": "marker", "name": "ready" }
+      ]
+    }
+  }
+}

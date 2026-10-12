@@ -1,0 +1,37 @@
+{
+  "AnimatorComponent": {
+    "animResPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Idle.hanim",
+    "bEnableRootMotion": false,
+    "bLockRootMotionXZ": true,
+    "bLoop": true,
+    "bPlay": true,
+    "controllerPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien_Locomotion.hanimctrl",
+    "currentClipIndex": 0,
+    "playSpeed": 1.0
+  },
+  "MeshComponent": {
+    "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien.hmesh",
+    "meshResPath": ""
+  },
+  "TagComponent": {
+    "Tag": "SurvivorMonster"
+  },
+  "TransformComponent": {
+    "ParentUuid": "",
+    "Rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Scale": [
+      0.0085,
+      0.0085,
+      0.0085
+    ],
+    "Translation": [
+      0.0,
+      0.08,
+      0.0
+    ]
+  }
+}

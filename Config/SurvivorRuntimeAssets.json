@@ -1,0 +1,1848 @@
+{
+  "Schema": "hengine.runtime-asset-set",
+  "SchemaVersion": 1,
+  "Assets": [
+    {
+      "Key": "audio/boss-alert",
+      "Path": "Assets/Audio/SFX/Gameplay/boss_alert.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio boss-alert"
+    },
+    {
+      "Key": "audio/cast-energy",
+      "Path": "Assets/Audio/SFX/Gameplay/cast_energy.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio cast-energy"
+    },
+    {
+      "Key": "audio/cast-heavy",
+      "Path": "Assets/Audio/SFX/Gameplay/cast_heavy.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio cast-heavy"
+    },
+    {
+      "Key": "audio/cast-light",
+      "Path": "Assets/Audio/SFX/Gameplay/cast_light.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio cast-light"
+    },
+    {
+      "Key": "audio/level-up",
+      "Path": "Assets/Audio/SFX/Gameplay/level_up.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio level-up"
+    },
+    {
+      "Key": "audio/monster-death-01",
+      "Path": "Assets/Audio/SFX/Gameplay/monster_death_01.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio monster-death-01"
+    },
+    {
+      "Key": "audio/monster-death-02",
+      "Path": "Assets/Audio/SFX/Gameplay/monster_death_02.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio monster-death-02"
+    },
+    {
+      "Key": "audio/monster-hit-01",
+      "Path": "Assets/Audio/SFX/Gameplay/monster_hit_01.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio monster-hit-01"
+    },
+    {
+      "Key": "audio/monster-hit-02",
+      "Path": "Assets/Audio/SFX/Gameplay/monster_hit_02.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio monster-hit-02"
+    },
+    {
+      "Key": "audio/monster-hit-03",
+      "Path": "Assets/Audio/SFX/Gameplay/monster_hit_03.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio monster-hit-03"
+    },
+    {
+      "Key": "audio/music-gameplay",
+      "Path": "Assets/Audio/Music/battle_fast_loop.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio music-gameplay"
+    },
+    {
+      "Key": "audio/music-menu",
+      "Path": "Assets/Audio/Music/menu_funky_loop.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio music-menu"
+    },
+    {
+      "Key": "audio/player-hit",
+      "Path": "Assets/Audio/SFX/Gameplay/player_hit.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio player-hit"
+    },
+    {
+      "Key": "audio/ui-click",
+      "Path": "Assets/Audio/SFX/UI/click.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio ui-click"
+    },
+    {
+      "Key": "audio/ui-confirm",
+      "Path": "Assets/Audio/SFX/UI/confirm.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio ui-confirm"
+    },
+    {
+      "Key": "audio/ui-error",
+      "Path": "Assets/Audio/SFX/UI/error.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio ui-error"
+    },
+    {
+      "Key": "audio/xp-pickup",
+      "Path": "Assets/Audio/SFX/Gameplay/xp_pickup.wav",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor semantic audio xp-pickup"
+    },
+    {
+      "Key": "boss/azure_demon/controller",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/BlueDemon/BlueDemon_Combat.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss azure_demon controller"
+    },
+    {
+      "Key": "boss/azure_demon/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/azure_demon.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss azure_demon icon"
+    },
+    {
+      "Key": "boss/azure_demon/mesh",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/BlueDemon/BlueDemon.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss azure_demon mesh"
+    },
+    {
+      "Key": "boss/azure_demon/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/azure_demon.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss azure_demon prefab"
+    },
+    {
+      "Key": "boss/mushroom_monarch/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss mushroom_monarch controller"
+    },
+    {
+      "Key": "boss/mushroom_monarch/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/mushroom_monarch.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss mushroom_monarch icon"
+    },
+    {
+      "Key": "boss/mushroom_monarch/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss mushroom_monarch mesh"
+    },
+    {
+      "Key": "boss/mushroom_monarch/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/mushroom_monarch.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss mushroom_monarch prefab"
+    },
+    {
+      "Key": "boss/orc_warlord/controller",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/Orc/Orc_Combat.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss orc_warlord controller"
+    },
+    {
+      "Key": "boss/orc_warlord/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/orc_warlord.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss orc_warlord icon"
+    },
+    {
+      "Key": "boss/orc_warlord/mesh",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/Orc/Orc.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss orc_warlord mesh"
+    },
+    {
+      "Key": "boss/orc_warlord/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/orc_warlord.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss orc_warlord prefab"
+    },
+    {
+      "Key": "boss/star_dragon/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss star_dragon controller"
+    },
+    {
+      "Key": "boss/star_dragon/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/star_dragon.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss star_dragon icon"
+    },
+    {
+      "Key": "boss/star_dragon/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss star_dragon mesh"
+    },
+    {
+      "Key": "boss/star_dragon/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/star_dragon.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss star_dragon prefab"
+    },
+    {
+      "Key": "boss/yeti_colossus/controller",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/YetiNormalized/Yeti_Combat.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss yeti_colossus controller"
+    },
+    {
+      "Key": "boss/yeti_colossus/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/yeti_colossus.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss yeti_colossus icon"
+    },
+    {
+      "Key": "boss/yeti_colossus/mesh",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/YetiNormalized/Yeti.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss yeti_colossus mesh"
+    },
+    {
+      "Key": "boss/yeti_colossus/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/yeti_colossus.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor boss yeti_colossus prefab"
+    },
+    {
+      "Key": "character/azura/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Penguin/Penguin_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character azura controller"
+    },
+    {
+      "Key": "character/azura/dance",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Penguin/Dance.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character azura dance"
+    },
+    {
+      "Key": "character/azura/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/azura.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character azura icon"
+    },
+    {
+      "Key": "character/azura/idle",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Penguin/Idle.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character azura idle"
+    },
+    {
+      "Key": "character/azura/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Penguin/Penguin.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character azura mesh"
+    },
+    {
+      "Key": "character/boolet/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Ghost/Ghost_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character boolet controller"
+    },
+    {
+      "Key": "character/boolet/dance",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Ghost/Dance.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character boolet dance"
+    },
+    {
+      "Key": "character/boolet/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/boolet.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character boolet icon"
+    },
+    {
+      "Key": "character/boolet/idle",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Ghost/Idle.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character boolet idle"
+    },
+    {
+      "Key": "character/boolet/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Ghost/Ghost.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character boolet mesh"
+    },
+    {
+      "Key": "character/cosmobob/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character cosmobob controller"
+    },
+    {
+      "Key": "character/cosmobob/dance",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Dance.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character cosmobob dance"
+    },
+    {
+      "Key": "character/cosmobob/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/cosmobob.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character cosmobob icon"
+    },
+    {
+      "Key": "character/cosmobob/idle",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Idle.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character cosmobob idle"
+    },
+    {
+      "Key": "character/cosmobob/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character cosmobob mesh"
+    },
+    {
+      "Key": "character/crabble/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Crab/Crab_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character crabble controller"
+    },
+    {
+      "Key": "character/crabble/dance",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Crab/Dance.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character crabble dance"
+    },
+    {
+      "Key": "character/crabble/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/crabble.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character crabble icon"
+    },
+    {
+      "Key": "character/crabble/idle",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Crab/Idle.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character crabble idle"
+    },
+    {
+      "Key": "character/crabble/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Crab/Crab.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character crabble mesh"
+    },
+    {
+      "Key": "character/honeybun/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Bee_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character honeybun controller"
+    },
+    {
+      "Key": "character/honeybun/dance",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Flying.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character honeybun dance"
+    },
+    {
+      "Key": "character/honeybun/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/honeybun.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character honeybun icon"
+    },
+    {
+      "Key": "character/honeybun/idle",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Flying.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character honeybun idle"
+    },
+    {
+      "Key": "character/honeybun/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Bee.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character honeybun mesh"
+    },
+    {
+      "Key": "character/mossling/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Cactus/Cactus_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mossling controller"
+    },
+    {
+      "Key": "character/mossling/dance",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Cactus/Dance.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mossling dance"
+    },
+    {
+      "Key": "character/mossling/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/mossling.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mossling icon"
+    },
+    {
+      "Key": "character/mossling/idle",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Cactus/Idle.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mossling idle"
+    },
+    {
+      "Key": "character/mossling/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Cactus/Cactus.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mossling mesh"
+    },
+    {
+      "Key": "character/mushmellow/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mushmellow controller"
+    },
+    {
+      "Key": "character/mushmellow/dance",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Dance.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mushmellow dance"
+    },
+    {
+      "Key": "character/mushmellow/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/mushmellow.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mushmellow icon"
+    },
+    {
+      "Key": "character/mushmellow/idle",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Idle.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mushmellow idle"
+    },
+    {
+      "Key": "character/mushmellow/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character mushmellow mesh"
+    },
+    {
+      "Key": "character/peachy/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Pig/Pig_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character peachy controller"
+    },
+    {
+      "Key": "character/peachy/dance",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Pig/Dance.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character peachy dance"
+    },
+    {
+      "Key": "character/peachy/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/peachy.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character peachy icon"
+    },
+    {
+      "Key": "character/peachy/idle",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Pig/Idle.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character peachy idle"
+    },
+    {
+      "Key": "character/peachy/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Pig/Pig.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character peachy mesh"
+    },
+    {
+      "Key": "character/snowbean/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Panda/Panda_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character snowbean controller"
+    },
+    {
+      "Key": "character/snowbean/dance",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Panda/Dance.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character snowbean dance"
+    },
+    {
+      "Key": "character/snowbean/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/snowbean.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character snowbean icon"
+    },
+    {
+      "Key": "character/snowbean/idle",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Panda/Idle.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character snowbean idle"
+    },
+    {
+      "Key": "character/snowbean/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Panda/Panda.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character snowbean mesh"
+    },
+    {
+      "Key": "character/starpaw/controller",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/Cat/Cat_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character starpaw controller"
+    },
+    {
+      "Key": "character/starpaw/dance",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/Cat/CharacterArmature_Dance.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character starpaw dance"
+    },
+    {
+      "Key": "character/starpaw/icon",
+      "Path": "Assets/UI/Icons/Survivor/Characters/starpaw.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character starpaw icon"
+    },
+    {
+      "Key": "character/starpaw/idle",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/Cat/CharacterArmature_Idle.hanim",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character starpaw idle"
+    },
+    {
+      "Key": "character/starpaw/mesh",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/Cat/Cat.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor character starpaw mesh"
+    },
+    {
+      "Key": "common/prefab/boss-chest",
+      "Path": "Assets/Prefabs/SurvivorBossChest.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime common/prefab/boss-chest"
+    },
+    {
+      "Key": "common/prefab/experience-gem",
+      "Path": "Assets/Prefabs/ExperienceGem.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime common/prefab/experience-gem"
+    },
+    {
+      "Key": "domain/star/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/starfall.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Star domain gameplay telegraph"
+    },
+    {
+      "Key": "domain/star/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/starfall.png",
+      "Kind": "HardRuntime",
+      "Reason": "Star domain HUD seal"
+    },
+    {
+      "Key": "domain/star/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/MoonArcane.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Star domain meteor impact"
+    },
+    {
+      "Key": "domain/star/overcharge-vfx",
+      "Path": "Assets/Effects/Survivor/PetalStarburstToon.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Star domain activation overcharge"
+    },
+    {
+      "Key": "domain/thunder/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/thunder.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Thunder domain gameplay telegraph"
+    },
+    {
+      "Key": "domain/thunder/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/thunder.png",
+      "Kind": "HardRuntime",
+      "Reason": "Thunder domain HUD seal"
+    },
+    {
+      "Key": "domain/thunder/impact-vfx",
+      "Path": "Assets/Effects/MagicThunder.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Thunder domain chain impact"
+    },
+    {
+      "Key": "domain/thunder/overcharge-vfx",
+      "Path": "Assets/Effects/MagicThunder.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Thunder domain activation overcharge"
+    },
+    {
+      "Key": "domain/water/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/bubble.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Water domain gameplay telegraph"
+    },
+    {
+      "Key": "domain/water/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/bubble.png",
+      "Kind": "HardRuntime",
+      "Reason": "Water domain HUD seal"
+    },
+    {
+      "Key": "domain/water/impact-vfx",
+      "Path": "Assets/Effects/Survivor/ToonWater.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Water domain tidal impact"
+    },
+    {
+      "Key": "domain/water/overcharge-vfx",
+      "Path": "Assets/Effects/Survivor/ToonWater.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Water domain activation overcharge"
+    },
+    {
+      "Key": "domain/wind/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/tornado.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Wind domain gameplay telegraph"
+    },
+    {
+      "Key": "domain/wind/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/tornado.png",
+      "Kind": "HardRuntime",
+      "Reason": "Wind domain HUD seal"
+    },
+    {
+      "Key": "domain/wind/impact-vfx",
+      "Path": "Assets/Effects/Survivor/MagicTornade.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Wind domain tornado impact"
+    },
+    {
+      "Key": "domain/wind/overcharge-vfx",
+      "Path": "Assets/Effects/Survivor/MagicTornade.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Wind domain activation overcharge"
+    },
+    {
+      "Key": "enemy/alien_charger/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy alien_charger controller"
+    },
+    {
+      "Key": "enemy/alien_charger/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/alien_charger.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy alien_charger icon"
+    },
+    {
+      "Key": "enemy/alien_charger/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy alien_charger mesh"
+    },
+    {
+      "Key": "enemy/alien_charger/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/alien_charger.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy alien_charger prefab"
+    },
+    {
+      "Key": "enemy/alien_commander/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy alien_commander controller"
+    },
+    {
+      "Key": "enemy/alien_commander/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/alien_commander.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy alien_commander icon"
+    },
+    {
+      "Key": "enemy/alien_commander/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Alien/Alien.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy alien_commander mesh"
+    },
+    {
+      "Key": "enemy/alien_commander/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/alien_commander.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy alien_commander prefab"
+    },
+    {
+      "Key": "enemy/bee_ranger/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Bee_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy bee_ranger controller"
+    },
+    {
+      "Key": "enemy/bee_ranger/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/bee_ranger.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy bee_ranger icon"
+    },
+    {
+      "Key": "enemy/bee_ranger/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Bee.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy bee_ranger mesh"
+    },
+    {
+      "Key": "enemy/bee_ranger/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/bee_ranger.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy bee_ranger prefab"
+    },
+    {
+      "Key": "enemy/bomb_spore/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy bomb_spore controller"
+    },
+    {
+      "Key": "enemy/bomb_spore/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/bomb_spore.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy bomb_spore icon"
+    },
+    {
+      "Key": "enemy/bomb_spore/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy bomb_spore mesh"
+    },
+    {
+      "Key": "enemy/bomb_spore/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/bomb_spore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy bomb_spore prefab"
+    },
+    {
+      "Key": "enemy/crab_guard/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Crab/Crab_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy crab_guard controller"
+    },
+    {
+      "Key": "enemy/crab_guard/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/crab_guard.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy crab_guard icon"
+    },
+    {
+      "Key": "enemy/crab_guard/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Crab/Crab.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy crab_guard mesh"
+    },
+    {
+      "Key": "enemy/crab_guard/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/crab_guard.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy crab_guard prefab"
+    },
+    {
+      "Key": "enemy/ghost_ambusher/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Ghost/Ghost_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy ghost_ambusher controller"
+    },
+    {
+      "Key": "enemy/ghost_ambusher/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/ghost_ambusher.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy ghost_ambusher icon"
+    },
+    {
+      "Key": "enemy/ghost_ambusher/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Ghost/Ghost.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy ghost_ambusher mesh"
+    },
+    {
+      "Key": "enemy/ghost_ambusher/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/ghost_ambusher.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy ghost_ambusher prefab"
+    },
+    {
+      "Key": "enemy/green_blob/controller",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/GreenBlob_Combat.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy green_blob controller"
+    },
+    {
+      "Key": "enemy/green_blob/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/green_blob.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy green_blob icon"
+    },
+    {
+      "Key": "enemy/green_blob/mesh",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/GreenBlob/GreenBlob.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy green_blob mesh"
+    },
+    {
+      "Key": "enemy/green_blob/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/green_blob.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy green_blob prefab"
+    },
+    {
+      "Key": "enemy/mushroom_lobber/controller",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom_Locomotion.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy mushroom_lobber controller"
+    },
+    {
+      "Key": "enemy/mushroom_lobber/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/mushroom_lobber.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy mushroom_lobber icon"
+    },
+    {
+      "Key": "enemy/mushroom_lobber/mesh",
+      "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy mushroom_lobber mesh"
+    },
+    {
+      "Key": "enemy/mushroom_lobber/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/mushroom_lobber.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy mushroom_lobber prefab"
+    },
+    {
+      "Key": "enemy/orc_bruiser/controller",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/Orc/Orc_Combat.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy orc_bruiser controller"
+    },
+    {
+      "Key": "enemy/orc_bruiser/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/orc_bruiser.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy orc_bruiser icon"
+    },
+    {
+      "Key": "enemy/orc_bruiser/mesh",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/Orc/Orc.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy orc_bruiser mesh"
+    },
+    {
+      "Key": "enemy/orc_bruiser/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/orc_bruiser.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy orc_bruiser prefab"
+    },
+    {
+      "Key": "enemy/pink_blob/controller",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/PinkBlob/PinkBlob_Combat.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy pink_blob controller"
+    },
+    {
+      "Key": "enemy/pink_blob/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/pink_blob.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy pink_blob icon"
+    },
+    {
+      "Key": "enemy/pink_blob/mesh",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/PinkBlob/PinkBlob.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy pink_blob mesh"
+    },
+    {
+      "Key": "enemy/pink_blob/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/pink_blob.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy pink_blob prefab"
+    },
+    {
+      "Key": "enemy/spiky_blob/controller",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/GreenSpikyBlob/GreenSpikyBlob_Combat.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy spiky_blob controller"
+    },
+    {
+      "Key": "enemy/spiky_blob/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/spiky_blob.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy spiky_blob icon"
+    },
+    {
+      "Key": "enemy/spiky_blob/mesh",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/GreenSpikyBlob/GreenSpikyBlob.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy spiky_blob mesh"
+    },
+    {
+      "Key": "enemy/spiky_blob/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/spiky_blob.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy spiky_blob prefab"
+    },
+    {
+      "Key": "enemy/yeti_zoner/controller",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/YetiNormalized/Yeti_Combat.hanimctrl",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy yeti_zoner controller"
+    },
+    {
+      "Key": "enemy/yeti_zoner/icon",
+      "Path": "Assets/UI/Icons/Survivor/Enemies/yeti_zoner.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy yeti_zoner icon"
+    },
+    {
+      "Key": "enemy/yeti_zoner/mesh",
+      "Path": "Assets/Models/Quaternius/UltimateMonsters/YetiNormalized/Yeti.hmesh",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy yeti_zoner mesh"
+    },
+    {
+      "Key": "enemy/yeti_zoner/prefab",
+      "Path": "Assets/Prefabs/SurvivorEnemies/yeti_zoner.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor enemy yeti_zoner prefab"
+    },
+    {
+      "Key": "evolution/friendshipspectrum/icon",
+      "Path": "Assets/UI/Icons/Survivor/Evolutions/friendshipspectrum.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor evolution friendshipspectrum icon"
+    },
+    {
+      "Key": "evolution/galaxygarden/icon",
+      "Path": "Assets/UI/Icons/Survivor/Evolutions/galaxygarden.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor evolution galaxygarden icon"
+    },
+    {
+      "Key": "evolution/midnightencore/icon",
+      "Path": "Assets/UI/Icons/Survivor/Evolutions/midnightencore.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor evolution midnightencore icon"
+    },
+    {
+      "Key": "evolution/myceliumcarnival/icon",
+      "Path": "Assets/UI/Icons/Survivor/Evolutions/myceliumcarnival.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor evolution myceliumcarnival icon"
+    },
+    {
+      "Key": "evolution/nebulanetwork/icon",
+      "Path": "Assets/UI/Icons/Survivor/Evolutions/nebulanetwork.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor evolution nebulanetwork icon"
+    },
+    {
+      "Key": "evolution/royalbeehive/icon",
+      "Path": "Assets/UI/Icons/Survivor/Evolutions/royalbeehive.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor evolution royalbeehive icon"
+    },
+    {
+      "Key": "evolution/royalbubblecade/icon",
+      "Path": "Assets/UI/Icons/Survivor/Evolutions/royalbubblecade.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor evolution royalbubblecade icon"
+    },
+    {
+      "Key": "evolution/supernovachoir/icon",
+      "Path": "Assets/UI/Icons/Survivor/Evolutions/supernovachoir.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor evolution supernovachoir icon"
+    },
+    {
+      "Key": "evolution/tidalfortress/icon",
+      "Path": "Assets/UI/Icons/Survivor/Evolutions/tidalfortress.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor evolution tidalfortress icon"
+    },
+    {
+      "Key": "objective/central-summon-vfx",
+      "Path": "Assets/Effects/Survivor/Pilot/BossSpawnWarning.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Central Starbloom final-boss summon telegraph"
+    },
+    {
+      "Key": "powerup/meta_banish/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_banish.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_banish icon"
+    },
+    {
+      "Key": "powerup/meta_greed/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_greed.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_greed icon"
+    },
+    {
+      "Key": "powerup/meta_growth/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_growth.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_growth icon"
+    },
+    {
+      "Key": "powerup/meta_health/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_health.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_health icon"
+    },
+    {
+      "Key": "powerup/meta_luck/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_luck.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_luck icon"
+    },
+    {
+      "Key": "powerup/meta_magnet/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_magnet.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_magnet icon"
+    },
+    {
+      "Key": "powerup/meta_might/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_might.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_might icon"
+    },
+    {
+      "Key": "powerup/meta_move/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_move.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_move icon"
+    },
+    {
+      "Key": "powerup/meta_recovery/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_recovery.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_recovery icon"
+    },
+    {
+      "Key": "powerup/meta_reroll/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_reroll.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_reroll icon"
+    },
+    {
+      "Key": "powerup/meta_revive/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_revive.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_revive icon"
+    },
+    {
+      "Key": "powerup/meta_skip/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_skip.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_skip icon"
+    },
+    {
+      "Key": "powerup/meta_weapon_slots/icon",
+      "Path": "Assets/UI/Icons/Survivor/PowerUps/meta_weapon_slots.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor powerup meta_weapon_slots icon"
+    },
+    {
+      "Key": "tome/curse/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/curse.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome curse icon"
+    },
+    {
+      "Key": "tome/duration/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/duration.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome duration icon"
+    },
+    {
+      "Key": "tome/fortune/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/fortune.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome fortune icon"
+    },
+    {
+      "Key": "tome/greed/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/greed.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome greed icon"
+    },
+    {
+      "Key": "tome/growth/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/growth.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome growth icon"
+    },
+    {
+      "Key": "tome/guard/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/guard.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome guard icon"
+    },
+    {
+      "Key": "tome/haste/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/haste.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome haste icon"
+    },
+    {
+      "Key": "tome/magnet/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/magnet.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome magnet icon"
+    },
+    {
+      "Key": "tome/might/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/might.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome might icon"
+    },
+    {
+      "Key": "tome/quantity/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/quantity.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome quantity icon"
+    },
+    {
+      "Key": "tome/reach/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/reach.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome reach icon"
+    },
+    {
+      "Key": "tome/recovery/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/recovery.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome recovery icon"
+    },
+    {
+      "Key": "tome/status/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/status.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome status icon"
+    },
+    {
+      "Key": "tome/thorns/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/thorns.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome thorns icon"
+    },
+    {
+      "Key": "tome/velocity/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/velocity.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome velocity icon"
+    },
+    {
+      "Key": "tome/vitality/icon",
+      "Path": "Assets/UI/Icons/Survivor/Tomes/vitality.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor tome vitality icon"
+    },
+    {
+      "Key": "trinket/bloom_battery/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/bloom_battery.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket bloom_battery icon"
+    },
+    {
+      "Key": "trinket/boss_bell/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/boss_bell.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket boss_bell icon"
+    },
+    {
+      "Key": "trinket/comet_tail/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/comet_tail.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket comet_tail icon"
+    },
+    {
+      "Key": "trinket/echo_shell/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/echo_shell.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket echo_shell icon"
+    },
+    {
+      "Key": "trinket/friendship_pin/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/friendship_pin.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket friendship_pin icon"
+    },
+    {
+      "Key": "trinket/glass_star/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/glass_star.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket glass_star icon"
+    },
+    {
+      "Key": "trinket/lucky_ribbon/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/lucky_ribbon.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket lucky_ribbon icon"
+    },
+    {
+      "Key": "trinket/marshmallow_shield/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/marshmallow_shield.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket marshmallow_shield icon"
+    },
+    {
+      "Key": "trinket/popcorn_kernel/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/popcorn_kernel.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket popcorn_kernel icon"
+    },
+    {
+      "Key": "trinket/prism_lens/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/prism_lens.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket prism_lens icon"
+    },
+    {
+      "Key": "trinket/sticky_honey/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/sticky_honey.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket sticky_honey icon"
+    },
+    {
+      "Key": "trinket/tiny_magnet/icon",
+      "Path": "Assets/UI/Icons/Survivor/Trinkets/tiny_magnet.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor trinket tiny_magnet icon"
+    },
+    {
+      "Key": "ui/background/loading",
+      "Path": "Assets/UI/Backgrounds/starbloom_loading_bg.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime ui/background/loading"
+    },
+    {
+      "Key": "ui/background/menu-garden",
+      "Path": "Assets/UI/Backgrounds/StarbloomMenuGarden.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime ui/background/menu-garden"
+    },
+    {
+      "Key": "ui/cursor/starbloom",
+      "Path": "Assets/UI/Cursors/starbloom_cursor.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime ui/cursor/starbloom"
+    },
+    {
+      "Key": "ui/hud/document",
+      "Path": "Assets/UI/SurvivorHUD.hui",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime ui/hud/document"
+    },
+    {
+      "Key": "ui/hud/motion",
+      "Path": "Assets/UI/SurvivorHUD.uimotion.json",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime ui/hud/motion"
+    },
+    {
+      "Key": "ui/menu-preview-prefab",
+      "Path": "Assets/Prefabs/SurvivorMenuPreview.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime ui/menu-preview-prefab"
+    },
+    {
+      "Key": "ui/motion/loading-lottie",
+      "Path": "Assets/UI/Motion/starbloom-burst.lottie.json",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime ui/motion/loading-lottie"
+    },
+    {
+      "Key": "ui/motion/starburst-svg",
+      "Path": "Assets/UI/Motion/starbloom-starburst.svg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime ui/motion/starburst-svg"
+    },
+    {
+      "Key": "ui/window-icon",
+      "Path": "Assets/UI/Icons/Survivor/Brand/StarbloomSurvivor.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime ui/window-icon"
+    },
+    {
+      "Key": "vfx/common/boss-area-telegraph",
+      "Path": "Assets/Effects/Survivor/Common/BossAreaTelegraph.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime vfx/common/boss-area-telegraph"
+    },
+    {
+      "Key": "vfx/common/boss-chest",
+      "Path": "Assets/Effects/Survivor/Common/BossChest.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime vfx/common/boss-chest"
+    },
+    {
+      "Key": "vfx/common/enemy-projectile-orange",
+      "Path": "Assets/Effects/Survivor/Common/EnemyProjectileOrange.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime vfx/common/enemy-projectile-orange"
+    },
+    {
+      "Key": "vfx/common/enemy-zone-telegraph",
+      "Path": "Assets/Effects/Survivor/Common/EnemyZoneTelegraph.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime vfx/common/enemy-zone-telegraph"
+    },
+    {
+      "Key": "vfx/common/heal-level-up",
+      "Path": "Assets/Effects/Survivor/Common/HealLevelUp.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor runtime vfx/common/heal-level-up"
+    },
+    {
+      "Key": "weapon/acornmortar/body-vfx",
+      "Path": "Assets/Effects/Survivor/Weapons/AcornMortar.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon acornmortar bodyVfx"
+    },
+    {
+      "Key": "weapon/acornmortar/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/acornmortar.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon acornmortar castVfx"
+    },
+    {
+      "Key": "weapon/acornmortar/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/acornmortar.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon acornmortar icon"
+    },
+    {
+      "Key": "weapon/acornmortar/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/NaturePoison.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon acornmortar impactVfx"
+    },
+    {
+      "Key": "weapon/acornmortar/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorAcornCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon acornmortar projectilePrefab"
+    },
+    {
+      "Key": "weapon/aura/body-vfx",
+      "Path": "Assets/Effects/Survivor/AuraButterfly.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon aura bodyVfx"
+    },
+    {
+      "Key": "weapon/aura/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/aura.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon aura castVfx"
+    },
+    {
+      "Key": "weapon/aura/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/aura.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon aura icon"
+    },
+    {
+      "Key": "weapon/aura/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/MoonArcane.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon aura impactVfx"
+    },
+    {
+      "Key": "weapon/aura/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorCometCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon aura projectilePrefab"
+    },
+    {
+      "Key": "weapon/bubble/body-vfx",
+      "Path": "Assets/Effects/Survivor/BubbleBounceToon.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon bubble bodyVfx"
+    },
+    {
+      "Key": "weapon/bubble/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/bubble.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon bubble castVfx"
+    },
+    {
+      "Key": "weapon/bubble/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/bubble.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon bubble icon"
+    },
+    {
+      "Key": "weapon/bubble/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/WaterBubble.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon bubble impactVfx"
+    },
+    {
+      "Key": "weapon/bubble/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorBubbleCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon bubble projectilePrefab"
+    },
+    {
+      "Key": "weapon/comet/body-vfx",
+      "Path": "Assets/Effects/Survivor/WispCometToon.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon comet bodyVfx"
+    },
+    {
+      "Key": "weapon/comet/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/comet.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon comet castVfx"
+    },
+    {
+      "Key": "weapon/comet/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/comet.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon comet icon"
+    },
+    {
+      "Key": "weapon/comet/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/MoonArcane.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon comet impactVfx"
+    },
+    {
+      "Key": "weapon/comet/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorCometCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon comet projectilePrefab"
+    },
+    {
+      "Key": "weapon/coralanchor/body-vfx",
+      "Path": "Assets/Effects/Survivor/Weapons/CoralAnchor.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon coralanchor bodyVfx"
+    },
+    {
+      "Key": "weapon/coralanchor/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/coralanchor.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon coralanchor castVfx"
+    },
+    {
+      "Key": "weapon/coralanchor/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/coralanchor.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon coralanchor icon"
+    },
+    {
+      "Key": "weapon/coralanchor/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/WaterBubble.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon coralanchor impactVfx"
+    },
+    {
+      "Key": "weapon/coralanchor/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorCoralAnchorCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon coralanchor projectilePrefab"
+    },
+    {
+      "Key": "weapon/dagger/body-vfx",
+      "Path": "Assets/Effects/Survivor/StarDaggerToon.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon dagger bodyVfx"
+    },
+    {
+      "Key": "weapon/dagger/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/dagger.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon dagger castVfx"
+    },
+    {
+      "Key": "weapon/dagger/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/dagger.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon dagger icon"
+    },
+    {
+      "Key": "weapon/dagger/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/Physical.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon dagger impactVfx"
+    },
+    {
+      "Key": "weapon/dagger/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorStarBolt.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon dagger projectilePrefab"
+    },
+    {
+      "Key": "weapon/fireball/body-vfx",
+      "Path": "Assets/Effects/Survivor/FireballChibiToon.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon fireball bodyVfx"
+    },
+    {
+      "Key": "weapon/fireball/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/fireball.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon fireball castVfx"
+    },
+    {
+      "Key": "weapon/fireball/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/fireball.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon fireball icon"
+    },
+    {
+      "Key": "weapon/fireball/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/Fire.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon fireball impactVfx"
+    },
+    {
+      "Key": "weapon/fireball/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorFireballCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon fireball projectilePrefab"
+    },
+    {
+      "Key": "weapon/frostorb/body-vfx",
+      "Path": "Assets/Effects/Survivor/Weapons/FrostOrb.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon frostorb bodyVfx"
+    },
+    {
+      "Key": "weapon/frostorb/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/frostorb.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon frostorb castVfx"
+    },
+    {
+      "Key": "weapon/frostorb/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/frostorb.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon frostorb icon"
+    },
+    {
+      "Key": "weapon/frostorb/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/IceElectric.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon frostorb impactVfx"
+    },
+    {
+      "Key": "weapon/frostorb/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorFrostOrbCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon frostorb projectilePrefab"
+    },
+    {
+      "Key": "weapon/gravityyoyo/body-vfx",
+      "Path": "Assets/Effects/Survivor/Weapons/GravityYoyo.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon gravityyoyo bodyVfx"
+    },
+    {
+      "Key": "weapon/gravityyoyo/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/gravityyoyo.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon gravityyoyo castVfx"
+    },
+    {
+      "Key": "weapon/gravityyoyo/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/gravityyoyo.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon gravityyoyo icon"
+    },
+    {
+      "Key": "weapon/gravityyoyo/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/MoonArcane.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon gravityyoyo impactVfx"
+    },
+    {
+      "Key": "weapon/gravityyoyo/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorGravityYoyoCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon gravityyoyo projectilePrefab"
+    },
+    {
+      "Key": "weapon/honeyneedle/body-vfx",
+      "Path": "Assets/Effects/Survivor/Weapons/HoneyNeedle.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon honeyneedle bodyVfx"
+    },
+    {
+      "Key": "weapon/honeyneedle/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/honeyneedle.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon honeyneedle castVfx"
+    },
+    {
+      "Key": "weapon/honeyneedle/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/honeyneedle.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon honeyneedle icon"
+    },
+    {
+      "Key": "weapon/honeyneedle/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/NaturePoison.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon honeyneedle impactVfx"
+    },
+    {
+      "Key": "weapon/honeyneedle/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorHoneyNeedleCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon honeyneedle projectilePrefab"
+    },
+    {
+      "Key": "weapon/moonblade/body-vfx",
+      "Path": "Assets/Effects/Survivor/MoonBladeToon.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon moonblade bodyVfx"
+    },
+    {
+      "Key": "weapon/moonblade/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/moonblade.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon moonblade castVfx"
+    },
+    {
+      "Key": "weapon/moonblade/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/moonblade.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon moonblade icon"
+    },
+    {
+      "Key": "weapon/moonblade/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/MoonArcane.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon moonblade impactVfx"
+    },
+    {
+      "Key": "weapon/moonblade/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorStarBolt.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon moonblade projectilePrefab"
+    },
+    {
+      "Key": "weapon/petalstorm/body-vfx",
+      "Path": "Assets/Effects/Survivor/PetalStarburstToon.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon petalstorm bodyVfx"
+    },
+    {
+      "Key": "weapon/petalstorm/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/petalstorm.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon petalstorm castVfx"
+    },
+    {
+      "Key": "weapon/petalstorm/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/petalstorm.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon petalstorm icon"
+    },
+    {
+      "Key": "weapon/petalstorm/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/NaturePoison.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon petalstorm impactVfx"
+    },
+    {
+      "Key": "weapon/petalstorm/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorPetalCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon petalstorm projectilePrefab"
+    },
+    {
+      "Key": "weapon/phantombell/body-vfx",
+      "Path": "Assets/Effects/Survivor/Weapons/PhantomBell.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon phantombell bodyVfx"
+    },
+    {
+      "Key": "weapon/phantombell/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/phantombell.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon phantombell castVfx"
+    },
+    {
+      "Key": "weapon/phantombell/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/phantombell.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon phantombell icon"
+    },
+    {
+      "Key": "weapon/phantombell/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/MoonArcane.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon phantombell impactVfx"
+    },
+    {
+      "Key": "weapon/phantombell/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorPhantomBellCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon phantombell projectilePrefab"
+    },
+    {
+      "Key": "weapon/prismorbit/body-vfx",
+      "Path": "Assets/Effects/Survivor/Weapons/PrismOrbit.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon prismorbit bodyVfx"
+    },
+    {
+      "Key": "weapon/prismorbit/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/prismorbit.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon prismorbit castVfx"
+    },
+    {
+      "Key": "weapon/prismorbit/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/prismorbit.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon prismorbit icon"
+    },
+    {
+      "Key": "weapon/prismorbit/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/MoonArcane.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon prismorbit impactVfx"
+    },
+    {
+      "Key": "weapon/prismorbit/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorPrismCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon prismorbit projectilePrefab"
+    },
+    {
+      "Key": "weapon/rainbowrail/body-vfx",
+      "Path": "Assets/Effects/Survivor/Weapons/RainbowRail.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon rainbowrail bodyVfx"
+    },
+    {
+      "Key": "weapon/rainbowrail/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/rainbowrail.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon rainbowrail castVfx"
+    },
+    {
+      "Key": "weapon/rainbowrail/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/rainbowrail.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon rainbowrail icon"
+    },
+    {
+      "Key": "weapon/rainbowrail/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/MoonArcane.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon rainbowrail impactVfx"
+    },
+    {
+      "Key": "weapon/rainbowrail/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorPrismCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon rainbowrail projectilePrefab"
+    },
+    {
+      "Key": "weapon/ring/body-vfx",
+      "Path": "Assets/Effects/HModify_Simple_Ring_Shape2.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon ring bodyVfx"
+    },
+    {
+      "Key": "weapon/ring/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/ring.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon ring castVfx"
+    },
+    {
+      "Key": "weapon/ring/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/ring.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon ring icon"
+    },
+    {
+      "Key": "weapon/ring/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/WaterBubble.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon ring impactVfx"
+    },
+    {
+      "Key": "weapon/sporecap/body-vfx",
+      "Path": "Assets/Effects/Survivor/Weapons/Sporecap.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon sporecap bodyVfx"
+    },
+    {
+      "Key": "weapon/sporecap/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/sporecap.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon sporecap castVfx"
+    },
+    {
+      "Key": "weapon/sporecap/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/sporecap.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon sporecap icon"
+    },
+    {
+      "Key": "weapon/sporecap/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/NaturePoison.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon sporecap impactVfx"
+    },
+    {
+      "Key": "weapon/sporecap/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorSporecapCore.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon sporecap projectilePrefab"
+    },
+    {
+      "Key": "weapon/starwheel/body-vfx",
+      "Path": "Assets/Effects/Survivor/StarWheelToon.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon starwheel bodyVfx"
+    },
+    {
+      "Key": "weapon/starwheel/cast-vfx",
+      "Path": "Assets/Effects/Survivor/Casts/starwheel.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon starwheel castVfx"
+    },
+    {
+      "Key": "weapon/starwheel/icon",
+      "Path": "Assets/UI/Icons/Survivor/Weapons/starwheel.png",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon starwheel icon"
+    },
+    {
+      "Key": "weapon/starwheel/impact-vfx",
+      "Path": "Assets/Effects/Survivor/Impacts/Physical.efkpkg",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon starwheel impactVfx"
+    },
+    {
+      "Key": "weapon/starwheel/projectile-prefab",
+      "Path": "Assets/Prefabs/SurvivorStarWheel.hprefab",
+      "Kind": "HardRuntime",
+      "Reason": "Survivor weapon starwheel projectilePrefab"
+    }
+  ]
+}

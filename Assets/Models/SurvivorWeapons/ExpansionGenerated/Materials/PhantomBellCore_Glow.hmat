@@ -1,0 +1,92 @@
+{
+  "Properties": {
+    "alphaCutoff": 0.5,
+    "alphaMode": "OPAQUE",
+    "bUseAlbedoMap": false,
+    "bUseAoMap": false,
+    "bUseEmissiveMap": true,
+    "bUseMetallicRoughnessMap": false,
+    "bUseNormalMap": false,
+    "doubleSided": false,
+    "emissiveFactor": [
+      0.08,
+      0.22,
+      0.3
+    ],
+    "emissiveTexture": {
+      "texCoord": 0,
+      "textureRes": {
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9729,
+          "wrapS": 33071,
+          "wrapT": 33071
+        },
+        "textureSourcePath": "white"
+      }
+    },
+    "name": "PhantomBellCore_Glow",
+    "normalTexture": {
+      "scale": 1.0,
+      "texCoord": 0,
+      "textureRes": {
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9729,
+          "wrapS": 33071,
+          "wrapT": 33071
+        },
+        "textureSourcePath": ""
+      }
+    },
+    "occlusionTexture": {
+      "strength": 1.0,
+      "texCoord": 0,
+      "textureRes": {
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9729,
+          "wrapS": 33071,
+          "wrapT": 33071
+        },
+        "textureSourcePath": ""
+      }
+    },
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.44,
+        0.91,
+        1.0,
+        1.0
+      ],
+      "baseColorTexture": {
+        "texCoord": 0,
+        "textureRes": {
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 33071,
+            "wrapT": 33071
+          },
+          "textureSourcePath": ""
+        }
+      },
+      "metallicFactor": 0.04,
+      "metallicRoughnessTexture": {
+        "texCoord": 0,
+        "textureRes": {
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 33071,
+            "wrapT": 33071
+          },
+          "textureSourcePath": ""
+        }
+      },
+      "roughnessFactor": 0.36
+    }
+  },
+  "ShaderPath": "Shaders/BasePBR.hlsl",
+  "Type": "Default"
+}

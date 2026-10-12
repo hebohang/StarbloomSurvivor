@@ -1,0 +1,27 @@
+{
+  "MeshComponent": {
+    "Path": "Assets/Models/SurvivorWeapons/ExpansionGenerated/FrostOrbCore.hmesh",
+    "meshResPath": ""
+  },
+  "TagComponent": {
+    "Tag": "ProjectileVisual"
+  },
+  "TransformComponent": {
+    "ParentUuid": "",
+    "Rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Scale": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Translation": [
+      0.0,
+      -100.0,
+      0.0
+    ]
+  }
+}

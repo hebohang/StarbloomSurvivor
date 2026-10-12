@@ -1,0 +1,9 @@
+{
+  "Language": "zh_cn",
+  "MasterVolume": 0.5,
+  "VSync": false,
+  "Fullscreen": false,
+  "UIScale": 1.00,
+  "MotionEnabled": true,
+  "DamageFlashEnabled": true
+}

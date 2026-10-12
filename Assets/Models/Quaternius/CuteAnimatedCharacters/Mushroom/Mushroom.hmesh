@@ -1,0 +1,187 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 662,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 662,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 662,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 662,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 662,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 662,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 662,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 7,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 2604,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 68672,
+            "data": [],
+            "name": "Mushroom",
+            "uri": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 7944,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 7944,
+            "byteOffset": 7944,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 5296,
+            "byteOffset": 15888,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 7944,
+            "byteOffset": 21184,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 7944,
+            "byteOffset": 29128,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 10592,
+            "byteOffset": 37072,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 10592,
+            "byteOffset": 47664,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 10416,
+            "byteOffset": 58256,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        }
+    ],
+    "name": "Mushroom",
+    "primitives": [
+        {
+            "attributes": {
+                "BITANGENT": 4,
+                "JOINTS_0": 5,
+                "NORMAL": 1,
+                "POSITION": 0,
+                "TANGENT": 3,
+                "TEXCOORD_0": 2,
+                "WEIGHTS_0": 6
+            },
+            "indices": 7,
+            "materialResPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Texture.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Mushroom/Mushroom_Skeleton.hskel",
+    "version": 1,
+    "weights": []
+}

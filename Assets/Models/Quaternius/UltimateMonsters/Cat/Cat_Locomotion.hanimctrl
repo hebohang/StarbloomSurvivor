@@ -1,0 +1,26 @@
+{
+  "entryNodeId": 1,
+  "name": "CatLocomotion",
+  "nodes": [
+    {"clipPath": "", "id": 1, "name": "Entry", "position": [-280.0, 40.0], "type": "Entry"},
+    {"clipPath": "Assets/Models/Quaternius/UltimateMonsters/Cat/CharacterArmature_Idle.hanim", "id": 2, "name": "Idle", "position": [-40.0, 20.0], "type": "State"},
+    {"clipPath": "Assets/Models/Quaternius/UltimateMonsters/Cat/CharacterArmature_Walk.hanim", "id": 3, "name": "Run", "position": [220.0, 20.0], "type": "State"},
+    {"clipPath": "Assets/Models/Quaternius/UltimateMonsters/Cat/CharacterArmature_Jump.hanim", "id": 4, "name": "Jump", "position": [90.0, -150.0], "type": "State"}
+  ],
+  "parameters": [
+    {"defaultValue": 0.0, "name": "Speed", "type": "Float"},
+    {"defaultValue": 0.0, "name": "Direction", "type": "Float"},
+    {"defaultValue": false, "name": "IsInAir", "type": "Bool"}
+  ],
+  "targetSkeletonPath": "Assets/Models/Quaternius/UltimateMonsters/Cat/Cat_Skeleton.hskel",
+  "transitions": [
+    {"conditions": [], "duration": 0.05, "fromNodeId": 1, "toNodeId": 2},
+    {"conditions": [{"op": ">", "param": "Speed", "value": 0.12}], "duration": 0.10, "fromNodeId": 2, "toNodeId": 3},
+    {"conditions": [{"op": "<=", "param": "Speed", "value": 0.12}], "duration": 0.12, "fromNodeId": 3, "toNodeId": 2},
+    {"conditions": [{"op": "==", "param": "IsInAir", "value": true}], "duration": 0.06, "fromNodeId": 2, "toNodeId": 4},
+    {"conditions": [{"op": "==", "param": "IsInAir", "value": true}], "duration": 0.06, "fromNodeId": 3, "toNodeId": 4},
+    {"conditions": [{"op": "==", "param": "IsInAir", "value": false}, {"op": "<=", "param": "Speed", "value": 0.12}], "duration": 0.08, "fromNodeId": 4, "toNodeId": 2},
+    {"conditions": [{"op": "==", "param": "IsInAir", "value": false}, {"op": ">", "param": "Speed", "value": 0.12}], "duration": 0.08, "fromNodeId": 4, "toNodeId": 3}
+  ],
+  "version": 1
+}

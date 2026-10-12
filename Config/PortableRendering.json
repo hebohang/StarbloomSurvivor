@@ -1,0 +1,5 @@
+{
+  "Web": {"enabled": true, "radius": 65, "padding": 25, "animationHz": 30},
+  "WeChat": {"enabled": true, "radius": 55, "padding": 25, "animationHz": 20},
+  "Windows": {"enabled": false}
+}

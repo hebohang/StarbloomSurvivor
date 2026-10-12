@@ -1,0 +1,27 @@
+{
+  "MeshComponent": {
+    "Path": "Assets/Models/SurvivorBossChest/BossChest.hmesh",
+    "meshResPath": ""
+  },
+  "TagComponent": {
+    "Tag": "SurvivorBossChest"
+  },
+  "TransformComponent": {
+    "ParentUuid": "",
+    "Rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Scale": [
+      0.72,
+      0.72,
+      0.72
+    ],
+    "Translation": [
+      0.0,
+      0.18,
+      0.0
+    ]
+  }
+}

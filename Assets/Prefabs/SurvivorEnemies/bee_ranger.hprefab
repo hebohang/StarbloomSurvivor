@@ -1,0 +1,37 @@
+{
+  "AnimatorComponent": {
+    "animResPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Flying.hanim",
+    "bEnableRootMotion": false,
+    "bLockRootMotionXZ": true,
+    "bLoop": true,
+    "bPlay": true,
+    "controllerPath": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Bee_Locomotion.hanimctrl",
+    "currentClipIndex": 0,
+    "playSpeed": 1.0
+  },
+  "MeshComponent": {
+    "Path": "Assets/Models/Quaternius/CuteAnimatedCharacters/Bee/Bee.hmesh",
+    "meshResPath": ""
+  },
+  "TagComponent": {
+    "Tag": "SurvivorMonster"
+  },
+  "TransformComponent": {
+    "ParentUuid": "",
+    "Rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Scale": [
+      0.008,
+      0.008,
+      0.008
+    ],
+    "Translation": [
+      0.0,
+      0.08,
+      0.0
+    ]
+  }
+}

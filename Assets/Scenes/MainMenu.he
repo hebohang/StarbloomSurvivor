@@ -1,0 +1,140 @@
+{
+  "10cc6df5-e129-465c-a1f7-f58dce1f41ef": {
+    "TagComponent": {
+      "Tag": "MenuSceneMarker"
+    },
+    "TransformComponent": {
+      "ParentUuid": "",
+      "Rotation": [0.0, 0.0, 0.0],
+      "Scale": [1.0, 1.0, 1.0],
+      "Translation": [0.0, 0.0, 0.0]
+    }
+  },
+  "b81e7bcf-f246-470b-93d2-14a69488ea52": {
+    "PythonScriptComponent": {
+      "Path": "Scripts.SurvivorGame.py"
+    },
+    "TagComponent": {
+      "Tag": "GameDirector"
+    },
+    "TransformComponent": {
+      "ParentUuid": "",
+      "Rotation": [0.0, 0.0, 0.0],
+      "Scale": [1.0, 1.0, 1.0],
+      "Translation": [0.0, 0.0, 0.0]
+    }
+  },
+  "a8ba0f67-7cbb-434c-abee-89f83f44e18d": {
+    "AudioListenerComponent": {
+      "bActive": true,
+      "bUsePrimaryCameraOrientation": true
+    },
+    "CameraComponent": {
+        "Camera": {
+            "mAspectRatio": 1.777778,
+            "mOrthographicFar": 1.0,
+            "mOrthographicNear": -1.0,
+            "mOrthographicSize": 10.0,
+            "mPerspectiveFOV": 0.785398,
+            "mPerspectiveFar": 10.0,
+            "mPerspectiveNear": 0.005,
+            "mProjectionType": 0
+        },
+        "FixedAspectRatio": false,
+        "Primary": true,
+        "ExposureEV100": 14.0,
+        "ExposureCompensation": 0.0
+    },
+    "TagComponent": {
+      "Tag": "Camera"
+    },
+    "TransformComponent": {
+      "ParentUuid": "",
+      "Rotation": [1.570796, 0.0, 0.0],
+      "Scale": [1.0, 1.0, 1.0],
+      "Translation": [0.0, -0.05, 0.012]
+    }
+  },
+  "0361b364-0b18-4e39-a3da-9dbfd3ca49a1": {
+    "DirectionalLightComponent": {
+      "CascadeCount": 2,
+      "CascadeLambda": 0.6,
+      "Color": [1.0, 0.92, 0.8],
+      "DepthBias": 0.001,
+      "Intensity": 1.8,
+      "NormalBias": 0.03,
+      "PCFRadius": 1.0,
+      "ShadowDistance": 24.0,
+      "ShadowMapSize": 1024,
+      "ShadowStrength": 0.72,
+      "bCastShadows": true,
+      "bUsePCF": true
+    },
+    "TagComponent": {
+      "Tag": "Menu Key Light"
+    },
+    "TransformComponent": {
+      "ParentUuid": "",
+      "Rotation": [-2.45, -0.6, 0.15],
+      "Scale": [1.0, 1.0, 1.0],
+      "Translation": [4.0, 8.0, -3.0]
+    }
+  },
+  "513d4cd1-f1d9-4ec9-b6b2-9529fe3917d7": {
+    "DirectionalLightComponent": {
+      "CascadeCount": 1,
+      "CascadeLambda": 0.5,
+      "Color": [0.55, 0.78, 1.0],
+      "DepthBias": 0.001,
+      "Intensity": 0.65,
+      "NormalBias": 0.03,
+      "PCFRadius": 1.0,
+      "ShadowDistance": 16.0,
+      "ShadowMapSize": 512,
+      "ShadowStrength": 0.0,
+      "bCastShadows": false,
+      "bUsePCF": true
+    },
+    "TagComponent": {
+      "Tag": "Menu Fill Light"
+    },
+    "TransformComponent": {
+      "ParentUuid": "",
+      "Rotation": [-0.65, 2.3, 0.0],
+      "Scale": [1.0, 1.0, 1.0],
+      "Translation": [-4.0, 4.0, -2.0]
+    }
+  },
+  "2c4bd06f-bbf8-4ff0-9620-6547c76f4d87": {
+    "MeshComponent": {
+      "Path": "Assets/Models/StarbloomMenu/StarbloomMenuBackdrop.hmesh",
+      "meshResPath": ""
+    },
+    "TagComponent": {
+      "Tag": "Menu Backdrop"
+    },
+    "TransformComponent": {
+      "ParentUuid": "",
+      "Rotation": [1.570796, 0.0, 0.0],
+      "Scale": [0.104, 0.104, 0.104],
+      "Translation": [0.0, 0.2, 0.012]
+    }
+  },
+  "a8cf1499-576a-4e75-89d2-12abeb4a1862": {
+    "EnvironmentLightComponent": {
+        "HdrTexturePath": "Assets/Textures/Hdr/snowy_field_2k.hdr",
+        "IBLIntensity": 1.15,
+        "ExposureEV100": 0.15200309344504995,
+        "ExposureCompensation": 0.0
+    },
+    "TagComponent": {
+      "Tag": "Menu Environment Light"
+    },
+    "TransformComponent": {
+      "ParentUuid": "",
+      "Rotation": [0.0, 0.0, 0.0],
+      "Scale": [1.0, 1.0, 1.0],
+      "Translation": [0.0, 0.0, 0.0]
+    }
+  }
+}

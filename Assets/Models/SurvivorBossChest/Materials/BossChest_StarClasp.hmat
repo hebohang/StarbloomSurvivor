@@ -1,0 +1,92 @@
+{
+  "Properties": {
+    "alphaCutoff": 0.5,
+    "alphaMode": "OPAQUE",
+    "bUseAlbedoMap": false,
+    "bUseAoMap": false,
+    "bUseEmissiveMap": true,
+    "bUseMetallicRoughnessMap": false,
+    "bUseNormalMap": false,
+    "doubleSided": false,
+    "emissiveFactor": [
+      0.1,
+      0.045,
+      0.006
+    ],
+    "emissiveTexture": {
+      "texCoord": 0,
+      "textureRes": {
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9729,
+          "wrapS": 33071,
+          "wrapT": 33071
+        },
+        "textureSourcePath": "white"
+      }
+    },
+    "name": "BossChest_StarClasp",
+    "normalTexture": {
+      "scale": 1.0,
+      "texCoord": 0,
+      "textureRes": {
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9729,
+          "wrapS": 33071,
+          "wrapT": 33071
+        },
+        "textureSourcePath": ""
+      }
+    },
+    "occlusionTexture": {
+      "strength": 1.0,
+      "texCoord": 0,
+      "textureRes": {
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9729,
+          "wrapS": 33071,
+          "wrapT": 33071
+        },
+        "textureSourcePath": ""
+      }
+    },
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1.0,
+        0.86,
+        0.3,
+        1.0
+      ],
+      "baseColorTexture": {
+        "texCoord": 0,
+        "textureRes": {
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 33071,
+            "wrapT": 33071
+          },
+          "textureSourcePath": ""
+        }
+      },
+      "metallicFactor": 0.14,
+      "metallicRoughnessTexture": {
+        "texCoord": 0,
+        "textureRes": {
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 33071,
+            "wrapT": 33071
+          },
+          "textureSourcePath": ""
+        }
+      },
+      "roughnessFactor": 0.36
+    }
+  },
+  "ShaderPath": "Shaders/BasePBR.hlsl",
+  "Type": "Default"
+}

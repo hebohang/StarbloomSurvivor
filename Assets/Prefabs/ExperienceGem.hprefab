@@ -1,0 +1,15 @@
+{
+    "MeshComponent": {
+        "Path": "Assets/Models/VerdantRift/ExperienceCrystal.hmesh",
+        "meshResPath": ""
+    },
+    "TagComponent": {
+        "Tag": "ExperienceGem"
+    },
+    "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [0.0, 0.0, 0.7853982],
+        "Scale": [0.62, 0.72, 0.62],
+        "Translation": [0.0, 0.10, 0.0]
+    }
+}

@@ -1,0 +1,201 @@
+{
+  "accessorVec": [
+    {
+      "bufferViewIndex": 0,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 504,
+      "max": [
+        1.03,
+        1.4,
+        0.79
+      ],
+      "min": [
+        -1.03,
+        -0.08000000000000002,
+        -0.65
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "VEC3"
+    },
+    {
+      "bufferViewIndex": 1,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 504,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "VEC3"
+    },
+    {
+      "bufferViewIndex": 2,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 504,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "VEC2"
+    },
+    {
+      "bufferViewIndex": 3,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 192,
+      "max": [
+        191
+      ],
+      "min": [
+        0
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "SCALAR"
+    },
+    {
+      "bufferViewIndex": 4,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 192,
+      "max": [
+        383
+      ],
+      "min": [
+        192
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "SCALAR"
+    },
+    {
+      "bufferViewIndex": 5,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 120,
+      "max": [
+        503
+      ],
+      "min": [
+        384
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferVec": [
+    {
+      "byteLength": 18144,
+      "data": [],
+      "name": "",
+      "uri": "Assets/Models/SurvivorBossChest/BossChest.bin"
+    }
+  ],
+  "bufferViewVec": [
+    {
+      "bufferIndex": 0,
+      "byteLength": 6048,
+      "byteOffset": 0,
+      "byteStride": 0,
+      "name": "",
+      "target": 34962
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 6048,
+      "byteOffset": 6048,
+      "byteStride": 0,
+      "name": "",
+      "target": 34962
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 4032,
+      "byteOffset": 12096,
+      "byteStride": 0,
+      "name": "",
+      "target": 34962
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 768,
+      "byteOffset": 16128,
+      "byteStride": 0,
+      "name": "",
+      "target": 34963
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 768,
+      "byteOffset": 16896,
+      "byteStride": 0,
+      "name": "",
+      "target": 34963
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 480,
+      "byteOffset": 17664,
+      "byteStride": 0,
+      "name": "",
+      "target": 34963
+    }
+  ],
+  "name": "BossChest",
+  "primitives": [
+    {
+      "attributes": {
+        "NORMAL": 1,
+        "POSITION": 0,
+        "TEXCOORD_0": 2
+      },
+      "indices": 3,
+      "materialResPath": "Assets/Models/SurvivorBossChest/Materials/BossChest_Body.hmat",
+      "mode": 4,
+      "targets": []
+    },
+    {
+      "attributes": {
+        "NORMAL": 1,
+        "POSITION": 0,
+        "TEXCOORD_0": 2
+      },
+      "indices": 4,
+      "materialResPath": "Assets/Models/SurvivorBossChest/Materials/BossChest_GoldTrim.hmat",
+      "mode": 4,
+      "targets": []
+    },
+    {
+      "attributes": {
+        "NORMAL": 1,
+        "POSITION": 0,
+        "TEXCOORD_0": 2
+      },
+      "indices": 5,
+      "materialResPath": "Assets/Models/SurvivorBossChest/Materials/BossChest_StarClasp.hmat",
+      "mode": 4,
+      "targets": []
+    }
+  ],
+  "skeletonPath": "",
+  "version": 1,
+  "weights": []
+}

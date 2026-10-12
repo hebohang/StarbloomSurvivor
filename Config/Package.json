@@ -1,0 +1,49 @@
+{
+  "ThirdPartyNotices": "Legal/THIRD_PARTY_NOTICES.txt",
+  "Licenses": [
+    {
+      "Source": "Legal/Assets/Starbloom-Audio-Assets.txt",
+      "Output": "Starbloom-Audio-Assets.txt"
+    },
+    {
+      "Source": "Legal/Assets/Starbloom-Effekseer-Pilot-Assets.txt",
+      "Output": "Starbloom-Effekseer-Pilot-Assets.txt"
+    },
+    {
+      "Source": "Legal/Assets/Starbloom-Survivor-Expansion-VFX.txt",
+      "Output": "Starbloom-Survivor-Expansion-VFX.txt"
+    },
+    {
+      "Source": "Legal/Assets/Starbloom-Survivor-Toon-Projectiles-V2.txt",
+      "Output": "Starbloom-Survivor-Toon-Projectiles-V2.txt"
+    },
+    {
+      "Source": "Legal/Assets/Effekseer01-Sample-Effects-CC0.txt",
+      "Output": "Effekseer01-Sample-Effects-CC0.txt"
+    },
+    {
+      "Source": "Legal/Assets/HATO-Springhascome-Sample-Effects-CC0.txt",
+      "Output": "HATO-Springhascome-Sample-Effects-CC0.txt"
+    },
+    {
+      "Source": "Legal/Assets/Pierre02-Sample-Effects-CC0.txt",
+      "Output": "Pierre02-Sample-Effects-CC0.txt"
+    },
+    {
+      "Source": "Legal/Assets/Quaternius-Ultimate-Monsters-CC0.txt",
+      "Output": "Quaternius-Ultimate-Monsters-CC0.txt"
+    },
+    {
+      "Source": "Legal/Assets/Quaternius-Cute-Animated-Characters-CC0.txt",
+      "Output": "Quaternius-Cute-Animated-Characters-CC0.txt"
+    },
+    {
+      "Source": "Legal/Assets/Quaternius-Ultimate-Stylized-Nature-CC0.txt",
+      "Output": "Quaternius-Ultimate-Stylized-Nature-CC0.txt"
+    },
+    {
+      "Source": "Legal/Assets/Quaternius-Ultimate-Modular-Ruins-CC0.txt",
+      "Output": "Quaternius-Ultimate-Modular-Ruins-CC0.txt"
+    }
+  ]
+}

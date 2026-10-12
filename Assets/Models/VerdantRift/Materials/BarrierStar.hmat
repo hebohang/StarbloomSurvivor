@@ -1,0 +1,92 @@
+{
+    "Properties": {
+        "alphaCutoff": 0.5,
+        "alphaMode": "BLEND",
+        "bUseAlbedoMap": false,
+        "bUseAoMap": false,
+        "bUseEmissiveMap": true,
+        "bUseMetallicRoughnessMap": false,
+        "bUseNormalMap": false,
+        "doubleSided": true,
+        "emissiveFactor": [
+            0.08,
+            0.12,
+            0.3
+        ],
+        "emissiveTexture": {
+            "texCoord": 0,
+            "textureRes": {
+                "sampler": {
+                    "magFilter": 9729,
+                    "minFilter": 9729,
+                    "wrapS": 33071,
+                    "wrapT": 33071
+                },
+                "textureSourcePath": "white"
+            }
+        },
+        "name": "BarrierStar",
+        "normalTexture": {
+            "texCoord": 0,
+            "textureRes": {
+                "sampler": {
+                    "magFilter": 9729,
+                    "minFilter": 9729,
+                    "wrapS": 33071,
+                    "wrapT": 33071
+                },
+                "textureSourcePath": ""
+            },
+            "scale": 1.0
+        },
+        "occlusionTexture": {
+            "texCoord": 0,
+            "textureRes": {
+                "sampler": {
+                    "magFilter": 9729,
+                    "minFilter": 9729,
+                    "wrapS": 33071,
+                    "wrapT": 33071
+                },
+                "textureSourcePath": ""
+            },
+            "strength": 1.0
+        },
+        "pbrMetallicRoughness": {
+            "baseColorFactor": [
+                0.5,
+                0.64,
+                1.0,
+                0.12
+            ],
+            "baseColorTexture": {
+                "texCoord": 0,
+                "textureRes": {
+                    "sampler": {
+                        "magFilter": 9729,
+                        "minFilter": 9729,
+                        "wrapS": 33071,
+                        "wrapT": 33071
+                    },
+                    "textureSourcePath": ""
+                }
+            },
+            "metallicFactor": 0.0,
+            "metallicRoughnessTexture": {
+                "texCoord": 0,
+                "textureRes": {
+                    "sampler": {
+                        "magFilter": 9729,
+                        "minFilter": 9729,
+                        "wrapS": 33071,
+                        "wrapT": 33071
+                    },
+                    "textureSourcePath": ""
+                }
+            },
+            "roughnessFactor": 0.26
+        }
+    },
+    "ShaderPath": "Shaders/BasePBR.hlsl",
+    "Type": "Default"
+}

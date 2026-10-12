@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "applicationId": "com.hengine.starbloomsurvivor",
+  "versionCode": 3,
+  "versionName": "1.0.2",
+  "icon": "Resources/Windows/Game.png",
+  "minimumSdk": 29,
+  "ndkVersion": "30.0.16248370",
+  "managedProject": "Scripts/CSharp/GameScripts.csproj",
+  "gameConfig": "Config/Game.CSharp.json",
+  "pluginConfig": "Config/Plugins.CSharp.json",
+  "format": "apk",
+  "signing": "Development"
+}

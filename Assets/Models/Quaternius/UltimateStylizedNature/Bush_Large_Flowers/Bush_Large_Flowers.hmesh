@@ -1,0 +1,274 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 552,
+            "max": [1.14915717, 0.5573543, 0.4012355],
+            "min": [-0.817209363, -0.782483637, -1.07583785],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 552,
+            "max": [0.9996308, 0.983159363, 0.8318762],
+            "min": [-0.9999739, -0.9663049, -0.979727268],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 552,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 552,
+            "max": [0.998130441, 0.9937171, 0.980064332],
+            "min": [-0.9990992, -0.9949823, -0.9976872],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 552,
+            "max": [0.9673912, 0.990337133, 0.999928653],
+            "min": [-0.975485563, -0.9963056, -0.9905404],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 5,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 828,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 147,
+            "max": [1.18313277, 0.466019422, 0.07130127],
+            "min": [-0.612421155, -0.82224077, -1.11214089],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 7,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 147,
+            "max": [0.9763388, 0.9919304, 0.8579352],
+            "min": [-0.916488767, -0.999766469, -0.9997768],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 8,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 147,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 9,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 147,
+            "max": [0.8951762, 0.978512, 0.9980556],
+            "min": [-0.9958959, -0.925787151, -0.5902482],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 10,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 147,
+            "max": [0.995897949, 0.9673228, 0.9086987],
+            "min": [-0.755136967, -0.9706563, -0.990028262],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 11,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 378,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 43968,
+            "data": [],
+            "name": "Bush_Large_Flowers",
+            "uri": "Assets/Models/Quaternius/UltimateStylizedNature/Bush_Large_Flowers/Bush_Large_Flowers.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 6624,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 6624,
+            "byteOffset": 6624,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 4416,
+            "byteOffset": 13248,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 6624,
+            "byteOffset": 17664,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 6624,
+            "byteOffset": 24288,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 3312,
+            "byteOffset": 30912,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1764,
+            "byteOffset": 34224,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1764,
+            "byteOffset": 35988,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1176,
+            "byteOffset": 37752,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1764,
+            "byteOffset": 38928,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1764,
+            "byteOffset": 40692,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 1512,
+            "byteOffset": 42456,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        }
+    ],
+    "name": "Bush_Large_Flowers",
+    "primitives": [
+        {
+            "attributes": {
+                "BITANGENT": 4,
+                "NORMAL": 1,
+                "POSITION": 0,
+                "TANGENT": 3,
+                "TEXCOORD_0": 2
+            },
+            "indices": 5,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/Foliage.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "BITANGENT": 10,
+                "NORMAL": 7,
+                "POSITION": 6,
+                "TANGENT": 9,
+                "TEXCOORD_0": 8
+            },
+            "indices": 11,
+            "materialResPath": "Assets/Models/VerdantRift/Materials/Blossom.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "",
+    "version": 1,
+    "weights": []
+}

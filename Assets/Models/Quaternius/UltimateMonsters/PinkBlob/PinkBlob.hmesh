@@ -1,0 +1,354 @@
+{
+    "accessorVec": [
+        {
+            "bufferViewIndex": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 775,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 775,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 775,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 775,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 775,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 775,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 775,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 7,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 2208,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        },
+        {
+            "bufferViewIndex": 8,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 514,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 9,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 514,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 10,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 514,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC2"
+        },
+        {
+            "bufferViewIndex": 11,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 514,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 12,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 514,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC3"
+        },
+        {
+            "bufferViewIndex": 13,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 514,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 14,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 514,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "VEC4"
+        },
+        {
+            "bufferViewIndex": 15,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 882,
+            "max": [],
+            "min": [],
+            "name": "",
+            "normalized": false,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferVec": [
+        {
+            "byteLength": 125792,
+            "data": [],
+            "name": "PinkBlob",
+            "uri": "Assets\\Models\\Quaternius\\UltimateMonsters\\PinkBlob\\PinkBlob.bin"
+        }
+    ],
+    "bufferViewVec": [
+        {
+            "bufferIndex": 0,
+            "byteLength": 9300,
+            "byteOffset": 0,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 9300,
+            "byteOffset": 9300,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 6200,
+            "byteOffset": 18600,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 9300,
+            "byteOffset": 24800,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 9300,
+            "byteOffset": 34100,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 12400,
+            "byteOffset": 43400,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 12400,
+            "byteOffset": 55800,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 8832,
+            "byteOffset": 68200,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 6168,
+            "byteOffset": 77032,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 6168,
+            "byteOffset": 83200,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 4112,
+            "byteOffset": 89368,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 6168,
+            "byteOffset": 93480,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 6168,
+            "byteOffset": 99648,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 8224,
+            "byteOffset": 105816,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 8224,
+            "byteOffset": 114040,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        },
+        {
+            "bufferIndex": 0,
+            "byteLength": 3528,
+            "byteOffset": 122264,
+            "byteStride": 0,
+            "name": "",
+            "target": 0
+        }
+    ],
+    "name": "PinkBlob",
+    "primitives": [
+        {
+            "attributes": {
+                "BITANGENT": 4,
+                "JOINTS_0": 5,
+                "NORMAL": 1,
+                "POSITION": 0,
+                "TANGENT": 3,
+                "TEXCOORD_0": 2,
+                "WEIGHTS_0": 6
+            },
+            "indices": 7,
+            "materialResPath": "Assets\\Models\\Quaternius\\UltimateMonsters\\PinkBlob\\Atlas.hmat",
+            "mode": 4,
+            "targets": []
+        },
+        {
+            "attributes": {
+                "BITANGENT": 12,
+                "JOINTS_0": 13,
+                "NORMAL": 9,
+                "POSITION": 8,
+                "TANGENT": 11,
+                "TEXCOORD_0": 10,
+                "WEIGHTS_0": 14
+            },
+            "indices": 15,
+            "materialResPath": "Assets\\Models\\Quaternius\\UltimateMonsters\\PinkBlob\\Atlas.hmat",
+            "mode": 4,
+            "targets": []
+        }
+    ],
+    "skeletonPath": "Assets/Models/Quaternius/UltimateMonsters/PinkBlob/PinkBlob_Skeleton.hskel",
+    "version": 1,
+    "weights": []
+}

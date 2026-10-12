@@ -1,0 +1,92 @@
+{
+    "Properties": {
+        "alphaCutoff": 0.5,
+        "alphaMode": "OPAQUE",
+        "bUseAlbedoMap": false,
+        "bUseAoMap": false,
+        "bUseEmissiveMap": true,
+        "bUseMetallicRoughnessMap": false,
+        "bUseNormalMap": false,
+        "doubleSided": false,
+        "emissiveFactor": [
+            0.11,
+            0.008,
+            0.008
+        ],
+        "emissiveTexture": {
+            "texCoord": 0,
+            "textureRes": {
+                "sampler": {
+                    "magFilter": 9729,
+                    "minFilter": 9729,
+                    "wrapS": 33071,
+                    "wrapT": 33071
+                },
+                "textureSourcePath": "white"
+            }
+        },
+        "name": "FireballCore_FlameCoral",
+        "normalTexture": {
+            "texCoord": 0,
+            "textureRes": {
+                "sampler": {
+                    "magFilter": 9729,
+                    "minFilter": 9729,
+                    "wrapS": 33071,
+                    "wrapT": 33071
+                },
+                "textureSourcePath": ""
+            },
+            "scale": 1.0
+        },
+        "occlusionTexture": {
+            "texCoord": 0,
+            "textureRes": {
+                "sampler": {
+                    "magFilter": 9729,
+                    "minFilter": 9729,
+                    "wrapS": 33071,
+                    "wrapT": 33071
+                },
+                "textureSourcePath": ""
+            },
+            "strength": 1.0
+        },
+        "pbrMetallicRoughness": {
+            "baseColorFactor": [
+                0.92,
+                0.075,
+                0.055,
+                1.0
+            ],
+            "baseColorTexture": {
+                "texCoord": 0,
+                "textureRes": {
+                    "sampler": {
+                        "magFilter": 9729,
+                        "minFilter": 9729,
+                        "wrapS": 33071,
+                        "wrapT": 33071
+                    },
+                    "textureSourcePath": ""
+                }
+            },
+            "metallicFactor": 0.0,
+            "metallicRoughnessTexture": {
+                "texCoord": 0,
+                "textureRes": {
+                    "sampler": {
+                        "magFilter": 9729,
+                        "minFilter": 9729,
+                        "wrapS": 33071,
+                        "wrapT": 33071
+                    },
+                    "textureSourcePath": ""
+                }
+            },
+            "roughnessFactor": 0.2773500981126146
+        }
+    },
+    "ShaderPath": "Shaders/BasePBR.hlsl",
+    "Type": "Default"
+}

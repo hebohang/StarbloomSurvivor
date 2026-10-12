@@ -1,0 +1,17 @@
+# Survivor Toon Projectiles v2 license evidence
+
+The seven derived packages use only assets from the following reviewed local
+intakes. Every source manifest records `license_decision: ACCEPT`,
+`license_identifier: CC0-1.0`, commercial use, redistribution and modification
+permission. The complete retained license texts and their packaged names are:
+
+- `../effekseer01-official/LICENSE.txt` — Effekseer01, author Effekseer;
+  packaged as `Effekseer01-Sample-Effects-CC0.txt`.
+- `../hato01/LICENSE.txt` — HATO01, author HATO;
+  packaged as `HATO-Springhascome-Sample-Effects-CC0.txt`.
+- `../pierre02/LICENSE.txt` — Pierre02, author 日陰者ピエール;
+  packaged as `Pierre02-Sample-Effects-CC0.txt`.
+
+Exact source paths and SHA-256 values are embedded in each derived package's
+`PROVENANCE.json` and reproduced by
+`Tools/VFX/generate_survivor_toon_projectiles_v2.py`.

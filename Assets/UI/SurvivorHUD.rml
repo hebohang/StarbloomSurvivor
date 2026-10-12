@@ -1,0 +1,608 @@
+<rml>
+  <head>
+    <title>小树保卫者 HUD</title>
+    <link type="text/rcss" href="SurvivorHUD.rcss" />
+  </head>
+  <body>
+    <div id="hud">
+      <div id="title_backdrop">
+        <div id="title_backdrop_image"></div>
+        <div id="title_backdrop_tint"></div>
+      </div>
+
+      <div id="loading_backdrop">
+        <div id="loading_backdrop_tint"></div>
+      </div>
+
+      <div id="gameplay_hud">
+      <div id="xp_hud">
+        <div id="xp_track">
+          <div id="xp_fill"></div>
+          <div id="xp_sheen"></div>
+          <div id="xp_flash"></div>
+        </div>
+        <div id="xp_label">经验 0 / 12 · 0%</div>
+      </div>
+
+      <div id="top_bar">
+        <div class="top_chip level_chip"><span class="chip_icon">★</span><span id="level">等级 1</span></div>
+        <div id="timer_wrap"><span id="timer_caption">本轮时间</span><span id="timer">00:00</span></div>
+        <div class="top_chip kill_chip"><span id="kills">击杀 0</span><span class="chip_icon">★</span></div>
+      </div>
+
+      <div id="right_stats">
+        <div id="enemy_count_panel" class="counter_pill"><span class="counter_dot coral"></span><span id="enemy_count">附近怪物 0</span></div>
+        <div id="shard_count_panel" class="counter_pill"><span class="counter_dot aqua"></span><span id="shard_count">星光碎片 0</span></div>
+        <div id="score_panel" class="counter_pill score_pill">
+          <span id="score_label">灵魂得分</span>
+          <span id="score">000000</span>
+        </div>
+      </div>
+
+      <div id="region_objective_panel" class="objective_panel dormant">
+        <div class="objective_header"><span id="region_objective_title">四域净化</span><span id="region_completed_count">0 / 4</span></div>
+        <div class="objective_current_row"><span id="region_current_name">寻找未净化区域</span><span id="region_countdown">60.0</span></div>
+        <div id="region_status_instruction">追随区域光柱，进入光圈启动净化</div>
+        <div class="objective_progress_track"><div id="region_progress_fill"></div></div>
+        <div id="objective_navigation">北 · 星之区域 0m</div>
+        <div id="region_seals" class="region_seal_grid">
+          <div id="region_seal_star" class="region_seal dormant"><span class="region_glyph">★</span><span id="region_seal_star_name" class="region_name">星</span><span id="region_seal_star_status" class="region_status">沉寂</span><span id="region_seal_star_direction" class="region_direction">北 · 0m</span></div>
+          <div id="region_seal_thunder" class="region_seal dormant"><span class="region_glyph">ϟ</span><span id="region_seal_thunder_name" class="region_name">雷</span><span id="region_seal_thunder_status" class="region_status">沉寂</span><span id="region_seal_thunder_direction" class="region_direction">西 · 0m</span></div>
+          <div id="region_seal_water" class="region_seal dormant"><span class="region_glyph">≈</span><span id="region_seal_water_name" class="region_name">水</span><span id="region_seal_water_status" class="region_status">沉寂</span><span id="region_seal_water_direction" class="region_direction">南 · 0m</span></div>
+          <div id="region_seal_wind" class="region_seal dormant"><span class="region_glyph">↝</span><span id="region_seal_wind_name" class="region_name">风</span><span id="region_seal_wind_status" class="region_status">沉寂</span><span id="region_seal_wind_direction" class="region_direction">东 · 0m</span></div>
+        </div>
+      </div>
+
+      <div id="domain_power_panel">
+        <span id="domain_power_title">区域权能</span>
+        <div id="domain_power_star" class="domain_power locked"><img id="domain_power_star_icon" src="Assets/UI/Icons/Survivor/Weapons/starfall.png" /><span id="domain_power_star_cooldown">—</span></div>
+        <div id="domain_power_thunder" class="domain_power locked"><img id="domain_power_thunder_icon" src="Assets/UI/Icons/Survivor/Weapons/thunder.png" /><span id="domain_power_thunder_cooldown">—</span></div>
+        <div id="domain_power_water" class="domain_power locked"><img id="domain_power_water_icon" src="Assets/UI/Icons/Survivor/Weapons/bubble.png" /><span id="domain_power_water_cooldown">—</span></div>
+        <div id="domain_power_wind" class="domain_power locked"><img id="domain_power_wind_icon" src="Assets/UI/Icons/Survivor/Weapons/tornado.png" /><span id="domain_power_wind_cooldown">—</span></div>
+      </div>
+
+      <div id="controls"><span class="keycap">WASD</span> <span id="controls_move">移动</span>　<span id="controls_jump_key" class="keycap">空格</span> <span id="controls_jump">跳跃</span>　<span id="controls_camera_key" class="keycap">右键</span> <span id="controls_camera">环绕视角</span>　<span id="controls_auto">自动攻击</span></div>
+      <div id="banner">熬过长夜</div>
+      <div id="damage_flash"></div>
+
+      <div id="boss_panel">
+        <div id="boss_row">
+          <span class="boss_crown">◆</span>
+          <span id="boss_name">暗夜暴君</span>
+          <span id="boss_hp">0</span>
+        </div>
+        <div id="boss_bar"><div id="boss_fill"></div></div>
+      </div>
+
+      <div id="bottom_hud">
+        <div id="avatar_badge"><span id="avatar_star">★</span></div>
+        <div id="vitality_block">
+          <div id="hp_row">
+            <span id="hp_label">生命</span>
+            <span id="hp_text">100 / 100</span>
+          </div>
+          <div id="hp_bar"><div id="hp_fill"></div><div id="hp_gloss"></div></div>
+        </div>
+      </div>
+
+      <div id="weapon_panel">
+        <div id="weapon_header"><span id="weapon_title">魔法小背包</span><span class="weapon_sparkle">★</span></div>
+        <div id="weapon_slots">
+          <div id="weapon_slot_1" class="weapon_stat equipped">
+            <span class="weapon_icon"><img id="weapon_icon_1" class="loadout_icon" src="Assets/UI/Icons/Survivor/Weapons/comet.png" /></span>
+            <span class="weapon_lock">◆</span>
+            <span id="weapon_name_1" class="weapon_name">雷霆</span>
+            <span id="weapon_value_1" class="weapon_value">1级</span>
+          </div>
+          <div id="weapon_slot_2" class="weapon_stat empty"><span class="weapon_icon"><img id="weapon_icon_2" class="loadout_icon" src="Assets/UI/Icons/Survivor/Weapons/ring.png" /></span><span class="weapon_lock">◆</span><span id="weapon_name_2" class="weapon_name"></span><span id="weapon_value_2" class="weapon_value"></span></div>
+          <div id="weapon_slot_3" class="weapon_stat empty"><span class="weapon_icon"><img id="weapon_icon_3" class="loadout_icon" src="Assets/UI/Icons/Survivor/Weapons/fireball.png" /></span><span class="weapon_lock">◆</span><span id="weapon_name_3" class="weapon_name"></span><span id="weapon_value_3" class="weapon_value"></span></div>
+          <div id="weapon_slot_4" class="weapon_stat locked"><span class="weapon_icon"><img id="weapon_icon_4" class="loadout_icon" src="Assets/UI/Icons/Survivor/Weapons/moonblade.png" /></span><span class="weapon_lock">◆</span><span id="weapon_name_4" class="weapon_name"></span><span id="weapon_value_4" class="weapon_value"></span></div>
+          <div id="weapon_slot_5" class="weapon_stat locked"><span class="weapon_icon"><img id="weapon_icon_5" class="loadout_icon" src="Assets/UI/Icons/Survivor/Weapons/bubble.png" /></span><span class="weapon_lock">◆</span><span id="weapon_name_5" class="weapon_name"></span><span id="weapon_value_5" class="weapon_value"></span></div>
+          <div id="weapon_slot_6" class="weapon_stat locked"><span class="weapon_icon"><img id="weapon_icon_6" class="loadout_icon" src="Assets/UI/Icons/Survivor/Weapons/aura.png" /></span><span class="weapon_lock">◆</span><span id="weapon_name_6" class="weapon_name"></span><span id="weapon_value_6" class="weapon_value"></span></div>
+        </div>
+        <div id="tome_header"><span id="tome_title">奇妙绘本</span><span class="tome_sparkle">◆</span></div>
+        <div id="tome_slots">
+          <div id="tome_slot_1" class="tome_stat empty"><img id="tome_icon_1" class="tome_icon" src="Assets/UI/Icons/Survivor/Tomes/magnet.png" /><span id="tome_value_1" class="tome_value"></span></div>
+          <div id="tome_slot_2" class="tome_stat empty"><img id="tome_icon_2" class="tome_icon" src="Assets/UI/Icons/Survivor/Tomes/vitality.png" /><span id="tome_value_2" class="tome_value"></span></div>
+          <div id="tome_slot_3" class="tome_stat empty"><img id="tome_icon_3" class="tome_icon" src="Assets/UI/Icons/Survivor/Tomes/guard.png" /><span id="tome_value_3" class="tome_value"></span></div>
+          <div id="tome_slot_4" class="tome_stat empty"><img id="tome_icon_4" class="tome_icon" src="Assets/UI/Icons/Survivor/Tomes/might.png" /><span id="tome_value_4" class="tome_value"></span></div>
+          <div id="tome_slot_5" class="tome_stat empty"><img id="tome_icon_5" class="tome_icon" src="Assets/UI/Icons/Survivor/Tomes/haste.png" /><span id="tome_value_5" class="tome_value"></span></div>
+          <div id="tome_slot_6" class="tome_stat empty"><img id="tome_icon_6" class="tome_icon" src="Assets/UI/Icons/Survivor/Tomes/reach.png" /><span id="tome_value_6" class="tome_value"></span></div>
+        </div>
+      </div>
+      </div>
+
+      <div id="upgrade_panel" class="modal">
+        <div id="upgrade_card" class="modal_card upgrade_card">
+          <div id="upgrade_intro">
+            <div id="level_up_badge"><span class="badge_star">★</span></div>
+            <div id="level_up_callout">升级啦！</div>
+            <div id="upgrade_title" class="modal_title">等级 2</div>
+            <div id="upgrade_subtitle" class="modal_subtitle">挑一个喜欢的能力吧</div>
+            <div id="upgrade_flavor">每次成长，都会让冒险轻松一点点。</div>
+            <div id="upgrade_level_stamp"><span id="upgrade_level_caption">当前等级</span><span id="upgrade_level_value">02</span></div>
+            <div class="intro_sparkle sparkle_a">★</div>
+            <div class="intro_sparkle sparkle_b">★</div>
+          </div>
+
+          <div id="upgrade_choices">
+            <div id="choice_prompt"><span class="prompt_star">★</span><span id="choice_prompt_text">三选一 · 选择一份成长礼物</span></div>
+
+            <button id="upgrade_1" class="upgrade_button">
+              <span class="selection_glow"></span>
+              <span id="upgrade_icon_1" class="upgrade_icon"><img id="upgrade_icon_image_1" class="upgrade_icon_image" src="Assets/UI/Icons/Survivor/Tomes/magnet.png" /></span>
+              <span class="upgrade_copy">
+                <span class="upgrade_meta">
+                  <span id="upgrade_kind_1" class="upgrade_kind">被动能力</span>
+                  <span id="upgrade_rank_1" class="upgrade_rank">永久强化</span>
+                  <span id="upgrade_rarity_1" class="upgrade_rarity">常规</span>
+                </span>
+                <span id="upgrade_name_1" class="upgrade_name">吸吸星光</span>
+                <span id="upgrade_desc_1" class="upgrade_desc">更远的星光碎片也会主动飞过来。</span>
+                <span id="upgrade_stat_1" class="upgrade_stat">拾取范围 +2.2 米</span>
+              </span>
+              <span class="selected_tick">✓</span>
+            </button>
+
+            <button id="upgrade_2" class="upgrade_button">
+              <span class="selection_glow"></span>
+              <span id="upgrade_icon_2" class="upgrade_icon"><img id="upgrade_icon_image_2" class="upgrade_icon_image" src="Assets/UI/Icons/Survivor/Tomes/vitality.png" /></span>
+              <span class="upgrade_copy">
+                <span class="upgrade_meta">
+                  <span id="upgrade_kind_2" class="upgrade_kind">被动能力</span>
+                  <span id="upgrade_rank_2" class="upgrade_rank">永久强化</span>
+                  <span id="upgrade_rarity_2" class="upgrade_rarity">常规</span>
+                </span>
+                <span id="upgrade_name_2" class="upgrade_name">活力泡泡</span>
+                <span id="upgrade_desc_2" class="upgrade_desc">最大生命 +28，并恢复 40 生命</span>
+                <span id="upgrade_stat_2" class="upgrade_stat">最大生命 +28 · 恢复 40</span>
+              </span>
+              <span class="selected_tick">✓</span>
+            </button>
+
+            <button id="upgrade_3" class="upgrade_button">
+              <span class="selection_glow"></span>
+              <span id="upgrade_icon_3" class="upgrade_icon"><img id="upgrade_icon_image_3" class="upgrade_icon_image" src="Assets/UI/Icons/Survivor/Tomes/guard.png" /></span>
+              <span class="upgrade_copy">
+                <span class="upgrade_meta">
+                  <span id="upgrade_kind_3" class="upgrade_kind">被动能力</span>
+                  <span id="upgrade_rank_3" class="upgrade_rank">永久强化</span>
+                  <span id="upgrade_rarity_3" class="upgrade_rarity">常规</span>
+                </span>
+                <span id="upgrade_name_3" class="upgrade_name">软绵护甲</span>
+                <span id="upgrade_desc_3" class="upgrade_desc">受到的伤害降低 10%</span>
+                <span id="upgrade_stat_3" class="upgrade_stat">伤害减免 +10%</span>
+              </span>
+              <span class="selected_tick">✓</span>
+            </button>
+
+            <div id="upgrade_pool_controls">
+              <button id="upgrade_reroll_button" class="upgrade_control_button"><span id="upgrade_reroll_label">重抽 · 0</span></button>
+              <button id="upgrade_skip_button" class="upgrade_control_button"><span id="upgrade_skip_label">跳过 · 0</span></button>
+              <button id="upgrade_banish_button" class="upgrade_control_button"><span id="upgrade_banish_label">放逐所选 · 0</span></button>
+            </div>
+            <div id="upgrade_hint" class="modal_hint"><span class="mouse_badge"><img class="hint_cursor_icon" src="Assets/UI/Cursors/starbloom_cursor.png" /></span><span id="upgrade_hint_mouse">移动鼠标选择，点击卡片确认</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="start_panel" class="modal start_modal">
+        <div id="start_sparkle_a" class="menu_sparkle start_sparkle_a"></div>
+        <div id="start_sparkle_b" class="menu_sparkle start_sparkle_b"></div>
+        <div id="start_sparkle_c" class="menu_sparkle start_sparkle_c"></div>
+        <div id="start_card" class="modal_card start_card hub_shell">
+          <svg id="start_starburst" src="Assets/UI/Motion/starbloom-starburst.svg"></svg>
+          <div id="start_card_aura_top" class="start_card_aura"></div>
+          <div id="start_card_aura_bottom" class="start_card_aura"></div>
+          <div id="hub_topbar">
+            <div id="hub_brand">
+              <div id="start_emblem"><img src="Assets/UI/Icons/Survivor/Weapons/starfall.png" /></div>
+              <div id="hub_brand_copy">
+                <div id="start_eyebrow">软绵绵的星光冒险</div>
+                <div id="start_title">小树保卫者</div>
+              </div>
+            </div>
+            <div id="hub_status_strip">
+              <div id="hub_wallet" class="hub_status_chip"><span id="hub_wallet_label" class="hub_chip_label">星币</span><span id="hub_wallet_value" class="hub_chip_value">0</span></div>
+              <div id="hub_completion" class="hub_status_chip"><span id="hub_completion_label" class="hub_chip_label">完成度</span><span id="hub_completion_value" class="hub_chip_value">0%</span></div>
+              <div id="hub_difficulty" class="hub_status_chip difficulty_status"><span id="hub_difficulty_label" class="hub_chip_label">当前难度</span><span id="hub_difficulty_value" class="hub_chip_value">冒险</span></div>
+            </div>
+          </div>
+
+          <div id="hub_body">
+            <div id="hub_navigation">
+              <button id="hub_nav_play" class="hub_nav_button"><span class="hub_nav_icon">▶</span><span class="hub_nav_copy"><span id="hub_nav_play_label">开始冒险</span></span></button>
+              <button id="hub_nav_characters" class="hub_nav_button"><span class="hub_nav_icon">★</span><span class="hub_nav_copy"><span id="hub_nav_characters_label">伙伴</span></span></button>
+              <button id="hub_nav_armory" class="hub_nav_button"><span class="hub_nav_icon">◆</span><span class="hub_nav_copy"><span id="hub_nav_armory_label">军械库</span></span></button>
+              <button id="hub_nav_shop" class="hub_nav_button"><span class="hub_nav_icon">＋</span><span class="hub_nav_copy"><span id="hub_nav_shop_label">星光成长</span></span></button>
+              <button id="hub_nav_quests" class="hub_nav_button"><span class="hub_nav_icon">✓</span><span class="hub_nav_copy"><span id="hub_nav_quests_label">星愿任务</span></span></button>
+              <button id="hub_nav_collection" class="hub_nav_button"><span class="hub_nav_icon">◇</span><span class="hub_nav_copy"><span id="hub_nav_collection_label">图鉴统计</span></span></button>
+              <button id="hub_nav_settings" class="hub_nav_button"><span class="hub_nav_icon">⚙</span><span class="hub_nav_copy"><span id="hub_nav_settings_label">设置</span></span></button>
+            </div>
+
+            <div id="hub_workspace">
+              <div id="hub_page_play" class="hub_page selected_hub_page">
+                <div class="hub_page_header">
+                  <div><span id="play_page_eyebrow" class="hub_page_eyebrow">开始冒险</span><span id="play_page_title" class="hub_page_title">今晚的星光旅程</span></div>
+                  <span id="play_reward_multiplier" class="reward_multiplier">奖励 ×1.00</span>
+                </div>
+                <div id="play_scroll" class="hub_page_scroll">
+                  <div id="play_hero_card" class="hub_feature_card">
+                    <img id="play_character_portrait" class="play_portrait" src="Assets/UI/Icons/Survivor/Characters/starpaw.png" />
+                    <div class="play_character_copy">
+                      <span id="play_character_label" class="hub_field_label">当前伙伴</span>
+                      <span id="play_character_name" class="play_character_name">—</span>
+                      <span id="play_character_passive" class="hub_body_copy">从伙伴页确认后，本局模型、被动与起始武器会使用同一快照。</span>
+                    </div>
+                    <button id="play_change_character_button" class="hub_small_button"><span id="play_change_character_label" class="flex_text">更换伙伴</span></button>
+                  </div>
+                  <div class="hub_section">
+                    <span id="play_difficulty_label" class="hub_section_title">难度</span>
+                    <div id="difficulty_choices" class="choice_row">
+                      <button id="difficulty_adventure" class="choice_card"><span id="difficulty_adventure_title" class="choice_title">冒险</span><span id="difficulty_adventure_subtitle" class="choice_subtitle">奖励 ×1.00</span></button>
+                      <button id="difficulty_fierce" class="choice_card"><span id="difficulty_fierce_title" class="choice_title">凶猛</span><span id="difficulty_fierce_subtitle" class="choice_subtitle">奖励 ×1.35</span></button>
+                      <button id="difficulty_nightmare" class="choice_card locked_content"><span id="difficulty_nightmare_title" class="choice_title">噩梦</span><span id="difficulty_nightmare_subtitle" class="choice_subtitle">未解锁 · 奖励 ×1.75</span></button>
+                    </div>
+                  </div>
+                  <div class="hub_section">
+                    <div class="section_heading_row"><span id="play_weapon_slots_label" class="hub_section_title">普通武器槽位</span><span id="play_weapon_slots_summary" class="section_counter">已购上限 3 槽 · 本局计划 3 槽</span></div>
+                    <div id="weapon_limit_choices" class="choice_row weapon_limit_choices">
+                      <button id="weapon_limit_3" class="choice_card"><span id="weapon_limit_3_label" class="choice_title">3 槽 · 结算金币 +20%</span></button>
+                      <button id="weapon_limit_4" class="choice_card locked_content"><span id="weapon_limit_4_label" class="choice_title">4 槽 · 需要冒险首通</span></button>
+                      <button id="weapon_limit_5" class="choice_card locked_content"><span id="weapon_limit_5_label" class="choice_title">5 槽 · 需要凶猛首通</span></button>
+                      <button id="weapon_limit_6" class="choice_card locked_content"><span id="weapon_limit_6_label" class="choice_title">6 槽 · 需要噩梦首通</span></button>
+                    </div>
+                  </div>
+                  <div class="hub_section">
+                    <div class="section_heading_row"><span id="play_challenges_label" class="hub_section_title">挑战</span><span id="play_challenge_count" class="section_counter">0 / 6</span></div>
+                    <div id="challenge_choices" class="toggle_grid">
+                      <button id="challenge_slot_0" class="toggle_card"><span id="challenge_slot_0_mark" class="toggle_mark">＋</span><span id="challenge_slot_0_name">挑战槽 1</span></button>
+                      <button id="challenge_slot_1" class="toggle_card"><span id="challenge_slot_1_mark" class="toggle_mark">＋</span><span id="challenge_slot_1_name">挑战槽 2</span></button>
+                      <button id="challenge_slot_2" class="toggle_card"><span id="challenge_slot_2_mark" class="toggle_mark">＋</span><span id="challenge_slot_2_name">挑战槽 3</span></button>
+                      <button id="challenge_slot_3" class="toggle_card"><span id="challenge_slot_3_mark" class="toggle_mark">＋</span><span id="challenge_slot_3_name">挑战槽 4</span></button>
+                      <button id="challenge_slot_4" class="toggle_card"><span id="challenge_slot_4_mark" class="toggle_mark">＋</span><span id="challenge_slot_4_name">挑战槽 5</span></button>
+                      <button id="challenge_slot_5" class="toggle_card"><span id="challenge_slot_5_mark" class="toggle_mark">＋</span><span id="challenge_slot_5_name">挑战槽 6</span></button>
+                    </div>
+                  </div>
+                  <div id="play_seed_row" class="hub_inline_card"><span><span id="play_seed_label" class="hub_field_label">本局种子</span><span id="play_seed_value" class="hub_inline_value">7319</span></span><button id="play_seed_button" class="hub_small_button action_button"><span id="play_seed_button_label" class="flex_text">重新生成</span></button></div>
+                  <div id="start_features">
+                    <span id="start_feature_magic" class="feature_chip aqua_chip"><span id="start_feature_magic_label" class="flex_text">自动魔法</span></span>
+                    <span id="start_feature_cozy" class="feature_chip coral_chip"><span id="start_feature_cozy_label" class="flex_text">可爱怪潮</span></span>
+                    <span id="start_feature_growth" class="feature_chip yellow_chip"><span id="start_feature_growth_label" class="flex_text">每局新成长</span></span>
+                  </div>
+                  <div class="menu_stack start_menu_stack">
+                    <button id="start_button" class="menu_button primary_button"><span id="start_button_label" class="flex_text">开始冒险</span></button>
+                  </div>
+                  <div id="start_subtitle" class="modal_subtitle">净化四域 · 中央召唤 · 击败星外巨龙</div>
+                  <div id="start_hint" class="modal_hint">方向键或手柄切换选项，按确认键开始冒险。</div>
+                </div>
+              </div>
+
+              <div id="hub_page_characters" class="hub_page">
+                <div class="hub_page_header"><div><span id="characters_page_eyebrow" class="hub_page_eyebrow">伙伴</span><span id="character_select_title" class="hub_page_title">选择本次冒险伙伴</span></div><span id="character_roster_count" class="section_counter">0 / 10</span></div>
+                <div id="character_page_layout" class="hub_page_scroll">
+                  <div id="character_roster" class="character_slot_grid">
+                    <div id="character_slot_0" class="character_slot"><button id="character_starpaw" class="character_card"><img id="character_starpaw_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/starpaw.png" /><span id="character_starpaw_name" class="character_name">—</span><span id="character_starpaw_passive" class="character_passive">—</span><span id="character_starpaw_unlock" class="character_unlock">—</span></button></div>
+                    <div id="character_slot_1" class="character_slot"><button id="character_peachy" class="character_card locked_character"><img id="character_peachy_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/peachy.png" /><span id="character_peachy_name" class="character_name">—</span><span id="character_peachy_passive" class="character_passive">—</span><span id="character_peachy_unlock" class="character_unlock">—</span></button></div>
+                    <div id="character_slot_2" class="character_slot"><button id="character_mossling" class="character_card locked_character"><img id="character_mossling_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/mossling.png" /><span id="character_mossling_name" class="character_name">—</span><span id="character_mossling_passive" class="character_passive">—</span><span id="character_mossling_unlock" class="character_unlock">—</span></button></div>
+                    <div id="character_slot_3" class="character_slot"><button id="character_snowbean" class="character_card locked_character"><img id="character_snowbean_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/snowbean.png" /><span id="character_snowbean_name" class="character_name">—</span><span id="character_snowbean_passive" class="character_passive">—</span><span id="character_snowbean_unlock" class="character_unlock">—</span></button></div>
+                    <div id="character_slot_4" class="character_slot"><button id="character_azura" class="character_card locked_character"><img id="character_azura_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/azura.png" /><span id="character_azura_name" class="character_name">—</span><span id="character_azura_passive" class="character_passive">—</span><span id="character_azura_unlock" class="character_unlock">—</span></button></div>
+                    <div id="character_slot_5" class="character_slot"><button id="character_honeybun" class="character_card locked_character"><img id="character_honeybun_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/honeybun.png" /><span id="character_honeybun_name" class="character_name">—</span><span id="character_honeybun_passive" class="character_passive">—</span><span id="character_honeybun_unlock" class="character_unlock">—</span></button></div>
+                    <div id="character_slot_6" class="character_slot"><button id="character_mushmellow" class="character_card locked_character"><img id="character_mushmellow_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/mushmellow.png" /><span id="character_mushmellow_name" class="character_name">—</span><span id="character_mushmellow_passive" class="character_passive">—</span><span id="character_mushmellow_unlock" class="character_unlock">—</span></button></div>
+                    <div id="character_slot_7" class="character_slot"><button id="character_boolet" class="character_card locked_character"><img id="character_boolet_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/boolet.png" /><span id="character_boolet_name" class="character_name">—</span><span id="character_boolet_passive" class="character_passive">—</span><span id="character_boolet_unlock" class="character_unlock">—</span></button></div>
+                    <div id="character_slot_8" class="character_slot"><button id="character_crabble" class="character_card locked_character"><img id="character_crabble_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/crabble.png" /><span id="character_crabble_name" class="character_name">—</span><span id="character_crabble_passive" class="character_passive">—</span><span id="character_crabble_unlock" class="character_unlock">—</span></button></div>
+                    <div id="character_slot_9" class="character_slot"><button id="character_cosmobob" class="character_card locked_character"><img id="character_cosmobob_icon" class="character_badge" src="Assets/UI/Icons/Survivor/Characters/cosmobob.png" /><span id="character_cosmobob_name" class="character_name">—</span><span id="character_cosmobob_passive" class="character_passive">—</span><span id="character_cosmobob_unlock" class="character_unlock">—</span></button></div>
+                  </div>
+                  <div id="character_preview_column">
+                    <div id="character_preview_stage" class="preview_transparent_region">
+                      <span id="character_preview_loading" class="preview_status">正在载入伙伴预览</span>
+                      <span id="character_preview_error" class="preview_error">预览资源不可用</span>
+                      <div id="character_preview_hit_area" class="preview_hit_area"></div>
+                      <div id="character_preview_pedestal"></div>
+                    </div>
+                    <div id="character_preview_controls">
+                      <button id="character_rotate_left" class="preview_control_button" aria-label="Rotate left"><span>L</span></button>
+                      <button id="character_zoom_out" class="preview_control_button" aria-label="Zoom out"><span>−</span></button>
+                      <button id="character_preview_idle" class="preview_control_button"><span id="character_preview_idle_label">待机</span></button>
+                      <button id="character_preview_dance" class="preview_control_button"><span id="character_preview_dance_label">跳舞</span></button>
+                      <button id="character_preview_reset" class="preview_control_button"><span>100%</span></button>
+                      <button id="character_zoom_in" class="preview_control_button" aria-label="Zoom in"><span>＋</span></button>
+                      <button id="character_rotate_right" class="preview_control_button" aria-label="Rotate right"><span>R</span></button>
+                    </div>
+                  </div>
+                  <div id="character_detail_panel" class="hub_detail_panel">
+                    <span id="character_preview_label" class="hub_field_label">预览伙伴</span><span id="character_detail_name" class="detail_title">—</span>
+                    <span id="character_detail_passive" class="hub_body_copy">—</span>
+                    <div class="detail_stat_row"><span id="character_weapon_label">起始武器</span><span id="character_detail_weapon">—</span></div>
+                    <div class="detail_stat_row"><span id="character_state_label">状态</span><span id="character_detail_state">—</span></div>
+                    <div class="detail_stat_row"><span id="character_price_label">价格</span><span id="character_detail_price">—</span></div>
+                     <button id="character_purchase_button" class="hub_action_button coral_action"><span id="character_purchase_button_label">购买</span></button>
+                     <button id="character_use_button" class="hub_action_button primary_action"><span id="character_use_button_label">使用</span></button>
+                     <button id="character_training_button" class="hub_action_button"><span id="character_training_button_label">训练</span></button>
+                     <button id="character_training_toggle_button" class="hub_action_button ghost_action"><span id="character_training_toggle_button_label">训练已启用</span></button>
+                    <div id="character_training_panel" class="subpanel">
+                      <div class="section_heading_row"><span id="character_training_label" class="hub_field_label">训练</span><span id="character_training_level">0 / 5</span></div>
+                      <div class="training_nodes"><span id="training_stat_0" class="mini_node">MGT</span><span id="training_stat_1" class="mini_node">HP</span><span id="training_stat_2" class="mini_node">HST</span><span id="training_stat_3" class="mini_node">SPD</span><span id="training_stat_4" class="mini_node">LCK</span></div>
+                    </div>
+                    <div id="character_mastery_panel" class="subpanel"><div class="section_heading_row"><span id="character_mastery_label" class="hub_field_label">熟练度</span><span id="character_mastery_level">等级 0</span></div><div class="mini_progress"><div id="character_mastery_fill"></div></div><span id="character_mastery_text" class="mini_caption">0 / 100 经验</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hub_page_armory" class="hub_page">
+                <div class="hub_page_header"><div><span id="armory_page_eyebrow" class="hub_page_eyebrow">军械库</span><span id="armory_page_title" class="hub_page_title">整理本局成长池</span></div><span id="armory_pool_summary" class="section_counter">0</span></div>
+                <div id="armory_tabs" class="hub_tabs"><button id="armory_tab_weapons" class="hub_tab"><span id="armory_tab_weapons_label">武器</span></button><button id="armory_tab_tomes" class="hub_tab"><span id="armory_tab_tomes_label">绘本</span></button><button id="armory_tab_trinkets" class="hub_tab"><span id="armory_tab_trinkets_label">奇物</span></button><button id="armory_tab_evolutions" class="hub_tab"><span id="armory_tab_evolutions_label">进化</span></button></div>
+                <div class="filter_row"><button id="armory_filter_all" class="filter_button"><span id="armory_filter_all_label">全部</span></button><button id="armory_filter_owned" class="filter_button"><span id="armory_filter_owned_label">已拥有</span></button><button id="armory_filter_eligible" class="filter_button"><span id="armory_filter_eligible_label">可购买</span></button><button id="armory_filter_locked" class="filter_button"><span id="armory_filter_locked_label">未解锁</span></button><button id="armory_filter_disabled" class="filter_button"><span id="armory_filter_disabled_label">已封印 0</span></button><button id="armory_pool_toggle_all" class="filter_button right_filter"><span id="armory_pool_toggle_all_label">全部解除封印</span></button></div>
+                <span id="armory_pool_hint">封印只会让内容不再出现在下一局的随机成长中，不会失去已拥有内容。</span>
+                <div id="armory_layout" class="hub_page_scroll split_content_layout">
+                  <div id="armory_slot_grid" class="content_slot_grid">
+                    <div id="armory_empty_state" class="empty_filter_state"><span id="armory_empty_state_label">当前筛选没有内容。</span></div>
+                    <button id="armory_slot_0" class="content_slot"><img id="armory_slot_0_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/ring.png" /><span id="armory_slot_0_name" class="slot_name">—</span><span id="armory_slot_0_state" class="slot_state">—</span></button>
+                    <button id="armory_slot_1" class="content_slot"><img id="armory_slot_1_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/fireball.png" /><span id="armory_slot_1_name" class="slot_name">—</span><span id="armory_slot_1_state" class="slot_state">—</span></button>
+                    <button id="armory_slot_2" class="content_slot"><img id="armory_slot_2_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/moonblade.png" /><span id="armory_slot_2_name" class="slot_name">—</span><span id="armory_slot_2_state" class="slot_state">—</span></button>
+                    <button id="armory_slot_3" class="content_slot"><img id="armory_slot_3_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/bubble.png" /><span id="armory_slot_3_name" class="slot_name">—</span><span id="armory_slot_3_state" class="slot_state">—</span></button>
+                    <button id="armory_slot_4" class="content_slot"><img id="armory_slot_4_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/aura.png" /><span id="armory_slot_4_name" class="slot_name">—</span><span id="armory_slot_4_state" class="slot_state">—</span></button>
+                    <button id="armory_slot_5" class="content_slot"><img id="armory_slot_5_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/dagger.png" /><span id="armory_slot_5_name" class="slot_name">—</span><span id="armory_slot_5_state" class="slot_state">—</span></button>
+                    <button id="armory_slot_6" class="content_slot"><img id="armory_slot_6_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/starwheel.png" /><span id="armory_slot_6_name" class="slot_name">—</span><span id="armory_slot_6_state" class="slot_state">—</span></button>
+                    <button id="armory_slot_7" class="content_slot"><img id="armory_slot_7_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/petalstorm.png" /><span id="armory_slot_7_name" class="slot_name">—</span><span id="armory_slot_7_state" class="slot_state">—</span></button>
+                    <button id="armory_slot_8" class="content_slot"><img id="armory_slot_8_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/comet.png" /><span id="armory_slot_8_name" class="slot_name">—</span><span id="armory_slot_8_state" class="slot_state">—</span></button>
+                    <button id="armory_slot_9" class="content_slot"><img id="armory_slot_9_icon" class="slot_icon" src="Assets/UI/Icons/Survivor/Weapons/honeyneedle.png" /><span id="armory_slot_9_name" class="slot_name">—</span><span id="armory_slot_9_state" class="slot_state">—</span></button>
+                  </div>
+                  <div id="armory_detail" class="hub_detail_panel"><span id="armory_selected_label" class="hub_field_label">当前内容</span><span id="armory_detail_name" class="detail_title">—</span><span id="armory_detail_description" class="hub_body_copy">—</span><div class="detail_stat_row"><span id="armory_state_label">状态</span><span id="armory_detail_state">—</span></div><div class="detail_stat_row"><span id="armory_price_label">价格</span><span id="armory_detail_price">—</span></div><div class="detail_stat_row"><span id="armory_evolution_label">进化线索</span><span id="armory_detail_evolution">—</span></div><button id="armory_purchase_button" class="hub_action_button coral_action"><span id="armory_purchase_button_label">购买</span></button><button id="armory_toggle_button" class="hub_action_button primary_action"><span id="armory_toggle_button_label">启用到升级池</span></button><div class="pager"><button id="armory_page_previous" class="pager_button"><span>‹</span></button><span id="armory_page_value">1 / 1</span><button id="armory_page_next" class="pager_button"><span>›</span></button></div></div>
+                </div>
+              </div>
+
+              <div id="hub_page_shop" class="hub_page">
+                <div class="hub_page_header"><div><span id="shop_page_eyebrow" class="hub_page_eyebrow">星光成长</span><span id="shop_page_title" class="hub_page_title">永久强化</span></div><button id="shop_refund_all_button" class="hub_small_button warning_button"><span id="shop_refund_all_label">全部退款</span></button></div>
+                <div id="shop_layout" class="hub_page_scroll split_content_layout">
+                  <div id="powerup_nodes" class="powerup_node_grid">
+                    <button id="powerup_node_0" class="powerup_node"><img id="powerup_node_0_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_might.png" /><span class="node_rank" id="powerup_node_0_rank">0/5</span><span id="powerup_node_0_name">—</span></button>
+                    <button id="powerup_node_1" class="powerup_node"><img id="powerup_node_1_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_health.png" /><span class="node_rank" id="powerup_node_1_rank">0/5</span><span id="powerup_node_1_name">—</span></button>
+                    <button id="powerup_node_2" class="powerup_node"><img id="powerup_node_2_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_recovery.png" /><span class="node_rank" id="powerup_node_2_rank">0/5</span><span id="powerup_node_2_name">—</span></button>
+                    <button id="powerup_node_3" class="powerup_node"><img id="powerup_node_3_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_move.png" /><span class="node_rank" id="powerup_node_3_rank">0/3</span><span id="powerup_node_3_name">—</span></button>
+                    <button id="powerup_node_4" class="powerup_node"><img id="powerup_node_4_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_magnet.png" /><span class="node_rank" id="powerup_node_4_rank">0/4</span><span id="powerup_node_4_name">—</span></button>
+                    <button id="powerup_node_5" class="powerup_node"><img id="powerup_node_5_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_growth.png" /><span class="node_rank" id="powerup_node_5_rank">0/5</span><span id="powerup_node_5_name">—</span></button>
+                    <button id="powerup_node_6" class="powerup_node"><img id="powerup_node_6_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_luck.png" /><span class="node_rank" id="powerup_node_6_rank">0/5</span><span id="powerup_node_6_name">—</span></button>
+                    <button id="powerup_node_7" class="powerup_node"><img id="powerup_node_7_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_greed.png" /><span class="node_rank" id="powerup_node_7_rank">0/7</span><span id="powerup_node_7_name">—</span></button>
+                    <button id="powerup_node_8" class="powerup_node"><img id="powerup_node_8_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_reroll.png" /><span class="node_rank" id="powerup_node_8_rank">0/3</span><span id="powerup_node_8_name">—</span></button>
+                    <button id="powerup_node_9" class="powerup_node"><img id="powerup_node_9_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_skip.png" /><span class="node_rank" id="powerup_node_9_rank">0/2</span><span id="powerup_node_9_name">—</span></button>
+                    <button id="powerup_node_10" class="powerup_node"><img id="powerup_node_10_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_banish.png" /><span class="node_rank" id="powerup_node_10_rank">0/3</span><span id="powerup_node_10_name">—</span></button>
+                    <button id="powerup_node_11" class="powerup_node"><img id="powerup_node_11_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_revive.png" /><span class="node_rank" id="powerup_node_11_rank">0/1</span><span id="powerup_node_11_name">—</span></button>
+                    <button id="powerup_node_12" class="powerup_node"><img id="powerup_node_12_icon" class="powerup_icon" src="Assets/UI/Icons/Survivor/PowerUps/meta_weapon_slots.png" /><span class="node_rank" id="powerup_node_12_rank">0/3</span><span id="powerup_node_12_name">—</span></button>
+                  </div>
+                  <div id="shop_detail" class="hub_detail_panel"><span id="shop_powerup_label" class="hub_field_label">强化详情</span><span id="shop_detail_name" class="detail_title">—</span><span id="shop_detail_description" class="hub_body_copy">选择节点查看当前与下一级效果。</span><div class="detail_stat_row"><span id="shop_current_label">当前</span><span id="shop_current_value">—</span></div><div class="detail_stat_row"><span id="shop_next_label">下一级</span><span id="shop_next_value">—</span></div><div class="detail_stat_row"><span id="shop_price_label">价格</span><span id="shop_next_price">—</span></div><button id="shop_purchase_button" class="hub_action_button coral_action"><span id="shop_purchase_button_label">购买下一级</span></button><button id="shop_enable_button" class="hub_action_button primary_action"><span id="shop_enable_button_label">已启用</span></button><button id="shop_refund_button" class="hub_action_button"><span id="shop_refund_label">退还此项</span></button><span id="shop_transaction_status" class="transaction_status">交易保存后才会更新余额。</span></div>
+                </div>
+              </div>
+
+              <div id="hub_page_quests" class="hub_page">
+                <div class="hub_page_header"><div><span id="quests_page_eyebrow" class="hub_page_eyebrow">星愿任务</span><span id="quests_page_title" class="hub_page_title">完成任务，开放新星光</span></div><span id="quest_completion_summary" class="section_counter">0 / 57</span></div>
+                <div id="quest_filters" class="hub_tabs"><button id="quest_filter_all" class="hub_tab"><span id="quest_filter_all_label">全部</span></button><button id="quest_filter_character" class="hub_tab"><span id="quest_filter_character_label">伙伴</span></button><button id="quest_filter_combat" class="hub_tab"><span id="quest_filter_combat_label">战斗</span></button><button id="quest_filter_mastery" class="hub_tab"><span id="quest_filter_mastery_label">熟练</span></button><button id="quest_filter_untracked" class="hub_tab"><span id="quest_filter_untracked_label">未追踪</span></button></div>
+                <div id="quest_layout" class="hub_page_scroll split_content_layout">
+                  <div id="quest_slot_list" class="quest_slot_list">
+                    <button id="quest_slot_0" class="quest_slot"><span id="quest_slot_0_name" class="quest_name">—</span><span id="quest_slot_0_progress" class="quest_progress">0 / 0</span><span id="quest_slot_0_reward" class="quest_reward">—</span></button>
+                    <button id="quest_slot_1" class="quest_slot"><span id="quest_slot_1_name" class="quest_name">—</span><span id="quest_slot_1_progress" class="quest_progress">0 / 0</span><span id="quest_slot_1_reward" class="quest_reward">—</span></button>
+                    <button id="quest_slot_2" class="quest_slot"><span id="quest_slot_2_name" class="quest_name">—</span><span id="quest_slot_2_progress" class="quest_progress">0 / 0</span><span id="quest_slot_2_reward" class="quest_reward">—</span></button>
+                    <button id="quest_slot_3" class="quest_slot"><span id="quest_slot_3_name" class="quest_name">—</span><span id="quest_slot_3_progress" class="quest_progress">0 / 0</span><span id="quest_slot_3_reward" class="quest_reward">—</span></button>
+                    <button id="quest_slot_4" class="quest_slot"><span id="quest_slot_4_name" class="quest_name">—</span><span id="quest_slot_4_progress" class="quest_progress">0 / 0</span><span id="quest_slot_4_reward" class="quest_reward">—</span></button>
+                    <button id="quest_slot_5" class="quest_slot"><span id="quest_slot_5_name" class="quest_name">—</span><span id="quest_slot_5_progress" class="quest_progress">0 / 0</span><span id="quest_slot_5_reward" class="quest_reward">—</span></button>
+                    <button id="quest_slot_6" class="quest_slot"><span id="quest_slot_6_name" class="quest_name">—</span><span id="quest_slot_6_progress" class="quest_progress">0 / 0</span><span id="quest_slot_6_reward" class="quest_reward">—</span></button>
+                    <button id="quest_slot_7" class="quest_slot"><span id="quest_slot_7_name" class="quest_name">—</span><span id="quest_slot_7_progress" class="quest_progress">0 / 0</span><span id="quest_slot_7_reward" class="quest_reward">—</span></button>
+                    <button id="quest_slot_8" class="quest_slot"><span id="quest_slot_8_name" class="quest_name">—</span><span id="quest_slot_8_progress" class="quest_progress">0 / 0</span><span id="quest_slot_8_reward" class="quest_reward">—</span></button>
+                    <button id="quest_slot_9" class="quest_slot"><span id="quest_slot_9_name" class="quest_name">—</span><span id="quest_slot_9_progress" class="quest_progress">0 / 0</span><span id="quest_slot_9_reward" class="quest_reward">—</span></button>
+                  </div>
+                  <div id="quest_detail" class="hub_detail_panel"><span id="quest_detail_label" class="hub_field_label">任务详情</span><span id="quest_detail_name" class="detail_title">—</span><span id="quest_detail_description" class="hub_body_copy">—</span><div class="detail_progress"><div id="quest_detail_progress_fill"></div></div><span id="quest_detail_progress_text" class="mini_caption">0 / 0</span><div class="detail_stat_row"><span id="quest_reward_label">奖励</span><span id="quest_detail_reward">—</span></div><div class="detail_stat_row"><span id="quest_unlock_label">解锁</span><span id="quest_detail_unlock">—</span></div><button id="quest_track_button" class="hub_action_button primary_action"><span id="quest_track_button_label">追踪</span></button><div class="pager"><button id="quest_page_previous" class="pager_button"><span>‹</span></button><span id="quest_page_value">1 / 1</span><button id="quest_page_next" class="pager_button"><span>›</span></button></div></div>
+                </div>
+              </div>
+
+              <div id="hub_page_collection" class="hub_page">
+                <div class="hub_page_header"><div><span id="collection_page_eyebrow" class="hub_page_eyebrow">图鉴统计</span><span id="collection_page_title" class="hub_page_title">记录每一次相遇与成长</span></div><span id="collection_completion_summary" class="section_counter">0%</span></div>
+                <div id="collection_tabs" class="hub_tabs"><button id="collection_tab_enemies" class="hub_tab"><span id="collection_tab_enemies_label">敌人</span></button><button id="collection_tab_bosses" class="hub_tab"><span id="collection_tab_bosses_label">首领</span></button><button id="collection_tab_evolutions" class="hub_tab"><span id="collection_tab_evolutions_label">进化</span></button><button id="collection_tab_characters" class="hub_tab"><span id="collection_tab_characters_label">伙伴</span></button><button id="collection_tab_stats" class="hub_tab"><span id="collection_tab_stats_label">历史统计</span></button></div>
+                <div id="collection_scroll" class="hub_page_scroll">
+                  <div id="collection_catalog_grid" class="silhouette_grid">
+                    <div id="collection_slot_0" class="silhouette_slot"><img id="collection_slot_0_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/green_blob.png" /><span id="collection_slot_0_symbol" class="collection_symbol">?</span><span id="collection_slot_0_title">—</span><span id="collection_slot_0_hint">—</span></div><div id="collection_slot_1" class="silhouette_slot"><img id="collection_slot_1_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/pink_blob.png" /><span id="collection_slot_1_symbol" class="collection_symbol">?</span><span id="collection_slot_1_title">—</span><span id="collection_slot_1_hint">—</span></div>
+                    <div id="collection_slot_2" class="silhouette_slot"><img id="collection_slot_2_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/spiky_blob.png" /><span id="collection_slot_2_symbol" class="collection_symbol">?</span><span id="collection_slot_2_title">—</span><span id="collection_slot_2_hint">—</span></div><div id="collection_slot_3" class="silhouette_slot"><img id="collection_slot_3_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/orc_bruiser.png" /><span id="collection_slot_3_symbol" class="collection_symbol">?</span><span id="collection_slot_3_title">—</span><span id="collection_slot_3_hint">—</span></div>
+                    <div id="collection_slot_4" class="silhouette_slot"><img id="collection_slot_4_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/yeti_zoner.png" /><span id="collection_slot_4_symbol" class="collection_symbol">?</span><span id="collection_slot_4_title">—</span><span id="collection_slot_4_hint">—</span></div><div id="collection_slot_5" class="silhouette_slot"><img id="collection_slot_5_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/alien_charger.png" /><span id="collection_slot_5_symbol" class="collection_symbol">?</span><span id="collection_slot_5_title">—</span><span id="collection_slot_5_hint">—</span></div>
+                    <div id="collection_slot_6" class="silhouette_slot"><img id="collection_slot_6_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/bee_ranger.png" /><span id="collection_slot_6_symbol" class="collection_symbol">?</span><span id="collection_slot_6_title">—</span><span id="collection_slot_6_hint">—</span></div><div id="collection_slot_7" class="silhouette_slot"><img id="collection_slot_7_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/mushroom_lobber.png" /><span id="collection_slot_7_symbol" class="collection_symbol">?</span><span id="collection_slot_7_title">—</span><span id="collection_slot_7_hint">—</span></div>
+                    <div id="collection_slot_8" class="silhouette_slot"><img id="collection_slot_8_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/ghost_ambusher.png" /><span id="collection_slot_8_symbol" class="collection_symbol">?</span><span id="collection_slot_8_title">—</span><span id="collection_slot_8_hint">—</span></div><div id="collection_slot_9" class="silhouette_slot"><img id="collection_slot_9_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/crab_guard.png" /><span id="collection_slot_9_symbol" class="collection_symbol">?</span><span id="collection_slot_9_title">—</span><span id="collection_slot_9_hint">—</span></div>
+                    <div id="collection_slot_10" class="silhouette_slot"><img id="collection_slot_10_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/bomb_spore.png" /><span id="collection_slot_10_symbol" class="collection_symbol">?</span><span id="collection_slot_10_title">—</span><span id="collection_slot_10_hint">—</span></div><div id="collection_slot_11" class="silhouette_slot"><img id="collection_slot_11_icon" class="collection_icon" src="Assets/UI/Icons/Survivor/Enemies/alien_commander.png" /><span id="collection_slot_11_symbol" class="collection_symbol">?</span><span id="collection_slot_11_title">—</span><span id="collection_slot_11_hint">—</span></div>
+                  </div>
+                  <div id="collection_stats_summary" class="stats_summary_grid"><div class="summary_tile"><span id="collection_runs_label" class="hub_field_label">冒险次数</span><span id="collection_total_runs">0</span></div><div class="summary_tile"><span id="collection_best_time_label" class="hub_field_label">最佳时间</span><span id="collection_best_time">00:00</span></div><div class="summary_tile"><span id="collection_kills_label" class="hub_field_label">总击杀</span><span id="collection_total_kills">0</span></div><div class="summary_tile"><span id="collection_top_weapon_label" class="hub_field_label">最佳武器</span><span id="collection_top_weapon">—</span></div></div>
+                </div>
+              </div>
+
+              <div id="hub_page_settings" class="hub_page">
+                <div class="hub_page_header"><div><span id="settings_page_eyebrow" class="hub_page_eyebrow">设置</span><span id="settings_page_title" class="hub_page_title">舒适、清楚地看见每一道星光</span></div><span id="hub_settings_saved_hint">更改自动保存</span></div>
+                <div id="hub_settings_scroll" class="hub_page_scroll">
+                  <div id="hub_settings_grid" class="hub_settings_grid">
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_language_label" class="setting_label">语言</span><span id="hub_language_desc" class="setting_desc">选择菜单与冒险中的文字语言</span></div><div class="hub_segment_group"><button id="hub_language_zh" class="hub_segment_button"><span id="hub_language_zh_label">中文</span></button><button id="hub_language_en" class="hub_segment_button"><span id="hub_language_en_label">英文</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_volume_label" class="setting_label">主音量</span><span id="hub_volume_desc" class="setting_desc">控制所有游戏声音</span></div><div class="hub_stepper"><button id="hub_volume_down" class="hub_stepper_button"><span>−</span></button><span id="hub_volume_value">50%</span><button id="hub_volume_up" class="hub_stepper_button"><span>＋</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_vsync_label" class="setting_label">垂直同步</span><span id="hub_vsync_desc" class="setting_desc">减少画面撕裂</span></div><div class="hub_segment_group"><button id="hub_vsync_on" class="hub_segment_button"><span id="hub_vsync_on_label">开启</span></button><button id="hub_vsync_off" class="hub_segment_button"><span id="hub_vsync_off_label">关闭</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_display_label" class="setting_label">显示模式</span><span id="hub_display_desc" class="setting_desc">选择全屏或窗口模式</span></div><div class="hub_segment_group"><button id="hub_display_fullscreen" class="hub_segment_button"><span id="hub_display_fullscreen_label">全屏</span></button><button id="hub_display_windowed" class="hub_segment_button"><span id="hub_display_windowed_label">窗口化</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_ui_scale_label" class="setting_label">界面大小</span><span id="hub_ui_scale_desc" class="setting_desc">调整所有界面与菜单</span></div><div class="hub_segment_group three_segments"><button id="hub_ui_scale_small" class="hub_segment_button"><span id="hub_ui_scale_small_label">小</span></button><button id="hub_ui_scale_normal" class="hub_segment_button"><span id="hub_ui_scale_normal_label">标准</span></button><button id="hub_ui_scale_large" class="hub_segment_button"><span id="hub_ui_scale_large_label">大</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_motion_label" class="setting_label">界面动效</span><span id="hub_motion_desc" class="setting_desc">按钮与页面的柔和动画</span></div><div class="hub_segment_group"><button id="hub_motion_on" class="hub_segment_button"><span id="hub_motion_on_label">开启</span></button><button id="hub_motion_off" class="hub_segment_button"><span id="hub_motion_off_label">关闭</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_flash_label" class="setting_label">受伤闪光</span><span id="hub_flash_desc" class="setting_desc">受到伤害时显示提示</span></div><div class="hub_segment_group"><button id="hub_flash_on" class="hub_segment_button"><span id="hub_flash_on_label">开启</span></button><button id="hub_flash_off" class="hub_segment_button"><span id="hub_flash_off_label">关闭</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_projectile_opacity_label" class="setting_label">玩家弹体透明度</span><span id="hub_projectile_opacity_desc" class="setting_desc">保留核心弹体与敌方预警清晰度</span></div><div class="hub_stepper"><button id="hub_projectile_opacity_down" class="hub_stepper_button"><span>−</span></button><span id="hub_projectile_opacity_value">85%</span><button id="hub_projectile_opacity_up" class="hub_stepper_button"><span>＋</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_particle_density_label" class="setting_label">粒子密度</span><span id="hub_particle_density_desc" class="setting_desc">调节装饰粒子数量</span></div><div class="hub_segment_group four_segments"><button id="hub_particle_density_auto" class="hub_segment_button"><span id="hub_particle_density_auto_label">自动</span></button><button id="hub_particle_density_low" class="hub_segment_button"><span id="hub_particle_density_low_label">低</span></button><button id="hub_particle_density_medium" class="hub_segment_button"><span id="hub_particle_density_medium_label">中</span></button><button id="hub_particle_density_high" class="hub_segment_button"><span id="hub_particle_density_high_label">高</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_damage_numbers_label" class="setting_label">伤害数字</span><span id="hub_damage_numbers_desc" class="setting_desc">减少高压战斗的视觉噪声</span></div><div class="hub_segment_group three_segments"><button id="hub_damage_numbers_off" class="hub_segment_button"><span id="hub_damage_numbers_off_label">关闭</span></button><button id="hub_damage_numbers_reduced" class="hub_segment_button"><span id="hub_damage_numbers_reduced_label">精简</span></button><button id="hub_damage_numbers_full" class="hub_segment_button"><span id="hub_damage_numbers_full_label">完整</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_screen_shake_label" class="setting_label">屏幕震动</span><span id="hub_screen_shake_desc" class="setting_desc">关闭后仍保留危险方向提示</span></div><div class="hub_segment_group"><button id="hub_screen_shake_on" class="hub_segment_button"><span id="hub_screen_shake_on_label">开启</span></button><button id="hub_screen_shake_off" class="hub_segment_button"><span id="hub_screen_shake_off_label">关闭</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_telegraph_color_label" class="setting_label">敌方预警颜色</span><span id="hub_telegraph_color_desc" class="setting_desc">选择高对比或色觉辅助方案</span></div><div class="hub_segment_group four_segments"><button id="hub_telegraph_color_default" class="hub_segment_button"><span id="hub_telegraph_default_label">默认</span></button><button id="hub_telegraph_color_deuteranopia" class="hub_segment_button"><span id="hub_telegraph_deuteranopia_label">红绿色弱</span></button><button id="hub_telegraph_color_tritanopia" class="hub_segment_button"><span id="hub_telegraph_tritanopia_label">蓝黄色弱</span></button><button id="hub_telegraph_color_high_contrast" class="hub_segment_button"><span id="hub_telegraph_high_contrast_label">高对比</span></button></div></div>
+                    <div class="hub_setting_row"><div class="hub_setting_copy"><span id="hub_auto_throttle_label" class="setting_label">自动视觉降档</span><span id="hub_auto_throttle_desc" class="setting_desc">高负载时优先减少装饰效果</span></div><div class="hub_segment_group"><button id="hub_auto_throttle_on" class="hub_segment_button"><span id="hub_auto_throttle_on_label">开启</span></button><button id="hub_auto_throttle_off" class="hub_segment_button"><span id="hub_auto_throttle_off_label">关闭</span></button></div></div>
+                  </div>
+                  <div id="hub_settings_actions"><button id="hub_settings_defaults_button" class="hub_small_button warning_button"><span id="hub_settings_defaults_label">恢复默认设置</span></button></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="hub_activity_rail">
+              <div class="activity_header"><span id="activity_tracked_label">追踪任务</span><span id="activity_tracked_count">0/3</span></div>
+              <button id="tracked_quest_slot_0" class="tracked_quest_slot"><span id="tracked_quest_slot_0_name">未追踪任务</span><span id="tracked_quest_slot_0_progress">—</span></button>
+              <button id="tracked_quest_slot_1" class="tracked_quest_slot"><span id="tracked_quest_slot_1_name">未追踪任务</span><span id="tracked_quest_slot_1_progress">—</span></button>
+              <button id="tracked_quest_slot_2" class="tracked_quest_slot"><span id="tracked_quest_slot_2_name">未追踪任务</span><span id="tracked_quest_slot_2_progress">—</span></button>
+              <div id="recent_unlock_panel"><span id="recent_unlock_label" class="hub_field_label">最近解锁</span><span id="recent_unlock_name">还没有新解锁</span><span id="recent_unlock_hint">继续冒险，新的星光会在这里出现。</span></div>
+            </div>
+          </div>
+          <div id="hub_footer"><span id="hub_footer_hint">方向键导航 · 回车确认 · 返回键返回 · 肩键换页</span><span id="hub_save_status">存档已就绪</span></div>
+        </div>
+      </div>
+
+      <div id="loading_panel" class="modal loading_modal">
+        <div id="loading_card" class="modal_card loading_card">
+          <div id="loading_emblem">
+            <lottie id="loading_lottie" src="Assets/UI/Motion/starbloom-burst.lottie.json"></lottie>
+            <img src="Assets/UI/Icons/Survivor/Weapons/starfall.png" />
+          </div>
+          <div id="loading_eyebrow">星光正在集结</div>
+          <div id="loading_title">准备软绵绵的冒险</div>
+          <div id="loading_subtitle">魔法背包正在把可爱伙伴和闪亮礼物装进今晚的旅程。</div>
+          <div id="loading_progress_shell">
+            <div id="loading_progress_fill">
+              <div id="loading_progress_glow"></div>
+            </div>
+          </div>
+          <div id="loading_status_row">
+            <span id="loading_status">正在唤醒魔法特效</span>
+            <span id="loading_percent">0%</span>
+          </div>
+          <div id="loading_hint">星光铺好道路后，冒险会自动开始。</div>
+        </div>
+      </div>
+
+      <div id="pause_panel" class="modal">
+        <div id="pause_card" class="modal_card pause_card">
+          <div class="pause_icon"><img src="Assets/UI/Icons/Survivor/Tomes/haste.png" /></div>
+          <div id="pause_title" class="modal_title">休息一下</div>
+          <div id="pause_subtitle" class="modal_subtitle">冒险已经暂停，准备好再继续吧。</div>
+          <div class="menu_stack pause_menu_stack">
+            <button id="resume_button" class="menu_button primary_button"><span id="resume_button_label" class="flex_text">继续冒险</span></button>
+            <button id="pause_settings_button" class="menu_button secondary_button"><span id="pause_settings_button_label" class="flex_text">设置</span></button>
+            <button id="pause_restart_button" class="menu_button soft_coral_button"><span id="pause_restart_button_label" class="flex_text">重新开始</span></button>
+            <button id="pause_home_button" class="menu_button ghost_button"><span id="pause_home_button_label" class="flex_text">返回开始界面</span></button>
+          </div>
+          <div id="pause_hint" class="modal_hint"><span class="keycap light">ESC</span> <span id="pause_hint_text">返回游戏</span></div>
+        </div>
+      </div>
+
+      <div id="settings_panel" class="modal">
+        <div id="settings_card" class="modal_card settings_card">
+          <div id="settings_header">
+            <div>
+              <div id="settings_eyebrow">舒适小屋</div>
+              <div id="settings_title" class="modal_title">设置</div>
+            </div>
+            <button id="settings_back_button" class="back_button"><span id="settings_back_button_label" class="flex_text">返回</span></button>
+          </div>
+
+          <div id="settings_body">
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_language_label" class="setting_label">语言</span><span id="settings_language_desc" class="setting_desc">选择冒险中的文字语言</span></div>
+              <div class="segment_group language_segments"><button id="language_zh" class="segment_button"><span id="language_zh_label" class="flex_text">中文</span></button><button id="language_en" class="segment_button"><span id="language_en_label" class="flex_text">英文</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_volume_label" class="setting_label">主音量</span><span id="settings_volume_desc" class="setting_desc">控制所有游戏声音</span></div>
+              <div class="stepper"><button id="volume_down" class="stepper_button"><span class="flex_text">−</span></button><span id="volume_value"><span id="volume_value_label" class="flex_text">80%</span></span><button id="volume_up" class="stepper_button"><span class="flex_text">＋</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_vsync_label" class="setting_label">垂直同步</span><span id="settings_vsync_desc" class="setting_desc">减少画面撕裂</span></div>
+              <div class="segment_group"><button id="vsync_on" class="segment_button"><span id="vsync_on_label" class="flex_text">开启</span></button><button id="vsync_off" class="segment_button"><span id="vsync_off_label" class="flex_text">关闭</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_display_mode_label" class="setting_label">显示模式</span><span id="settings_display_mode_desc" class="setting_desc">选择全屏游玩或使用窗口</span></div>
+              <div class="segment_group display_segments"><button id="display_fullscreen" class="segment_button"><span id="display_fullscreen_label" class="flex_text">全屏</span></button><button id="display_windowed" class="segment_button"><span id="display_windowed_label" class="flex_text">窗口化</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_ui_scale_label" class="setting_label">界面大小</span><span id="settings_ui_scale_desc" class="setting_desc">调整所有界面和菜单</span></div>
+              <div class="segment_group scale_segments"><button id="ui_scale_small" class="segment_button"><span id="ui_scale_small_label" class="flex_text">小</span></button><button id="ui_scale_normal" class="segment_button"><span id="ui_scale_normal_label" class="flex_text">标准</span></button><button id="ui_scale_large" class="segment_button"><span id="ui_scale_large_label" class="flex_text">大</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_motion_label" class="setting_label">界面动效</span><span id="settings_motion_desc" class="setting_desc">按钮与星星的柔和动画</span></div>
+              <div class="segment_group"><button id="motion_on" class="segment_button"><span id="motion_on_label" class="flex_text">开启</span></button><button id="motion_off" class="segment_button"><span id="motion_off_label" class="flex_text">关闭</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_flash_label" class="setting_label">受伤闪光</span><span id="settings_flash_desc" class="setting_desc">受到伤害时显示珊瑚色提示</span></div>
+              <div class="segment_group"><button id="flash_on" class="segment_button"><span id="flash_on_label" class="flex_text">开启</span></button><button id="flash_off" class="segment_button"><span id="flash_off_label" class="flex_text">关闭</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_projectile_opacity_label" class="setting_label">玩家弹体透明度</span><span id="settings_projectile_opacity_desc" class="setting_desc">只调节玩家弹体装饰；核心弹体与敌方预警保持清楚</span></div>
+              <div class="stepper"><button id="projectile_opacity_down" class="stepper_button"><span class="flex_text">−</span></button><span id="projectile_opacity_value"><span id="projectile_opacity_value_label" class="flex_text">85%</span></span><button id="projectile_opacity_up" class="stepper_button"><span class="flex_text">＋</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_particle_density_label" class="setting_label">粒子密度</span><span id="settings_particle_density_desc" class="setting_desc">关键命中、弹体核心与预警不会被隐藏</span></div>
+              <div class="segment_group four_segments"><button id="particle_density_auto" class="segment_button"><span id="particle_density_auto_label" class="flex_text">自动</span></button><button id="particle_density_low" class="segment_button"><span id="particle_density_low_label" class="flex_text">低</span></button><button id="particle_density_medium" class="segment_button"><span id="particle_density_medium_label" class="flex_text">中</span></button><button id="particle_density_high" class="segment_button"><span id="particle_density_high_label" class="flex_text">高</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_damage_numbers_label" class="setting_label">伤害数字</span><span id="settings_damage_numbers_desc" class="setting_desc">减少高压战斗中的非关键视觉噪声</span></div>
+              <div class="segment_group three_segments"><button id="damage_numbers_off" class="segment_button"><span id="damage_numbers_off_label" class="flex_text">关闭</span></button><button id="damage_numbers_reduced" class="segment_button"><span id="damage_numbers_reduced_label" class="flex_text">精简</span></button><button id="damage_numbers_full" class="segment_button"><span id="damage_numbers_full_label" class="flex_text">完整</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_screen_shake_label" class="setting_label">屏幕震动</span><span id="settings_screen_shake_desc" class="setting_desc">关闭后保留伤害方向与危险边界提示</span></div>
+              <div class="segment_group"><button id="screen_shake_on" class="segment_button"><span id="screen_shake_on_label" class="flex_text">开启</span></button><button id="screen_shake_off" class="segment_button"><span id="screen_shake_off_label" class="flex_text">关闭</span></button></div>
+            </div>
+
+            <div class="setting_row telegraph_setting_row">
+              <div class="setting_copy"><span id="settings_telegraph_color_label" class="setting_label">敌方预警颜色</span><span id="settings_telegraph_color_desc" class="setting_desc">选择高对比或色觉辅助预设</span></div>
+              <div class="segment_group four_segments"><button id="telegraph_color_default" class="segment_button"><span id="telegraph_color_default_label" class="flex_text">默认</span></button><button id="telegraph_color_deuteranopia" class="segment_button"><span id="telegraph_color_deuteranopia_label" class="flex_text">红绿色弱</span></button><button id="telegraph_color_tritanopia" class="segment_button"><span id="telegraph_color_tritanopia_label" class="flex_text">蓝黄色弱</span></button><button id="telegraph_color_high_contrast" class="segment_button"><span id="telegraph_color_high_contrast_label" class="flex_text">高对比</span></button></div>
+            </div>
+
+            <div class="setting_row">
+              <div class="setting_copy"><span id="settings_auto_throttle_label" class="setting_label">自动视觉降档</span><span id="settings_auto_throttle_desc" class="setting_desc">高负载时优先降低尾迹与装饰，不隐藏玩法关键视觉</span></div>
+              <div class="segment_group"><button id="auto_throttle_on" class="segment_button"><span id="auto_throttle_on_label" class="flex_text">开启</span></button><button id="auto_throttle_off" class="segment_button"><span id="auto_throttle_off_label" class="flex_text">关闭</span></button></div>
+            </div>
+          </div>
+
+          <div id="settings_footer"><button id="settings_defaults_button" class="small_secondary_button"><span id="settings_defaults_button_label" class="flex_text">恢复默认</span></button><span id="settings_saved_hint">更改会自动保存</span></div>
+        </div>
+      </div>
+
+      <div id="game_over_panel" class="modal">
+        <div id="game_over_card" class="modal_card game_over_card">
+          <div id="result_header">
+            <div id="game_over_icon"><img src="Assets/UI/Icons/Survivor/Weapons/starfall.png" /></div>
+            <div id="result_title_copy"><span id="result_end_reason" class="result_reason">结束原因：失败</span><div id="game_over_title" class="modal_title coral_text">这次冒险结束啦</div><div id="game_over_subtitle" class="modal_subtitle">奖励已提交并保存后，结算操作才会开放。</div></div>
+            <div id="result_commit_status" class="result_commit_pending"><span id="result_commit_status_label">正在保存奖励</span><button id="result_commit_retry_button" class="hub_small_button"><span id="result_commit_retry_button_label">重试</span></button></div>
+          </div>
+          <div id="result_scroll">
+            <div id="result_stats">
+              <div class="result_stat time_result"><span id="final_time_label" class="result_label">存活时间</span><span id="final_time_value" class="result_value">00:00</span></div>
+              <div class="result_stat kill_result"><span id="final_kills_label" class="result_label">击杀</span><span id="final_kills_value" class="result_value">0</span></div>
+              <div class="result_stat elite_result"><span id="final_elites_label" class="result_label">精英</span><span id="final_elites_value" class="result_value">0</span></div>
+              <div class="result_stat boss_result"><span id="final_bosses_label" class="result_label">首领</span><span id="final_bosses_value" class="result_value">0</span></div>
+              <div class="result_stat level_result"><span id="final_level_label" class="result_label">等级</span><span id="final_level_value" class="result_value">1</span></div>
+              <div class="result_stat score_result"><span id="final_score_label" class="result_label">得分</span><span id="final_score_value" class="result_value">0</span></div>
+            </div>
+            <div id="result_columns">
+              <div class="result_column">
+                <div class="result_section"><div class="result_section_header"><span id="result_gold_section_label">金币结算</span><span id="result_gold_total">0</span></div><div class="formula_row"><span id="result_gold_time_label">存活时间</span><span id="result_gold_time">+0</span></div><div class="formula_row"><span id="result_gold_kills_label">击杀</span><span id="result_gold_kills">+0</span></div><div class="formula_row"><span id="result_gold_elite_boss_label">精英与首领</span><span id="result_gold_elite_boss">+0</span></div><div class="formula_row"><span id="result_gold_clear_difficulty_label">通关与难度</span><span id="result_gold_clear_difficulty">×1.00</span></div><div class="formula_row"><span id="result_weapon_slot_limit_label">普通武器槽</span><span id="result_weapon_slot_limit">3</span></div><div class="formula_row"><span id="result_weapon_slot_bonus_label">低槽位奖励</span><span id="result_weapon_slot_bonus">+0 · ×1.00</span></div><div class="formula_row quest_formula"><span id="result_gold_quests_label">任务奖励（不参与倍率）</span><span id="result_gold_quests">+0</span></div></div>
+                <div class="result_section"><div class="result_section_header"><span id="result_survival_section_label">生存记录</span></div><div class="formula_row"><span id="result_damage_taken_label">承受伤害</span><span id="result_damage_taken">0</span></div><div class="formula_row"><span id="result_damage_prevented_label">阻止伤害</span><span id="result_damage_prevented">0</span></div><div class="formula_row"><span id="result_healing_label">治疗</span><span id="result_healing">0</span></div><div class="formula_row"><span id="result_distance_moved_label">移动距离</span><span id="result_distance_moved">0 米</span></div></div>
+                <div class="result_section"><div class="result_section_header"><span id="result_objective_section_label">四域与终局</span></div><div class="formula_row"><span id="result_region_order_label">区域激活顺序</span><span id="result_region_order">—</span></div><div class="formula_row"><span id="result_region_attempts_label">区域尝试次数</span><span id="result_region_attempts">—</span></div><div class="formula_row"><span id="result_region_exits_label">离圈失败次数</span><span id="result_region_exits">—</span></div><div class="formula_row"><span id="result_domain_summary_label">区域权能贡献</span><span id="result_domain_summary">—</span></div><div class="formula_row"><span id="result_boss_ttk_label">最终首领用时</span><span id="result_boss_ttk">—</span></div></div>
+              </div>
+              <div class="result_column weapon_result_column">
+                <div class="result_section"><div class="result_section_header"><span id="result_weapon_section_label">武器表现</span><span id="result_weapon_columns_label">伤害 / 每秒伤害 / 命中 / 暴击 / 击杀 / 等级</span></div>
+                  <div id="result_weapon_header" class="weapon_result_row"><span id="result_weapon_name_label">武器</span><span id="result_weapon_damage_label">伤害</span><span id="result_weapon_dps_label">每秒</span><span id="result_weapon_hits_label">命中</span><span id="result_weapon_crits_label">暴击</span><span id="result_weapon_kills_label">击杀</span><span id="result_weapon_level_label">等级 / 进化</span></div>
+                  <div id="result_weapon_slot_0" class="weapon_result_row"><span id="result_weapon_slot_0_name">—</span><span id="result_weapon_slot_0_damage">0</span><span id="result_weapon_slot_0_dps">0</span><span id="result_weapon_slot_0_hits">0</span><span id="result_weapon_slot_0_crits">0</span><span id="result_weapon_slot_0_kills">0</span><span id="result_weapon_slot_0_level">—</span></div>
+                  <div id="result_weapon_slot_1" class="weapon_result_row"><span id="result_weapon_slot_1_name">—</span><span id="result_weapon_slot_1_damage">0</span><span id="result_weapon_slot_1_dps">0</span><span id="result_weapon_slot_1_hits">0</span><span id="result_weapon_slot_1_crits">0</span><span id="result_weapon_slot_1_kills">0</span><span id="result_weapon_slot_1_level">—</span></div>
+                  <div id="result_weapon_slot_2" class="weapon_result_row"><span id="result_weapon_slot_2_name">—</span><span id="result_weapon_slot_2_damage">0</span><span id="result_weapon_slot_2_dps">0</span><span id="result_weapon_slot_2_hits">0</span><span id="result_weapon_slot_2_crits">0</span><span id="result_weapon_slot_2_kills">0</span><span id="result_weapon_slot_2_level">—</span></div>
+                  <div id="result_weapon_slot_3" class="weapon_result_row"><span id="result_weapon_slot_3_name">—</span><span id="result_weapon_slot_3_damage">0</span><span id="result_weapon_slot_3_dps">0</span><span id="result_weapon_slot_3_hits">0</span><span id="result_weapon_slot_3_crits">0</span><span id="result_weapon_slot_3_kills">0</span><span id="result_weapon_slot_3_level">—</span></div>
+                  <div id="result_weapon_slot_4" class="weapon_result_row"><span id="result_weapon_slot_4_name">—</span><span id="result_weapon_slot_4_damage">0</span><span id="result_weapon_slot_4_dps">0</span><span id="result_weapon_slot_4_hits">0</span><span id="result_weapon_slot_4_crits">0</span><span id="result_weapon_slot_4_kills">0</span><span id="result_weapon_slot_4_level">—</span></div>
+                  <div id="result_weapon_slot_5" class="weapon_result_row"><span id="result_weapon_slot_5_name">—</span><span id="result_weapon_slot_5_damage">0</span><span id="result_weapon_slot_5_dps">0</span><span id="result_weapon_slot_5_hits">0</span><span id="result_weapon_slot_5_crits">0</span><span id="result_weapon_slot_5_kills">0</span><span id="result_weapon_slot_5_level">—</span></div>
+                </div>
+                <div class="result_section"><div class="result_section_header"><span id="result_quests_section_label">任务与新资格</span></div><div id="result_quest_progress">本局没有任务进度</div><div id="result_first_completion">首次通关：—</div><div id="result_new_eligible">新购买资格：—</div></div>
+              </div>
+            </div>
+          </div>
+          <div id="result_actions"><button id="restart_button" class="menu_button primary_button result_restart_button"><span id="restart_button_label" class="flex_text">再来一次</span></button><button id="result_adjust_build_button" class="menu_button result_build_button"><span id="result_adjust_build_button_label" class="flex_text">调整构筑</span></button><button id="game_over_home_button" class="menu_button result_home_button"><span id="game_over_home_button_label" class="flex_text">返回开始界面</span></button></div>
+          <div id="restart_hint" class="modal_hint"><span class="keycap light">R</span> <span id="restart_hint_text">奖励保存成功后可快速重开</span></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</rml>

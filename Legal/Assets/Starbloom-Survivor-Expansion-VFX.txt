@@ -1,0 +1,7 @@
+# Survivor expansion VFX licenses
+
+All visible textures and all authored node recipes are deterministic HEngine project-owned work; see `source/HEngine-Project-Owned.txt`.
+
+The empty project structure used for Effekseer XML serialization is derived from the already reviewed `pierre02` official Sample Effects intake: `license_decision: ACCEPT`, `license_identifier: CC0-1.0`. The complete retained license is copied to every derived package and remains at `../pierre02/LICENSE.txt`.
+
+No legacy `MANUAL_REVIEW` runtime package is an input.

@@ -1,0 +1,59 @@
+Starbloom Survivor - Third-Party Notices
+========================================
+
+This distribution contains open-source components used by HEngine. The full
+license text for each redistributed component is provided in the Licenses
+directory next to the game executable.
+
+Component                         License file
+---------                         ------------
+GLFW                              GLFW.txt
+GLM                               GLM.txt
+Dear ImGui                        DearImGui.txt
+spdlog                            spdlog.txt
+fmt (bundled by spdlog)           fmt.txt
+Box2D                             Box2D.txt
+stb                               stb.txt
+Jolt Physics                      JoltPhysics.txt
+pybind11                          pybind11.txt
+nlohmann/json                     nlohmann-json.txt
+magic_enum                        magic-enum.txt
+EnTT                              EnTT.txt
+crossguid                         crossguid.txt
+SimpleIni                         SimpleIni.txt
+miniaudio                         miniaudio.txt
+Starbloom audio assets (CC0)      Starbloom-Audio-Assets.txt
+Starbloom Effekseer pilots (CC0)  Starbloom-Effekseer-Pilot-Assets.txt
+Starbloom expansion VFX           Starbloom-Survivor-Expansion-VFX.txt
+Starbloom toon projectiles (CC0)  Starbloom-Survivor-Toon-Projectiles-V2.txt
+Effekseer01 sample effects (CC0)  Effekseer01-Sample-Effects-CC0.txt
+HATO sample effects (CC0)         HATO-Springhascome-Sample-Effects-CC0.txt
+Pierre02 sample effects (CC0)     Pierre02-Sample-Effects-CC0.txt
+Quaternius Ultimate Monsters      Quaternius-Ultimate-Monsters-CC0.txt
+Quaternius Cute Characters        Quaternius-Cute-Animated-Characters-CC0.txt
+Quaternius Stylized Nature        Quaternius-Ultimate-Stylized-Nature-CC0.txt
+Quaternius Modular Ruins          Quaternius-Ultimate-Modular-Ruins-CC0.txt
+Effekseer Runtime                 Effekseer.txt
+Effekseer DirectX dependencies    Effekseer-DirectX.txt
+Recast Navigation                 RecastNavigation.txt
+RmlUi                             RmlUi.txt
+LunaSVG                           LunaSVG.txt
+PlutoVG                           PlutoVG.txt
+rlottie and bundled components    rlottie.txt, rlottie-*.txt
+NVRHI                             NVRHI.txt, NVRHI-ThirdParty.txt
+DirectX 12 Agility SDK            DirectX-Agility-SDK.txt, DirectX-Agility-SDK-Code.txt
+Microsoft Visual C++ Runtime      Microsoft-Visual-Cpp-Runtime.txt
+FreeType                          FreeType.txt
+zlib / MiniZip                    zlib.txt, MiniZip.txt
+kuba--/zip and bundled miniz      kuba-zip.txt
+Python 3.11 runtime               Python-3.11.txt
+Open Sans                         OpenSans.txt
+Noto Sans Simplified Chinese      NotoSansSC.txt
+MaterialX Arnold Shader Ball      MaterialX.txt, MaterialX-ShaderBall-Attribution.txt, MaterialX-Third-Party.txt
+
+This software is based in part of the work of the FreeType Team.
+
+The Microsoft Visual C++ runtime is sourced from the selected Visual Studio toolchain's
+x64 Redist directory, not from System32. The matching DirectX 12 Agility SDK
+runtime is redistributed app-local under its Microsoft license; other Windows
+DirectX system components continue to be provided by Windows.

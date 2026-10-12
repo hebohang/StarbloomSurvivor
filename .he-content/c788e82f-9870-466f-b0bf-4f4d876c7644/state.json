@@ -1,0 +1,1981 @@
+{
+  "adapterSha256": "661ec8e6db0f0cfa77b2f1d9b0bf67fdf61a9819166852cdbe3992bbdfcd7a76",
+  "artifacts": {
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/01d797e37838476c9cb4a575907b3201bc9749e7755d085fbae149042fd58751.hmat": "01d797e37838476c9cb4a575907b3201bc9749e7755d085fbae149042fd58751",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat": "026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/1e6d98d40432e1fb16cb075e9d385aec91c2d7ad4426a7c4e5ebbfeb3220a8d8.hmat": "1e6d98d40432e1fb16cb075e9d385aec91c2d7ad4426a7c4e5ebbfeb3220a8d8",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh": "2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2de3ec5ac2208fce9dceed78b3ac059c9480d17581c5d6c8ca972e10906cb847.hmesh": "2de3ec5ac2208fce9dceed78b3ac059c9480d17581c5d6c8ca972e10906cb847",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/569293265d750d82bdf5e9e1fcd4549eea8aa3330bcc3deefc7ceec31fd92210.bin": "569293265d750d82bdf5e9e1fcd4549eea8aa3330bcc3deefc7ceec31fd92210",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/68309ec9f606e98dd9ded34613071a27aad5079634eddea796461955d7b6e0b9.hmesh": "68309ec9f606e98dd9ded34613071a27aad5079634eddea796461955d7b6e0b9",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/789e9dd247111a5052a9faf594582e198e27793071b7d5a279856bdeb7a07d68.hcollision": "789e9dd247111a5052a9faf594582e198e27793071b7d5a279856bdeb7a07d68",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/a080f0e026108e2a4a9e00ac0f71932d34023d30a0223579305a886e65cf320a.hmat": "a080f0e026108e2a4a9e00ac0f71932d34023d30a0223579305a886e65cf320a",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/b3680772ae6f4605942eaa0eb53756869b0db15a93ab481d71cb8960fd252f3c.png": "b3680772ae6f4605942eaa0eb53756869b0db15a93ab481d71cb8960fd252f3c",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/f6276c52d2693d4b24a59e7e21e9a72fb34970207d9c3aef6960b0e5076d2eb2.bin": "f6276c52d2693d4b24a59e7e21e9a72fb34970207d9c3aef6960b0e5076d2eb2",
+    "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/fc1a5cfa798f3778c29a5dd603e2568f147475e19647f4d5ed9644925a9628e5.bin": "fc1a5cfa798f3778c29a5dd603e2568f147475e19647f4d5ed9644925a9628e5"
+  },
+  "baseline": {
+    "0ab1adf7-9bde-5baf-b438-1776cec19842": {
+      "TagComponent": {
+        "Tag": "Crates"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Translation": [
+          -2.0,
+          0.0,
+          -1.0
+        ]
+      }
+    },
+    "0c156eb6-aa84-5e27-a659-735257535d05": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Step 2"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          2.0,
+          0.75,
+          0.6000000238418579
+        ],
+        "Translation": [
+          3.0,
+          0.375,
+          -2.0
+        ]
+      }
+    },
+    "2fcb0e5e-efd9-5d3e-878b-c984ecb11864": {
+      "Rigidbody3DComponent": {
+        "AllowSleeping": true,
+        "ColliderOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderRotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "CollisionAssetPath": "",
+        "EnableCCD": false,
+        "IsTrigger": false,
+        "Shape": 1,
+        "Type": 0,
+        "angularDamping": 0.05000000074505806,
+        "friction": 0.5,
+        "linearDamping": 0.0,
+        "mass": 1.0,
+        "restitution": 0.0
+      },
+      "TagComponent": {
+        "Tag": "Back Wall Collision"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          12.0,
+          3.0,
+          0.30000001192092896
+        ],
+        "Translation": [
+          0.0,
+          1.5,
+          -5.0
+        ]
+      }
+    },
+    "32fe0ad2-476f-516c-bd87-7a369d164e6c": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Back Wall"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          12.0,
+          3.0,
+          0.30000001192092896
+        ],
+        "Translation": [
+          0.0,
+          1.5,
+          -5.0
+        ]
+      }
+    },
+    "467a7d19-9733-5bd7-ac0b-09939da39856": {
+      "PointLightComponent": {
+        "Intensity": 43481.12890625,
+        "IntensityUnits": 1,
+        "LightColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Radius": 12.0
+      },
+      "TagComponent": {
+        "Tag": "Point"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          -1.5707964897155762,
+          0.0,
+          0.0
+        ],
+        "Scale": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Translation": [
+          -3.0,
+          4.0,
+          1.0
+        ]
+      }
+    },
+    "4d84cf76-6e8e-58e1-8412-f284fb851f16": {
+      "Rigidbody3DComponent": {
+        "AllowSleeping": true,
+        "ColliderOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderRotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "CollisionAssetPath": "",
+        "EnableCCD": false,
+        "IsTrigger": false,
+        "Shape": 1,
+        "Type": 0,
+        "angularDamping": 0.05000000074505806,
+        "friction": 0.5,
+        "linearDamping": 0.0,
+        "mass": 1.0,
+        "restitution": 0.0
+      },
+      "TagComponent": {
+        "Tag": "Step 1 Collision"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          2.0,
+          0.5,
+          0.6000000238418579
+        ],
+        "Translation": [
+          3.0,
+          0.25,
+          -1.399999976158142
+        ]
+      }
+    },
+    "5fba4b5d-866f-52f1-928c-14e917d84b3d": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/a080f0e026108e2a4a9e00ac0f71932d34023d30a0223579305a886e65cf320a.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Drop Visual"
+      },
+      "TransformComponent": {
+        "ParentUuid": "6d467d38-0188-519f-886f-47f2a3f4bcf2",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Translation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "6d467d38-0188-519f-886f-47f2a3f4bcf2": {
+      "Rigidbody3DComponent": {
+        "AllowSleeping": true,
+        "ColliderOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderRotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "CollisionAssetPath": "",
+        "EnableCCD": true,
+        "IsTrigger": false,
+        "Shape": 1,
+        "Type": 1,
+        "angularDamping": 0.05000000074505806,
+        "friction": 0.5,
+        "linearDamping": 0.0,
+        "mass": 1.0,
+        "restitution": 0.0
+      },
+      "TagComponent": {
+        "Tag": "Test Drop"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          0.6000000238418579,
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "Translation": [
+          0.0,
+          4.0,
+          0.0
+        ]
+      }
+    },
+    "7dd4e53b-aff1-5525-8996-4ebd41a43df0": {
+      "Rigidbody3DComponent": {
+        "AllowSleeping": true,
+        "ColliderOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderRotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "CollisionAssetPath": "",
+        "EnableCCD": false,
+        "IsTrigger": false,
+        "Shape": 1,
+        "Type": 0,
+        "angularDamping": 0.05000000074505806,
+        "friction": 0.5,
+        "linearDamping": 0.0,
+        "mass": 1.0,
+        "restitution": 0.0
+      },
+      "TagComponent": {
+        "Tag": "Step 2 Collision"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          2.0,
+          0.75,
+          0.6000000238418579
+        ],
+        "Translation": [
+          3.0,
+          0.375,
+          -2.0
+        ]
+      }
+    },
+    "83ff3a55-4952-5e7d-9d0c-60f2a3070ca4": {
+      "Rigidbody3DComponent": {
+        "AllowSleeping": true,
+        "ColliderOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderRotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "CollisionAssetPath": "",
+        "EnableCCD": false,
+        "IsTrigger": false,
+        "Shape": 1,
+        "Type": 0,
+        "angularDamping": 0.05000000074505806,
+        "friction": 0.5,
+        "linearDamping": 0.0,
+        "mass": 1.0,
+        "restitution": 0.0
+      },
+      "TagComponent": {
+        "Tag": "Side Wall Collision"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          0.30000001192092896,
+          3.0,
+          9.0
+        ],
+        "Translation": [
+          -6.0,
+          1.5,
+          -0.5
+        ]
+      }
+    },
+    "8662e9be-2de7-519d-afc4-1ad4e6c90b8e": {
+      "Rigidbody3DComponent": {
+        "AllowSleeping": true,
+        "ColliderOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderRotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "CollisionAssetPath": "",
+        "EnableCCD": false,
+        "IsTrigger": false,
+        "Shape": 1,
+        "Type": 0,
+        "angularDamping": 0.05000000074505806,
+        "friction": 0.5,
+        "linearDamping": 0.0,
+        "mass": 1.0,
+        "restitution": 0.0
+      },
+      "TagComponent": {
+        "Tag": "Floor Collision"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          14.0,
+          0.5,
+          14.0
+        ],
+        "Translation": [
+          0.0,
+          -0.25,
+          0.0
+        ]
+      }
+    },
+    "9c61a19c-d99e-559f-8c1a-c33f9a0c5bab": {
+      "Rigidbody3DComponent": {
+        "AllowSleeping": true,
+        "ColliderOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderRotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "CollisionAssetPath": "",
+        "EnableCCD": false,
+        "IsTrigger": false,
+        "Shape": 1,
+        "Type": 0,
+        "angularDamping": 0.05000000074505806,
+        "friction": 0.5,
+        "linearDamping": 0.0,
+        "mass": 1.0,
+        "restitution": 0.0
+      },
+      "TagComponent": {
+        "Tag": "Step 0 Collision"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          2.0,
+          0.25,
+          0.6000000238418579
+        ],
+        "Translation": [
+          3.0,
+          0.125,
+          -0.800000011920929
+        ]
+      }
+    },
+    "9e02073f-8ab5-5bd0-81dc-5fe84d3002ff": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Step 1"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          2.0,
+          0.5,
+          0.6000000238418579
+        ],
+        "Translation": [
+          3.0,
+          0.25,
+          -1.399999976158142
+        ]
+      }
+    },
+    "a9109b71-888e-52ac-ac21-ebe30d67fda5": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/a080f0e026108e2a4a9e00ac0f71932d34023d30a0223579305a886e65cf320a.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Shared Crate 1"
+      },
+      "TransformComponent": {
+        "ParentUuid": "0ab1adf7-9bde-5baf-b438-1776cec19842",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          0.800000011920929,
+          1.0,
+          0.800000011920929
+        ],
+        "Translation": [
+          1.25,
+          0.5,
+          0.0
+        ]
+      }
+    },
+    "ac0a61fd-1a6f-5709-a080-62937437ea5a": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Shared Crate 2"
+      },
+      "TransformComponent": {
+        "ParentUuid": "0ab1adf7-9bde-5baf-b438-1776cec19842",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          0.800000011920929,
+          1.0,
+          0.800000011920929
+        ],
+        "Translation": [
+          2.5,
+          0.5,
+          0.0
+        ]
+      }
+    },
+    "b2056342-613b-56b7-8c01-4ef2cfe0156c": {
+      "CapsuleCollider3DComponent": {
+        "Center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Height": 1.7999999523162842,
+        "IsTrigger": false,
+        "Radius": 0.3499999940395355
+      },
+      "CharacterMovementComponent": {
+        "Acceleration": 25.0,
+        "Deceleration": 20.0,
+        "Gravity": -9.800000190734863,
+        "JumpSpeed": 5.5,
+        "MaxSlopeAngleDegrees": 50.0,
+        "MaxSpeed": 2.0,
+        "SprintAccelerationMultiplier": 1.149999976158142,
+        "SprintSpeedMultiplier": 1.7999999523162842,
+        "StepUpHeight": 0.4000000059604645,
+        "StickToFloorDistance": 0.5,
+        "TurnRate": 10.0,
+        "bEnableJump": true,
+        "bEnableSprint": true,
+        "bOrientRotationToMovement": true,
+        "bPlayerInputEnabled": true,
+        "bUseWorldUp": true
+      },
+      "TagComponent": {
+        "Tag": "Test Door Walker"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Translation": [
+          0.0,
+          0.9100000262260437,
+          5.5
+        ]
+      }
+    },
+    "b5bee115-77cd-5b8e-a7c5-f928f34749ce": {
+      "DirectionalLightComponent": {
+        "CascadeCount": 4,
+        "CascadeLambda": 0.75,
+        "Color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "DepthBias": 0.001500000013038516,
+        "Intensity": 2049.0,
+        "NormalBias": 0.05000000074505806,
+        "PCFRadius": 1.5,
+        "ShadowDistance": 150.0,
+        "ShadowMapSize": 2048,
+        "ShadowStrength": 1.0,
+        "bCastShadows": true,
+        "bUsePCF": true
+      },
+      "TagComponent": {
+        "Tag": "Sun"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          -1.3695218563079834,
+          -0.5692322850227356,
+          0.41812512278556824
+        ],
+        "Scale": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Translation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "b7073faa-6c40-5b2f-897e-a71a32278b11": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Side Wall"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          0.30000001192092896,
+          3.0,
+          9.0
+        ],
+        "Translation": [
+          -6.0,
+          1.5,
+          -0.5
+        ]
+      }
+    },
+    "ba7b3e72-4545-501d-9f02-42ec45436308": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Shared Crate 0"
+      },
+      "TransformComponent": {
+        "ParentUuid": "0ab1adf7-9bde-5baf-b438-1776cec19842",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          0.800000011920929,
+          1.0,
+          0.800000011920929
+        ],
+        "Translation": [
+          0.0,
+          0.5,
+          0.0
+        ]
+      }
+    },
+    "bd5a3874-8bb7-5e48-babc-c8f97f67c63c": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Floor"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          14.0,
+          0.5,
+          14.0
+        ],
+        "Translation": [
+          0.0,
+          -0.25,
+          0.0
+        ]
+      }
+    },
+    "bf5fd927-369b-5598-8582-ed026681b658": {
+      "CameraComponent": {
+        "Camera": {
+          "mAspectRatio": 1.7777777910232544,
+          "mOrthographicFar": 1.0,
+          "mOrthographicNear": -1.0,
+          "mOrthographicSize": 10.0,
+          "mPerspectiveFOV": 0.47311562299728394,
+          "mPerspectiveFar": 1000.0,
+          "mPerspectiveNear": 0.10000000149011612,
+          "mProjectionType": 0
+        },
+        "ExposureCompensation": 0.0,
+        "ExposureEV100": 10.0,
+        "FixedAspectRatio": true,
+        "Primary": true,
+        "bOverrideExposure": true
+      },
+      "TagComponent": {
+        "Tag": "Acceptance Camera"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          -0.49327585101127625,
+          0.6327489614486694,
+          9.239255405191216e-08
+        ],
+        "Scale": [
+          1.0,
+          1.0,
+          1.0000001192092896
+        ],
+        "Translation": [
+          11.0,
+          11.0,
+          15.0
+        ]
+      }
+    },
+    "cdac5b9e-75d0-53aa-9fc5-9c91a4cce210": {
+      "Rigidbody3DComponent": {
+        "AllowSleeping": true,
+        "ColliderOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderRotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "CollisionAssetPath": "",
+        "EnableCCD": false,
+        "IsTrigger": false,
+        "Shape": 1,
+        "Type": 0,
+        "angularDamping": 0.05000000074505806,
+        "friction": 0.5,
+        "linearDamping": 0.0,
+        "mass": 1.0,
+        "restitution": 0.0
+      },
+      "TagComponent": {
+        "Tag": "Step 3 Collision"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          2.0,
+          1.0,
+          0.6000000238418579
+        ],
+        "Translation": [
+          3.0,
+          0.5,
+          -2.5999999046325684
+        ]
+      }
+    },
+    "d48d1e40-0fef-5541-bf98-f902544cc071": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Step 0"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          2.0,
+          0.25,
+          0.6000000238418579
+        ],
+        "Translation": [
+          3.0,
+          0.125,
+          -0.800000011920929
+        ]
+      }
+    },
+    "d4e6db83-d39c-528e-bc42-2a40cc7c0a17": {
+      "CapsuleCollider3DComponent": {
+        "Center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Height": 1.7999999523162842,
+        "IsTrigger": false,
+        "Radius": 0.3499999940395355
+      },
+      "CharacterMovementComponent": {
+        "Acceleration": 25.0,
+        "Deceleration": 20.0,
+        "Gravity": -9.800000190734863,
+        "JumpSpeed": 5.5,
+        "MaxSlopeAngleDegrees": 50.0,
+        "MaxSpeed": 2.0,
+        "SprintAccelerationMultiplier": 1.149999976158142,
+        "SprintSpeedMultiplier": 1.7999999523162842,
+        "StepUpHeight": 0.4000000059604645,
+        "StickToFloorDistance": 0.5,
+        "TurnRate": 10.0,
+        "bEnableJump": true,
+        "bEnableSprint": true,
+        "bOrientRotationToMovement": true,
+        "bPlayerInputEnabled": true,
+        "bUseWorldUp": true
+      },
+      "TagComponent": {
+        "Tag": "Test Stair Walker"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Translation": [
+          3.0,
+          0.9100000262260437,
+          0.5
+        ]
+      }
+    },
+    "d88e9ea9-68b5-5c20-9182-51ef2c0900db": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/68309ec9f606e98dd9ded34613071a27aad5079634eddea796461955d7b6e0b9.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/68309ec9f606e98dd9ded34613071a27aad5079634eddea796461955d7b6e0b9.hmesh"
+      },
+      "Rigidbody3DComponent": {
+        "AllowSleeping": true,
+        "ColliderOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderRotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ColliderScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "CollisionAssetPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/789e9dd247111a5052a9faf594582e198e27793071b7d5a279856bdeb7a07d68.hcollision",
+        "EnableCCD": false,
+        "IsTrigger": false,
+        "Shape": 4,
+        "Type": 0,
+        "angularDamping": 0.05000000074505806,
+        "friction": 0.5,
+        "linearDamping": 0.0,
+        "mass": 1.0,
+        "restitution": 0.0
+      },
+      "TagComponent": {
+        "Tag": "Concave Door Frame"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Translation": [
+          0.0,
+          2.5999999046325684,
+          4.0
+        ]
+      }
+    },
+    "de14e56c-feb8-5953-84e5-406991303c2b": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/a080f0e026108e2a4a9e00ac0f71932d34023d30a0223579305a886e65cf320a.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2de3ec5ac2208fce9dceed78b3ac059c9480d17581c5d6c8ca972e10906cb847.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2de3ec5ac2208fce9dceed78b3ac059c9480d17581c5d6c8ca972e10906cb847.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Mirrored Display"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          3.1415927410125732,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          -1.0,
+          -2.0,
+          -0.6000000238418579
+        ],
+        "Translation": [
+          -3.5,
+          1.0,
+          -2.5
+        ]
+      }
+    },
+    "e6c222b5-264c-5f42-bbdd-f7fd8b4f6fe6": {
+      "MeshComponent": {
+        "MaterialOverrides": [
+          "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat"
+        ],
+        "Path": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+        "meshResPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh"
+      },
+      "TagComponent": {
+        "Tag": "Step 3"
+      },
+      "TransformComponent": {
+        "ParentUuid": "",
+        "Rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Scale": [
+          2.0,
+          1.0,
+          0.6000000238418579
+        ],
+        "Translation": [
+          3.0,
+          0.5,
+          -2.5999999046325684
+        ]
+      }
+    }
+  },
+  "converter": "cgltf-scene/1",
+  "dependencies": {
+    "C:\\WorkSpace\\HEngineDev\\Project\\SourceAssets\\BlenderAcceptance\\Playable.blend": "ce7ab73d58cde8bf6040ac97ad11ab55d629fa914ad08202fb5170248aabf99d",
+    "C:\\WorkSpace\\HEngineDev\\Project\\SourceAssets\\BlenderAcceptance\\Playable.verify.json": "a18b35c4eba3d79f9e5785ee59740d14830eba0d744ea827be231b7a0a315067"
+  },
+  "diagnostics": [
+    {
+      "code": "world_lighting_not_exported",
+      "message": "Blender World/background lighting is not exported. Configure HEngine environment/exposure separately; point and sun lights are exported.",
+      "name": "Scene",
+      "objectId": "c788e82f-9870-466f-b0bf-4f4d876c7644",
+      "property": "world",
+      "severity": "warning"
+    }
+  ],
+  "documentId": "c788e82f-9870-466f-b0bf-4f4d876c7644",
+  "driverSha256": "6ca4fa0055cddba94a3d7709d1ac12562bbef673ef73e1bd128205285a4074c9",
+  "export": {
+    "adapter": "he-blender/1",
+    "blender": "5.2.1 LTS",
+    "dependencies": [],
+    "dependencyHashes": {},
+    "diagnostics": [
+      {
+        "code": "world_lighting_not_exported",
+        "message": "Blender World/background lighting is not exported. Configure HEngine environment/exposure separately; point and sun lights are exported.",
+        "name": "Scene",
+        "objectId": "c788e82f-9870-466f-b0bf-4f4d876c7644",
+        "property": "world",
+        "severity": "warning"
+      }
+    ],
+    "ok": true,
+    "options": {
+      "export_animations": false,
+      "export_apply": true,
+      "export_attributes": false,
+      "export_cameras": true,
+      "export_extras": true,
+      "export_format": "GLB",
+      "export_lights": true,
+      "export_materials": "EXPORT",
+      "export_morph": false,
+      "export_normals": true,
+      "export_skins": false,
+      "export_tangents": true,
+      "export_texcoords": true,
+      "export_yup": true,
+      "use_selection": true
+    },
+    "sourceSha256": "ce7ab73d58cde8bf6040ac97ad11ab55d629fa914ad08202fb5170248aabf99d"
+  },
+  "identities": {
+    "0b645ce2-d407-459c-90be-cabd79665df2": "9e02073f-8ab5-5bd0-81dc-5fe84d3002ff",
+    "0c15c76d-b763-48c5-82f9-cc70aa7d3917": "0ab1adf7-9bde-5baf-b438-1776cec19842",
+    "126268ae-299d-47b0-ba7f-16228956101e": "5fba4b5d-866f-52f1-928c-14e917d84b3d",
+    "13c723db-69a1-4f2c-b9f4-b1e8350ba202": "ba7b3e72-4545-501d-9f02-42ec45436308",
+    "2c9d0857-8fcb-4705-90cb-527901cd89f3": "bf5fd927-369b-5598-8582-ed026681b658",
+    "584be729-0b62-4f97-ae35-81145df68523": "32fe0ad2-476f-516c-bd87-7a369d164e6c",
+    "58f7e86f-5667-4386-9ad6-562018d5146f": "6d467d38-0188-519f-886f-47f2a3f4bcf2",
+    "5d8ce7ae-d592-4a99-97d7-c63804ade857": "b2056342-613b-56b7-8c01-4ef2cfe0156c",
+    "65595578-3da4-4e9a-ac14-01ed8b7a9554": "d48d1e40-0fef-5541-bf98-f902544cc071",
+    "6e901ad1-a65c-471a-a587-522cf14f35ce": "83ff3a55-4952-5e7d-9d0c-60f2a3070ca4",
+    "740471d7-2505-4e82-b7e8-c0a16eb8dc15": "d4e6db83-d39c-528e-bc42-2a40cc7c0a17",
+    "7c85f44c-ff71-4203-af70-5a13e41854a4": "d88e9ea9-68b5-5c20-9182-51ef2c0900db",
+    "854cd1d6-93e4-43e6-b029-c805b72349c6": "9c61a19c-d99e-559f-8c1a-c33f9a0c5bab",
+    "988306b1-0511-4b04-bf5b-0e9050d21ad8": "e6c222b5-264c-5f42-bbdd-f7fd8b4f6fe6",
+    "9c57f04c-26ed-448c-aeac-a4ccfe502add": "4d84cf76-6e8e-58e1-8412-f284fb851f16",
+    "a2adf279-0af1-4a8a-9cf5-1a3d2c627f22": "0c156eb6-aa84-5e27-a659-735257535d05",
+    "a5482391-93d3-4588-998d-9a171ac480ca": "7dd4e53b-aff1-5525-8996-4ebd41a43df0",
+    "bb0b6a79-bf79-4d62-8932-5bef85156f1d": "de14e56c-feb8-5953-84e5-406991303c2b",
+    "daa3832c-7533-4ccd-8180-bd4498f56974": "bd5a3874-8bb7-5e48-babc-c8f97f67c63c",
+    "dfb63550-8822-4e65-9efd-8713855f4995": "b7073faa-6c40-5b2f-897e-a71a32278b11",
+    "e257dd39-d4a7-464d-bb56-e5a39f3402a1": "467a7d19-9733-5bd7-ac0b-09939da39856",
+    "e6148758-5c09-4e58-b474-7399663054f6": "b5bee115-77cd-5b8e-a7c5-f928f34749ce",
+    "ee00f8f5-6979-45dc-a1bc-a5c154b93a53": "2fcb0e5e-efd9-5d3e-878b-c984ecb11864",
+    "f36b1cf4-533b-4ad9-9017-7725c97a3de7": "8662e9be-2de7-519d-afc4-1ad4e6c90b8e",
+    "f64ce656-a274-4b92-9fd5-bb887814fe2b": "cdac5b9e-75d0-53aa-9fc5-9c91a4cce210",
+    "f834ce0e-e70d-45bf-9fa1-b0c5d7d72285": "ac0a61fd-1a6f-5709-a080-62937437ea5a",
+    "f8c32a60-5ba2-4c50-880c-c20229411802": "a9109b71-888e-52ac-ac21-ebe30d67fda5"
+  },
+  "importerSha256": "4fca7fe0c84b29a0d1570de5e04bd621d7b643083a9f84fcb31086f76dab57fc",
+  "materials": {
+    "7904766a-4be7-4ecd-9a0b-49cbe1f3b917": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/026dbe33b13089b15dca65f288897d08f2514601392a2ae58ab4ebbb84021314.hmat",
+    "8a043415-0a62-4c60-a468-73734ec6f9ef": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/a080f0e026108e2a4a9e00ac0f71932d34023d30a0223579305a886e65cf320a.hmat"
+  },
+  "ownership": {
+    "fields": {
+      "CameraComponent": [
+        "Camera",
+        "Primary",
+        "FixedAspectRatio"
+      ],
+      "CapsuleCollider3DComponent": [],
+      "CharacterMovementComponent": [],
+      "DirectionalLightComponent": [
+        "Intensity",
+        "Color"
+      ],
+      "MeshComponent": [
+        "Path",
+        "meshResPath",
+        "MaterialOverrides"
+      ],
+      "PointLightComponent": [
+        "Intensity",
+        "IntensityUnits",
+        "LightColor",
+        "Radius"
+      ],
+      "Rigidbody3DComponent": [
+        "Shape",
+        "Type",
+        "ColliderOffset",
+        "ColliderRotation",
+        "ColliderScale",
+        "CollisionAssetPath"
+      ],
+      "TagComponent": [
+        "Tag"
+      ],
+      "TransformComponent": [
+        "Translation",
+        "Rotation",
+        "Scale",
+        "ParentUuid"
+      ]
+    },
+    "mode": "source-to-engine",
+    "schema": 1
+  },
+  "scene": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Scene.he",
+  "sceneSha256": "9719559cf49fbda2aba254ea014e279199e37533fcdfb82611133598a168eff6",
+  "schema": 1,
+  "skins": {},
+  "slots": {
+    "0ab1adf7-9bde-5baf-b438-1776cec19842": [],
+    "0c156eb6-aa84-5e27-a659-735257535d05": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ],
+    "2fcb0e5e-efd9-5d3e-878b-c984ecb11864": [],
+    "32fe0ad2-476f-516c-bd87-7a369d164e6c": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ],
+    "467a7d19-9733-5bd7-ac0b-09939da39856": [],
+    "4d84cf76-6e8e-58e1-8412-f284fb851f16": [],
+    "5fba4b5d-866f-52f1-928c-14e917d84b3d": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/8a043415-0a62-4c60-a468-73734ec6f9ef"
+    ],
+    "6d467d38-0188-519f-886f-47f2a3f4bcf2": [],
+    "7dd4e53b-aff1-5525-8996-4ebd41a43df0": [],
+    "83ff3a55-4952-5e7d-9d0c-60f2a3070ca4": [],
+    "8662e9be-2de7-519d-afc4-1ad4e6c90b8e": [],
+    "9c61a19c-d99e-559f-8c1a-c33f9a0c5bab": [],
+    "9e02073f-8ab5-5bd0-81dc-5fe84d3002ff": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ],
+    "a9109b71-888e-52ac-ac21-ebe30d67fda5": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/8a043415-0a62-4c60-a468-73734ec6f9ef"
+    ],
+    "ac0a61fd-1a6f-5709-a080-62937437ea5a": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ],
+    "b2056342-613b-56b7-8c01-4ef2cfe0156c": [],
+    "b5bee115-77cd-5b8e-a7c5-f928f34749ce": [],
+    "b7073faa-6c40-5b2f-897e-a71a32278b11": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ],
+    "ba7b3e72-4545-501d-9f02-42ec45436308": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ],
+    "bd5a3874-8bb7-5e48-babc-c8f97f67c63c": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ],
+    "bf5fd927-369b-5598-8582-ed026681b658": [],
+    "cdac5b9e-75d0-53aa-9fc5-9c91a4cce210": [],
+    "d48d1e40-0fef-5541-bf98-f902544cc071": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ],
+    "d4e6db83-d39c-528e-bc42-2a40cc7c0a17": [],
+    "d88e9ea9-68b5-5c20-9182-51ef2c0900db": [
+      "6f52211e-3744-4f24-8624-0960381f2def/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ],
+    "de14e56c-feb8-5953-84e5-406991303c2b": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/8a043415-0a62-4c60-a468-73734ec6f9ef"
+    ],
+    "e6c222b5-264c-5f42-bbdd-f7fd8b4f6fe6": [
+      "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+    ]
+  },
+  "source": "C:\\WorkSpace\\HEngineDev\\Project\\SourceAssets\\BlenderAcceptance\\Playable.blend",
+  "sourceObjects": {
+    "0b645ce2-d407-459c-90be-cabd79665df2": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Step 1",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "9e02073f-8ab5-5bd0-81dc-5fe84d3002ff"
+    },
+    "0c15c76d-b763-48c5-82f9-cc70aa7d3917": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Crates",
+      "slots": [],
+      "uuid": "0ab1adf7-9bde-5baf-b438-1776cec19842"
+    },
+    "126268ae-299d-47b0-ba7f-16228956101e": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Drop Visual",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/8a043415-0a62-4c60-a468-73734ec6f9ef"
+      ],
+      "uuid": "5fba4b5d-866f-52f1-928c-14e917d84b3d"
+    },
+    "13c723db-69a1-4f2c-b9f4-b1e8350ba202": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Shared Crate 0",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "ba7b3e72-4545-501d-9f02-42ec45436308"
+    },
+    "2c9d0857-8fcb-4705-90cb-527901cd89f3": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Acceptance Camera",
+      "slots": [],
+      "uuid": "bf5fd927-369b-5598-8582-ed026681b658"
+    },
+    "584be729-0b62-4f97-ae35-81145df68523": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Back Wall",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "32fe0ad2-476f-516c-bd87-7a369d164e6c"
+    },
+    "58f7e86f-5667-4386-9ad6-562018d5146f": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Test Drop",
+      "slots": [],
+      "uuid": "6d467d38-0188-519f-886f-47f2a3f4bcf2"
+    },
+    "5d8ce7ae-d592-4a99-97d7-c63804ade857": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Test Door Walker",
+      "slots": [],
+      "uuid": "b2056342-613b-56b7-8c01-4ef2cfe0156c"
+    },
+    "65595578-3da4-4e9a-ac14-01ed8b7a9554": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Step 0",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "d48d1e40-0fef-5541-bf98-f902544cc071"
+    },
+    "6e901ad1-a65c-471a-a587-522cf14f35ce": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Side Wall Collision",
+      "slots": [],
+      "uuid": "83ff3a55-4952-5e7d-9d0c-60f2a3070ca4"
+    },
+    "740471d7-2505-4e82-b7e8-c0a16eb8dc15": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Test Stair Walker",
+      "slots": [],
+      "uuid": "d4e6db83-d39c-528e-bc42-2a40cc7c0a17"
+    },
+    "7c85f44c-ff71-4203-af70-5a13e41854a4": {
+      "meshId": "6f52211e-3744-4f24-8624-0960381f2def",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/68309ec9f606e98dd9ded34613071a27aad5079634eddea796461955d7b6e0b9.hmesh",
+      "name": "Concave Door Frame",
+      "slots": [
+        "6f52211e-3744-4f24-8624-0960381f2def/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "d88e9ea9-68b5-5c20-9182-51ef2c0900db"
+    },
+    "854cd1d6-93e4-43e6-b029-c805b72349c6": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Step 0 Collision",
+      "slots": [],
+      "uuid": "9c61a19c-d99e-559f-8c1a-c33f9a0c5bab"
+    },
+    "988306b1-0511-4b04-bf5b-0e9050d21ad8": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Step 3",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "e6c222b5-264c-5f42-bbdd-f7fd8b4f6fe6"
+    },
+    "9c57f04c-26ed-448c-aeac-a4ccfe502add": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Step 1 Collision",
+      "slots": [],
+      "uuid": "4d84cf76-6e8e-58e1-8412-f284fb851f16"
+    },
+    "a2adf279-0af1-4a8a-9cf5-1a3d2c627f22": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Step 2",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "0c156eb6-aa84-5e27-a659-735257535d05"
+    },
+    "a5482391-93d3-4588-998d-9a171ac480ca": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Step 2 Collision",
+      "slots": [],
+      "uuid": "7dd4e53b-aff1-5525-8996-4ebd41a43df0"
+    },
+    "bb0b6a79-bf79-4d62-8932-5bef85156f1d": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2de3ec5ac2208fce9dceed78b3ac059c9480d17581c5d6c8ca972e10906cb847.hmesh",
+      "name": "Mirrored Display",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/8a043415-0a62-4c60-a468-73734ec6f9ef"
+      ],
+      "uuid": "de14e56c-feb8-5953-84e5-406991303c2b"
+    },
+    "daa3832c-7533-4ccd-8180-bd4498f56974": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Floor",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "bd5a3874-8bb7-5e48-babc-c8f97f67c63c"
+    },
+    "dfb63550-8822-4e65-9efd-8713855f4995": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Side Wall",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "b7073faa-6c40-5b2f-897e-a71a32278b11"
+    },
+    "e257dd39-d4a7-464d-bb56-e5a39f3402a1": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Point",
+      "slots": [],
+      "uuid": "467a7d19-9733-5bd7-ac0b-09939da39856"
+    },
+    "e6148758-5c09-4e58-b474-7399663054f6": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Sun",
+      "slots": [],
+      "uuid": "b5bee115-77cd-5b8e-a7c5-f928f34749ce"
+    },
+    "ee00f8f5-6979-45dc-a1bc-a5c154b93a53": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Back Wall Collision",
+      "slots": [],
+      "uuid": "2fcb0e5e-efd9-5d3e-878b-c984ecb11864"
+    },
+    "f36b1cf4-533b-4ad9-9017-7725c97a3de7": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Floor Collision",
+      "slots": [],
+      "uuid": "8662e9be-2de7-519d-afc4-1ad4e6c90b8e"
+    },
+    "f64ce656-a274-4b92-9fd5-bb887814fe2b": {
+      "meshId": null,
+      "meshPath": null,
+      "name": "Step 3 Collision",
+      "slots": [],
+      "uuid": "cdac5b9e-75d0-53aa-9fc5-9c91a4cce210"
+    },
+    "f834ce0e-e70d-45bf-9fa1-b0c5d7d72285": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Shared Crate 2",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/7904766a-4be7-4ecd-9a0b-49cbe1f3b917"
+      ],
+      "uuid": "ac0a61fd-1a6f-5709-a080-62937437ea5a"
+    },
+    "f8c32a60-5ba2-4c50-880c-c20229411802": {
+      "meshId": "44c78fb8-d804-4712-9465-f2eba0f9dee4",
+      "meshPath": "Assets/Imported/c788e82f-9870-466f-b0bf-4f4d876c7644/Resources/2dda789ec43b561ffec4b6b958402443df8b1dec06ba534fa57527e03ba879cf.hmesh",
+      "name": "Shared Crate 1",
+      "slots": [
+        "44c78fb8-d804-4712-9465-f2eba0f9dee4/8a043415-0a62-4c60-a468-73734ec6f9ef"
+      ],
+      "uuid": "a9109b71-888e-52ac-ac21-ebe30d67fda5"
+    }
+  },
+  "tool": "content-sync/1",
+  "worldMatrices": {
+    "0ab1adf7-9bde-5baf-b438-1776cec19842": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      -2.0,
+      0.0,
+      -1.0,
+      1.0
+    ],
+    "0c156eb6-aa84-5e27-a659-735257535d05": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.75,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      3.0,
+      0.375,
+      -2.0,
+      1.0
+    ],
+    "2fcb0e5e-efd9-5d3e-878b-c984ecb11864": [
+      12.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.30000001192092896,
+      0.0,
+      0.0,
+      1.5,
+      -5.0,
+      1.0
+    ],
+    "32fe0ad2-476f-516c-bd87-7a369d164e6c": [
+      12.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.30000001192092896,
+      0.0,
+      0.0,
+      1.5,
+      -5.0,
+      1.0
+    ],
+    "467a7d19-9733-5bd7-ac0b-09939da39856": [
+      1.0,
+      0.0,
+      -0.0,
+      0.0,
+      -0.0,
+      -1.1920928955078125e-07,
+      -1.0000001192092896,
+      0.0,
+      0.0,
+      1.0000001192092896,
+      -1.1920928955078125e-07,
+      0.0,
+      -3.0,
+      4.0,
+      1.0,
+      1.0
+    ],
+    "4d84cf76-6e8e-58e1-8412-f284fb851f16": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      3.0,
+      0.25,
+      -1.399999976158142,
+      1.0
+    ],
+    "5fba4b5d-866f-52f1-928c-14e917d84b3d": [
+      0.6000000238418579,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      0.0,
+      4.0,
+      0.0,
+      1.0
+    ],
+    "6d467d38-0188-519f-886f-47f2a3f4bcf2": [
+      0.6000000238418579,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      0.0,
+      4.0,
+      0.0,
+      1.0
+    ],
+    "7dd4e53b-aff1-5525-8996-4ebd41a43df0": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.75,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      3.0,
+      0.375,
+      -2.0,
+      1.0
+    ],
+    "83ff3a55-4952-5e7d-9d0c-60f2a3070ca4": [
+      0.30000001192092896,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      9.0,
+      0.0,
+      -6.0,
+      1.5,
+      -0.5,
+      1.0
+    ],
+    "8662e9be-2de7-519d-afc4-1ad4e6c90b8e": [
+      14.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      14.0,
+      0.0,
+      0.0,
+      -0.25,
+      0.0,
+      1.0
+    ],
+    "9c61a19c-d99e-559f-8c1a-c33f9a0c5bab": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      3.0,
+      0.125,
+      -0.800000011920929,
+      1.0
+    ],
+    "9e02073f-8ab5-5bd0-81dc-5fe84d3002ff": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      3.0,
+      0.25,
+      -1.399999976158142,
+      1.0
+    ],
+    "a9109b71-888e-52ac-ac21-ebe30d67fda5": [
+      0.800000011920929,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.800000011920929,
+      0.0,
+      -0.75,
+      0.5,
+      -1.0,
+      1.0
+    ],
+    "ac0a61fd-1a6f-5709-a080-62937437ea5a": [
+      0.800000011920929,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.800000011920929,
+      0.0,
+      0.5,
+      0.5,
+      -1.0,
+      1.0
+    ],
+    "b2056342-613b-56b7-8c01-4ef2cfe0156c": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.9100000262260437,
+      5.5,
+      1.0
+    ],
+    "b5bee115-77cd-5b8e-a7c5-f928f34749ce": [
+      0.7697511315345764,
+      0.3420201241970062,
+      0.538985550403595,
+      0.0,
+      0.4014332592487335,
+      0.39713138341903687,
+      -0.8253108263015747,
+      0.0,
+      -0.4963209927082062,
+      0.8516507148742676,
+      0.1683940887451172,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "b7073faa-6c40-5b2f-897e-a71a32278b11": [
+      0.30000001192092896,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      9.0,
+      0.0,
+      -6.0,
+      1.5,
+      -0.5,
+      1.0
+    ],
+    "ba7b3e72-4545-501d-9f02-42ec45436308": [
+      0.800000011920929,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.800000011920929,
+      0.0,
+      -2.0,
+      0.5,
+      -1.0,
+      1.0
+    ],
+    "bd5a3874-8bb7-5e48-babc-c8f97f67c63c": [
+      14.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      14.0,
+      0.0,
+      0.0,
+      -0.25,
+      0.0,
+      1.0
+    ],
+    "bf5fd927-369b-5598-8582-ed026681b658": [
+      0.8064048886299133,
+      5.960464477539063e-08,
+      -0.5913638472557068,
+      0.0,
+      -0.28001895546913147,
+      0.8807864189147949,
+      -0.3818438649177551,
+      0.0,
+      0.520865261554718,
+      0.4735138416290283,
+      0.7102704644203186,
+      0.0,
+      11.0,
+      11.0,
+      15.0,
+      1.0
+    ],
+    "cdac5b9e-75d0-53aa-9fc5-9c91a4cce210": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      3.0,
+      0.5,
+      -2.5999999046325684,
+      1.0
+    ],
+    "d48d1e40-0fef-5541-bf98-f902544cc071": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      3.0,
+      0.125,
+      -0.800000011920929,
+      1.0
+    ],
+    "d4e6db83-d39c-528e-bc42-2a40cc7c0a17": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      3.0,
+      0.9100000262260437,
+      0.5,
+      1.0
+    ],
+    "d88e9ea9-68b5-5c20-9182-51ef2c0900db": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      2.5999999046325684,
+      4.0,
+      1.0
+    ],
+    "de14e56c-feb8-5953-84e5-406991303c2b": [
+      -1.0,
+      -0.0,
+      -0.0,
+      0.0,
+      -0.0,
+      2.0,
+      -0.0,
+      0.0,
+      -0.0,
+      -0.0,
+      0.6000000238418579,
+      0.0,
+      -3.5,
+      1.0,
+      -2.5,
+      1.0
+    ],
+    "e6c222b5-264c-5f42-bbdd-f7fd8b4f6fe6": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6000000238418579,
+      0.0,
+      3.0,
+      0.5,
+      -2.5999999046325684,
+      1.0
+    ]
+  }
+}

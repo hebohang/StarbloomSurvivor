@@ -1,0 +1,20 @@
+License identifier: CC0-1.0
+Asset: Effekseer Official Effects
+Author/publisher: Effekseer
+
+Official license evidence:
+https://effekseer.github.io/en/contribute.html
+
+The official page places this contribution in the new "Sample Effects" section
+and states: "These effects are distributed under CC-0 License."
+
+Asset detail:
+https://effekseer.github.io/en/contributes/Effekseer01/index.html
+
+Original download:
+https://effekseer.github.io/contributes/Effekseer01.zip
+
+CC0 1.0 reference:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Evidence recorded: 2026-08-13

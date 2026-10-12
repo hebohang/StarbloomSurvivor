@@ -1,0 +1,201 @@
+{
+  "accessorVec": [
+    {
+      "bufferViewIndex": 0,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 330,
+      "max": [
+        0.72,
+        0.71625,
+        0.7090615821687898
+      ],
+      "min": [
+        -0.676578686965854,
+        -0.62,
+        -0.7090615821687898
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "VEC3"
+    },
+    {
+      "bufferViewIndex": 1,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 330,
+      "max": [
+        0.9238795325112867,
+        1.0,
+        0.9238795325112867
+      ],
+      "min": [
+        -0.923879532511287,
+        -1.0,
+        -0.923879532511287
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "VEC3"
+    },
+    {
+      "bufferViewIndex": 2,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 330,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "VEC2"
+    },
+    {
+      "bufferViewIndex": 3,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 162,
+      "max": [
+        161
+      ],
+      "min": [
+        0
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "SCALAR"
+    },
+    {
+      "bufferViewIndex": 4,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 96,
+      "max": [
+        257
+      ],
+      "min": [
+        162
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "SCALAR"
+    },
+    {
+      "bufferViewIndex": 5,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 72,
+      "max": [
+        329
+      ],
+      "min": [
+        258
+      ],
+      "name": "",
+      "normalized": false,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferVec": [
+    {
+      "byteLength": 11880,
+      "data": [],
+      "name": "",
+      "uri": "Assets/Models/SurvivorWeapons/ExpansionGenerated/SporecapCore.bin"
+    }
+  ],
+  "bufferViewVec": [
+    {
+      "bufferIndex": 0,
+      "byteLength": 3960,
+      "byteOffset": 0,
+      "byteStride": 0,
+      "name": "",
+      "target": 34962
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 3960,
+      "byteOffset": 3960,
+      "byteStride": 0,
+      "name": "",
+      "target": 34962
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 2640,
+      "byteOffset": 7920,
+      "byteStride": 0,
+      "name": "",
+      "target": 34962
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 648,
+      "byteOffset": 10560,
+      "byteStride": 0,
+      "name": "",
+      "target": 34963
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 384,
+      "byteOffset": 11208,
+      "byteStride": 0,
+      "name": "",
+      "target": 34963
+    },
+    {
+      "bufferIndex": 0,
+      "byteLength": 288,
+      "byteOffset": 11592,
+      "byteStride": 0,
+      "name": "",
+      "target": 34963
+    }
+  ],
+  "name": "SporecapCore",
+  "primitives": [
+    {
+      "attributes": {
+        "NORMAL": 1,
+        "POSITION": 0,
+        "TEXCOORD_0": 2
+      },
+      "indices": 3,
+      "materialResPath": "Assets/Models/SurvivorWeapons/ExpansionGenerated/Materials/SporecapCore_Cap.hmat",
+      "mode": 4,
+      "targets": []
+    },
+    {
+      "attributes": {
+        "NORMAL": 1,
+        "POSITION": 0,
+        "TEXCOORD_0": 2
+      },
+      "indices": 4,
+      "materialResPath": "Assets/Models/SurvivorWeapons/ExpansionGenerated/Materials/SporecapCore_Stem.hmat",
+      "mode": 4,
+      "targets": []
+    },
+    {
+      "attributes": {
+        "NORMAL": 1,
+        "POSITION": 0,
+        "TEXCOORD_0": 2
+      },
+      "indices": 5,
+      "materialResPath": "Assets/Models/SurvivorWeapons/ExpansionGenerated/Materials/SporecapCore_Spots.hmat",
+      "mode": 4,
+      "targets": []
+    }
+  ],
+  "skeletonPath": "",
+  "version": 1,
+  "weights": []
+}

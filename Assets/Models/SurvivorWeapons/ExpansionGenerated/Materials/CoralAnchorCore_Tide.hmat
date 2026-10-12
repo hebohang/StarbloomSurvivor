@@ -1,0 +1,92 @@
+{
+  "Properties": {
+    "alphaCutoff": 0.5,
+    "alphaMode": "OPAQUE",
+    "bUseAlbedoMap": false,
+    "bUseAoMap": false,
+    "bUseEmissiveMap": true,
+    "bUseMetallicRoughnessMap": false,
+    "bUseNormalMap": false,
+    "doubleSided": false,
+    "emissiveFactor": [
+      0.01,
+      0.08,
+      0.09
+    ],
+    "emissiveTexture": {
+      "texCoord": 0,
+      "textureRes": {
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9729,
+          "wrapS": 33071,
+          "wrapT": 33071
+        },
+        "textureSourcePath": "white"
+      }
+    },
+    "name": "CoralAnchorCore_Tide",
+    "normalTexture": {
+      "scale": 1.0,
+      "texCoord": 0,
+      "textureRes": {
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9729,
+          "wrapS": 33071,
+          "wrapT": 33071
+        },
+        "textureSourcePath": ""
+      }
+    },
+    "occlusionTexture": {
+      "strength": 1.0,
+      "texCoord": 0,
+      "textureRes": {
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9729,
+          "wrapS": 33071,
+          "wrapT": 33071
+        },
+        "textureSourcePath": ""
+      }
+    },
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.22,
+        0.76,
+        0.78,
+        1.0
+      ],
+      "baseColorTexture": {
+        "texCoord": 0,
+        "textureRes": {
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 33071,
+            "wrapT": 33071
+          },
+          "textureSourcePath": ""
+        }
+      },
+      "metallicFactor": 0.02,
+      "metallicRoughnessTexture": {
+        "texCoord": 0,
+        "textureRes": {
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 33071,
+            "wrapT": 33071
+          },
+          "textureSourcePath": ""
+        }
+      },
+      "roughnessFactor": 0.6
+    }
+  },
+  "ShaderPath": "Shaders/BasePBR.hlsl",
+  "Type": "Default"
+}

@@ -1,0 +1,12 @@
+Quaternius Cute Animated Monsters Pack
+
+Author: Quaternius
+Official pack page: https://quaternius.com/packs/cutemonsters.html
+
+License:
+CC0 1.0 Universal (CC0 1.0)
+Public Domain Dedication
+https://creativecommons.org/publicdomain/zero/1.0/
+
+The official pack page identifies the downloadable model files and textures as
+CC0 and free to use in personal and commercial projects.

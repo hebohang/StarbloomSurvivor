@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "appid": "wx54887856924392ee",
+  "projectName": "小树保卫者",
+  "scene": "Assets/WeChatSample/Touch.he",
+  "texture": "Assets/WeChatSample/checker.png",
+  "audio": "Assets/WeChatSample/touch.wav",
+  "shaderProfile": "wechat-webgl2-sprite-v1",
+  "orientation": "landscape",
+  "enableDebug": true,
+  "storageKey": "he-wechat-touch-v1",
+  "ads": {
+    "interstitialId": "",
+    "rewardedId": ""
+  },
+  "leaderboard": {
+    "enabled": true,
+    "key": "starbloom-survival-seconds-v1",
+    "title": "好友生存排行榜",
+    "unit": "秒",
+    "metricLabel": "最长生存时间"
+  }
+}

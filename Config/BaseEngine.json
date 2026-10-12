@@ -1,0 +1,20 @@
+{
+    "Schema": "hengine.render-settings",
+    "SchemaVersion": 2,
+    "Rendering": {
+        "Clouds": { "Quality": "Off" },
+        "AO": {
+            "Technique": "GTAO",
+            "FastUpsample": true
+        },
+        "Reflections": {
+            "SSR": { "Enabled": false }
+        },
+        "AntiAliasing": {
+            "Mode": "FXAA",
+            "FxaaEdgeThreshold": 0.1,
+            "FxaaEdgeThresholdMin": 0.025,
+            "FxaaSubpixelQuality": 0.65
+        }
+    }
+}
