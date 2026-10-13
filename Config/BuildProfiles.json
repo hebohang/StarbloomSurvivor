@@ -12,7 +12,7 @@
     },
     {
       "configuration": "Release",
-      "contentExporter": "Tools/ExportWeb.py",
+      "contentExporter": "Tools/ExportContent.cjs",
       "id": "web",
       "managedProject": "Build/Web/Starbloom.Web.csproj",
       "name": "Web 浏览器",
@@ -22,25 +22,16 @@
     },
     {
       "configuration": "Release",
-      "gameConfig": "Config/Game.CSharp.json",
+      "gameConfig": "Config/Game.json",
       "id": "windows",
       "name": "Windows · C#",
       "output": "Dist/Windows",
       "platform": "Windows",
-      "pluginConfig": "Config/Plugins.CSharp.json"
+      "pluginConfig": "Config/Plugins.json"
     },
     {
       "configuration": "Release",
-      "gameConfig": "Config/Game.json",
-      "id": "windows-python",
-      "name": "Windows · Python",
-      "output": "Dist/WindowsPython",
-      "platform": "Windows",
-      "pluginConfig": "Config/Plugins.Python.json"
-    },
-    {
-      "configuration": "Release",
-      "contentExporter": "Tools/ExportWeb.py",
+      "contentExporter": "Tools/ExportContent.cjs",
       "id": "wechat",
       "managedProject": "Build/Web/Starbloom.Web.csproj",
       "name": "微信小游戏",

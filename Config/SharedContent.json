@@ -1,7 +1,9 @@
 {
   "schema": 1,
-  "nativeSceneVariants": ["Assets/Scenes/MainMenu.he"],
-  "portableScriptAdapters": ["he.script.csharp:survivor.game"],
+  "nativeSceneVariants": [],
+  "portableScriptAdapters": [
+    "he.script.csharp:survivor.game"
+  ],
   "portableComponentFallbacks": {
     "AnimatorComponent": "角色动画由共享角色目录和 Web SceneRenderer 播放；不执行原生 Animator 状态机。",
     "AudioListenerComponent": "音频由平台 AudioBank 播放；不使用场景内的 3D 监听器。",

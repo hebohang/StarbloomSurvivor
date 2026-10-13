@@ -5,27 +5,27 @@
     "runtime":  "10.0.10",
     "shipping":  false,
     "apiSchemaSha256":  "e2686e50a6d99ecbeb731d92f6f011d14000dae8c128488ff1b2b616af44cfea",
-    "gameplaySourceIdentity":  "7e519c50d6c06cdcd94b67617f4b7ee9d9cf6997454ecc00b4794ce667dd48d1",
+    "gameplaySourceIdentity":  "98b970467dcd4672b7f733f61535bf6dbd8b2b39fa66c826118bb068d5f036c0",
     "gameplaySourceInputs":  [
                                  {
-                                     "path":  "../../../../HEngineDev/Engine/Managed/Shared/BuildFeatures.cs",
+                                     "path":  "../../../../HEngineReleases/1.1.0-final-20261012/HEngine-1.1.0-Windows-x64/Engine/Managed/Shared/BuildFeatures.cs",
                                      "sha256":  "f2b82e24caa45fc3cb0997cfeb12c6e6e76a1f0390d841272d7fbb72456e890a"
                                  },
                                  {
-                                     "path":  "../../../../HEngineDev/Engine/Managed/Shared/IGameSession.cs",
+                                     "path":  "../../../../HEngineReleases/1.1.0-final-20261012/HEngine-1.1.0-Windows-x64/Engine/Managed/Shared/IGameSession.cs",
                                      "sha256":  "005903d1477f63a098ba6a61718ef9ae884ef75cebe94c118c273190f7f8fb1a"
                                  },
                                  {
-                                     "path":  "../../../../HEngineDev/Engine/Managed/Shared/InterestRegion.cs",
+                                     "path":  "../../../../HEngineReleases/1.1.0-final-20261012/HEngine-1.1.0-Windows-x64/Engine/Managed/Shared/InterestRegion.cs",
                                      "sha256":  "d28b88bbf86a2b9344622f58a5b62dec4a71908ece94433bf97f458c484c44a0"
                                  },
                                  {
-                                     "path":  "../../../../HEngineDev/Engine/Managed/Shared/OrbitCamera.cs",
+                                     "path":  "../../../../HEngineReleases/1.1.0-final-20261012/HEngine-1.1.0-Windows-x64/Engine/Managed/Shared/OrbitCamera.cs",
                                      "sha256":  "1ba3d14a87f6712b28341a4d97e8f62cb94fd399d7c6c637f992061fe88f1183"
                                  },
                                  {
                                      "path":  "GameScripts.csproj",
-                                     "sha256":  "98f48abb8fa2b5dc9e33eb8d4cf600af2f0328b260090e0fedcad3074e86fbe2"
+                                     "sha256":  "40f12da93fd2e94ffd962a8f2b7947d047f3c3faa67da4831bfd13bd99b7652b"
                                  },
                                  {
                                      "path":  "Survivor/ChallengeRules.cs",
@@ -124,24 +124,24 @@
                                      "sha256":  "fe13a156e5229f5d50fc029658c5f0452f701a81720ad1539b9784aa462674cb"
                                  }
                              ],
-    "gameScriptsSha256":  "c85fdec5c5161a183a6252c18ba772ed802262334cb7c87f0cb55104a1d674f1",
-    "runtimeAssemblySha256":  "5ac09a2ecbbdd0caf14849a99d39aab119b8e09492cccc9e93d993e86a24e944",
+    "gameScriptsSha256":  "4f4da8447b46540e126e2f3f9aeaa1dc970d5c87d0aaf48689bda0b9f2f38d59",
+    "runtimeAssemblySha256":  "324fdfcf60488b04c62f677a035ab69abc9939f5e98606707421528d3570c16d",
     "managedFiles":  [
                          {
                              "path":  "GameScripts.dll",
-                             "sha256":  "c85fdec5c5161a183a6252c18ba772ed802262334cb7c87f0cb55104a1d674f1"
+                             "sha256":  "4f4da8447b46540e126e2f3f9aeaa1dc970d5c87d0aaf48689bda0b9f2f38d59"
                          },
                          {
                              "path":  "GameScripts.metadata.json",
-                             "sha256":  "49ca8e792458ad08250717999fbc97e0f01604461101bbee3034ef62ab903ca3"
+                             "sha256":  "e2be83ea417a3600f29593480e1bd9325fa40a07537b90fee889711bca76f77f"
                          },
                          {
                              "path":  "HEngine.ScriptCore.dll",
-                             "sha256":  "4334d545ecdcac0cd159eb1af83ba2fcd1fd77563f7f4868d790115b2ea6039d"
+                             "sha256":  "b1073823c02cefef06281f17556fef954df0863211a183986260740170c42567"
                          },
                          {
                              "path":  "HEngine.ScriptRuntime.dll",
-                             "sha256":  "5ac09a2ecbbdd0caf14849a99d39aab119b8e09492cccc9e93d993e86a24e944"
+                             "sha256":  "324fdfcf60488b04c62f677a035ab69abc9939f5e98606707421528d3570c16d"
                          },
                          {
                              "path":  "HEngine.ScriptRuntime.deps.json",
@@ -153,7 +153,7 @@
                          },
                          {
                              "path":  "HEngine.ScriptHost.dll",
-                             "sha256":  "ec9106c18ed406eea4ca00fe4a4fb00eb0c8704b2a0d61042a25aec4a0a1aaf3"
+                             "sha256":  "d766860aad3957cf44a833a9b2b906378ee26c962e29aca42c2373d654b92d14"
                          }
                      ]
 }

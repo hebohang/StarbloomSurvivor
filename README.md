@@ -1,54 +1,50 @@
-# 小树保卫者 · HEngine 1.1.0
+# 小树保卫者 · C# · HEngine 1.1.0
 
-这是“小树保卫者”的独立游戏工程，使用 HEngine 1.1.0。引擎与项目可以放在任意目录，不需要引擎源码或复制引擎资源。
+`main` 是独立的 C# 游戏工程，玩法源码全部位于 `Scripts/CSharp/`，没有 Python 玩法、Python 场景或 C++ 游戏模块。纯 Python 实现在独立的 [`python` 分支](https://github.com/hebohang/StarbloomSurvivor/tree/python)，两边分别维护自己的脚本和默认配置。
 
-从 [HEngine 1.1.0 Release](https://github.com/hebohang/HEngineDev/releases/tag/v1.1.0) 下载并解压 Windows x64 二进制 SDK，再下载或克隆 [本工程](https://github.com/hebohang/StarbloomSurvivor)。
+## 打开和游玩
 
-当前引擎 1.1.0 先在私有 `HEngineDev` 发布，需要该仓库访问权限或作者提供的 SDK。此游戏工程已公开；公开引擎 release 发布后会更新下载地址。
+下载或克隆本分支，解压 [HEngine 1.1.0 Windows x64 SDK](https://github.com/hebohang/HEngineDev/releases/tag/v1.1.0)，运行 SDK 的 `ProjectManager.exe`，选择本目录的 `Project.heproject`。Editor 默认打开 `Assets/Scenes/MainGameCSharp.he`，按 `F6` 游玩，按 `F8` 停止。项目插件配置只启用 C# 脚本后端。
 
-运行 SDK 内的 `ProjectManager.exe`，选择本目录的 `Project.heproject`，打开 `Assets/Scenes/MainGameCSharp.he` 后按 `F6` 游玩，按 `F8` 停止。`Project.heproject` 是引擎规定的描述文件名；工程目录名可以任意更换。
+当前引擎 1.1.0 先在私有 `HEngineDev` 发布，需要该仓库访问权限或作者提供的 SDK。游戏仓库公开；公开引擎 release 发布后会更新下载地址。
 
-发行示例提供 `Scripts/CSharp/Prebuilt`，首次打开和游玩不需要编译引擎。修改 C# 脚本后需要 .NET SDK，按 SDK 的依赖检查结果安装工具。
-源码版引擎可以使用 `hectl editor open -Project <本目录>`。
-
-## 两套玩法实现
-
-| 实现 | 在 Editor 中打开的场景 | Windows 导出配置 |
-| --- | --- | --- |
-| C# | `Assets/Scenes/MainGameCSharp.he`（含主菜单） | `windows` |
-| Python | `Assets/Scenes/MainMenu.he` → `MainGame.he` | `windows-python` |
-
-C# 入口是 `Scripts/CSharp/SurvivorNativeGame.cs`，共享玩法在
-`Scripts/CSharp/Survivor/`。Python 入口是 `Scripts/SurvivorHub.py` 和
-`Scripts/SurvivorGame.py`。两套实现共用美术、音频和玩法目录，便于对照学习。
-Web 使用 C#，选择 `web` 导出配置。
-在 Editor 中按 `F6` 运行当前场景，按 `F8` 停止并返回编辑；游戏捕获鼠标时也可以停止。
-
-编辑 C# 需要 .NET SDK 10.0.302；游戏目录生成还需要 Python 3.11 和 Node.js。
-通过引擎构建工具编译时自动传入引擎路径；直接调用 dotnet 时传入
-`-p:HEngineRoot=<引擎根目录>`。可分发的预编译示例附带
-`Scripts/CSharp/Prebuilt`，普通打开无需重新编译；修改脚本后在 Editor 的脚本面板重新编译。
-预编译目录可随独立仓库保留，使下载工程的用户能直接运行；更新发行示例时用引擎的
-`Tools/Distribution/Export-Project.ps1 -PrecompileCSharp` 重新生成。个人编译缓存保存在 `Saved/`。
-
-## 使用二进制 SDK 导出四个平台
-
-在 Editor 的构建/发布面板选择 `windows`、`android`、`web` 或 `wechat`，或在 SDK 根目录运行：
+`Project.heproject` 是引擎规定的描述文件名；工程目录可改名，也可与引擎放在不同位置。`Scripts/CSharp/Prebuilt/` 提供预编译示例，首次打开和游玩无需引擎源码或 Visual Studio。
 
 ```powershell
-.\hectl.bat deps check -Profile SDK -Project C:\Games\StarbloomSurvivor -Json
-powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor -Profile windows
-powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor -Profile android
-powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor -Profile web
-powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor -Profile wechat
+git clone --branch main https://github.com/hebohang/StarbloomSurvivor.git StarbloomSurvivor-CSharp
 ```
 
-输出分别在本工程 `Dist/Windows`、`Dist/Android`、`Dist/Web` 和 `Dist/WeChat`。Windows 和 Android 复用 SDK 的预编译原生模板，无需 VS 或重新编译引擎；C#、资源 cook、APK 组装及 Web/微信 Wasm 构建仍需要相应工具。以 SDK 内锁定的依赖版本及 `Docs/ReleaseSDK-1.1.0.md` 为准。
+推荐把两个分支分别克隆到不同目录，避免分支切换复用 `Saved/`、旧构建结果或 Editor 个性设置。
 
-Web 输出通过 HTTP 服务打开；微信输出用微信开发者工具导入。发布自己的小游戏时替换 `Config/WeChat.json` 的 AppID、广告及排行榜配置。Android 默认使用开发签名，商店发布前配置自己的签名和包名。打包验证不等同于 Android/微信真机或商店审核通过。
+## 修改游戏
 
-四平台主路径为 C#。`windows-python` 保留作源码版对照学习，不属于标准二进制 SDK 的四端导出承诺。Web/微信使用便携视图适配，显示能力与原生 PC/Android 有差异。
+| 目录 | 内容 |
+| --- | --- |
+| `Scripts/CSharp/SurvivorNative*.cs` | 原生场景、主菜单、设置与特效适配 |
+| `Scripts/CSharp/Survivor/` | 战斗、成长、任务、存档与便携端共享玩法 |
+| `Config/GameplayCatalog.json` | 角色、武器、关卡、地形、文本与资源路径，可直接编辑 |
+| `Assets/` | 本分支场景、美术、UI、音频与特效 |
+| `Build/Web/`、`Web/` | C# WebAssembly 入口与浏览器表现层 |
+| `Tools/` | Node.js 内容导出和微信平台适配工具 |
+| `Legal/Assets/` | 素材许可证 |
+| `Saved/`、`Dist/` | 忽略提交的缓存、存档与导出产物 |
 
-资源位于 `Assets/`；项目配置在 `Config/`；生成目录 `Saved/`、`Dist/` 不加入版本控制。
-项目素材许可证集中在 `Legal/Assets/`。原始导入素材和渲染测试属于引擎的
-`Examples/RenderingTests`，运行本游戏不需要它们。
+修改 C# 需要 SDK 锁定的 .NET SDK 10.0.302 和 Node.js，随后在 Editor 脚本面板重新编译。引擎提供的通用资源工具可能使用 Python；本工程不依赖 Python 游戏脚本或另一分支的数据。
+
+构建工具自动传入引擎路径；直接调用 `dotnet` 时使用 `-p:HEngineRoot=<引擎根目录>`。`Tools/ExportContent.cjs` 根据 JSON 生成目录和资源依赖，生成内容写入构建缓存。更新仓库中的预编译示例时，使用引擎 `Tools/Distribution/Export-Project.ps1 -PrecompileCSharp` 导出到新目录并同步 `Scripts/CSharp/Prebuilt/`，无需提交个人缓存。
+
+## 导出四个平台
+
+Editor 构建/发布面板可选择 `windows`、`android`、`web` 或 `wechat`。本分支的 Node.js 内容导出需要含该支持的 1.1.0 维护版 SDK；源码引擎 `main` 和 `codex/release-1.1.0` 同步维护。在引擎根目录也可运行：
+
+```powershell
+.\hectl.bat deps check -Profile SDK -Project C:\Games\StarbloomSurvivor-CSharp -Json
+powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor-CSharp -Profile windows
+powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor-CSharp -Profile android
+powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor-CSharp -Profile web
+powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor-CSharp -Profile wechat
+```
+
+输出位于本工程 `Dist/Windows`、`Dist/Android`、`Dist/Web`、`Dist/WeChat`。Windows 与 Android 复用 SDK 原生模板，无需 VS；脚本编译、资源 cook 和各平台组装仍需要对应工具。依赖版本以 SDK 和 `Docs/ReleaseSDK-1.1.0.md` 为准。
+
+Web 用 HTTP 服务打开，微信用微信开发者工具导入；自己的小游戏需修改 `Config/WeChat.json`。Android 默认开发签名，正式发布需配置自己的签名和包名。Web/微信使用便携表现适配；打包通过不等同于真机或商店验收通过。

@@ -1,8 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <HEngineRoot Condition="'$(HEngineRoot)' == ''">$(HE_ENGINE_ROOT)</HEngineRoot>
-    <HEBuildPython Condition="'$(HEBuildPython)' == ''">$(HE_BUILD_PYTHON)</HEBuildPython>
-    <HEBuildPython Condition="'$(HEBuildPython)' == ''">python</HEBuildPython>
   </PropertyGroup>
   <Import Project="$(HEngineRoot)/Engine/Managed/Platform.props" />
   <PropertyGroup>
@@ -16,7 +14,7 @@
   <ItemGroup Condition="'$(HEPlatform)' != 'Windows'"><Compile Remove="ScriptWorkflowSample.cs" /></ItemGroup>
   <Target Name="ExportGameplayCatalog" BeforeTargets="PrepareForBuild">
     <Exec Command="node &quot;$(HEngineRoot)/Tools/Build/CompileSharedUI.cjs&quot; &quot;$(MSBuildProjectDirectory)/../..&quot;" />
-    <Exec Command="&quot;$(HEBuildPython)&quot; &quot;$(MSBuildProjectDirectory)/../../Tools/ExportWeb.py&quot; --engine &quot;$(HEngineRoot)&quot; --catalog-only --output &quot;$(IntermediateOutputPath)Content&quot;" />
+    <Exec Command="node &quot;$(MSBuildProjectDirectory)/../../Tools/ExportContent.cjs&quot; --engine &quot;$(HEngineRoot)&quot; --catalog-only --output &quot;$(IntermediateOutputPath)Content&quot;" />
     <ItemGroup>
       <EmbeddedResource Include="$(IntermediateOutputPath)Content/catalog.json" LogicalName="Survivor.catalog.json" />
       <Compile Include="$(IntermediateOutputPath)Content/SurvivorNativeDependencies.cs" />

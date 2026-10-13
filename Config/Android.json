@@ -7,8 +7,8 @@
   "minimumSdk": 29,
   "ndkVersion": "30.0.16248370",
   "managedProject": "Scripts/CSharp/GameScripts.csproj",
-  "gameConfig": "Config/Game.CSharp.json",
-  "pluginConfig": "Config/Plugins.CSharp.json",
+  "gameConfig": "Config/Game.json",
+  "pluginConfig": "Config/Plugins.json",
   "format": "apk",
   "signing": "Development"
 }

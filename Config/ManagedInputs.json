@@ -1,3 +1,10 @@
 {
-  "inputs": ["Scripts/*.py", "Tools/ExportWeb.py", "Tools/GenerateVerdantRift.py"]
+  "inputs": [
+    "Config/GameplayCatalog.json",
+    "Tools/ExportContent.cjs",
+    "Config/SharedUI.json",
+    "Config/SharedContent.json",
+    "Project.heproject",
+    "Config/Game.json"
+  ]
 }
