@@ -1,34 +1,6 @@
 {
-  "activeProfile": "windows",
+  "activeProfile": "windows-python",
   "profiles": [
-    {
-      "configuration": "Release",
-      "id": "android",
-      "name": "Android 原生 Vulkan",
-      "output": "Dist/Android",
-      "platform": "Android",
-      "quality": "Desktop",
-      "androidConfig": "Config/Android.json"
-    },
-    {
-      "configuration": "Release",
-      "contentExporter": "Tools/ExportWeb.py",
-      "id": "web",
-      "managedProject": "Build/Web/Starbloom.Web.csproj",
-      "name": "Web 浏览器",
-      "output": "Dist/Web",
-      "platform": "Web",
-      "previewPort": 8769
-    },
-    {
-      "configuration": "Release",
-      "gameConfig": "Config/Game.CSharp.json",
-      "id": "windows",
-      "name": "Windows · C#",
-      "output": "Dist/Windows",
-      "platform": "Windows",
-      "pluginConfig": "Config/Plugins.CSharp.json"
-    },
     {
       "configuration": "Release",
       "gameConfig": "Config/Game.json",
@@ -36,18 +8,7 @@
       "name": "Windows · Python",
       "output": "Dist/WindowsPython",
       "platform": "Windows",
-      "pluginConfig": "Config/Plugins.Python.json"
-    },
-    {
-      "configuration": "Release",
-      "contentExporter": "Tools/ExportWeb.py",
-      "id": "wechat",
-      "managedProject": "Build/Web/Starbloom.Web.csproj",
-      "name": "微信小游戏",
-      "output": "Dist/WeChat",
-      "platform": "WeChat",
-      "platformExporter": "Tools/ExportWeChat.cjs",
-      "quality": "Portable"
+      "pluginConfig": "Config/Plugins.json"
     }
   ],
   "schema": 1

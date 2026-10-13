@@ -1,54 +1,43 @@
-# 小树保卫者 · HEngine 1.1.0
+# 小树保卫者 · Python · HEngine 1.1.0
 
-这是“小树保卫者”的独立游戏工程，使用 HEngine 1.1.0。引擎与项目可以放在任意目录，不需要引擎源码或复制引擎资源。
+`python` 分支是独立的纯 Python 玩法工程，不包含 C# 游戏脚本、预编译托管 DLL、C# 场景、WebAssembly 工程或 C++ 游戏模块。C# 四端版本位于 [`main`](https://github.com/hebohang/StarbloomSurvivor/tree/main)。
 
-从 [HEngine 1.1.0 Release](https://github.com/hebohang/HEngineDev/releases/tag/v1.1.0) 下载并解压 Windows x64 二进制 SDK，再下载或克隆 [本工程](https://github.com/hebohang/StarbloomSurvivor)。
-
-当前引擎 1.1.0 先在私有 `HEngineDev` 发布，需要该仓库访问权限或作者提供的 SDK。此游戏工程已公开；公开引擎 release 发布后会更新下载地址。
-
-运行 SDK 内的 `ProjectManager.exe`，选择本目录的 `Project.heproject`，打开 `Assets/Scenes/MainGameCSharp.he` 后按 `F6` 游玩，按 `F8` 停止。`Project.heproject` 是引擎规定的描述文件名；工程目录名可以任意更换。
-
-发行示例提供 `Scripts/CSharp/Prebuilt`，首次打开和游玩不需要编译引擎。修改 C# 脚本后需要 .NET SDK，按 SDK 的依赖检查结果安装工具。
-源码版引擎可以使用 `hectl editor open -Project <本目录>`。
-
-## 两套玩法实现
-
-| 实现 | 在 Editor 中打开的场景 | Windows 导出配置 |
-| --- | --- | --- |
-| C# | `Assets/Scenes/MainGameCSharp.he`（含主菜单） | `windows` |
-| Python | `Assets/Scenes/MainMenu.he` → `MainGame.he` | `windows-python` |
-
-C# 入口是 `Scripts/CSharp/SurvivorNativeGame.cs`，共享玩法在
-`Scripts/CSharp/Survivor/`。Python 入口是 `Scripts/SurvivorHub.py` 和
-`Scripts/SurvivorGame.py`。两套实现共用美术、音频和玩法目录，便于对照学习。
-Web 使用 C#，选择 `web` 导出配置。
-在 Editor 中按 `F6` 运行当前场景，按 `F8` 停止并返回编辑；游戏捕获鼠标时也可以停止。
-
-编辑 C# 需要 .NET SDK 10.0.302；游戏目录生成还需要 Python 3.11 和 Node.js。
-通过引擎构建工具编译时自动传入引擎路径；直接调用 dotnet 时传入
-`-p:HEngineRoot=<引擎根目录>`。可分发的预编译示例附带
-`Scripts/CSharp/Prebuilt`，普通打开无需重新编译；修改脚本后在 Editor 的脚本面板重新编译。
-预编译目录可随独立仓库保留，使下载工程的用户能直接运行；更新发行示例时用引擎的
-`Tools/Distribution/Export-Project.ps1 -PrecompileCSharp` 重新生成。个人编译缓存保存在 `Saved/`。
-
-## 使用二进制 SDK 导出四个平台
-
-在 Editor 的构建/发布面板选择 `windows`、`android`、`web` 或 `wechat`，或在 SDK 根目录运行：
+## 打开和游玩
 
 ```powershell
-.\hectl.bat deps check -Profile SDK -Project C:\Games\StarbloomSurvivor -Json
-powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor -Profile windows
-powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor -Profile android
-powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor -Profile web
-powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Project C:\Games\StarbloomSurvivor -Profile wechat
+git clone --branch python https://github.com/hebohang/StarbloomSurvivor.git StarbloomSurvivor-Python
 ```
 
-输出分别在本工程 `Dist/Windows`、`Dist/Android`、`Dist/Web` 和 `Dist/WeChat`。Windows 和 Android 复用 SDK 的预编译原生模板，无需 VS 或重新编译引擎；C#、资源 cook、APK 组装及 Web/微信 Wasm 构建仍需要相应工具。以 SDK 内锁定的依赖版本及 `Docs/ReleaseSDK-1.1.0.md` 为准。
+解压 [HEngine 1.1.0 Windows x64 SDK](https://github.com/hebohang/HEngineDev/releases/tag/v1.1.0)，运行 `ProjectManager.exe`，打开本目录的 `Project.heproject`。Editor 默认进入 `Assets/Scenes/MainMenu.he`，按 `F6` 启动 Python 主菜单，再点击开始进入 `MainGame.he`，按 `F8` 停止。编辑器内游玩使用 SDK 自带的 Python 后端，不需要 C# 或重新编译引擎。项目配置只启用 Python 脚本后端。
 
-Web 输出通过 HTTP 服务打开；微信输出用微信开发者工具导入。发布自己的小游戏时替换 `Config/WeChat.json` 的 AppID、广告及排行榜配置。Android 默认使用开发签名，商店发布前配置自己的签名和包名。打包验证不等同于 Android/微信真机或商店审核通过。
+当前引擎先在私有 `HEngineDev` 发布，需要访问权限或作者提供 SDK。本游戏仓库公开。工程目录可改名，但 `Project.heproject` 文件名保持不变。
 
-四平台主路径为 C#。`windows-python` 保留作源码版对照学习，不属于标准二进制 SDK 的四端导出承诺。Web/微信使用便携视图适配，显示能力与原生 PC/Android 有差异。
+推荐两个分支分别克隆到不同目录。Python 工程有独立项目身份和默认存档目录，避免与 C# 版混用缓存和存档。
 
-资源位于 `Assets/`；项目配置在 `Config/`；生成目录 `Saved/`、`Dist/` 不加入版本控制。
-项目素材许可证集中在 `Legal/Assets/`。原始导入素材和渲染测试属于引擎的
-`Examples/RenderingTests`，运行本游戏不需要它们。
+## 开发目录
+
+| 路径 | 内容 |
+| --- | --- |
+| `Scripts/SurvivorGame.py`、`SurvivorHub.py` | 游戏入口与主菜单 |
+| `Scripts/Survivor*.py` | 战斗、成长、目录、存档、表现及对应契约测试 |
+| `Scripts/HEngineUI/`、`Scripts/DevOnly/` | UI 辅助与开发 GM 命令 |
+| `Assets/Scenes/` | Python 主菜单和游戏场景 |
+| `Assets/`、`Config/` | 游戏资源与 Python 工程配置 |
+| `Tools/` | 可从独立工程运行的 Python 平衡检查 |
+| `Legal/Assets/` | 素材许可证 |
+| `Saved/`、`Dist/` | 忽略提交的本机产物 |
+
+修改脚本后在 Editor 中停止、重新运行。资源已随工程提供；旧的素材生成草稿从本分支移除，可从拆分前的 Git 历史恢复。平衡检查使用 Python 3.11，可直接执行：
+
+```powershell
+py -3.11 Tools/RunSurvivorBalance.py --check
+```
+
+源码引擎运行本分支时显式传入工程路径：
+
+```powershell
+.\hectl.bat game check -Project C:\Games\StarbloomSurvivor-Python -Frames 120
+.\hectl.bat package -Project C:\Games\StarbloomSurvivor-Python
+```
+
+本分支保留 `windows-python` 源码版 Windows 导出配置。标准 1.1.0 SDK 的独立 Game/Shipping 模板为 C#，不支持该配置；Python 在二进制 Editor 内可运行。Android、Web、微信的 C# 导出配置已从本分支移除；四端发布使用 C# 主干。

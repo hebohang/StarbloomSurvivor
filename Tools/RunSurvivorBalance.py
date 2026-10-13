@@ -7,8 +7,8 @@ import os
 import sys
 
 
-REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-SCRIPT_ROOT = os.path.join(REPO_ROOT, "Project", "Scripts")
+REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+SCRIPT_ROOT = os.path.join(REPO_ROOT, "Scripts")
 if SCRIPT_ROOT not in sys.path:
     sys.path.insert(0, SCRIPT_ROOT)
 
@@ -20,7 +20,7 @@ def main():
     parser.add_argument(
         "--output",
         default=os.path.join(
-            REPO_ROOT, "out", "agent", "telemetry", "survivor-balance.json",
+            REPO_ROOT, "Saved", "Tests", "survivor-balance.json",
         ),
     )
     parser.add_argument("--check", action="store_true")

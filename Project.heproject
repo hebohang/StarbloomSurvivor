@@ -1,11 +1,11 @@
 {
   "SchemaVersion": 1,
   "RuntimeMode": "Scene",
-  "ProjectId": "starbloom-survivor",
+  "ProjectId": "starbloom-survivor-python",
   "DisplayName": "小树保卫者",
   "EngineVersion": "1.1.0",
-  "GameConfig": "Config/Game.CSharp.json",
+  "GameConfig": "Config/Game.json",
   "PackageConfig": "Config/Package.json",
-  "LegacySavedDirectory": "StarbloomSurvivor",
-  "ExecutableName": "StarbloomSurvivor"
+  "LegacySavedDirectory": "StarbloomSurvivorPython",
+  "ExecutableName": "StarbloomSurvivorPython"
 }
