@@ -47,6 +47,147 @@
         <member name="M:HEngine.ActionTimeline.Advance(System.Single)">
             <summary>Advances animation and gameplay on the same simulation clock.</summary>
         </member>
+        <member name="T:HEngine.AudioBus">
+            <summary>Engine mix buses. Gameplay participates in gameplay pause.</summary>
+        </member>
+        <member name="F:HEngine.AudioBus.Music">
+            <summary>Background music.</summary>
+        </member>
+        <member name="F:HEngine.AudioBus.Gameplay">
+            <summary>Gameplay sounds.</summary>
+        </member>
+        <member name="F:HEngine.AudioBus.UI">
+            <summary>Menu and interface feedback.</summary>
+        </member>
+        <member name="T:HEngine.AudioAttenuation">
+            <summary>Spatial distance attenuation.</summary>
+        </member>
+        <member name="F:HEngine.AudioAttenuation.Disabled">
+            <summary>No distance attenuation.</summary>
+        </member>
+        <member name="F:HEngine.AudioAttenuation.Inverse">
+            <summary>Inverse distance.</summary>
+        </member>
+        <member name="F:HEngine.AudioAttenuation.Linear">
+            <summary>Linear distance.</summary>
+        </member>
+        <member name="F:HEngine.AudioAttenuation.Exponential">
+            <summary>Exponential distance.</summary>
+        </member>
+        <member name="T:HEngine.AudioOptions">
+            <summary>Options copied into a new voice. Positions are world space; angles are radians.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.Bus">
+            <summary>Mix bus, default Gameplay.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.Volume">
+            <summary>Gain in [0, 1].</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.Pitch">
+            <summary>Positive playback pitch multiplier.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.Pan">
+            <summary>Stereo pan in [-1, 1].</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.Loop">
+            <summary>Repeat playback.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.Stream">
+            <summary>Stream the resource. Null follows Loop.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.StartPaused">
+            <summary>Create the voice paused.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.Position">
+            <summary>Null selects 2D; a world position selects spatial playback.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.MinDistance">
+            <summary>Distance at which attenuation starts.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.MaxDistance">
+            <summary>Maximum attenuation distance, at least MinDistance.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.Rolloff">
+            <summary>Nonnegative attenuation strength.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.Attenuation">
+            <summary>Distance curve.</summary>
+        </member>
+        <member name="P:HEngine.AudioOptions.DopplerFactor">
+            <summary>Nonnegative Doppler multiplier.</summary>
+        </member>
+        <member name="T:HEngine.Audio">
+            <summary>Native scene audio. Call on the engine thread in a live script callback. Use AudioPlayback for automatic owner cleanup.</summary>
+        </member>
+        <member name="M:HEngine.Audio.Play(HEngine.ResourceReference,HEngine.AudioOptions)">
+            <summary>Starts a voice; zero means device/resource failure. Runtime handles must never be saved.</summary>
+        </member>
+        <member name="M:HEngine.Audio.Stop(System.UInt64)">
+            <summary>Stops a voice; false if absent.</summary>
+        </member>
+        <member name="M:HEngine.Audio.Pause(System.UInt64)">
+            <summary>Pauses a voice; false if absent.</summary>
+        </member>
+        <member name="M:HEngine.Audio.Resume(System.UInt64)">
+            <summary>Resumes a voice; false if absent.</summary>
+        </member>
+        <member name="M:HEngine.Audio.IsPlaying(System.UInt64)">
+            <summary>True while actively playing.</summary>
+        </member>
+        <member name="M:HEngine.Audio.IsPaused(System.UInt64)">
+            <summary>True while paused.</summary>
+        </member>
+        <member name="M:HEngine.Audio.SetVolume(System.UInt64,System.Single)">
+            <summary>Changes gain in [0, 1].</summary>
+        </member>
+        <member name="M:HEngine.Audio.SetPitch(System.UInt64,System.Single)">
+            <summary>Changes positive pitch multiplier.</summary>
+        </member>
+        <member name="M:HEngine.Audio.SetPan(System.UInt64,System.Single)">
+            <summary>Changes stereo pan in [-1, 1].</summary>
+        </member>
+        <member name="M:HEngine.Audio.SetPosition(System.UInt64,System.Numerics.Vector3)">
+            <summary>Moves a spatial voice in world space.</summary>
+        </member>
+        <member name="M:HEngine.Audio.SetVelocity(System.UInt64,System.Numerics.Vector3)">
+            <summary>Sets world velocity for Doppler.</summary>
+        </member>
+        <member name="M:HEngine.Audio.SetDirection(System.UInt64,System.Numerics.Vector3)">
+            <summary>Sets the spatial cone direction.</summary>
+        </member>
+        <member name="M:HEngine.Audio.SetCone(System.UInt64,System.Single,System.Single,System.Single)">
+            <summary>Sets cone angles in radians (0 &lt;= inner &lt;= outer &lt;= 2 pi) and outer gain in [0, 1].</summary>
+        </member>
+        <member name="M:HEngine.Audio.Seek(System.UInt64,System.Double)">
+            <summary>Seeks to nonnegative seconds; false if unsupported or absent.</summary>
+        </member>
+        <member name="M:HEngine.Audio.GetPlaybackPosition(System.UInt64)">
+            <summary>Playback cursor in seconds; absent voices return zero.</summary>
+        </member>
+        <member name="M:HEngine.Audio.GetLength(System.UInt64)">
+            <summary>Duration in seconds; unavailable duration returns zero.</summary>
+        </member>
+        <member name="P:HEngine.Audio.MasterVolume">
+            <summary>Global gain in [0, 1].</summary>
+        </member>
+        <member name="M:HEngine.Audio.GetBusVolume(HEngine.AudioBus)">
+            <summary>Reads a bus gain.</summary>
+        </member>
+        <member name="M:HEngine.Audio.SetBusVolume(HEngine.AudioBus,System.Single)">
+            <summary>Sets a bus gain in [0, 1].</summary>
+        </member>
+        <member name="M:HEngine.Audio.StopBus(HEngine.AudioBus)">
+            <summary>Stops all voices on a bus.</summary>
+        </member>
+        <member name="P:HEngine.Audio.IsDeviceAvailable">
+            <summary>Whether the native audio device is available.</summary>
+        </member>
+        <member name="P:HEngine.Audio.LastError">
+            <summary>Last backend diagnostic, possibly empty.</summary>
+        </member>
+        <member name="M:HEngine.Audio.SetListener(System.Numerics.Vector3,System.Numerics.Vector3,System.Numerics.Vector3,System.Numerics.Vector3)">
+            <summary>Sets listener 0 immediately. The scene AudioListenerComponent or primary camera overwrites it on the next audio update.</summary>
+        </member>
         <member name="T:HEngine.CombatAgentState">
             <summary>Reusable combat phases; locomotion, collision and rendering remain with the caller.</summary>
         </member>
@@ -285,6 +426,18 @@
         <member name="P:HEngine.Transform.Snapshot">
             <summary>Batched transform state; invalid views throw InvalidEngineObjectException.</summary>
         </member>
+        <member name="P:HEngine.Transform.LocalPosition">
+            <summary>Translation relative to the parent. Use WorldPosition for a world-space query.</summary>
+        </member>
+        <member name="P:HEngine.Transform.LocalRotation">
+            <summary>Local Euler rotation in radians, using the engine's transform convention.</summary>
+        </member>
+        <member name="P:HEngine.Transform.LocalScale">
+            <summary>Scale relative to the parent.</summary>
+        </member>
+        <member name="P:HEngine.Transform.WorldPosition">
+            <summary>Evaluated world position including hierarchy and bone attachments.</summary>
+        </member>
         <member name="T:HEngine.Sprite">
             <summary>A generation-checked Sprite view. Removing/replacing the component permanently invalidates old views.</summary>
         </member>
@@ -386,6 +539,18 @@
         </member>
         <member name="M:HEngine.EngineApi.PrefabRequest(System.UInt64,System.UInt64,System.UInt32,System.String)">
             <inheritdoc/>
+        </member>
+        <member name="T:HEngine.GameSettings">
+            <summary>Project defaults with per-user Saved/Config overrides. Never writes into the installed engine or packaged project.</summary>
+        </member>
+        <member name="M:HEngine.GameSettings.Read(System.String)">
+            <summary>Reads merged object settings from a Config/*.json path, limited to 64 KiB per file.</summary>
+        </member>
+        <member name="M:HEngine.GameSettings.Write(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <summary>Atomically saves a settings object under Saved/Config; rejects nonobjects, traversal and values over 64 KiB.</summary>
+        </member>
+        <member name="M:HEngine.GameSettings.ApplyDisplay(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Single})">
+            <summary>Applies supported display preferences; null leaves the corresponding setting unchanged. Returns effective display state.</summary>
         </member>
         <member name="T:HEngine.ActionState">
             <summary>Snapshot for one presentation frame; edge flags do not consume input.</summary>
@@ -560,6 +725,15 @@
         <member name="T:HEngine.Physics">
             <summary>Scene-checked desktop physics operations. Velocities use world units per second.</summary>
         </member>
+        <member name="M:HEngine.Physics.TryGetVelocity(HEngine.Entity,System.Numerics.Vector3@,System.Boolean)">
+            <summary>Reads world velocity; false and zero when the body is absent or disabled. Two-dimensional bodies return Z=0.</summary>
+        </member>
+        <member name="M:HEngine.Physics.AddForce(HEngine.Entity,System.Numerics.Vector3,System.Boolean)">
+            <summary>Applies a world-space center-of-mass force for the next physics step. Call in FixedUpdate for continuous force; do not multiply by delta time. False for absent, disabled, static or kinematic bodies. Two-dimensional bodies ignore Z.</summary>
+        </member>
+        <member name="M:HEngine.Physics.AddImpulse(HEngine.Entity,System.Numerics.Vector3,System.Boolean)">
+            <summary>Applies a one-off world-space center-of-mass impulse, waking a dynamic body. Do not multiply by delta time. False for absent, disabled, static or kinematic bodies; two-dimensional bodies ignore Z.</summary>
+        </member>
         <member name="M:HEngine.Physics.CharacterState(HEngine.Entity)">
             <summary>Reads the current collision-driven character stance and world velocity.</summary>
         </member>
@@ -596,6 +770,42 @@
         <member name="M:HEngine.Animator.#ctor(HEngine.Entity)">
             <summary>Typed animation controller operations on a generation-checked scene entity.</summary>
         </member>
+        <member name="M:HEngine.Animator.HasParameter(System.String)">
+            <summary>True when the loaded controller declares a parameter with this name.</summary>
+        </member>
+        <member name="M:HEngine.Animator.GetBool(System.String)">
+            <summary>Reads a declared boolean; missing or mismatched parameter types throw.</summary>
+        </member>
+        <member name="M:HEngine.Animator.GetInt(System.String)">
+            <summary>Reads a declared integer; missing or mismatched parameter types throw.</summary>
+        </member>
+        <member name="M:HEngine.Animator.GetFloat(System.String)">
+            <summary>Reads a declared float; missing or mismatched parameter types throw.</summary>
+        </member>
+        <member name="M:HEngine.Animator.SetInt(System.String,System.Int32)">
+            <summary>Sets a declared integer; false if the component/parameter/type is absent.</summary>
+        </member>
+        <member name="M:HEngine.Animator.ResetTrigger(System.String)">
+            <summary>Clears a declared trigger; false if the component/parameter/type is absent.</summary>
+        </member>
+        <member name="M:HEngine.Animator.Pause">
+            <summary>Pauses animation evaluation; false if there is no animator.</summary>
+        </member>
+        <member name="M:HEngine.Animator.Resume">
+            <summary>Resumes paused animation; does not restart an explicitly stopped animator.</summary>
+        </member>
+        <member name="M:HEngine.Animator.Stop">
+            <summary>Stops animation and resets its progress and queued events.</summary>
+        </member>
+        <member name="M:HEngine.Animator.Play">
+            <summary>Restarts the current clip/controller without changing its resource.</summary>
+        </member>
+        <member name="M:HEngine.Animator.SetSpeed(System.Single)">
+            <summary>Sets a finite nonnegative playback speed.</summary>
+        </member>
+        <member name="P:HEngine.Animator.State">
+            <summary>Reads current playback state. Playing is the requested play flag, not proof that an animation resource loaded successfully.</summary>
+        </member>
         <member name="M:HEngine.Animator.ConsumeEvents">
             <summary>Consumes this frame's base/transition-target clip events once. Blend samples and layers do not duplicate events.</summary>
         </member>
@@ -626,6 +836,12 @@
         <member name="M:HEngine.AnimationEvent.#ctor(System.String,System.String,System.String,System.Single,System.Int64)">
             <summary>One authored animation event, identified by clip-local ID and loop cycle.</summary>
         </member>
+        <member name="T:HEngine.AnimationPlaybackState">
+            <summary>Animation play/pause flags, speed, normalized progress and controller state name.</summary>
+        </member>
+        <member name="M:HEngine.AnimationPlaybackState.#ctor(System.Boolean,System.Boolean,System.Single,System.Single,System.String)">
+            <summary>Animation play/pause flags, speed, normalized progress and controller state name.</summary>
+        </member>
         <member name="T:HEngine.SceneSequence">
             <summary>Controls a persisted scene sequence; the engine restores gameplay camera and input on completion.</summary>
         </member>
@@ -635,6 +851,15 @@
         <member name="M:HEngine.SceneSequence.Stop(HEngine.Entity)">
             <summary>Requests that the sequence stop and gameplay state be restored on the next scene update.</summary>
         </member>
+        <member name="M:HEngine.SceneSequence.Pause(HEngine.Entity)">
+            <summary>Pauses an active sequence; false if it is absent or not playing.</summary>
+        </member>
+        <member name="M:HEngine.SceneSequence.Resume(HEngine.Entity)">
+            <summary>Resumes an active sequence; false if it is absent or not playing.</summary>
+        </member>
+        <member name="M:HEngine.SceneSequence.Seek(HEngine.Entity,System.Single)">
+            <summary>Queues a seek within [0, Duration] for the next sequence update. Returns false if not playing; out-of-range or nonfinite input throws.</summary>
+        </member>
         <member name="M:HEngine.SceneSequence.State(HEngine.Entity)">
             <summary>Reads current playback time and any runtime validation error.</summary>
         </member>
@@ -643,6 +868,9 @@
         </member>
         <member name="P:HEngine.SequencePlaybackState.Playing">
             <summary>Whether this sequence is requested to play or currently playing.</summary>
+        </member>
+        <member name="P:HEngine.SequencePlaybackState.Paused">
+            <summary>Whether sequence time is explicitly paused.</summary>
         </member>
         <member name="P:HEngine.SequencePlaybackState.Time">
             <summary>Current playback time in seconds.</summary>
@@ -662,6 +890,12 @@
         <member name="T:HEngine.Camera">
             <summary>Primary-camera follow configuration. Angles are radians; pitch bounds are degrees.</summary>
         </member>
+        <member name="M:HEngine.Camera.SetFieldOfView(System.Single)">
+            <summary>Sets the primary perspective camera's vertical field of view in [0.1, 2.8] radians; false if absent.</summary>
+        </member>
+        <member name="M:HEngine.Camera.ForwardRay">
+            <summary>Returns the primary camera's world-space forward ray through its center.</summary>
+        </member>
         <member name="P:HEngine.Camera.Primary">
             <summary>The current primary camera entity.</summary>
         </member>
@@ -673,6 +907,12 @@
         </member>
         <member name="M:HEngine.Camera.StopFollowing">
             <summary>Clears the primary camera's follow target.</summary>
+        </member>
+        <member name="T:HEngine.CameraRay">
+            <summary>A world-space camera ray with a normalized direction.</summary>
+        </member>
+        <member name="M:HEngine.CameraRay.#ctor(System.Numerics.Vector3,System.Numerics.Vector3)">
+            <summary>A world-space camera ray with a normalized direction.</summary>
         </member>
         <member name="T:HEngine.NavigationPath">
             <summary>Complete path result; an unreachable target has no partial points.</summary>
@@ -697,6 +937,45 @@
         </member>
         <member name="M:HEngine.AudioPlayback.Play(HEngine.ScriptBehaviour,HEngine.ResourceReference,System.Boolean,System.Single)">
             <summary>Starts a sound; resource/load failures throw at the script boundary.</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.Play(HEngine.ScriptBehaviour,HEngine.ResourceReference,HEngine.AudioOptions)">
+            <summary>Starts a configured 2D or spatial voice owned by this script.</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.Pause">
+            <summary>Pauses the owned voice.</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.Resume">
+            <summary>Resumes the owned voice.</summary>
+        </member>
+        <member name="P:HEngine.AudioPlayback.IsPlaying">
+            <summary>True while playing; throws after disposal.</summary>
+        </member>
+        <member name="P:HEngine.AudioPlayback.IsPaused">
+            <summary>True while paused; throws after disposal.</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.SetVolume(System.Single)">
+            <summary>Changes gain in [0, 1].</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.SetPitch(System.Single)">
+            <summary>Changes the positive pitch multiplier.</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.SetPan(System.Single)">
+            <summary>Changes stereo pan in [-1, 1].</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.SetPosition(System.Numerics.Vector3)">
+            <summary>Moves a spatial voice in world space.</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.SetVelocity(System.Numerics.Vector3)">
+            <summary>Changes world velocity for Doppler.</summary>
+        </member>
+        <member name="M:HEngine.AudioPlayback.Seek(System.Double)">
+            <summary>Seeks to nonnegative seconds; false if unsupported or the voice has ended.</summary>
+        </member>
+        <member name="P:HEngine.AudioPlayback.PlaybackPosition">
+            <summary>Current playback cursor in seconds.</summary>
+        </member>
+        <member name="P:HEngine.AudioPlayback.Length">
+            <summary>Duration in seconds, or zero when unavailable.</summary>
         </member>
         <member name="M:HEngine.AudioPlayback.Dispose">
             <summary>Stops playback. Repeated disposal is safe.</summary>
@@ -733,6 +1012,18 @@
         </member>
         <member name="M:HEngine.UiDocument.SetClass(System.String,System.String,System.Boolean)">
             <summary>Adds or removes a CSS class.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.SetMarkup(System.String,System.String)">
+            <summary>Writes authored markup into an element; callers own markup validity.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.SetAttribute(System.String,System.String,System.String)">
+            <summary>Sets an element attribute.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.ScrollIntoView(System.String)">
+            <summary>Scrolls an element into its container without changing keyboard focus.</summary>
+        </member>
+        <member name="M:HEngine.UiDocument.SetCursorVisible(System.Boolean)">
+            <summary>Shows or hides this document's mouse cursor.</summary>
         </member>
         <member name="M:HEngine.UiDocument.Dispose">
             <summary>Unloads the document; repeated disposal is safe.</summary>
@@ -1147,7 +1438,7 @@
             <summary>Current engine-thread services. Runtime access is forbidden during Reset/OnValidate.</summary>
         </member>
         <member name="P:HEngine.Engine.CurrentEntity">
-            <summary>Host callback context; never retain it across Play sessions.</summary>
+            <summary>Thread-local host callback context; never retain it across Play sessions. Native APIs still require the engine thread.</summary>
         </member>
         <member name="M:HEngine.Engine.ExchangeEntity(System.UInt64)">
             <summary>Host dispatch only; restore the returned previous context after a callback.</summary>

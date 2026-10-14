@@ -10,6 +10,8 @@
 
 `Project.heproject` 是引擎规定的描述文件名；工程目录可改名，也可与引擎放在不同位置。`Scripts/CSharp/Prebuilt/` 提供预编译示例，首次打开和游玩无需引擎源码或 Visual Studio。
 
+预编译脚本已更新到本次 1.1.0 SDK 契约。候选包校验值、C#/Python 编辑器验收及四端导出记录见 [二进制 SDK 验收](Docs/SDKValidation-1.1.0.md)；请使用其中对应的 SDK，旧版同名附件不代表通过本次验收。
+
 ```powershell
 git clone --branch main https://github.com/hebohang/StarbloomSurvivor.git StarbloomSurvivor-CSharp
 ```
@@ -35,7 +37,7 @@ git clone --branch main https://github.com/hebohang/StarbloomSurvivor.git Starbl
 
 ## 导出四个平台
 
-Editor 构建/发布面板可选择 `windows`、`android`、`web` 或 `wechat`。本分支的 Node.js 内容导出需要含该支持的 1.1.0 维护版 SDK；源码引擎 `main` 和 `codex/release-1.1.0` 同步维护。在引擎根目录也可运行：
+Editor 构建/发布面板可选择 `windows`、`android`、`web` 或 `wechat`。本分支的 Node.js 内容导出需要含该支持的 1.1.0 维护版 SDK；源码引擎 `main` 和 `release-1.1.0` 同步维护。在引擎根目录也可运行：
 
 ```powershell
 .\hectl.bat deps check -Profile SDK -Project C:\Games\StarbloomSurvivor-CSharp -Json
