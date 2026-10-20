@@ -9,6 +9,7 @@ Dist/
 *.pdb
 HEngine.workspace.local.json*
 Config/EditorLayout.ini
+Config/WeChat.local.json
 Shaders/CACHES/
 Scripts/HEngine/
 **/.he-content/**

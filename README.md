@@ -49,4 +49,4 @@ powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Build/Publish.ps1 -Pro
 
 输出位于本工程 `Dist/Windows`、`Dist/Android`、`Dist/Web`、`Dist/WeChat`。Windows 与 Android 复用 SDK 原生模板，无需 VS；脚本编译、资源 cook 和各平台组装仍需要对应工具。依赖版本以 SDK 和 `Docs/ReleaseSDK-1.1.0.md` 为准。
 
-Web 用 HTTP 服务打开，微信用微信开发者工具导入；自己的小游戏需修改 `Config/WeChat.json`。Android 默认开发签名，正式发布需配置自己的签名和包名。Web/微信使用便携表现适配；打包通过不等同于真机或商店验收通过。
+Web 用 HTTP 服务打开，微信用微信开发者工具导入。微信公共配置 `Config/WeChat.json` 的 `appid` 保持为空；导出前在 Git 忽略的 `Config/WeChat.local.json` 中填写 `{"appid":"你的小游戏 AppID"}`，或设置优先级更高的环境变量 `HE_WECHAT_APPID`。未提供有效 AppID 时导出会停止，避免上传到错误账号。导出包 `Dist/` 也不提交。Android 默认开发签名，正式发布需配置自己的签名和包名。Web/微信使用便携表现适配；打包通过不等同于真机或商店验收通过。
