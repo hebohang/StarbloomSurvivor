@@ -41,3 +41,5 @@ py -3.11 Tools/RunSurvivorBalance.py --check
 ```
 
 本分支保留 `windows-python` 源码版 Windows 导出配置。标准 1.1.0 SDK 的独立 Game/Shipping 模板为 C#，不支持该配置；Python 在二进制 Editor 内可运行。Android、Web、微信的 C# 导出配置已从本分支移除；四端发布使用 C# 主干。
+
+微信 AppID 属于本机发布配置，不写入共享仓库。C# 主干通过 Git 忽略的 `Config/WeChat.local.json` 或环境变量 `HE_WECHAT_APPID` 指定；本分支也忽略该本地文件，避免切换分支后误提交。此规则不为 Python 分支增加微信导出支持。
