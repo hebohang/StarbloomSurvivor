@@ -5,12 +5,20 @@ namespace GameScripts.Survivor;
 // Same authored plate/ramp height query as GenerateVerdantRift. No platform API.
 public sealed class TerrainSurface
 {
-    private readonly List<(double[][] Points, double Height)> mPlates = new();
+    private readonly List<(double[][] Points, double Height, double MinX, double MaxX, double MinZ, double MaxZ)> mPlates = new();
     private readonly List<(double X, double Z, double Dx, double Dz, double Length, double Width, double Low, double High)> mRamps = new();
     public TerrainSurface(JsonObject catalog)
     {
         foreach (var plate in catalog["terrainPlates"]!.AsArray())
-            mPlates.Add((plate!["outline"]!.AsArray().Select(p=>p!.AsArray().Select(n=>n!.GetValue<double>()).ToArray()).ToArray(),plate["top_y"]!.GetValue<double>()));
+        {
+            var points=plate!["outline"]!.AsArray().Select(p=>p!.AsArray().Select(n=>n!.GetValue<double>()).ToArray()).ToArray();
+            // Preserve the edge tolerance in Height, including just-outside points.
+            mPlates.Add((points,plate["top_y"]!.GetValue<double>(),
+                points.Length>0?points.Min(p=>p[0])-1e-5:double.PositiveInfinity,
+                points.Length>0?points.Max(p=>p[0])+1e-5:double.NegativeInfinity,
+                points.Length>0?points.Min(p=>p[1])-1e-5:double.PositiveInfinity,
+                points.Length>0?points.Max(p=>p[1])+1e-5:double.NegativeInfinity));
+        }
         foreach(var ramp in catalog["terrainRamps"]!.AsArray())
         {
             double x=ramp!["low_center"]![0]!.GetValue<double>(),z=ramp["low_center"]![1]!.GetValue<double>();
@@ -23,6 +31,7 @@ public sealed class TerrainSurface
         double? height=null;
         foreach(var plate in mPlates)
         {
+            if(x<plate.MinX||x>plate.MaxX||z<plate.MinZ||z>plate.MaxZ)continue;
             bool bInside=false;var points=plate.Points;
             for(int i=0,j=points.Length-1;i<points.Length;j=i++)
             {

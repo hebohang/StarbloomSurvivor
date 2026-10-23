@@ -19,26 +19,44 @@ async function main(){
             for(const name of ['drawElementsInstanced','drawArraysInstanced','vertexAttribDivisor'])
                 WebGL2RenderingContext.prototype[name]=()=>{throw Error('Unsupported phone instancing: '+name);};
             const buffers=new Map(),events={},storage=new Map();let mainCanvas;
-            window.fixture={events,storage,modals:[],toasts:[],size:{width:960,height:540}};
-            const bytes=async file=>{if(!buffers.has(file)){const response=await fetch(file);if(!response.ok)throw Error('Missing '+file);buffers.set(file,await response.arrayBuffer());}return buffers.get(file);};
+            window.fixture={events,storage,modals:[],toasts:[],size:{width:960,height:540},loadedPackages:new Set(),packageAttempts:[],activeDownloads:0,peakDownloads:0,nativeInstantiations:0,nativeModules:0,imagesAtNativeStart:null,loadingReads:0,loadingReadBytes:0};
+            fixture.tableGrowth=[];fixture.zeroArityExports=0;
+            const grow=WebAssembly.Table.prototype.grow;
+            WebAssembly.Table.prototype.grow=function(delta,...args){fixture.tableGrowth.push(delta);if(fixture.rejectJitTables&&delta>64){fixture.tableFailure=true;throw Error('Simulated iOS Jiterpreter Table.grow failure');}return grow.call(this,delta,...args);};
+            const bytes=async file=>{if(!fixture.loadedPackages.has(file.split('/')[0]))throw Error('Read before subpackage ready: '+file);if(!buffers.has(file)){const response=await fetch(file);if(!response.ok)throw Error('Missing '+file);buffers.set(file,await response.arrayBuffer());}return buffers.get(file);};
             const filePath=file=>{if(typeof file!=='string'||!file.endsWith('.wasm'))throw Error('WX Wasm requires a package path');};
-            window.WXWebAssembly={Memory:WebAssembly.Memory,Table:WebAssembly.Table,Global:WebAssembly.Global,
-                Module:function(file){filePath(file);return new WebAssembly.Module(buffers.get(file));},
-                instantiate:async(file,imports)=>{filePath(file);return WebAssembly.instantiate(await bytes(file),imports);}};
+            window.WXWebAssembly={Memory:WebAssembly.Memory,Table:WebAssembly.Table,Global:WebAssembly.Global,RuntimeError:WebAssembly.RuntimeError,
+                Module:function(file){fixture.nativeModules++;if(!fixture.baseline)throw Error('Unexpected redundant synchronous native Wasm compile');filePath(file);return new WebAssembly.Module(buffers.get(file));},
+                instantiate:async(file,imports)=>{
+                    filePath(file);if(!file.includes('/feature-')){fixture.nativeInstantiations++;fixture.imagesAtNativeStart=fixture.imageCount||0;if(fixture.pauseNative)await new Promise(resolve=>{fixture.resumeNative=resolve;});}
+                    const result=await WebAssembly.instantiate(await bytes(file),imports);if(result.instance?.exports.memory)fixture.wasmMemory=result.instance.exports.memory;
+                    if(fixture.zeroArity&&!file.includes('/feature-')){
+                        const exports={};for(const [name,value] of Object.entries(result.instance.exports)){exports[name]=typeof value==='function'?(...args)=>value(...args):value;if(typeof value==='function')fixture.zeroArityExports++;}
+                        return {instance:{exports},module:result.module};
+                    }return result;
+                }};
             const shared=document.createElement('canvas');shared.width=720;shared.height=640;fixture.sharedCanvas=shared;fixture.boardMessages=[];
             const originalDrawImage=CanvasRenderingContext2D.prototype.drawImage;
+            const originalGetImageData=CanvasRenderingContext2D.prototype.getImageData;
+            CanvasRenderingContext2D.prototype.getImageData=function(...args){const result=originalGetImageData.apply(this,args);if(!window.HEGame){fixture.loadingReads++;fixture.loadingReadBytes+=result.data.byteLength;}return result;};
             CanvasRenderingContext2D.prototype.drawImage=function(source,...args){if(source===shared)throw Error('Restricted shared canvas cannot enter a 2D HUD');return originalDrawImage.call(this,source,...args);};
             window.wx={getWindowInfo:()=>({windowWidth:fixture.size.width,windowHeight:fixture.size.height,pixelRatio:3,safeArea:{left:12,top:0,right:fixture.size.width-12,bottom:fixture.size.height-10}}),
                 getMenuButtonBoundingClientRect:()=>({bottom:40}),
                 setEnableDebug:({enableDebug})=>{fixture.debug=enableDebug;},
                 setDeviceOrientation:({value,complete})=>{fixture.orientation=value;complete();},
-                createCanvas:()=>{const c=document.createElement('canvas');if(!mainCanvas){mainCanvas=c;document.body.appendChild(c);}return c;},createImage:()=>new Image(),
-                getFileSystemManager:()=>({readFile:({filePath,success,fail})=>bytes(filePath).then(data=>success({data})).catch(fail),readFileSync:file=>new TextDecoder().decode(buffers.get(file))}),
-                loadSubpackage:({success})=>success(),getStorageSync:key=>storage.get(key),setStorageSync:(key,value)=>storage.set(key,value),
+                createCanvas:()=>{const c=document.createElement('canvas');if(!mainCanvas){mainCanvas=c;document.body.appendChild(c);}return c;},createImage:()=>{fixture.imageCount=(fixture.imageCount||0)+1;return new Image();},
+                getFileSystemManager:()=>({readFile:({filePath,encoding,success,fail})=>bytes(filePath).then(data=>success({data:encoding==='utf8'?new TextDecoder().decode(data):data})).catch(fail),readFileSync:file=>new TextDecoder().decode(buffers.get(file))}),
+                loadSubpackage:({name,success,fail})=>{
+                    fixture.packageAttempts.push(name);fixture.peakDownloads=Math.max(fixture.peakDownloads,++fixture.activeDownloads);let report=()=>{};
+                    setTimeout(()=>{report({progress:50,totalBytesWritten:500,totalBytesExpectedToWrite:1000});fixture.activeDownloads--;
+                        if(name==='managed'&&(fixture.failPackages||fixture.packageAttempts.filter(n=>n===name).length===1)){fail({errMsg:'fixture network failure',errCode:1001});return;}
+                        fixture.loadedPackages.add(name==='managed'?'runtime':name);success();},5);
+                    return {onProgressUpdate:callback=>{report=callback;}};
+                },getStorageSync:key=>storage.get(key),setStorageSync:(key,value)=>storage.set(key,value),
                 createInnerAudioContext:()=>({onError(){},play(){},pause(){},stop(){},destroy(){}}),
-                showModal:options=>fixture.modals.push(options),showToast:options=>fixture.toasts.push(options),
-                authorize:({success})=>success(),getOpenDataContext:()=>({canvas:shared,postMessage:message=>{fixture.boardMessages.push(message);fixture.openDataMessage(message);}})};
-            for(const name of ['TouchStart','TouchMove','TouchEnd','TouchCancel','Hide','Show','WindowResize'])wx['on'+name]=fn=>events[name]=fn;
+                showModal:options=>{fixture.modals.push(options);if(options.title==='上次加载未完成')setTimeout(()=>options.success({confirm:true}),1);},showToast:options=>fixture.toasts.push(options),
+                authorize:({success,fail})=>fixture.authorizeError?fail(fixture.authorizeError):success(),getOpenDataContext:()=>({canvas:shared,postMessage:message=>{fixture.boardMessages.push(message);fixture.openDataMessage(message);}})};
+            for(const name of ['TouchStart','TouchMove','TouchEnd','TouchCancel','Hide','Show','WindowResize','MemoryWarning'])wx['on'+name]=fn=>events[name]=fn;
             fixture.tap=(x,y)=>{events.TouchStart({changedTouches:[{identifier:1,clientX:x,clientY:y}]});events.TouchEnd({changedTouches:[{identifier:1,clientX:x,clientY:y}]});};
         });
         await page.evaluate(source=>{
@@ -51,12 +69,63 @@ async function main(){
         const catalog=require('../Config/GameplayCatalog.json'),profile=structuredClone(catalog.defaultProfile);
         profile.walletGold=1000;profile.eligible.characters=['peachy'];profile.completedQuests.push('quest_character_peachy');
         await page.evaluate(save=>fixture.storage.set('HEngine.StarbloomSurvivor.CSharp.v4',save),JSON.stringify(profile));
-        await page.addScriptTag({content:bundled});await page.waitForFunction(()=>window.HEGame||fixture.modals.length,null,{timeout:90000});
-        assert.deepEqual(await page.evaluate(()=>fixture.modals),[]);assert.equal(await page.evaluate(()=>HEGame.snapshot.mode),'menu');
+        if(process.argv.includes('--baseline'))await page.evaluate(()=>{fixture.baseline=true;});
+        if(process.argv.includes('--previous-startup'))await page.evaluate(()=>fixture.storage.set('HEngine.StarbloomSurvivor.WeChat.diagnostic',{phase:'wasm:native-instantiate',time:123}));
+        if(process.argv.includes('--loading-capture'))await page.evaluate(()=>{fixture.pauseNative=true;});
+        if(process.argv.includes('--ios-interop'))await page.evaluate(()=>{fixture.rejectJitTables=true;fixture.zeroArity=true;});
+        if(process.argv.includes('--expect-table-failure'))await page.evaluate(()=>{fixture.expectTableFailure=true;});
+        if(process.argv.includes('--package-failure'))await page.evaluate(()=>{fixture.failPackages=true;});
+        await page.addScriptTag({content:bundled});
+        if(process.argv.includes('--loading-capture')){await page.waitForFunction(()=>fixture.resumeNative);await page.screenshot({path:path.join(out,'ios-startup-loading.png')});await page.evaluate(()=>fixture.resumeNative());}
+        await page.waitForFunction(()=>window.HEGame?.metrics.frames>0||fixture.modals.some(m=>m.title!=='上次加载未完成')||(fixture.expectTableFailure&&fixture.tableFailure),null,{timeout:90000});
+        if(process.argv.includes('--expect-table-failure')){
+            const failure=await page.evaluate(()=>({tableFailure:fixture.tableFailure,growth:fixture.tableGrowth,diagnostic:fixture.storage.get('HEngine.StarbloomSurvivor.WeChat.diagnostic'),ready:!!window.HEGame}));
+            assert.equal(failure.tableFailure,true);assert.equal(failure.ready,false);assert.ok(failure.growth.some(n=>n>64));
+            fs.writeFileSync(path.join(out,'ios-table-negative-control.json'),JSON.stringify(failure,null,2));
+            console.log('test-layer PASS (expected old-package failure): '+JSON.stringify({growth:failure.growth,phase:failure.diagnostic.phase}));return;
+        }
+        if(process.argv.includes('--package-failure')){
+            const failure=await page.evaluate(()=>({modal:fixture.modals[0],attempts:fixture.packageAttempts,diagnostic:fixture.storage.get('HEngine.StarbloomSurvivor.WeChat.diagnostic')}));
+            assert.equal(failure.attempts.length,3);assert.equal(failure.modal.title,'资源下载未完成');
+            assert.match(failure.modal.content,/managed.*fixture network failure.*1001/);
+            assert.equal(failure.diagnostic.phase,'failed:packages');assert.equal(failure.diagnostic.download.code,1001);
+            fs.writeFileSync(path.join(out,'package-failure.json'),JSON.stringify(failure,null,2));
+            console.log('test-layer PASS: permanent package failure retries exactly three times; modal and persisted diagnostic retain package/native error/code');return;
+        }
+        assert.deepEqual(await page.evaluate(()=>fixture.modals.filter(m=>m.title!=='上次加载未完成')),[]);assert.equal(await page.evaluate(()=>HEGame.snapshot.mode),'menu');
+        if(!process.argv.includes('--baseline')){
+            assert.equal(await page.evaluate(()=>fixture.nativeModules),0);assert.equal(await page.evaluate(()=>fixture.nativeInstantiations),1);assert.equal(await page.evaluate(()=>fixture.imagesAtNativeStart),0,'Wasm compilation precedes image decoding');
+            assert.ok(await page.evaluate(()=>HEGame.metrics.loading.pixels<=640*360),'loading raster has its own low-memory budget');
+        }
+        if(process.argv.includes('--previous-startup')){
+            assert.match(await page.evaluate(()=>fixture.modals[0].content),/wasm:native-instantiate/);
+            assert.equal(await page.evaluate(()=>fixture.storage.get('HEngine.StarbloomSurvivor.WeChat.diagnostic.previous').phase),'wasm:native-instantiate');
+            assert.equal(await page.evaluate(()=>fixture.storage.get('HEngine.StarbloomSurvivor.WeChat.diagnostic').phase),'ready');
+        }
+        if(process.argv.includes('--ios-interop')){assert.deepEqual(await page.evaluate(()=>fixture.tableGrowth),[]);assert.ok(await page.evaluate(()=>fixture.zeroArityExports>100));}
+        const startup=await page.evaluate(async()=>{
+            const r=HEGame.renderer,buffers=new Set();
+            for(const mesh of await Promise.all([...r.meshes.values()]))for(const part of mesh.parts)for(const name of ['position','normal','joints','weights'])
+                if(part[name]?.buffer)buffers.add(part[name].buffer);
+            return {loadedMeshes:r.meshes.size,loadedSceneItems:r.scene.filter(item=>item.mesh).length,textures:r.textures.size,
+                retainedGeometryBytes:[...buffers].reduce((total,b)=>total+b.byteLength,0),wasmMemoryBytes:fixture.wasmMemory?.buffer.byteLength,
+                framebuffer:r.diagnostics().size,hudBytesPerUpload:HEGame.ui.rasterWidth*HEGame.ui.rasterHeight*4,context:r.gl.getContextAttributes(),loading:HEGame.metrics.loading,
+                loadingReads:fixture.loadingReads,loadingReadBytes:fixture.loadingReadBytes,nativeModules:fixture.nativeModules,nativeInstantiations:fixture.nativeInstantiations,imagesAtNativeStart:fixture.imagesAtNativeStart,tableGrowth:fixture.tableGrowth,zeroArityExports:fixture.zeroArityExports};
+        });
+        fs.writeFileSync(path.join(out,'startup-'+path.basename(pkg)+'.json'),JSON.stringify(startup,null,2));
+        console.log('Startup resource census (not total process memory): '+JSON.stringify(startup));
+        if(process.argv.includes('--startup-only'))return;
+        const packageConfig=require(path.join(pkg,'he-game-config.js'));
+        const startupDownloads=await page.evaluate(()=>({loaded:[...fixture.loadedPackages],attempts:fixture.packageAttempts,peak:fixture.peakDownloads}));
+        assert.equal(startupDownloads.peak,1);assert.equal(startupDownloads.attempts.filter(name=>name==='managed').length,2,'transient failure retries without restarting startup');
+        assert.deepEqual(startupDownloads.loaded.map(name=>name==='runtime'?'managed':name).sort(),[...packageConfig.subpackages].sort(),'all packages are downloaded before the menu');
         assert.equal(await page.evaluate(()=>fixture.orientation),'landscape');
         assert.equal(await page.evaluate(()=>fixture.debug),false);
-        assert.deepEqual(await page.evaluate(()=>HEGame.renderer.diagnostics().size),[1920,1080]);
-        assert.deepEqual(await page.evaluate(()=>({width:HEGame.ui.rasterWidth,height:HEGame.ui.rasterHeight})),{width:1920,height:1080});
+        assert.deepEqual(await page.evaluate(()=>HEGame.renderer.diagnostics().size),[1280,720]);
+        assert.deepEqual(await page.evaluate(()=>({width:HEGame.ui.rasterWidth,height:HEGame.ui.rasterHeight})),{width:1280,height:720});
+        const contextAttributes=await page.evaluate(()=>HEGame.renderer.gl.getContextAttributes());
+        assert.equal(contextAttributes.antialias,false);assert.equal(contextAttributes.preserveDrawingBuffer,false);
+        assert.equal(await page.evaluate(()=>HEGame.renderer.scene.filter(item=>item.mesh).length),0,'menu does not allocate battle geometry before first frame');
         await page.waitForTimeout(150);
         const idleUploads=await page.evaluate(()=>HEGame.ui.uploadCount);
         await page.waitForTimeout(250);
@@ -64,6 +133,18 @@ async function main(){
         assert.equal(await page.evaluate(()=>HEGame.renderer.diagnostics().instancing),false);
         const tapAction=async action=>{await page.waitForFunction(a=>HEGame.ui.buttons.some(b=>b.action===a),action);await page.evaluate(a=>{const {buttons,layout}=HEGame.ui,b=buttons.find(b=>b.action===a);fixture.tap(layout.left+(b.x+b.w/2)*layout.scale,layout.top+(b.y+b.h/2)*layout.scale);},action);};
         const tapValue=async(action,value)=>{await page.waitForFunction(({action,value})=>HEGame.ui.buttons.some(b=>b.action===action&&b.value===value),{action,value});await page.evaluate(({action,value})=>{const {buttons,layout}=HEGame.ui,b=buttons.find(b=>b.action===action&&b.value===value);fixture.tap(layout.left+(b.x+b.w/2)*layout.scale,layout.top+(b.y+b.h/2)*layout.scale);},{action,value});};
+        if(process.argv.includes('--leaderboard-failure')){
+            await page.evaluate(()=>{fixture.authorizeError={errMsg:'authorize:fail fixture privacy declaration missing',errCode:103};});
+            await tapAction('friends');await page.waitForFunction(()=>fixture.modals.some(m=>m.title==='好友榜未能打开'));
+            const failure=await page.evaluate(()=>({modal:fixture.modals.find(m=>m.title==='好友榜未能打开'),error:HEGame.metrics.serviceError,stored:fixture.storage.get('HEngine.StarbloomSurvivor.WeChat.diagnostic').serviceError}));
+            assert.match(failure.modal.content,/privacy declaration missing/);assert.match(failure.modal.content,/103/);assert.equal(failure.error.stage,'authorize');assert.deepEqual(failure.error,failure.stored);
+            await page.waitForFunction(()=>HEGame.ui.buttons.some(b=>b.action==='start'));
+            await page.evaluate(()=>{fixture.authorizeError=null;});await tapAction('friends');
+            await page.waitForFunction(()=>HEGame.ui.buttons.some(b=>b.action==='friendsClose'));assert.equal(await page.evaluate(()=>HEGame.metrics.serviceError),null);
+            assert.deepEqual(errors,[]);assert.deepEqual(await page.evaluate(()=>HEGame.metrics.errors),[]);
+            fs.writeFileSync(path.join(out,'leaderboard-authorization-failure.json'),JSON.stringify(failure,null,2));
+            console.log('test-layer PASS: leaderboard native authorization error/code shown and persisted, menu restored, later authorization success opens the real open-data renderer');return;
+        }
         await page.screenshot({path:path.join(out,'landscape-menu.png')});
         await page.evaluate(()=>{
             const {buttons,layout}=HEGame.ui,b=buttons.find(b=>b.action==='start'),clientX=layout.left+(b.x+b.w/2)*layout.scale,clientY=layout.top+(b.y+b.h/2)*layout.scale;
@@ -105,6 +186,7 @@ async function main(){
         await page.waitForFunction(()=>HEGame.snapshot.mode==='paused');
         await page.evaluate(()=>fixture.events.Show());await tapAction('resume');
         await page.waitForFunction(()=>HEGame.snapshot.mode==='playing');
+        assert.equal(await page.evaluate(()=>fixture.packageAttempts.length),startupDownloads.attempts.length,'Start does not trigger another package download');
         await page.waitForTimeout(1000);await page.screenshot({path:path.join(out,'landscape-game.png')});
         const before=await page.evaluate(()=>({x:HEGame.snapshot.x,z:HEGame.snapshot.z}));
         await page.evaluate(()=>{fixture.events.TouchStart({changedTouches:[{identifier:2,clientX:80,clientY:440}]});fixture.events.TouchMove({changedTouches:[{identifier:2,clientX:125,clientY:440}]});});await page.waitForTimeout(600);
@@ -256,8 +338,14 @@ async function main(){
             assert.ok(await page.evaluate(()=>{const {buttons,layout}=HEGame.ui;return buttons.filter(b=>b.action).every(b=>b.w*layout.scale>=44&&b.h*layout.scale>=44&&b.x>=0&&b.y>=0&&b.x+b.w<=layout.width+.01&&b.y+b.h<=layout.height+.01);}),'phone touch targets remain large and safe');
             await page.screenshot({path:path.join(out,`menu-${width}x${height}.png`)});
         }
+        await page.evaluate(()=>fixture.events.MemoryWarning({level:10}));await page.waitForTimeout(120);
+        const memory=await page.evaluate(()=>({warnings:HEGame.metrics.memoryWarnings,phase:fixture.storage.get('HEngine.StarbloomSurvivor.WeChat.diagnostic').phase,
+            scene:HEGame.renderer.diagnostics().size,hud:[HEGame.ui.rasterWidth,HEGame.ui.rasterHeight],cachedRequests:HEGame.renderer.requests.size,glError:HEGame.renderer.gl.getError()}));
+        assert.equal(memory.warnings,1);assert.equal(memory.phase,'playing');assert.ok(memory.scene[0]*memory.scene[1]<=960*540);
+        assert.ok(memory.hud[0]*memory.hud[1]<=960*540);assert.equal(memory.cachedRequests,0);assert.equal(memory.glError,0);
+        fs.writeFileSync(path.join(out,'memory-pressure.json'),JSON.stringify(memory,null,2));
         assert.deepEqual(await page.evaluate(()=>HEGame.metrics.errors),[]);
-        assert.deepEqual(errors,[]);assert.deepEqual(await page.evaluate(()=>fixture.modals),[]);
+        assert.deepEqual(errors,[]);assert.deepEqual(await page.evaluate(()=>fixture.modals.filter(m=>m.title!=='上次加载未完成')),[]);
         console.log('test-layer PASS: actual exported C# game in simulated WX browser host; mobile lobby/characters/purchase cancel+confirm/growth/settings/release/friends/stick/multi-touch look/jump/pause/resume/background/abandon confirmation/settlement/save/natural combat upgrade + stale finger reset + background start, small phone layouts and portrait resize, strict WX Module path; distant-actor draw comparison '+JSON.stringify(roi));
     }finally{if(browser)await browser.close();server.kill();}
 }
