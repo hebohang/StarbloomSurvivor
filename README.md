@@ -4,9 +4,9 @@
 
 ## 打开和游玩
 
-下载或克隆本分支，解压 [HEngine 1.1.0 Windows x64 SDK](https://github.com/hebohang/HEngineDev/releases/tag/v1.1.0)，运行 SDK 的 `ProjectManager.exe`，选择本目录的 `Project.heproject`。Editor 默认打开 `Assets/Scenes/MainGameCSharp.he`，按 `F6` 游玩，按 `F8` 停止。项目插件配置只启用 C# 脚本后端。
+下载或克隆本分支，解压 [HEngine 1.1.0 Windows x64 SDK](https://github.com/hebohang/HEngine/releases/tag/v1.1.0)，运行 SDK 的 `ProjectManager.exe`，选择本目录的 `Project.heproject`。Editor 默认打开 `Assets/Scenes/MainGameCSharp.he`，按 `F6` 游玩，按 `F8` 停止。项目插件配置只启用 C# 脚本后端。
 
-当前引擎 1.1.0 先在私有 `HEngineDev` 发布，需要该仓库访问权限或作者提供的 SDK。游戏仓库公开；公开引擎 release 发布后会更新下载地址。
+引擎 1.1.0 已在公开仓库 `hebohang/HEngine` 发布，可从上述 Release 页面下载 `HEngine-1.1.0-Windows-x64.zip`，无需私有仓库访问权限。
 
 `Project.heproject` 是引擎规定的描述文件名；工程目录可改名，也可与引擎放在不同位置。`Scripts/CSharp/Prebuilt/` 提供预编译示例，首次打开和游玩无需引擎源码或 Visual Studio。
 
