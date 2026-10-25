@@ -43,6 +43,7 @@ async function main(){
             window.wx={getWindowInfo:()=>({windowWidth:fixture.size.width,windowHeight:fixture.size.height,pixelRatio:3,safeArea:{left:12,top:0,right:fixture.size.width-12,bottom:fixture.size.height-10}}),
                 getMenuButtonBoundingClientRect:()=>({bottom:40}),
                 setEnableDebug:({enableDebug})=>{fixture.debug=enableDebug;},
+                setPreferredFramesPerSecond:fps=>{fixture.preferredFps=fps;},
                 setDeviceOrientation:({value,complete})=>{fixture.orientation=value;complete();},
                 createCanvas:()=>{const c=document.createElement('canvas');if(!mainCanvas){mainCanvas=c;document.body.appendChild(c);}return c;},createImage:()=>{fixture.imageCount=(fixture.imageCount||0)+1;return new Image();},
                 getFileSystemManager:()=>({readFile:({filePath,encoding,success,fail})=>bytes(filePath).then(data=>success({data:encoding==='utf8'?new TextDecoder().decode(data):data})).catch(fail),readFileSync:file=>new TextDecoder().decode(buffers.get(file))}),
@@ -73,6 +74,7 @@ async function main(){
         if(process.argv.includes('--previous-startup'))await page.evaluate(()=>fixture.storage.set('HEngine.StarbloomSurvivor.WeChat.diagnostic',{phase:'wasm:native-instantiate',time:123}));
         if(process.argv.includes('--loading-capture'))await page.evaluate(()=>{fixture.pauseNative=true;});
         if(process.argv.includes('--ios-interop'))await page.evaluate(()=>{fixture.rejectJitTables=true;fixture.zeroArity=true;});
+        if(process.argv.includes('--no-crypto'))await page.evaluate(()=>Object.defineProperty(window,'crypto',{value:undefined,configurable:true}));
         if(process.argv.includes('--expect-table-failure'))await page.evaluate(()=>{fixture.expectTableFailure=true;});
         if(process.argv.includes('--package-failure'))await page.evaluate(()=>{fixture.failPackages=true;});
         await page.addScriptTag({content:bundled});
@@ -121,6 +123,7 @@ async function main(){
         assert.deepEqual(startupDownloads.loaded.map(name=>name==='runtime'?'managed':name).sort(),[...packageConfig.subpackages].sort(),'all packages are downloaded before the menu');
         assert.equal(await page.evaluate(()=>fixture.orientation),'landscape');
         assert.equal(await page.evaluate(()=>fixture.debug),false);
+        assert.equal(await page.evaluate(()=>fixture.preferredFps),30);
         assert.deepEqual(await page.evaluate(()=>HEGame.renderer.diagnostics().size),[1280,720]);
         assert.deepEqual(await page.evaluate(()=>({width:HEGame.ui.rasterWidth,height:HEGame.ui.rasterHeight})),{width:1280,height:720});
         const contextAttributes=await page.evaluate(()=>HEGame.renderer.gl.getContextAttributes());
@@ -187,7 +190,9 @@ async function main(){
         await page.evaluate(()=>fixture.events.Show());await tapAction('resume');
         await page.waitForFunction(()=>HEGame.snapshot.mode==='playing');
         assert.equal(await page.evaluate(()=>fixture.packageAttempts.length),startupDownloads.attempts.length,'Start does not trigger another package download');
-        await page.waitForTimeout(1000);await page.screenshot({path:path.join(out,'landscape-game.png')});
+        const frameStart=await page.evaluate(()=>HEGame.metrics.frames);
+        await page.waitForTimeout(1000);assert.ok(await page.evaluate(start=>HEGame.metrics.frames-start<=35,frameStart),'combat submissions are bounded to 30 Hz');
+        await page.screenshot({path:path.join(out,'landscape-game.png')});
         const before=await page.evaluate(()=>({x:HEGame.snapshot.x,z:HEGame.snapshot.z}));
         await page.evaluate(()=>{fixture.events.TouchStart({changedTouches:[{identifier:2,clientX:80,clientY:440}]});fixture.events.TouchMove({changedTouches:[{identifier:2,clientX:125,clientY:440}]});});await page.waitForTimeout(600);
         await page.evaluate(()=>fixture.events.TouchEnd({changedTouches:[{identifier:2}]}));
@@ -198,7 +203,7 @@ async function main(){
             e.TouchStart({changedTouches:[{identifier:3,clientX:90,clientY:430},{identifier:4,clientX:650,clientY:260}]});
             e.TouchMove({changedTouches:[{identifier:3,clientX:130,clientY:430},{identifier:4,clientX:720,clientY:260}]});
         });
-        assert.notEqual(await page.evaluate(()=>HEGame.snapshot.cameraYaw),yaw);
+        await page.waitForFunction(previous=>HEGame.snapshot.cameraYaw!==previous,yaw,{timeout:500});
         await tapAction('jump');
         await page.waitForTimeout(60);assert.ok(await page.evaluate(()=>HEGame.snapshot.y>0),'jump while moving and looking');
         await page.evaluate(()=>fixture.events.TouchCancel());
@@ -251,6 +256,7 @@ async function main(){
         console.log('Ground depth regression (synthetic coplanar overlap): '+JSON.stringify(seams));
         const visibility=await page.evaluate(async()=>{
             const r=HEGame.renderer;await r.ensureModel('green_blob');
+            const pixelLimit=r.memoryPixelLimit;r.memoryPixelLimit=800*450;
             const state={...HEGame.snapshot,mode:'playing',enemies:[],pickups:[],projectiles:[]};
             const pixels=()=>{const result=new Uint8Array(r.canvas.width*r.canvas.height*4);r.gl.readPixels(0,0,r.canvas.width,r.canvas.height,r.gl.RGBA,r.gl.UNSIGNED_BYTE,result);return result;};
             r.frame(state,10);const sceneCalls=r.drawCalls,scene=pixels();
@@ -262,6 +268,7 @@ async function main(){
             r.frame({...state,enemies:[]},10);const player=pixels();r.scene=scenery;
             const background=Array.from(player.slice(0,3));let playerPixels=0;
             for(let i=0;i<player.length;i+=4)if(Math.abs(player[i]-background[0])+Math.abs(player[i+1]-background[1])+Math.abs(player[i+2]-background[2])>15)playerPixels++;
+            r.memoryPixelLimit=pixelLimit;
             return {sceneCalls,crowdCalls,changedPixels,playerPixels,instancing:r.diagnostics().instancing,cullLeaked:r.gl.isEnabled(r.gl.CULL_FACE),glError:r.gl.getError()};
         });
         assert.ok(visibility.sceneCalls>10,'scenery submitted through compatible draw path');
@@ -296,6 +303,25 @@ async function main(){
         }
         fs.writeFileSync(path.join(out,'ordinary-render-performance.json'),JSON.stringify(performanceCases,null,2));
         console.log('Ordinary draw performance (instancing disabled): '+JSON.stringify(performanceCases));
+        const budgets=await page.evaluate(()=>{
+            const r=HEGame.renderer,state={...HEGame.snapshot,mode:'playing',pickups:[],projectiles:[]},result=[];
+            for(const count of [200,199,150,139]){
+                r.frame({...state,enemies:Array.from({length:count},(_,i)=>({kind:'green_blob',x:state.x+(i%20-10),z:state.z+(i/20|0),yaw:0}))},10);
+                result.push(r.canvas.width*r.canvas.height);
+            }
+            return result;
+        });
+        assert.deepEqual(budgets,[800*450,800*450,800*450,960*540],'crowd resolution has hysteresis and restores after load drops');
+        fs.writeFileSync(path.join(out,'crowd-resolution.json'),JSON.stringify(budgets));
+        const crowdFixture=path.join(engine,'out/agent/scratch/wechat-crowd/evidence');
+        if(fs.existsSync(path.join(crowdFixture,'crowd-after.json'))){
+            await page.evaluate(()=>fixture.events.Hide());
+            for(const phase of ['before','after']){
+                const state=JSON.parse(fs.readFileSync(path.join(crowdFixture,'crowd-'+phase+'.json')));
+                await page.evaluate(state=>HEGame.renderer.frame({...HEGame.snapshot,mode:'playing',x:0,y:state.y,z:0,enemies:state.enemies,pickups:[],projectiles:[],cameraYaw:0},10),state);
+                await page.screenshot({path:path.join(out,'crowd-separation-'+phase+'.png')});
+            }
+        }
         await page.evaluate(async()=>{
             fixture.events.Hide();const r=HEGame.renderer;
             await Promise.all(r.scene.map(async item=>{if(!item.mesh)item.mesh=await r.loadMesh(item.path);r.updateSceneBounds(item);}));

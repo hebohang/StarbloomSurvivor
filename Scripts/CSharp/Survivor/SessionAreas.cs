@@ -21,6 +21,7 @@ public sealed partial class WebGameSession
     }
     private readonly List<Area> mAreas=new();
     private readonly List<Beam> mBeams=new();
+    private int mFriendlyVisualBudget=int.MaxValue;
     private double Reach(double radius)=>radius*N(mCharacterStats,"weapon_reach_multiplier",1)*(1+.07*Tome("reach"));
     private void QueueArea(string id,double x,double z,double delay,double radius,double damage,double tick=0,double duration=0,double interval=.5,bool follow=false,int limit=0,int visuals=0)
     {
@@ -45,7 +46,7 @@ public sealed partial class WebGameSession
                 QueueArea(id,mX,mZ,0,Reach(6),damage,damage,duration,.20,true,amount,amount);return true;
             case "lob_zone":
             case "lob_split":
-                var center=mAgents.OrderByDescending(e=>mAgents.Count(n=>Distance(n.X-e.X,n.Z-e.Z)<=radius)).ThenBy(e=>Distance(e.X-mX,e.Z-mZ)).First();
+                var center=DensestEnemy(radius);
                 double travel=behavior=="lob_zone"?.58:.62;
                 mProjectiles.Add(new(){VisualId=++mNextVisualId,Weapon=id,X=mX,Z=mZ,Vx=(center.X-mX)/travel,Vz=(center.Z-mZ)/travel,Radius=.35,Life=travel,Behavior="travelVisual",Color=[.65,.9,.3,1]});
                 if(behavior=="lob_zone")QueueArea(id,center.X,center.Z,travel,radius,damage,4*N(mCharacterStats,"weapon_damage_multiplier",1)*(1+.08*Tome("might")),duration,visuals:8);
@@ -104,13 +105,19 @@ public sealed partial class WebGameSession
     }
     private IEnumerable<object> AreaVisuals()
     {
-        foreach(var area in mAreas.Where(a=>a.Delay<=0))for(int i=0;i<Math.Min(24,area.VisualCount);i++)
+        int remaining=mFriendlyVisualBudget;
+        foreach(var area in mAreas.Where(a=>a.Delay<=0))
         {
+            double view=mPresentationRegion.Radius;
+            if(view>0&&DistanceSquared(area.X-mX,area.Z-mZ)>(view+area.Radius)*(view+area.Radius))continue;
+            int count=Math.Min(24,area.VisualCount);if(!area.Hostile){count=Math.Min(count,remaining);remaining-=count;}
+            for(int i=0;i<count;i++){
             double radius=area.Ring?area.Radius*Math.Min(1,area.Age/area.Duration):area.Follow?Math.Clamp(area.Radius*.38,.8,2.4):area.Radius;
-            double angle=area.Age*2.4+Math.PI*2*i/Math.Max(1,area.VisualCount),x=area.X+Math.Cos(angle)*radius,z=area.Z+Math.Sin(angle)*radius;
+            double angle=area.Age*2.4+Math.PI*2*i/Math.Max(1,count),x=area.X+Math.Cos(angle)*radius,z=area.Z+Math.Sin(angle)*radius;
             yield return new{X=x,y=mTerrain.Height(x,z)??0,Z=z,Radius=.16,Color=area.Hostile?new[]{1,.25,.15,.85}:new[]{.45,.75,1,.8}};
+            }
         }
-        foreach(var beam in mBeams)for(int i=0;i<20;i++)
-        {double x=beam.X+beam.Dx*beam.Length*i/20,z=beam.Z+beam.Dz*beam.Length*i/20;yield return new{X=x,y=mTerrain.Height(x,z)??0,Z=z,Radius=.12,Color=new[]{1.0,.4,.3,.65}};}
+        foreach(var beam in mBeams){int count=Math.Min(20,remaining);remaining-=count;for(int i=0;i<count;i++)
+        {double x=beam.X+beam.Dx*beam.Length*i/count,z=beam.Z+beam.Dz*beam.Length*i/count;yield return new{X=x,y=mTerrain.Height(x,z)??0,Z=z,Radius=.12,Color=new[]{1.0,.4,.3,.65}};}}
     }
 }

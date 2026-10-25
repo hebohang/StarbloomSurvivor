@@ -1,6 +1,6 @@
 # 微信小游戏手机适配
 
-**最新版本见 [2026-10-21 四区地形与普通绘制优化](WeChatAreaPerformance-20261021.md)**，试玩包为 `Dist/WeChat-Areas-Final-20261021`。以下保留先前各轮验证历史。
+**最新版本见 [2026-10-25 群怪性能与节奏调整](WeChatCrowdPerformance-20261025.md)**，试玩包为 `Dist/WeChat-MobileTuned-20261025`。以下保留先前各轮验证历史。
 
 2026-10-20。引擎 `C:/WorkSpace/HEngineDev` 与独立游戏工程均使用 `main`。
 

@@ -16,6 +16,7 @@ import {ManagedGameSession} from '@hengine/web/ManagedGameSession.js';
 import {Subpackages} from '@hengine/wechat/Subpackages.js';
 import {StartupDiagnostics} from '@hengine/wechat/StartupDiagnostics.js';
 import {LoadingPresenter} from '@hengine/wechat/LoadingPresenter.js';
+import {FramePacer} from '@hengine/wechat/FramePacer.js';
 
 const root=typeof GameGlobal!=='undefined'?GameGlobal:globalThis;
 const config=require('./he-game-config.js');
@@ -23,8 +24,9 @@ const ads=new Advertising(wx,config.ads),leaderboard=new FriendLeaderboard(wx,co
 const canvas=wx.createCanvas(),stick=new AnalogStick(),look=new PointerDrag(),metrics={frames:0,errors:[],memoryWarnings:0,phase:'boot'};
 const viewport=()=>readViewport(wx);
 const tap=new MobileTap();
-let confirmation=null,downloadStatus='';
-function clearInput(){stick.reset();look.reset();tap.reset();}
+let confirmation=null,downloadStatus='',pendingLook=[0,0];
+const framePacer=new FramePacer(wx);
+function clearInput(){stick.reset();look.reset();tap.reset();pendingLook=[0,0];}
 function refreshUi(){buttons=[];tap.reset();overlay?.invalidate();}
 const diagnosticKey='HEngine.StarbloomSurvivor.WeChat.diagnostic';
 const diagnostics=new StartupDiagnostics(wx,diagnosticKey);
@@ -140,7 +142,7 @@ wx.onTouchMove(e=>{
         const point=mobileLayout(viewport()).point(px,py);
         stick.move(t.identifier,point.x,point.y);
         const delta=look.move(t.identifier,point.x,point.y);
-        if(delta&&snapshot?.mode==='playing')command('look',JSON.stringify(delta));
+        if(delta&&snapshot?.mode==='playing'){pendingLook[0]+=delta[0];pendingLook[1]+=delta[1];}
     }
 });
 wx.onTouchEnd(e=>{
@@ -206,6 +208,8 @@ async function start(){
     recordPhase('managed-state');await loadingPresenter.phase('正在读取游戏进度',.96);
     session=new ManagedGameSession(game,{get:key=>wx.getStorageSync(key),set:(key,value)=>wx.setStorageSync(key,value)},saveKey);
     snapshot=session.initialize(catalog,{backupBeforeInitialize:true});command('configureAdRevive',String(ads.canReward));command('configureInterestRadius',String(renderer.interest.enabled?renderer.interest.radius+renderer.interest.padding:0));
+    command('configureVisualBudget','128');
+    command('configureEnemyLimit','240');
     await loadingPresenter.phase('加载完成',1);
     metrics.loading={draws:loadingPresenter.draws,uploadBytes:overlay.uploadBytes,pixels:overlay.canvas.width*overlay.canvas.height};
     loadingPresenter.dispose();
@@ -215,8 +219,10 @@ async function start(){
     function frame(){
         try{
             const now=Date.now();
+            if(!hidden&&!framePacer.due(now,snapshot.mode==='playing')){requestAnimationFrame(frame);return;}
             if(!hidden){
                 const before=snapshot.mode;
+                if(snapshot.mode==='playing'&&(pendingLook[0]||pendingLook[1])){command('look',JSON.stringify(pendingLook));pendingLook=[0,0];}
                 if(snapshot.mode==='playing')snapshot=session.step(Math.min(.05,(now-last)/1000),stick.x,stick.y);
                 if(snapshot.mode!==before){clearInput();confirmation=null;refreshUi();}
                 renderer.frame(snapshot,now/1000);

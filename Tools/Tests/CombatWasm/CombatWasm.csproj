@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+  <Import Project="$(HEngineRoot)/Engine/Managed/WebAssembly.props" />
+  <ItemGroup>
+    <TrimmerRootAssembly Include="$(AssemblyName)" />
+    <Compile Include="../../../Scripts/CSharp/Survivor/*.cs" />
+    <Compile Include="../Combat/SessionFixture.cs" Link="SessionFixture.cs" />
+  </ItemGroup>
+</Project>

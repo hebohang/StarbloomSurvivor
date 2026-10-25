@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(HEngineRoot)/Engine/Managed/Platform.props" />
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework><RuntimeFrameworkVersion>10.0.10</RuntimeFrameworkVersion>
+    <OutputType>Exe</OutputType><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+    <GameplaySources Condition="'$(GameplaySources)' == ''">$(MSBuildThisFileDirectory)../../../Scripts/CSharp/Survivor</GameplaySources>
+    <DefineConstants Condition="'$(Baseline)' == 'true'">$(DefineConstants);BASELINE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(GameplaySources)/*.cs" />
+  </ItemGroup>
+</Project>

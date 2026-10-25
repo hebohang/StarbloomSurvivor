@@ -84,7 +84,7 @@ public sealed partial class WebGameSession
     private void Summon(Enemy e)
     {
         if(!Strings(mEnemies[e.Kind]["attackSet"]).Any(s=>s.Contains("summon")))return;
-        for(int i=0;i<4&&mAgents.Count<320;i++)
+        for(int i=0;i<4&&mAgents.Count<mEnemyLimit;i++)
         {
             Spawn("green_blob",new System.Text.Json.Nodes.JsonObject());var child=mAgents[^1];double angle=i*Math.PI*.5;
             child.X=e.X+Math.Cos(angle)*1.8;child.Z=e.Z+Math.Sin(angle)*1.8;

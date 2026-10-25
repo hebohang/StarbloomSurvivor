@@ -9,6 +9,7 @@ public sealed class CharacterDefinition
 
 public static class CharacterRules
 {
+    public const double BaseMoveSpeed = 5.1;
     public static double StarpawMight(int level) => Math.Min(.40, (level / 10) * .08);
     public static double HoneyGold(int level) => 1 + Math.Min(40, level) * .0075;
     private static readonly HashSet<string> sModifierKeys = new(StringComparer.Ordinal)
@@ -30,7 +31,7 @@ public static class CharacterRules
             ["character_id"] = characterId, ["starter_weapon"] = definition.Weapon,
             ["max_health"] = 100 + Value("max_health_add", 0),
             ["crit_chance"] = 0.08 + Value("crit_chance_add", 0),
-            ["move_speed"] = 4.25 * Value("move_speed_mul", 1),
+            ["move_speed"] = BaseMoveSpeed * Value("move_speed_mul", 1),
             ["magnet_range"] = 4.2 * Value("magnet_range_mul", 1),
             ["weapon_damage_multiplier"] = Value("weapon_damage_mul", 1) * (1 + trainingLevel * 0.02),
             ["weapon_cooldown_multiplier"] = Value("weapon_cooldown_mul", 1),

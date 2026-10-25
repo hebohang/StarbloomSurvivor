@@ -10,7 +10,13 @@ public sealed class QuestTracker
     private readonly Queue<(string Metric,double Amount,JsonObject Context,bool Set)> mBuffer = new();
     public List<string> CompletedThisRun { get; } = new();
     public long RunQuestGold { get; private set; }
-    private static double Number(JsonNode? value) => value is null ? 0 : double.Parse(value.ToJsonString(),System.Globalization.CultureInfo.InvariantCulture);
+    private static readonly JsonObject sEmptyContext=new();
+    private static double Number(JsonNode? value)
+    {
+        if(value is null)return 0;
+        if(value is JsonValue number){if(number.TryGetValue<double>(out var d))return d;if(number.TryGetValue<long>(out var l))return l;if(number.TryGetValue<int>(out var i))return i;}
+        return double.Parse(value.ToJsonString(),System.Globalization.CultureInfo.InvariantCulture);
+    }
     public QuestTracker(JsonObject profile,JsonArray quests)
     {
         mProfile=profile;
@@ -19,7 +25,7 @@ public sealed class QuestTracker
     public void ResetRun(){mRunValues.Clear();mBuffer.Clear();CompletedThisRun.Clear();RunQuestGold=0;}
     public void Record(string metric,double amount=1,JsonObject? context=null,bool bSet=false)
     {
-        if(mByMetric.ContainsKey(metric))mBuffer.Enqueue((metric,amount,context?.DeepClone().AsObject()??new(),bSet));
+        if(mByMetric.ContainsKey(metric))mBuffer.Enqueue((metric,amount,context?.DeepClone().AsObject()??sEmptyContext,bSet));
     }
     private static bool Has(JsonArray list,string id)=>list.Any(n=>n!.GetValue<string>()==id);
     private static bool Matches(JsonObject filters,JsonObject context)

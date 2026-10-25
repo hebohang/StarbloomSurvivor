@@ -8,7 +8,7 @@ export class WeChatRenderer extends withWeChatDepth(SurvivorRenderer) {
         const budget={pixels:1280*720,ratio:1.5};
         const viewport=()=>{const v=host.viewport();return {...v,ratio:Math.min(v.ratio||1,budget.ratio,Math.sqrt(budget.pixels/(v.width*v.height)))};};
         super(canvas,{...host,viewport,maxPixelRatio:1.5,deferSceneMeshes:true});
-        this.renderBudget=budget;this.cullView=true;this.localBounds=new Map();this.sceneLoads=0;
+        this.renderBudget=budget;this.memoryPixelLimit=budget.pixels;this.crowdQuality=false;this.cullView=true;this.localBounds=new Map();this.sceneLoads=0;
     }
     async initialize(catalog,progress){
         await super.initialize(catalog,progress);
@@ -45,6 +45,7 @@ export class WeChatRenderer extends withWeChatDepth(SurvivorRenderer) {
         }
     }
     reduceMemory(){
+        this.memoryPixelLimit=Math.min(this.memoryPixelLimit,960*540);
         this.renderBudget.pixels=Math.min(this.renderBudget.pixels,960*540);this.renderBudget.ratio=Math.min(this.renderBudget.ratio,1);
         // Parsed metadata can be read again if needed. Live models retain their
         // animation objects, and live geometry remains intact.
@@ -52,6 +53,8 @@ export class WeChatRenderer extends withWeChatDepth(SurvivorRenderer) {
     }
     frame(state,seconds){
         const menu=state.mode==='menu',px=menu?0:state.x,pz=menu?0:state.z,yaw=state.cameraYaw||0,elevation=state.cameraElevation??Math.atan2(14,17),distance=Math.hypot(14,17),horizontal=distance*Math.cos(elevation);
+        const count=state.enemies.length;if(count>=200)this.crowdQuality=true;else if(count<=140)this.crowdQuality=false;
+        this.renderBudget.pixels=Math.min(this.memoryPixelLimit,menu?1280*720:this.crowdQuality?800*450:960*540);
         const eye=menu?[0,1.8,4.8]:[px+Math.sin(yaw)*horizontal,(state.y||0)+Math.sin(elevation)*distance,pz+Math.cos(yaw)*horizontal],target=menu?[0,.65,0]:[px,state.y||0,pz];
         this.beginFrame(eye,target);if(!menu)this.streamScene(px,pz);
         this.visibleScenePaths=[];this.culledActors=0;this.culledScene=0;

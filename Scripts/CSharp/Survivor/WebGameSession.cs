@@ -27,6 +27,7 @@ public sealed partial class WebGameSession : IGameSession
     private string mMode = "menu", mMessage = "", mCharacter = "starpaw";
     private double mX, mY, mZ, mVerticalSpeed, mYaw, mHealth = 100, mMaxHealth = 100, mElapsed, mSpawnTimer, mHurtTimer, mXp, mShield;
     private int mLevel = 1, mKills, mBossKills, mEliteKills, mNextId, mRerolls, mSkips, mBanishes;
+    private int mEnemyLimit=320;
     private long mSaveRevision;
     private long mSeed = 7301;
     private double mBaseDamage, mBaseHealth, mDurationMultiplier = 1;
@@ -144,6 +145,8 @@ public sealed partial class WebGameSession : IGameSession
         switch (name)
         {
             case "configureInterestRadius" when mMode == "menu": mPresentationRegion.Configure(double.Parse(value,System.Globalization.CultureInfo.InvariantCulture));break;
+            case "configureVisualBudget" when mMode == "menu": mFriendlyVisualBudget=Math.Clamp(int.Parse(value,System.Globalization.CultureInfo.InvariantCulture),16,512);break;
+            case "configureEnemyLimit" when mMode == "menu": mEnemyLimit=Math.Clamp(int.Parse(value,System.Globalization.CultureInfo.InvariantCulture),64,320);break;
             case "configureAdRevive" when mMode == "menu": bAllowAdRevive = value == "true"; break;
             case "rewardRevive" when mMode == "revive" && bAllowAdRevive && !bAdReviveUsed:
                 bAdReviveUsed=true;++mRevivesUsed;mHealth=mMaxHealth*.5;mHurtTimer=3;mMode="playing";break;
@@ -222,6 +225,7 @@ public sealed partial class WebGameSession : IGameSession
         mDamageTaken=mDamagePrevented=mHealing=mDistanceMoved=0;mWeaponStats.Clear();
         mQuests.ResetRun();
         mAgents.Clear();mProjectiles.Clear();mPickups.Clear();mAreas.Clear();mBeams.Clear();mWeaponLevels.Clear();mTomeLevels.Clear();mWeaponSlots.Clear();mTomeSlots.Clear();mCooldowns.Clear();mUpgradePool=null;
+        mEnemyGrid.Clear();mCrowdTick=0;mSeparationTime=0;
         mRng = new(mSeed);
         var definition=mCatalog["characterDefinitions"]![mCharacter]!.Deserialize<CharacterDefinition>(sJson)!;
         int training=Object(mProfile,"characterTrainingEnabled")[mCharacter]?.GetValue<bool>() == false ? 0 : (int)Math.Clamp(N(Object(mProfile,"characterTraining"),mCharacter),0,5);
@@ -251,7 +255,7 @@ public sealed partial class WebGameSession : IGameSession
         double dt=Math.Clamp(seconds,0,.05),length=Math.Sqrt(inputX*inputX+inputZ*inputZ);bMoving=length>.01;
         if(length>1){inputX/=length;inputZ/=length;}
         (inputX,inputZ)=mView.Movement(inputX,inputZ);
-        double speed=N(mCharacterStats,"move_speed",4.25)*(1+.03*Power("meta_move"));
+        double speed=N(mCharacterStats,"move_speed",CharacterRules.BaseMoveSpeed)*(1+.03*Power("meta_move"));
         double nextX=mX+inputX*speed*dt,nextZ=mZ+inputZ*speed*dt;
         double? nextHeight=mTerrain.Height(nextX,nextZ);
         double walked=0;if(nextHeight.HasValue&&nextHeight.Value<=mY+.4){walked=Distance(nextX-mX,nextZ-mZ);mX=nextX;mZ=nextZ;}
@@ -261,7 +265,7 @@ public sealed partial class WebGameSession : IGameSession
         UpdateCombatHooks(dt,walked);
         mDistanceMoved+=walked;
         Heal(dt*(.2*Tome("recovery")+.05*Power("meta_recovery")));
-        UpdateObjectives(dt);UpdateEncounters(dt);SpawnWaves(dt);UpdateDomains(dt);UpdateWeapons(dt);UpdateProjectiles(dt);UpdateAreas(dt);UpdateEnemies(dt);UpdatePickups(dt);
+        UpdateObjectives(dt);UpdateEncounters(dt);SpawnWaves(dt);RebuildEnemyIndex();UpdateDomains(dt);UpdateWeapons(dt);UpdateProjectiles(dt);UpdateAreas(dt);UpdateEnemies(dt);SeparateEnemies(dt);UpdatePickups(dt);
         RecordQuest("survival_seconds",mElapsed,true);RecordQuest("best_level",mLevel,true);
         if(mHealth<=0)
         {
@@ -279,7 +283,7 @@ public sealed partial class WebGameSession : IGameSession
         int target=WorldTarget(progress,wave);
         mSpawnTimer=N(wave,"spawnInterval",.65);
         var pool=wave["pool"]!.AsArray();var weights=pool.Select(p=>p![1]!.GetValue<double>()).ToArray();
-        for(int i=0;i<(int)N(wave,"batch",2)&&mAgents.Count(e=>e.Region.Length==0)<target&&mAgents.Count<320;i++) Spawn(pool[mRng.WeightedIndex(weights)]![0]!.GetValue<string>(),wave);
+        for(int i=0;i<(int)N(wave,"batch",2)&&mAgents.Count(e=>e.Region.Length==0)<target&&mAgents.Count<mEnemyLimit;i++) Spawn(pool[mRng.WeightedIndex(weights)]![0]!.GetValue<string>(),wave);
     }
     private void UpdateObjectives(double dt)
     {
@@ -308,7 +312,12 @@ public sealed partial class WebGameSession : IGameSession
             Damage=N(d,"damage")*N(wave,"damageMultiplier",1)*N(mDifficulty,"damage",1)*mChallenges.EnemyDamage,
             Radius=N(d,"radius",.7),Xp=(int)N(d,"rewardXp",1)*(elite?4:1),Behavior=S(d,"behaviorId"),Boss=boss,Elite=elite,Phase=mRng.Unit()*Math.PI*2,Timer=mRng.Unit()*.3});
     }
-    private Enemy? Nearest(double x,double z,double range=30) => mAgents.Where(e=>e.Health>0&&Distance(e.X-x,e.Z-z)<range).OrderBy(e=>Distance(e.X-x,e.Z-z)).FirstOrDefault();
+    private Enemy? Nearest(double x,double z,double range=30)
+    {
+        mEnemyGrid.Query(x,z,range,mNearestCandidates);Enemy? best=null;double bestDistance=range*range;
+        foreach(var e in mNearestCandidates){if(e.Health<=0)continue;double d=DistanceSquared(e.X-x,e.Z-z);if(d<bestDistance||best!=null&&d==bestDistance&&e.Id<best.Id){best=e;bestDistance=d;}}
+        return best;
+    }
     private static double Distance(double x,double z)=>Math.Sqrt(x*x+z*z);
     private void UpdateWeapons(double dt)
     {
@@ -358,11 +367,15 @@ public sealed partial class WebGameSession : IGameSession
             p.X+=p.Vx*dt;p.Z+=p.Vz*dt;
             if(p.Behavior=="travelVisual")continue;
             if(p.Hostile){if(p.Behavior!="enemyLob"&&Distance(p.X-mX,p.Z-mZ)<p.Radius+.4){if(bRoyalBubbleShield)bRoyalBubbleShield=false;else Hurt(p.Damage);mProjectiles.Remove(p);}continue;}
-            foreach(var e in mAgents.ToArray())
+            ProjectileCandidates(p);
+            foreach(var e in mProjectileCandidates)
             {
-                if(e.Health<=0||p.Hit.Contains(e.Id)||Distance(e.X-p.X,e.Z-p.Z)>p.Radius+e.Radius)continue;
+                if(e.Health<=0||p.Hit.Contains(e.Id)||DistanceSquared(e.X-p.X,e.Z-p.Z)>(p.Radius+e.Radius)*(p.Radius+e.Radius))continue;
                 p.Hit.Add(e.Id);Hit(e,p.Damage,p.Weapon);
-                if(p.Behavior is "lob_homing" or "lob_zone" or "lob_split")foreach(var nearby in mAgents.ToArray())if(nearby.Id!=e.Id&&Distance(nearby.X-e.X,nearby.Z-e.Z)<2)Hit(nearby,p.Damage*.65,p.Weapon);
+                if(p.Behavior is "lob_homing" or "lob_zone" or "lob_split"){
+                    mEnemyGrid.Query(e.X,e.Z,2,mSplashCandidates);OrderCandidates(mSplashCandidates);
+                    foreach(var nearby in mSplashCandidates)if(nearby.Id!=e.Id&&DistanceSquared(nearby.X-e.X,nearby.Z-e.Z)<4)Hit(nearby,p.Damage*.65,p.Weapon);
+                }
                 if(p.Bounce-->0){var next=mAgents.Where(a=>!p.Hit.Contains(a.Id)).OrderBy(a=>Distance(a.X-p.X,a.Z-p.Z)).FirstOrDefault();if(next is not null){double d=Distance(next.X-p.X,next.Z-p.Z),s=Distance(p.Vx,p.Vz);p.Vx=(next.X-p.X)/Math.Max(.01,d)*s;p.Vz=(next.Z-p.Z)/Math.Max(.01,d)*s;}break;}
                 if(p.Pierce--<=0){mProjectiles.Remove(p);break;}
             }
